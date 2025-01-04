@@ -1,0 +1,675 @@
+[
+  {
+    "Key": "Example.Name",
+    "ProcessTemplates": false,
+    "enGB": "Name of your Feat/Class/Whatever"
+  },
+
+  {
+    "Key": "Example.Description",
+    "enGB": "Description for your Feat/Class/Whatever"
+  },
+
+  {
+    "Key": "DiscordantVoice.Description",
+    "enGB": "Whenever you are using bardic performance to create a spell-like or supernatural effect, allies within 30 feet of you deal an extra 1d6 points of sonic damage with successful weapon attacks. This damage stacks with other energy damage a weapon might deal. Projectile weapons bestow this extra damage on their ammunition."
+  },
+
+  {
+    "Key": "HungryGhostMonk.Name",
+    "ProcessTemplates": false,
+    "enGB": "Hungry Ghost Monk"
+  },
+
+  {
+    "Key": "HungryGhostMonk.Description",
+    "enGB": "The hungry ghost monk looks to spirits that prey upon the living as models of perfection. He sees the life energy of the universe as a resource to be manipulated, even stealing it from other creatures. It is through this constant influx of energy that the hungry ghost monk reaches his ultimate goal: power — personal, pure, and simple."
+  },
+
+  {
+    "Key": "HungryGhostAbilitiesGroup.Name",
+    "ProcessTemplates": false,
+    "enGB": "Hungry Ghost Monk Abilities"
+  },
+
+  {
+    "Key": "HungryGhostAbilitiesGroup.Description",
+    "enGB": "The Hungry Ghost Monk may choose to either consume the life or ki of his victims, but never both."
+  },
+
+  {
+    "Key": "HungryGhostMonk.StealKi.Name",
+    "ProcessTemplates": false,
+    "enGB": "Steal Ki"
+  },
+
+  {
+    "Key": "HungryGhostMonk.StealKi.Description",
+    "enGB": "At 5th level, a hungry ghost monk can steal ki from other creatures, though this ability is controversial in some circles of monks, who see it as nothing less than a form of vampirism. If the monk scores a confirmed critical hit against a living enemy or reduces a living enemy to 0 or fewer hit points, he can steal some of that creature's ki. This ability replenishes 1 spent ki point to the monk's ki pool, as long as the monk has at least 1 ki point in his pool. He cannot exceed his ki pool's maximum. At 10th level, each time the monk successfully steals ki, he can make an immediate saving throw against one disease he is suffering from. There is no penalty for failing this saving throw. The monk gains a bonus equal to his Wisdom modifier on the saving throw. This ability replaces purity of body."
+  },
+
+  {
+    "Key": "HungryGhostMonk.LifeFunnel.Name",
+    "ProcessTemplates": false,
+    "enGB": "Life Funnel"
+  },
+
+  {
+    "Key": "HungryGhostMonk.LifeFunnel.Description",
+    "enGB": "At 6th level, a hungry ghost monk can steal a creature’s life force to replenish his own. If the monk has at least 1 ki point in his ki pool and scores a confirmed critical hit against a living enemy or reduces a living enemy to 0 or fewer hit points, he heals a number of hit points equal to his monk level. As with steal ki, some monks believe that life funnel is an unsavory act, no better than what the undead do to the living. A monk with this ability cannot steal both ki and hit points at the same time. This ability replaces the ki power normally gained at 6th level."
+  },
+
+  {
+    "Key": "HungryGhostMonk.LifeFromAStone.Name",
+    "ProcessTemplates": false,
+    "enGB": "Life from a Stone"
+  },
+
+  {
+    "Key": "HungryGhostMonk.LifeFromAStone.Description",
+    "enGB": "At 10th level, a hungry ghost monk can steal ki or life force from any creature, not just living creatures. If the monk has at least 1 ki point in his pool, he gains the benefit of life funnel and steal ki when he confirms a critical hit against any creature or reduces any creature to 0 or fewer hit points. This ability replaces the ki power normally gained at 10th level."
+  },
+
+  {
+    "Key": "HungryGhostMonk.SippingDemon.Name",
+    "ProcessTemplates": false,
+    "enGB": "Sipping Demon"
+  },
+
+  {
+    "Key": "HungryGhostMonk.SippingDemon.Description",
+    "enGB": "A 12th level, a hungry ghost monk gains 1 temporary hit point each time he hits an enemy with a melee attack. The monk gains a number of temporary hit points equal to his Wisdom modifier when he scores a critical hit. The maximum number of temporary hit points the monk can have is equal to his monk level. The temporary hit points disappear 1 hour later. The monk can only use this ability when he has at least 1 ki point in his ki pool. This ability is a proscribed manipulation of ki considered by many good monks to be a corruption. This ability replaces the ki power normally gained at 12th level."
+  },
+
+  {
+    "Key": "BaneOfSpirit.Description",
+    "enGB": "You bound a part of your soul to the ring. You gain a +4 bonus to saving throws against mind-affecting effects, emotions, confusion, fear, death, and compulsion effects, but a -2 penalty to saves against poison, elemental, paralyzing and movement impairing effects. As a free action, you can lose HP equal to half your level to grant target creature a +2 bonus to attack rolls, and transform their weapon's damage type into force, for 1 round."
+  },
+
+  {
+    "Key": "FlamboyantArcana.Name",
+    "ProcessTemplates": false,
+    "enGB": "Flamboyant Arcana"
+  },
+
+  {
+    "Key": "FlamboyantArcana.Description",
+    "enGB": "A magus gains the derring-do and opportune parry and riposte deeds from the swashbuckler's list of deeds. \nThe magus can spend only points from his arcane pool (not panache points) to use these deeds and any other deeds he gains from the deed arcana. He can’t use points from his arcane pool to use deeds from other classes or those gained by feats, nor can he regain points to his arcane pool as a swashbuckler would regain panache points. \nEffects that add to, reduce the cost of, or otherwise affect panache or grit don't affect the arcane pool of a magus with this arcana. \nDerring-Do (Ex): At 1st level, a magus can spend 1 arcane pool point when she makes an Acrobatics, Climb, Escape Artist, Fly, Ride, or Swim check to roll 1d6 and add the result to the check. She can do this after she makes the check but before the result is revealed. If the result of the d6 roll is a natural 6, she rolls another 1d6 and adds it to the check. She can continue to do this as long as she rolls natural 6s, up to a number of times equal to her Dexterity modifier (minimum 1). \nOpportune Parry and Riposte (Ex): At 1st level, when an opponent makes a melee attack against the magus, she can spend 1 arcane pool point to attempt to parry that attack. The magus makes an attack roll as if she were making an attack of opportunity; for each size category the attacking creature is larger than the magus, the magus takes a –2 penalty on this roll. If her result is greater than the attacking creature's result, the creature's attack automatically misses. The magus must declare the use of this ability after the creature's attack is announced, but before its attack roll is made. Upon performing a successful parry and if she has at least 1 arcane pool point, the magus can make an attack of opportunity against the creature whose attack she parried, provided that creature is within her reach."
+  },
+
+  {
+    "Key": "FlamboyantParryAndRiposte.Name",
+    "ProcessTemplates": false,
+    "enGB": "Opportune Parry and Riposte"
+  },
+
+  {
+    "Key": "FlamboyantDerringDo.Name",
+    "ProcessTemplates": false,
+    "enGB": "Derring-Do"
+  },
+
+  {
+    "Key": "EldritchScrapper.Name",
+    "ProcessTemplates": false,
+    "enGB": "Eldritch Scrapper"
+  },
+
+  {
+    "Key": "EldritchScrapper.Description",
+    "enGB": "An eldritch scrapper is usually spoiling for a fight, looking to prove that she's just as tough as a martial character. A veteran of many brawls against opponents who were suspicious of her manifesting magic, an eldritch scrapper has a thick skin and a fighting style that blends weapons with spells."
+  },
+
+  {
+    "Key": "EldritchScrapper.EldritchScrapperBonusFeats.Name",
+    "ProcessTemplates": false,
+    "enGB": "Eldritch Scrapper Bonus Feats"
+  },
+
+  {
+    "Key": "EldritchScrapper.EldritchScrapperBonusFeats.Description",
+    "enGB": "At 1st level, an eldritch scrapper gains a bonus combat feat she qualifies for. The scrapper treats Arcane Strike and Combat Casting as combat feats for the purpose of this ability. \nAt 9th and 15th level, the Eldritch Scrapper gains an additional bonus combat feat. \nThis replaces the sorcerer's bloodline powers gained 1st, 9th, and 15th levels."
+  },
+
+  {
+    "Key": "ArcaneDeed.Name",
+    "ProcessTemplates": false,
+    "enGB": "Arcane Deed"
+  },
+
+  {
+    "Key": "ArcaneDeed.Description",
+    "enGB": "When a magus takes this arcana, he can pick any one deed from the swashbuckler class feature as long as that deed can be used by a swashbuckler of his magus level. The magus can use that deed by using points from his arcane pool as the panache points required for that deed. Even if he gains a panache pool through another means, the magus is not considered to have at least 1 point in his panache pool for the purpose of deeds selected with arcane deed, and his effective swashbuckler level for determining such a deed's effect is 0. \nA magus can take this arcana multiple times, each time gaining a new deed."
+  },
+
+  {
+    "Key": "ArcaneDeedDodgingPanache.Name",
+    "ProcessTemplates": false,
+    "enGB": "Dodging Panache"
+  },
+
+  {
+    "Key": "ArcaneDeedDodgingPanache.Description",
+    "enGB": "When an opponent attempts a melee attack against the magus, the magus can spend 1 arcane pool point to move 5 feet; doing so grants the magus a dodge bonus to AC equal to her Charisma modifier (minimum 0) against the triggering attack. This movement doesn't negate the attack, which is still resolved as if the magus had not moved from the original square. This movement is not a 5-foot step; it provokes attacks of opportunity from creatures other than the one who triggered this deed. The magus can only perform this deed while wearing light or no armor, and while carrying no heavier than a light load."
+  },
+
+  {
+    "Key": "ArcaneDeedTargetedStrike.Name",
+    "ProcessTemplates": false,
+    "enGB": "Targeted Strike"
+  },
+
+  {
+    "Key": "ArcaneDeedTargetedStrike.Description",
+    "enGB": "As a full-round action, the magus can spend 1 arcane pool point to make an attack with a single light or one-handed piercing melee weapon that cripples part of a foe's body. The magus chooses a part of the body to target. If the attack succeeds, in addition to the attack's normal damage, the target suffers one of the following effects based on the part of the body targeted. If a creature doesn't have one of the listed body locations, that body part cannot be targeted. Creatures that are immune to sneak attacks are also immune to targeted strikes. Items or abilities that protect a creature from critical hits also protect a creature from targeted strikes."
+  },
+
+  {
+    "Key": "ArcaneDeedTSArms.Name",
+    "ProcessTemplates": false,
+    "enGB": "Targeted Strike - Arms"
+  },
+
+  {
+    "Key": "ArcaneDeedTSArms.Description",
+    "enGB": "The target is disarmed for 2 rounds."
+  },
+
+  {
+    "Key": "ArcaneDeedTSHead.Name",
+    "ProcessTemplates": false,
+    "enGB": "Targeted Strike - Head"
+  },
+
+  {
+    "Key": "ArcaneDeedTSHead.Description",
+    "enGB": "The target is confused for 1 round."
+  },
+
+  {
+    "Key": "ArcaneDeedTSLegs.Name",
+    "ProcessTemplates": false,
+    "enGB": "Targeted Strike - Legs"
+  },
+
+  {
+    "Key": "ArcaneDeedTSLegs.Description",
+    "enGB": "The target is knocked prone."
+  },
+
+  {
+    "Key": "ArcaneDeedTSTorso.Name",
+    "ProcessTemplates": false,
+    "enGB": "Targeted Strike - Torso"
+  },
+
+  {
+    "Key": "ArcaneDeedTSTorso.Description",
+    "enGB": "The target is staggered for 1 round."
+  },
+
+  {
+    "Key": "ArcaneDeedBleed.Name",
+    "ProcessTemplates": false,
+    "enGB": "Bleeding Wound"
+  },
+
+  {
+    "Key": "ArcaneDeedBleedAbility.Description",
+    "enGB": "When the magus hits a living creature with a light or one-handed piercing melee weapon attack, she can spend 1 arcane pool point to have that attack deal additional bleed damage equal to the magus's Dexterity modifier."
+  },
+
+  {
+    "Key": "ArcaneDeedBleedDebuff.Description",
+    "enGB": "This creature takes hit point damage equal to the magus's Dexterity modifier each turn. Bleeding can be stopped through the application of any effect that cures hit point damage (even if the bleed is ability damage)."
+  },
+
+  {
+    "Key": "ArcaneDeedSBleed.Name",
+    "ProcessTemplates": false,
+    "enGB": "Bleeding Wound - Strength"
+  },
+
+  {
+    "Key": "ArcaneDeedSBleedAbility.Description",
+    "enGB": "When the magus hits a living creature with a light or one-handed piercing melee weapon attack, she can spend 2 arcane pool points to have that attack deal 1 point of Strength bleed damage."
+  },
+
+  {
+    "Key": "ArcaneDeedSBleedDebuff.Description",
+    "enGB": "This creature takes 1 Strength damage each turn. Bleeding can be stopped through the application of any effect that cures hit point damage (even if the bleed is ability damage)."
+  },
+
+  {
+    "Key": "ArcaneDeedDBleed.Name",
+    "ProcessTemplates": false,
+    "enGB": "Bleeding Wound - Dexterity"
+  },
+
+  {
+    "Key": "ArcaneDeedDBleedAbility.Description",
+    "enGB": "When the magus hits a living creature with a light or one-handed piercing melee weapon attack, she can spend 2 arcane pool points to have that attack deal 1 point of Dexterity bleed damage."
+  },
+
+  {
+    "Key": "ArcaneDeedDBleedDebuff.Description",
+    "enGB": "This creature takes 1 Dexterity damage each turn. Bleeding can be stopped through the application of any effect that cures hit point damage (even if the bleed is ability damage)."
+  },
+
+  {
+    "Key": "ArcaneDeedCBleed.Name",
+    "ProcessTemplates": false,
+    "enGB": "Bleeding Wound - Constitution"
+  },
+
+  {
+    "Key": "ArcaneDeedCBleedAbility.Description",
+    "enGB": "When the magus hits a living creature with a light or one-handed piercing melee weapon attack, she can spend 2 arcane pool points to have that attack deal 1 point of Constitution bleed damage."
+  },
+
+  {
+    "Key": "ArcaneDeedCBleedDebuff.Description",
+    "enGB": "This creature takes 1 Constitution damage each turn. Bleeding can be stopped through the application of any effect that cures hit point damage (even if the bleed is ability damage)."
+  },
+
+  {
+    "Key": "ArcaneDeedBWound.Name",
+    "ProcessTemplates": false,
+    "enGB": "Bleeding Wound"
+  },
+
+  {
+    "Key": "ArcaneDeedBWound.Description",
+    "enGB": "When the magus hits a living creature with a light or one-handed piercing melee weapon attack, as a free action she can spend 1 arcane pool point to have that attack deal additional bleed damage. The amount of bleed damage dealt is equal to the magus's Dexterity modifier (minimum 1). Alternatively, the magus can spend 2 arcane pool points to deal 1 point of Strength, Dexterity, or Constitution bleed damage instead (magus's choice). Creatures that are immune to sneak attacks are also immune to these types of bleed damage."
+  },
+
+  {
+    "Key": "CollegiateInitiate.Name",
+    "ProcessTemplates": false,
+    "enGB": "Collegiate Initiate"
+  },
+
+  {
+    "Key": "CollegiateInitiate.Description",
+    "enGB": "Those particularly gifted in the art of sculpting spells are sometimes schooled privately in the art of traditional, esoteric, and righteous spells, in the hope that such knowledge will pave the way for the initiate's acceptance into the school proper as a collegiate arcanist. \nBut many initiates find themselves overwhelmed by the extensive training and end up leaving before completing their studies. These spellcasters retain many of the techniques and philosophical bents, but are not considered to be graduates of the school. Yet they are still respected and valued, for the staff fully understand that its teachings and the scholastic, often hermetic lifestyle required to master the techniques are not to everyone's tastes. For the teachers, there are no truly failed students save those who abandon their philosophy and succumb to the lure of cruelty and evil."
+  },
+
+  {
+    "Key": "CollegiateInitiate.HalcyonSpellLore.Name",
+    "ProcessTemplates": false,
+    "enGB": "Halcyon Spell Lore"
+  },
+
+  {
+    "Key": "CollegiateInitiate.HalcyonSpellLore.Description",
+    "enGB": "At each class level, the Initiate chooses one spell from the druid spell list or one spell with the good descriptor from the cleric spell list. The spell must be of a spell level that she can cast, and cannot be a spell that already appears on her arcanist spell list. A Collegiate Initiate can prepare these spells like any other arcanist spell, but must expend a number of points from her arcane reservoir equal to half the spell's level (minimum 1) to cast the spell. \nThis ability replaces the arcanist exploits gained at 5th, 9th, and 17th levels."
+  },
+
+  {
+    "Key": "Samsaran.Name",
+    "ProcessTemplates": false,
+    "enGB": "Samsaran"
+  },
+
+  {
+    "Key": "Samsaran.Description",
+    "enGB": "Mysterious humanoids with pale blue flesh and transparent blood like the waters of a trickling brook, samsarans are ancient creatures even in their youth. A samsaran's life is not a linear progression from birth to death, but rather a circle of birth to death to rebirth. Whenever a samsaran dies, it reincarnates anew as a young samsaran to live a new life. Her past memories remain vague and indistinct—and each new incarnation is as different a creature and personality as a child is to a parent. \nSamsarans appear similar to humans, with dark hair and solid white eyes with no pupils or irises. Skin tones are generally shades of light blue. \nCapable of recalling the lessons and failings of their previous incarnations, the samsarans seek to live lives of balance and enlightenment in order to ensure they are reborn upon death to continue their trek through history."
+  },
+
+  {
+    "Key": "Samsaran.LifeBound.Name",
+    "ProcessTemplates": false,
+    "enGB": "Lifebound"
+  },
+
+  {
+    "Key": "Samsaran.LifeBound.Description",
+    "enGB": "Samsarans gain a +2 racial bonus on all saving throws made to resist death effects, saving throws against channeled negative energy, and saving throws against abilities that inflict negative levels."
+  },
+
+  {
+    "Key": "Samsaran.ShardsOfThePast.Name",
+    "ProcessTemplates": false,
+    "enGB": "Shards of the Past"
+  },
+
+  {
+    "Key": "Samsaran.ShardsOfThePast.Description",
+    "enGB": " A samsaran's past lives grant her bonuses on two particular skills. A samsaran chooses two skills—she gains a +2 racial bonus on both of these skills, and they are treated as class skills regardless of what class she actually takes."
+  },
+
+  {
+    "Key": "Samsaran.ShardsOfThePastAthletics.Name",
+    "ProcessTemplates": false,
+    "enGB": "Shards of the Past - Athletics"
+  },
+
+  {
+    "Key": "Samsaran.ShardsOfThePastMobility.Name",
+    "ProcessTemplates": false,
+    "enGB": "Shards of the Past - Mobility"
+  },
+  {
+    "Key": "Samsaran.ShardsOfThePastStealth.Name",
+    "ProcessTemplates": false,
+    "enGB": "Shards of the Past - Stealth"
+  },
+
+  {
+    "Key": "Samsaran.ShardsOfThePastTrickery.Name",
+    "ProcessTemplates": false,
+    "enGB": "Shards of the Past - Trickery"
+  },
+
+  {
+    "Key": "Samsaran.ShardsOfThePastArcana.Name",
+    "ProcessTemplates": false,
+    "enGB": "Shards of the Past - Knowledge (Arcana)"
+  },
+
+  {
+    "Key": "Samsaran.ShardsOfThePastWorld.Name",
+    "ProcessTemplates": false,
+    "enGB": "Shards of the Past - Knowledge (World)"
+  },
+
+  {
+    "Key": "Samsaran.ShardsOfThePastNature.Name",
+    "ProcessTemplates": false,
+    "enGB": "Shards of the Past - Lore (Nature)"
+  },
+
+  {
+    "Key": "Samsaran.ShardsOfThePastReligion.Name",
+    "ProcessTemplates": false,
+    "enGB": "Shards of the Past - Lore (Religion)"
+  },
+
+  {
+    "Key": "Samsaran.ShardsOfThePastPerception.Name",
+    "ProcessTemplates": false,
+    "enGB": "Shards of the Past - Perception"
+  },
+
+  {
+    "Key": "Samsaran.ShardsOfThePastPersuasion.Name",
+    "ProcessTemplates": false,
+    "enGB": "Shards of the Past - Persuasion"
+  },
+
+  {
+    "Key": "Samsaran.ShardsOfThePastUMD.Name",
+    "ProcessTemplates": false,
+    "enGB": "Shards of the Past - Use Magic Device"
+  },
+
+  {
+    "Key": "Samsaran.MysticPastLife.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mystic Past Life"
+  },
+
+  {
+    "Key": "Samsaran.MysticPastLife.Description",
+    "enGB": "You can add spells from another spellcasting class to the spell list of your current spellcasting class. You add a number of spells equal to 1 + your spellcasting class's key ability score bonus (Wisdom for clerics, and so on). The spells must be the same type (arcane or divine) as the spellcasting class you're adding them to. For example, you could add divine power to your druid class spell list, but not to your wizard class spell list because divine power is a divine spell. These spells do not have to be spells you can cast as a 1st-level character. The number of spells granted by this ability is set at 1st level. Changes to your ability score do not change the number of spells gained."
+  },
+
+  {
+    "Key": "Samsaran.MysticPastLifeBard.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mystic Past Life - Bard"
+  },
+
+  {
+    "Key": "Samsaran.MysticPastLifeBloodrager.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mystic Past Life - Bloodrager"
+  },
+
+  {
+    "Key": "Samsaran.MysticPastLifeCleric.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mystic Past Life - Cleric"
+  },
+
+  {
+    "Key": "Samsaran.MysticPastLifeDruid.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mystic Past Life - Druid"
+  },
+
+  {
+    "Key": "Samsaran.MysticPastLifeHunter.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mystic Past Life - Hunter"
+  },
+
+  {
+    "Key": "Samsaran.MysticPastLifeInquisitor.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mystic Past Life - Inquisitor"
+  },
+
+  {
+    "Key": "Samsaran.MysticPastLifeMagus.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mystic Past Life - Magus"
+  },
+
+  {
+    "Key": "Samsaran.MysticPastLifePaladin.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mystic Past Life - Paladin"
+  },
+
+  {
+    "Key": "Samsaran.MysticPastLifeRanger.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mystic Past Life - Ranger"
+  },
+
+  {
+    "Key": "Samsaran.MysticPastLifeShaman.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mystic Past Life - Shaman"
+  },
+
+  {
+    "Key": "Samsaran.MysticPastLifeWarpriest.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mystic Past Life - Warpriest"
+  },
+
+  {
+    "Key": "Samsaran.MysticPastLifeWitch.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mystic Past Life - Witch"
+  },
+
+  {
+    "Key": "Samsaran.MysticPastLifeWizard.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mystic Past Life - Wizard"
+  },
+
+  {
+    "Key": "Samsaran.SamsaranMagic.Name",
+    "ProcessTemplates": false,
+    "enGB": "Samsaran Magic"
+  },
+
+  {
+    "Key": "Samsaran.SamsaranMagic.Description",
+    "enGB": "Once per day, a Samsaran can cast Cure Light Wounds as a spell-like ability"
+  },
+
+  {
+    "Key": "Samsaran.RacialHeritage.Name",
+    "ProcessTemplates": false,
+    "enGB": "Racial Heritage"
+  },
+
+  {
+    "Key": "Samsaran.RacialHeritage.Description",
+    "enGB": "Various places and living conditions create sub-races differing from their peers. They gain unique racial in exchange for losing some of the usual ones."
+  },
+
+  {
+    "Key": "OrcSorcererBloodline.Name",
+    "ProcessTemplates": false,
+    "enGB": "Orc Bloodline"
+  },
+
+  {
+    "Key": "OrcSorcererBloodline.Description",
+    "enGB": "The rage of your ancestors burns within you, and the taint of savage orc blood flows through your veins. Your anger is never far from the surface, giving you strength and driving you to seek greater power."
+  },
+
+  {
+    "Key": "OrcSorcererBloodlineArcana.Name",
+    "ProcessTemplates": false,
+    "enGB": "Orc Bloodline Arcana"
+  },
+
+  {
+    "Key": "OrcSorcererBloodlineArcana.Description",
+    "enGB": "You gain Keen Senses and Light Sensitivity. Whenever you cast a spell that deals damage, that spell deals +1 point of damage per die rolled. At 9th level, you lose your light sensitivity."
+  },
+
+  {
+    "Key": "OrcSorcererBloodlineRequisiteFeature.Name",
+    "ProcessTemplates": false,
+    "enGB": "Orc Bloodline"
+  },
+
+  {
+    "Key": "OrcSorcererBloodlineRequisiteFeature.Description",
+    "enGB": "Orc Bloodline Requisite Feature"
+  },
+
+  {
+    "Key": "OrcSorcererBloodlineTouchOfRage.Name",
+    "ProcessTemplates": false,
+    "enGB": "Touch of Rage"
+  },
+
+  {
+    "Key": "OrcSorcererBloodlineTouchOfRage.Description",
+    "enGB": "At 1st level, you can touch a creature as a standard action, giving it a morale bonus on attack rolls, damage rolls, and Will saving throws equal to 1/2 your sorcerer level (minimum 1) for 1 round. You can use this ability a number of times per day equal to 3 + your Charisma modifier."
+  },
+
+  {
+    "Key": "OrcSorcererBloodlineFearless.Name",
+    "ProcessTemplates": false,
+    "enGB": "Fearless"
+  },
+
+  {
+    "Key": "OrcSorcererBloodlineFearless.Description",
+    "enGB": "At 3rd level, you gain a +4 bonus on saving throws made against fear and a +1 natural armor bonus. At 9th level, you gain immunity to fear and your natural armor bonus increases to +2."
+  },
+
+  {
+    "Key": "OrcSorcererBloodlineStrengthOfTheBeast.Name",
+    "ProcessTemplates": false,
+    "enGB": "Strength of the Beast"
+  },
+
+  {
+    "Key": "OrcSorcererBloodlineStrengthOfTheBeast.Description",
+    "enGB": "At 9th level, you gain a +2 inherent bonus to your Strength. This bonus increases to +4 at 13th level, and to +6 at 17th level."
+  },
+
+  {
+    "Key": "OrcSorcererBloodlinePowerOfGiants.Name",
+    "ProcessTemplates": false,
+    "enGB": "Power of Giants"
+  },
+
+  {
+    "Key": "OrcSorcererBloodlinePowerOfGiants.Description",
+    "enGB": "At 15th level, you may grow to Large size as a standard action. At this size you gain a +6 size bonus to Strength, a –2 penalty to Dexterity, a +4 size bonus to Constitution, and a +4 natural armor bonus. You may return to your normal size as a standard action. You may remain in this size for up to 1 minute per character level per day; this duration does not need to be consecutive, but it must be used in 1 minute increments."
+  },
+
+  {
+    "Key": "OrcSorcererBloodlineWarlordReborn.Name",
+    "ProcessTemplates": false,
+    "enGB": "Warlord Reborn"
+  },
+
+  {
+    "Key": "OrcSorcererBloodlineWarlordReborn.Description",
+    "enGB": "At 20th level, you become a true orc warlord of legend. You gain immunity to fire and DR 5/—. Once per day, you can cast transformation as a spell-like ability using your sorcerer level as your caster level."
+  },
+
+  {
+    "Key": "OrcSorcererBloodlineFeats.Name",
+    "ProcessTemplates": false,
+    "enGB": "Bloodline Feat Selection"
+  },
+
+  {
+    "Key": "OrcSorcererBloodlineFeats.Description",
+    "enGB": "At 7th level, and every six levels thereafter, a sorcerer receives one bonus feat, chosen from a list specific to each bloodline. The sorcerer must meet the prerequisites for these bonus feats. \nBonus Feats: Diehard, Endurance, Great Fortitude. Intimidating Prowess, Power Attack, Toughness, and Metamagic (Empower Spell)."
+  },
+
+  {
+    "Key": "OrcSorcererBloodlineSpells.Description",
+    "enGB": "At 3rd level, and every two levels thereafter, a sorcerer learns an additional spell, derived from her bloodline."
+  },
+
+  {
+    "Key": "OrcSorcererBloodlineClassSkill.Name",
+    "ProcessTemplates": false,
+    "enGB": "Class Skill - Lore (Nature)"
+  },
+
+  {
+    "Key": "OrcSorcererBloodlineClassSkill.Description",
+    "enGB": "Additional class skill from the orc bloodline."
+  },
+
+  {
+    "Key": "LightSensitivity.Name",
+    "ProcessTemplates": false,
+    "enGB": "Light Sensitivity"
+  },
+
+  {
+    "Key": "LightSensitivity.Description",
+    "enGB": "Creatures with light sensitivity are dazzled in areas of bright light."
+  },
+
+  {
+    "Key": "LightSensitivityImmunity.Name",
+    "ProcessTemplates": false,
+    "enGB": "Light Sensitivity Immunity"
+  },
+
+  {
+    "Key": "LightSensitivityImmunity.Description",
+    "enGB": "This creature is no longer dazzled in areas of bright light."
+  },
+
+  {
+    "Key": "Svirfneblin.Name",
+    "ProcessTemplates": false,
+    "enGB": "Svirfneblin"
+  },
+
+  {
+    "Key": "Svirfneblin.Description",
+    "enGB": "In the dark below earth, svirfneblin protect their enclaves, keeping their small communities safe from the terrors of the lightless depths. Serious creatures with slate-gray skin, these gnomes vary greatly from their surface cousins by choosing to live in the shadowy depths and protect the world above from the foul creatures sharing their chambers, vaults, and tunnels."
+  },
+
+  {
+    "Key": "Duergar.Name",
+    "ProcessTemplates": false,
+    "enGB": "Duergar"
+  },
+
+  {
+    "Key": "Duergar.Description",
+    "enGB": "Duergar dwell in subterranean caverns far from the touch of light. They detest all races living beneath the sun, but that hatred pales beside their loathing of their surface-dwarf cousins. Dwarves and duergar once were one race, but the dwarves left the deeps for their mountain strongholds. Duergar still consider themselves the only true dwarves, and the rightful heirs of all beneath the world's surface. In appearance, duergar resemble gray-skinned dwarves, bearded but bald, with cold, lightless eyes. They favor taking captives in battle over wanton slaughter, save for surface dwarves, who are slain without hesitation. Duergar view life as ceaseless toil ended only by death. Though few can be described as anything other than vile and cruel, duergar still value honor and rarely break their word."
+  }
+]
