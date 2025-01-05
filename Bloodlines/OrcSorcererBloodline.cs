@@ -8,6 +8,7 @@ using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 using BlueprintCore.Blueprints.References;
 using BlueprintCore.Utils;
 using BlueprintCore.Utils.Types;
+using Kingmaker.UnitLogic.Mechanics.Components;
 using EbonsContentMod.Components;
 using Kingmaker.Blueprints;
 using Kingmaker.Blueprints.Classes;
@@ -302,10 +303,11 @@ namespace EbonsContentMod.Bloodlines
                 .Configure();
 
             var OrcSorcererBloodlineWarlordRebornTransformation = AbilityConfigurator.New("OrcSorcererBloodlineWarlordRebornTransformation", "{1C1DDA18-95E9-4E1F-B2ED-30D09C47E8FE}") // done
-                .CopyFrom(AbilityRefs.Transformation, c => c is not (SpellListComponent or CraftInfoComponent))
+                .CopyFrom(AbilityRefs.Transformation, c => c is not (SpellListComponent or CraftInfoComponent or ContextRankConfig))
                 .SetDisplayName(OrcSorcererBloodlineWarlordRebornDisplayName)
                 .SetDescription(OrcSorcererBloodlineWarlordRebornDescription)
                 .AddAbilityResourceLogic(isSpendResource: true, requiredResource: OrcSorcererBloodlineWarlordRebornTransformationResource)
+                .AddComponent(Helpers.CreateCopy(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.Transformation.ToString()).Components.Where(c => c is ContextRankConfig).First()))
                 .SetType(AbilityType.SpellLike)
                 .AddPretendSpellLevel(spellLevel: 6)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.Transformation.ToString()).Icon)

@@ -66,9 +66,9 @@ namespace EbonsContentMod.Races
         public static List<Color> RaceHeadColors =
             [
                 new Color(
-                    RaceRecolorizer.GetColorsFromRGB(110f),
+                    RaceRecolorizer.GetColorsFromRGB(125f),
                     RaceRecolorizer.GetColorsFromRGB(102f),
-                    RaceRecolorizer.GetColorsFromRGB(112f)
+                    RaceRecolorizer.GetColorsFromRGB(123f)
                     )
             ];
 
@@ -103,7 +103,7 @@ namespace EbonsContentMod.Races
                 .Configure();
 
             // Recolor Race
-            var recoloredrace = RaceRecolorizer.RecolorRace(race, BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.GnomeRace.ToString()), RaceHeadColors, RaceHairColors);
+            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, BaldRace: true, OnlyMalesBald: true);
 
             // Add race to race list
             var raceRef = recoloredrace.ToReference<BlueprintRaceReference>();

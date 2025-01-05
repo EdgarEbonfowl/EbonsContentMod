@@ -65,7 +65,7 @@ namespace EbonsContentMod.Races
     {
         public static List<Color> RaceHeadColors =
             [
-                new Color(
+                new Color( // Very Dark Gray
                     RaceRecolorizer.GetColorsFromRGB(74f),
                     RaceRecolorizer.GetColorsFromRGB(73f),
                     RaceRecolorizer.GetColorsFromRGB(76f)
@@ -77,7 +77,7 @@ namespace EbonsContentMod.Races
 
         public static List<Color> RaceHairColors =
             [
-                new Color(0.75f, 0.75f, 0.75f)
+                new Color(0.75f, 0.75f, 0.75f) // White
             ];
 
         private static readonly string DuergarName = "DuergarRace";
@@ -102,7 +102,7 @@ namespace EbonsContentMod.Races
                 .Configure();
 
             // Recolor Race
-            var recoloredrace = RaceRecolorizer.RecolorRace(race, BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.DwarfRace.ToString()), RaceHeadColors, RaceHairColors);
+            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, BaldRace: true);
 
             // Add race to race list
             var raceRef = recoloredrace.ToReference<BlueprintRaceReference>();

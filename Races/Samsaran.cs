@@ -74,7 +74,7 @@ namespace EbonsContentMod.Races
 
         public static List<Color> RaceEyeColors =
             [
-                new Color(0.82f, 0.82f, 0.82f)
+                new Color(0.75f, 0.75f, 0.75f)
             ];
 
         public static List<Color> RaceHairColors =
@@ -625,7 +625,7 @@ namespace EbonsContentMod.Races
                 .Configure();
 
             // Recolor Race
-            var recoloredrace = RaceRecolorizer.RecolorRace(race, BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HumanRace.ToString()), RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.AasimarRace.ToString()));
+            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.OreadRace.ToString()));
 
             // Add race to race list
             var raceRef = recoloredrace.ToReference<BlueprintRaceReference>();

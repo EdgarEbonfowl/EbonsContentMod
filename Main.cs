@@ -125,7 +125,7 @@ public static class Main
                 FlamboyantArcana.Configure();
                 ArcaneDeed.Configure();
                 LightSensitivityTrait.Configure();
-                OrcSorcererBloodline.Configure();
+                //OrcSorcererBloodline.Configure();
             }
             catch (Exception e)
             {
@@ -166,7 +166,7 @@ public static class Main
             try
             {
                 EldritchScrapper.Configure();
-                CollegiateInitiate.Configure();
+                //CollegiateInitiate.Configure();
                 Samsaran.Configure();
                 Svirfneblin.Configure();
                 Duergar.Configure();
