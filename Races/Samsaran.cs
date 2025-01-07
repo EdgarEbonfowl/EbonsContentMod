@@ -84,6 +84,16 @@ namespace EbonsContentMod.Races
                 new Color(0.75f, 0.75f, 0.75f) // tester white hair - remove when finished
             ];
 
+        public static EquipmentEntityLink[] FemaleHairs =
+            [
+                new EquipmentEntityLink() {AssetId = "04c3eb6d7570d8d49b686516b7c4a4f8"}, // Long Camelia Hair
+                new EquipmentEntityLink() {AssetId = "779458079f7718c4bb960d9cef195339"}, // Long Wavy Braids
+                new EquipmentEntityLink() {AssetId = "34bb68b3e4f03be44a1f0611a09530fc"}, // Crown Braids - Dwarf
+                new EquipmentEntityLink() {AssetId = "1762cab3d178f53489f43ab791b87f9c"}  // Noble Braids - Dwarf
+            ];
+
+        public static BlueprintRace CopyRace = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HumanRace.ToString());
+
         private static readonly string SamsaranName = "SamsaranRace";
 
         internal const string SamsaranDisplayName = "Samsaran.Name";
@@ -598,6 +608,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(SamsaranMagicDescription)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.GnomeMagic.ToString()).Icon)
                 .AddFacts(new() { ability })
+                .AddAbilityResources(1, resource, true)
                 .Configure();
 
             return feat;
@@ -607,13 +618,15 @@ namespace EbonsContentMod.Races
         {
             Directory.CreateDirectory(MysticPastLifeFilePath);
 
+            var NewFemaleHairArray = FemaleHairs.AppendToArray(CopyRace.FemaleOptions.Hair);
+
             var heritage = CreateRacialHeritage();
             var lifebound = CreateLifebound();
             var magic = CreateSamsaranMagic();
 
             var race =
             RaceConfigurator.New(SamsaranName, RaceGuid)
-                .CopyFrom(RaceRefs.HumanRace)
+                .CopyFrom(CopyRace)
                 .SetDisplayName(SamsaranDisplayName)
                 .SetDescription(SamsaranDescription)
                 .SetSelectableRaceStat(false)
@@ -625,7 +638,10 @@ namespace EbonsContentMod.Races
                 .Configure();
 
             // Recolor Race
-            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.OreadRace.ToString()));
+            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.OreadRace.ToString()), CustomFemaleHairs: NewFemaleHairArray);
+
+            // Add race to mount fixes
+            RaceMountFixerizer.AddRaceToMountFixes(recoloredrace, CopyRace);
 
             // Add race to race list
             var raceRef = recoloredrace.ToReference<BlueprintRaceReference>();

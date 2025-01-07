@@ -43,7 +43,6 @@ using UnityEngine;
 using static EbonsContentMod.Utilities.ActivatableAbilityGroupUtilities;
 using EbonsContentMod.Utilities;
 using Kingmaker.Designers.EventConditionActionSystem.Actions;
-using MicroscopicContentExpansion.Utils;
 using Kingmaker.Designers.EventConditionActionSystem.Conditions;
 using System.Threading;
 using static Kingmaker.Visual.Animation.Kingmaker.Actions.UnitAnimationActionCastSpell;

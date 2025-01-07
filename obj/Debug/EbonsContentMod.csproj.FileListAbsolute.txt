@@ -14,7 +14,6 @@ D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\Core.Cheats.dll
 D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\Core.Console.dll
 D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\Core.Overlays.dll
 D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\Core.Reflection.dll
-D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\MicroscopicContentExpansion.dll
 D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\Newtonsoft.Json.dll
 D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\Owlcat.Runtime.Core.dll
 D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\Owlcat.Runtime.Hardware.dll
@@ -132,7 +131,6 @@ D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\UnityEngine.XRModule.dll
 D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\UnityModManager.dll
 D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\dnlib.dll
 D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\UnityModManager.xml
-D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\MicroscopicContentExpansion.pdb
 D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\TabletopTweaks-Core.pdb
 D:\WrathMods\EbonsContentMod\EbonsContentMod\obj\Debug\EbonsContentMod.csproj.AssemblyReference.cache
 D:\WrathMods\EbonsContentMod\EbonsContentMod\obj\Debug\EbonsContentMod.IgnoresAccessChecksTo.cs
@@ -143,4 +141,3 @@ D:\WrathMods\EbonsContentMod\EbonsContentMod\obj\Debug\EbonsContentMod.csproj.Co
 D:\WrathMods\EbonsContentMod\EbonsContentMod\obj\Debug\EbonsCon.B48EB8C1.Up2Date
 D:\WrathMods\EbonsContentMod\EbonsContentMod\obj\Debug\EbonsContentMod.dll
 D:\WrathMods\EbonsContentMod\EbonsContentMod\obj\Debug\EbonsContentMod.pdb
-D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\KRXLib.dll

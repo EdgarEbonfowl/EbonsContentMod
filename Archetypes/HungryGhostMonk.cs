@@ -42,8 +42,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TabletopTweaks.Core.Utilities;
-using MicroscopicContentExpansion.Utils;
-using BlueprintCore.Utils.Types;
 using BlueprintCore.Actions.Builder;
 using BlueprintCore.Actions.Builder.ContextEx;
 using TabletopTweaks.Core.NewComponents.OwlcatReplacements;

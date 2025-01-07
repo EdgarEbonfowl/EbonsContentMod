@@ -84,6 +84,36 @@ namespace EbonsContentMod.Utilities
                 "DuergarRace_Male_f097c18b5fcd269468e19243a62786c0" => "9e7cad5c027240d79c41a05128b6b344",
                 "SvirfneblinRace_Female_e969fe61ab898284ebeb387accb994d9" => "565a4f6e52864da88d8eeb9231490176",
                 "SvirfneblinRace_Male_ac15d06e7975ca74b970783daaef9b60" => "f2cd137f9ef74c89bf028bebb6ac32b4",
+                "SylphRace_Female_bb6988a21733fad4296ad22537248fea" => "e5316e4cd55d4d3b8d358bf6ea0bf278",
+                "SylphRace_Human_Standard_VisualPreset" => "cbc9a0a83379408b87b69ef045a7b092",
+                "SylphRace_Human_Standard_VisualPreset_fat" => "e56d4226939d492daaf31cab39267f03",
+                "SylphRace_Human_Standard_VisualPreset_thin" => "363de6841b174367aec11d043e1c2238",
+                "SylphRace_KEE_Body_Human" => "204219385222416a98417282d5a6acd7",
+                "SylphRace_Male_e7c86166041c1e04a92276abdab68afa" => "bceabb71f99b49cb857dfc7705d0fb31",
+                "UndineRace_Female_bb6988a21733fad4296ad22537248fea" => "9e2c719042d2483f9467a6d3c8822bac",
+                "UndineRace_Human_Standard_VisualPreset" => "d0afa5a0293c4252848af3a91e0d7203",
+                "UndineRace_Human_Standard_VisualPreset_fat" => "78ce3c701f394a35b40c8470fb176ebb",
+                "UndineRace_Human_Standard_VisualPreset_thin" => "863b483aae0f49b18de686c22b4a94e0",
+                "UndineRace_KEE_Body_Human" => "313116c25e06427491195720e6299bdd",
+                "UndineRace_Male_e7c86166041c1e04a92276abdab68afa" => "2bfda561ee0b4d138c5da2fb193cded3",
+                "StrixRace_Female_bb6988a21733fad4296ad22537248fea" => "afe9814302394aec80f3f0528e1d7d5d",
+                "StrixRace_Human_Standard_VisualPreset" => "651beb06155e4922944696df6d0995ef",
+                "StrixRace_Human_Standard_VisualPreset_fat" => "de77a73ba80b4c35a88de75d9e9cf394",
+                "StrixRace_Human_Standard_VisualPreset_thin" => "3ca47021901e4d2a9d9f1ad1edfd0277",
+                "StrixRace_KEE_Body_Human" => "2f5284ce1c7f4017884cb2cd57960e1b",
+                "StrixRace_Male_e7c86166041c1e04a92276abdab68afa" => "2cc186fcc24248a9a05afed8a989bc04",
+                "EbonsDrowRace_Elf_VisualPreset" => "958f125c8f8243ad9b6ed007d5df5396",
+                "EbonsDrowRace_Elf_VisualPreset_fat" => "4116ae3131d6409587e3e9c06fa73a7f",
+                "EbonsDrowRace_Elf_VisualPreset_thin" => "54ea57422e4d4af09157e86146b45b76",
+                "EbonsDrowRace_Female_86acde9747d561649919dd1117cd858c" => "47c54f1fa0b94819b7a906189aa5e532",
+                "EbonsDrowRace_KEE_Body_Elf" => "32ae70a145da4ce09e8bcfdce47adbe1",
+                "EbonsDrowRace_Male_14f3db044cb98ad4ab0ed4edfba5b6d6" => "867200cd31664343b8fe6bbb169e5321",
+                "SuliRace_Female_bb6988a21733fad4296ad22537248fea" => "80c531285ebc4b429a6a96b8a129d8a0",
+                "SuliRace_Human_Standard_VisualPreset" => "bb8632bc9946407baf8bce74533ecfde",
+                "SuliRace_Human_Standard_VisualPreset_fat" => "6525edd9eb0f49c1ab8e1b3339075728",
+                "SuliRace_Human_Standard_VisualPreset_thin" => "719c81aab4a34296b0641ec0c055c87b",
+                "SuliRace_KEE_Body_Human" => "ff1c513fe90d4298862ecd377e40785c",
+                "SuliRace_Male_e7c86166041c1e04a92276abdab68afa" => "1204fcdf42f34391b1a7e6c8e4c0c98f",
                 _ => "Error"
             };
         }
@@ -380,18 +410,46 @@ namespace EbonsContentMod.Utilities
 
             return null;
         }
-        
+
         // Add handling for tails and horns
-        // Add 'OnlyAdd[Part]Colors' bool to function for head, hair, and eyes (3)
-        public static BlueprintRace RecolorRace(BlueprintRace race, List<Color> headcolors, List<Color> haircolors, string[] sExtraHeadRamps = null, string[] sExtraHairRamps = null, List<Color> eyecolors = null, BlueprintRace eyerace = null, bool BaldRace = false, bool OnlyMalesBald = false)
+        public static BlueprintRace RecolorRace(BlueprintRace race, List<Color> headcolors, List<Color> haircolors, string[] sExtraHeadRamps = null, string[] sExtraHairRamps = null, List<Color> eyecolors = null, List<Color> horncolors = null, BlueprintRace eyerace = null, bool BaldRace = false, bool OnlyMalesBald = false, bool NoEyebrows = false, bool OnlyAddHeadColors = false, bool OnlyAddHairColors = false, bool OnlyAddEyeColors = false, BlueprintRace HeadSwapRace = null, EquipmentEntityLink[] CustomMaleHeads = null, EquipmentEntityLink[] CustomFemaleHeads = null, EquipmentEntityLink[] CustomMaleHairs = null, EquipmentEntityLink[] CustomFemaleHairs = null)
         {
             var HeadRamps = CreateRampsFromColors(race, headcolors);
+            if (OnlyAddHeadColors)
+            {
+                var NewHeadRamps = HeadRamps;
+                HeadRamps = race.MaleOptions.Heads[1].Load().m_PrimaryRamps;
+                HeadRamps.AddRange(NewHeadRamps);
+            }
+
             var HairRamps = CreateRampsFromColors(race, haircolors);
+            if (OnlyAddHairColors)
+            {
+                var NewHairRamps = HairRamps;
+                HairRamps = race.MaleOptions.Hair[1].Load().m_PrimaryRamps;
+                HairRamps.AddRange(NewHairRamps);
+            }
+
             List<Texture2D> EyeRamps = null;
-            if (eyecolors != null) EyeRamps = CreateRampsFromColors(race, eyecolors);
+            if (eyecolors != null) 
+            { 
+                EyeRamps = CreateRampsFromColors(race, eyecolors);
+                if (OnlyAddEyeColors) 
+                {
+                    var NewEyeRamps = EyeRamps;
+                    EyeRamps = race.MaleOptions.Heads[1].Load().m_SecondaryRamps;
+                    EyeRamps.AddRange(NewEyeRamps);
+                }
+            }
 
             var maleheads = race.MaleOptions.Heads;
             var femaleheads = race.FemaleOptions.Heads;
+
+            if (HeadSwapRace != null) maleheads = HeadSwapRace.MaleOptions.Heads;
+            if (HeadSwapRace != null) femaleheads = HeadSwapRace.FemaleOptions.Heads;
+
+            if (CustomMaleHeads != null) maleheads = CustomMaleHeads;
+            if (CustomFemaleHeads != null) femaleheads = CustomFemaleHeads;
 
             CharacterColorsProfile NewSkinColorsProfile = new();
             CharacterColorsProfile NewHairColorsProfile = new();
@@ -422,6 +480,9 @@ namespace EbonsContentMod.Utilities
 
             var malehairs = race.MaleOptions.Hair;
             var femalehairs = race.FemaleOptions.Hair;
+
+            if (CustomMaleHairs != null) malehairs = CustomMaleHairs;
+            if (CustomFemaleHairs != null) femalehairs = CustomFemaleHairs;
 
             var BaldHair = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HumanRace.ToString()).MaleOptions.Hair[9];
 
@@ -461,7 +522,7 @@ namespace EbonsContentMod.Utilities
             {
                 var NewBrow = PatchHairLinkColor(race, brow, HairRamps, NewHairColorsProfile);
 
-                if (NewBrow != null)
+                if (NewBrow != null && NoEyebrows == false)
                 {
                     MaleBrowArray = MaleBrowArray.AppendToArray(NewBrow);
                 }
@@ -471,7 +532,7 @@ namespace EbonsContentMod.Utilities
             {
                 var NewBrow = PatchHairLinkColor(race, brow, HairRamps, NewHairColorsProfile);
 
-                if (NewBrow != null)
+                if (NewBrow != null && NoEyebrows == false)
                 {
                     FemaleBrowArray = FemaleBrowArray.AppendToArray(NewBrow);
                 }

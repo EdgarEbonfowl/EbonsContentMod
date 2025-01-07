@@ -60,12 +60,6 @@
 		<PackageReference Include="MicroUtils.HarmonyAnalyzers" IncludeAssets="runtime; build; native; contentfiles; analyzers" Version="*-*" PrivateAssets="all" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Reference Include="KRXLib">
-	    <HintPath>..\..\KRXLib\KRXLib.dll</HintPath>
-	  </Reference>
-	  <Reference Include="MicroscopicContentExpansion">
-	    <HintPath>..\..\MicroscopicContentExpansion\MicroscopicContentExpansion.dll</HintPath>
-	  </Reference>
 	  <Reference Include="TabletopTweaks-Core">
 	    <HintPath>..\..\TableTopTweaks-Core\TabletopTweaks-Core.dll</HintPath>
 	  </Reference>

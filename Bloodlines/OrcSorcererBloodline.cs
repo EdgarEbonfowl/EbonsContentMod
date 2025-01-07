@@ -32,6 +32,7 @@ using Kingmaker.UnitLogic.Buffs.Components;
 using BlueprintCore.Blueprints.Configurators.UnitLogic.ActivatableAbilities;
 using Kingmaker.Designers.Mechanics.Buffs;
 using TabletopTweaks.Core.NewComponents.Prerequisites;
+using EbonsContentMod.Utilities;
 
 namespace EbonsContentMod.Bloodlines
 {
@@ -80,6 +81,8 @@ namespace EbonsContentMod.Bloodlines
 
         internal static void Configure()
         {
+            if (!CheckerUtilities.GetModActive("TabletopTweaks-Base")) return;
+
             var sorcererclass = BlueprintTools.GetBlueprintReference<BlueprintCharacterClassReference>(CharacterClassRefs.SorcererClass.ToString());
             var magusclass = BlueprintTools.GetBlueprintReference<BlueprintCharacterClassReference>(CharacterClassRefs.MagusClass.ToString());
             var eldritchscionarchetype = BlueprintTools.GetBlueprintReference<BlueprintArchetypeReference>(ArchetypeRefs.EldritchScionArchetype.ToString());
@@ -307,7 +310,13 @@ namespace EbonsContentMod.Bloodlines
                 .SetDisplayName(OrcSorcererBloodlineWarlordRebornDisplayName)
                 .SetDescription(OrcSorcererBloodlineWarlordRebornDescription)
                 .AddAbilityResourceLogic(isSpendResource: true, requiredResource: OrcSorcererBloodlineWarlordRebornTransformationResource)
-                .AddComponent(Helpers.CreateCopy(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.Transformation.ToString()).Components.Where(c => c is ContextRankConfig).First()))
+                //.AddComponent(Helpers.CreateCopy(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.Transformation.ToString()).Components.Where(c => c is ContextRankConfig).First()))
+                .AddContextRankConfig(new ContextRankConfig()
+                {
+                    m_Type = Kingmaker.Enums.AbilityRankType.Default,
+                    m_BaseValueType = ContextRankBaseValueType.CasterLevel,
+                    m_Progression = ContextRankProgression.AsIs
+                })
                 .SetType(AbilityType.SpellLike)
                 .AddPretendSpellLevel(spellLevel: 6)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.Transformation.ToString()).Icon)

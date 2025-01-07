@@ -56,10 +56,6 @@ using System.Collections;
 using System.Reflection;
 using UnityEngine;
 using System.IO;
-using static KRXLib.BlueprintRepository.Owlcat.CharacterClassRefs;
-using static KRXLib.BlueprintRepository.Owlcat.FeatureReplaceSpellbookRefs;
-using static KRXLib.BlueprintRepository.Owlcat.FeatureSelectionRefs;
-using static KRXLib.BlueprintRepository.Owlcat.SpellListRefs;
 using TabletopTweaks.Core.Utilities;
 using BlueprintCore.Blueprints.CustomConfigurators.Classes.Spells;
 using static Kingmaker.Kingdom.Settlements.SettlementGridTopology;
@@ -210,10 +206,14 @@ namespace EbonsContentMod.Archetypes
             List<SpellLevelList> levelLists = [];
             List<BlueprintAbilityReference> ArcanistSpells = [];
 
+            var DruidSpellList = BlueprintTools.GetBlueprint<BlueprintSpellList>(SpellListRefs.DruidSpellList.ToString());
+            var WizardSpellList = BlueprintTools.GetBlueprint<BlueprintSpellList>(SpellListRefs.WizardSpellList.ToString());
+            var ClericSpellList = BlueprintTools.GetBlueprint<BlueprintSpellList>(SpellListRefs.ClericSpellList.ToString());
+
             // Make the list of all Arcanist spells
             for (int n = 0; n < 11; n++)
             {
-                var WizardSpellLevelList = WizardSpellList.Get().SpellsByLevel[n];
+                var WizardSpellLevelList = WizardSpellList.SpellsByLevel[n];
                 foreach (BlueprintAbilityReference spell in WizardSpellLevelList.m_Spells.ToList())
                 {
                     ArcanistSpells.Add(spell);
@@ -222,9 +222,9 @@ namespace EbonsContentMod.Archetypes
 
             for (int i = 0; i < 11; i++)
             {
-                SpellLevelList HalcyonSpells = DruidSpellList.Get().SpellsByLevel[i];
+                SpellLevelList HalcyonSpells = DruidSpellList.SpellsByLevel[i];
 
-                IEnumerable<BlueprintAbilityReference> cSpells = ClericSpellList.Get().SpellsByLevel[i].m_Spells
+                IEnumerable<BlueprintAbilityReference> cSpells = ClericSpellList.SpellsByLevel[i].m_Spells
                     .Where(s => s.Get().SpellDescriptor.HasFlag(SpellDescriptor.Good));
                 HalcyonSpells.m_Spells.AddRange(cSpells);
                 HalcyonSpells.m_Spells = HalcyonSpells.m_Spells.Distinct().ToList();

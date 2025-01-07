@@ -663,6 +663,72 @@
   },
 
   {
+    "Key": "Svirfneblin.DefensiveTraining.Name",
+    "ProcessTemplates": false,
+    "enGB": "Defensive Training"
+  },
+
+  {
+    "Key": "Svirfneblin.DefensiveTraining.Description",
+    "enGB": "Svirfneblin gain a +2 dodge bonus to Armor Class."
+  },
+
+  {
+    "Key": "Svirfneblin.Fortunate.Name",
+    "ProcessTemplates": false,
+    "enGB": "Fortunate"
+  },
+
+  {
+    "Key": "Svirfneblin.Fortunate.Description",
+    "enGB": "Svirfneblin gain a +2 racial bonus on all saving throws."
+  },
+
+  {
+    "Key": "Svirfneblin.SpellResistance.Name",
+    "ProcessTemplates": false,
+    "enGB": "Spell Resistance"
+  },
+
+  {
+    "Key": "Svirfneblin.SpellResistance.Description",
+    "enGB": "Svirfneblin have spell resistance equal to 11 + their character level."
+  },
+
+  {
+    "Key": "Svirfneblin.Skilled.Name",
+    "ProcessTemplates": false,
+    "enGB": "Skills"
+  },
+
+  {
+    "Key": "Svirfneblin.Skilled.Description",
+    "enGB": "Svirfneblin gain a +2 racial bonus on Stealth and Perception checks."
+  },
+
+  {
+    "Key": "Svirfneblin.SvirfneblinMagic.Name",
+    "ProcessTemplates": false,
+    "enGB": "Svirfneblin Magic"
+  },
+
+  {
+    "Key": "Svirfneblin.SvirfneblinMagic.Description",
+    "enGB": "Svirfneblin add +1 to the DC of any illusion spells they cast. Svirfneblin also gain the following spell-like abilities: 1/day—blindness, blur; caster level equals the svirfneblin's character level."
+  },
+
+  {
+    "Key": "Svirfneblin.Hatred.Name",
+    "ProcessTemplates": false,
+    "enGB": "Hatred"
+  },
+
+  {
+    "Key": "Svirfneblin.Hatred.Description",
+    "enGB": "Svirfneblin receive a +1 bonus on attack rolls against humanoid creatures of the reptilian and dwarf subtypes due to training against these hated foes."
+  },
+
+  {
     "Key": "Duergar.Name",
     "ProcessTemplates": false,
     "enGB": "Duergar"
@@ -671,5 +737,126 @@
   {
     "Key": "Duergar.Description",
     "enGB": "Duergar dwell in subterranean caverns far from the touch of light. They detest all races living beneath the sun, but that hatred pales beside their loathing of their surface-dwarf cousins. Dwarves and duergar once were one race, but the dwarves left the deeps for their mountain strongholds. Duergar still consider themselves the only true dwarves, and the rightful heirs of all beneath the world's surface. In appearance, duergar resemble gray-skinned dwarves, bearded but bald, with cold, lightless eyes. They favor taking captives in battle over wanton slaughter, save for surface dwarves, who are slain without hesitation. Duergar view life as ceaseless toil ended only by death. Though few can be described as anything other than vile and cruel, duergar still value honor and rarely break their word."
+  },
+
+  {
+    "Key": "Duergar.DuergarImmunities.Name",
+    "ProcessTemplates": false,
+    "enGB": "Duergar Immunities"
+  },
+
+  {
+    "Key": "Duergar.DuergarImmunities.Description",
+    "enGB": "Duergar are immune to paralysis and poison. They gain a +2 racial bonus on saves against spells and spell-like abilities."
+  },
+
+  {
+    "Key": "Duergar.EnlargePerson.Name",
+    "ProcessTemplates": false,
+    "enGB": "Enlarge Person"
+  },
+
+  {
+    "Key": "Duergar.EnlargePerson.Description",
+    "enGB": "A duergar can use enlarge person once per day, using its character level as its caster level and affecting itself only."
+  },
+
+  {
+    "Key": "Duergar.Invisibility.Name",
+    "ProcessTemplates": false,
+    "enGB": "Invisibility"
+  },
+
+  {
+    "Key": "Duergar.Invisibility.Description",
+    "enGB": "A duergar can use invisibility once per day, using its character level as its caster level and affecting itself only."
+  },
+
+  {
+    "Key": "Sylph.Name",
+    "ProcessTemplates": false,
+    "enGB": "Sylph"
+  },
+
+  {
+    "Key": "Sylph.Description",
+    "enGB": "Born from the descendants of humans and beings of elemental air such as djinn, sylphs are a shy and reclusive race consumed by intense curiosity. Sylphs spend their lives blending into the crowd, remaining unnoticed as they spy and eavesdrop on the people around them. They call this hobby \"listening to the wind,\" and for many sylphs it becomes an obsession. Sylphs rely on their capable, calculating intellects and on knowledge gleaned from eavesdropping to deliver them from danger."
+  },
+
+  {
+    "Key": "Undine.Name",
+    "ProcessTemplates": false,
+    "enGB": "Undine"
+  },
+
+  {
+    "Key": "Undine.Description",
+    "enGB": "Undines are humans who trace their ancestry to creatures from the Plane of Water. Even at first glance, one notices the potency of their ancestry, for an undine's very flesh mimics the color of lakes, seas, and oceans. Whether they have the blood of marids or water mephits as their kin, all undines define themselves through their ancestry. They perceive their individual differences as gifts and explore the supernatural aspects of their unique heritage to the fullest. \nThe undines are a proud race and show little outward fear. While good-natured and somewhat playful among their own kind, they behave with slightly more reserve and seriousness in the company of non-undines. They have excellent emotional control, and can edge their tempers from calm to raging and back again within but a few minutes. While some might dub their behavior erratic, undines are simply a bit more outwardly melodramatic than most races. Certainly, they are not moody and do not become angered, excited, or otherwise emotional without provocation. As close friends, some find them overly possessive, though they are also extremely protective of those they care about. \nUndines tend to settle near water, usually in warmer climates. Though land-dwellers, they spend a fair amount of time in the water. For this reason, most dress sparsely, wearing only enough clothing to protect themselves from the elements, and few wear shoes. They avoid wearing jewelry around their necks and keep their hair slicked back and tied into tight knots. This prevents hair or other objects from becoming a distraction or hindrance while swimming. Similarly, undines pursuing martial classes choose weapons that they can wield efficiently on land as well as in water."
+  },
+
+  {
+    "Key": "Strix.Name",
+    "ProcessTemplates": false,
+    "enGB": "Strix"
+  },
+
+  {
+    "Key": "Strix.Description",
+    "enGB": "Human neighbors tell horrific tales of slaughter woven with frightened suspicion when speaking of strix. Strix, however, tell a tale of encroachment and a struggle for land and resources. For ages, humans invaded strix lands fighting bloody battles against the fierce, black-skinned creatures they thought to be winged devils. Over time, strix have developed a hatred for humankind and now fiercely protect their dwindling numbers."
+  },
+
+  {
+    "Key": "Strix.StrixWings.Name",
+    "ProcessTemplates": false,
+    "enGB": "Strix Wings"
+  },
+
+  {
+    "Key": "Strix.StrixWings.Description",
+    "enGB": "The black wings of a strix give them the ability to fly granting a +3 dodge bonus to AC against melee attacks and immunity to ground-based effects, such as difficult terrain."
+  },
+
+  {
+    "Key": "Drow.Name",
+    "ProcessTemplates": false,
+    "enGB": "Drow"
+  },
+
+  {
+    "Key": "Drow.Description",
+    "enGB": "Cruel and cunning, drow are a dark reflection of the elven race. Also called dark elves, they dwell deep underground in elaborate cities shaped from the rock of cyclopean caverns. Drow seldom make themselves known to surface folk, preferring to remain legends while advancing their sinister agendas through proxies and agents. Drow have no love for anyone but themselves, and are adept at manipulating other creatures. While they are not born evil, malignancy is deep-rooted in their culture and society, and nonconformists rarely survive for long. Some stories tell that given the right circumstances, a particularly hateful elf might turn into a drow, though such a transformation would require a truly heinous individual."
+  },
+
+  {
+    "Key": "Orc.Name",
+    "ProcessTemplates": false,
+    "enGB": "Orc"
+  },
+
+  {
+    "Key": "Orc.Description",
+    "enGB": "Orcs are aggressive, callous, and domineering. Bullies by nature, they respect strength and power as the highest virtues. On an almost instinctive level, orcs believe they are entitled to anything they want unless someone stronger can stop them from seizing it. They rarely exert themselves off the battlefield except when forced to do so; this attitude stems not just from laziness but also from an ingrained belief that work should trickle down through the pecking order until it falls upon the shoulders of the weak. They take slaves from other races, orc men brutalize orc women, and both abuse children and elders, on the grounds that anyone too feeble to fight back deserves little more than a life of suffering. Surrounded at all times by bitter enemies, orcs cultivate an attitude of indifference to pain, vicious tempers, and a fierce willingness to commit unspeakable acts of vengeance against anyone who dares to defy them."
+  },
+
+  {
+    "Key": "Orc.Ferocity.Name",
+    "ProcessTemplates": false,
+    "enGB": "Ferocity"
+  },
+
+  {
+    "Key": "Orc.Ferocity.Description",
+    "enGB": "Orcs possess the ferocity ability which allows them to remain conscious and continue fighting even if their hit point totals fall below 0. Orcs are still staggered at 0 hit points or lower and lose 1 hit point each round as normal."
+  },
+
+  {
+    "Key": "Suli.Name",
+    "ProcessTemplates": false,
+    "enGB": "Suli"
+  },
+
+  {
+    "Key": "Suli.Description",
+    "enGB": "Sulis, or suli-jann, are the descendents of mortals and jann. They manifest their otherworldly heritage in adolescence, or when awakened by an encounter with a genie. Strong and attractive, these dynamic individuals can call forth elemental energies to augment their prowess in combat. Neither genie nor quite human, sulis stand in two worlds and often feel as if they don’t belong to either."
   }
 ]
