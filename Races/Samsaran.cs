@@ -80,8 +80,7 @@ namespace EbonsContentMod.Races
         public static List<Color> RaceHairColors =
             [
                 new Color(0.11764706f, 0.11764706f, 0.11764706f),
-                new Color(0.0f, 0.0f, 0.0f),
-                new Color(0.75f, 0.75f, 0.75f) // tester white hair - remove when finished
+                new Color(0.0f, 0.0f, 0.0f)
             ];
 
         public static EquipmentEntityLink[] FemaleHairs =
@@ -582,6 +581,7 @@ namespace EbonsContentMod.Races
             var feat = FeatureSelectionConfigurator.New("SamsaranRacialHeritage", RacialHeritageGuid)
                 .SetDisplayName(SamsaranRacialHeritageDisplayName)
                 .SetDescription(SamsaranRacialHeritageDescription)
+                .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeatureSelection>(FeatureSelectionRefs.HalfOrcHeritageSelection.ToString()).Icon)
                 .AddToAllFeatures(shards, lives)
                 .SetGroup(FeatureGroup.Racial)
                 .Configure();
@@ -609,6 +609,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.GnomeMagic.ToString()).Icon)
                 .AddFacts(new() { ability })
                 .AddAbilityResources(1, resource, true)
+                .AddReplaceCasterLevelOfAbility(spell: ability)
                 .Configure();
 
             return feat;

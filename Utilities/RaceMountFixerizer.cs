@@ -44,7 +44,7 @@ namespace EbonsContentMod.Utilities
         {
             [HarmonyPatch(typeof(MountOffsets), nameof(MountOffsets.GetMountOffsets))]
             [HarmonyPostfix]
-            static void GetMountOffsets_Prefix(BlueprintRace race, MountOffsets __instance, ref RaceMountOffsetsConfig.MountOffsetData __result)
+            static void GetMountOffsets_Postfix(BlueprintRace race, MountOffsets __instance, ref RaceMountOffsetsConfig.MountOffsetData __result)
             {
                 if (__result == null && RaceOriginals.TryGetValue(race, out var originalRace))
                 {

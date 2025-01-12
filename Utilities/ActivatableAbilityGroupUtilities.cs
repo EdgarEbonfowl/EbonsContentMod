@@ -17,7 +17,8 @@ namespace EbonsContentMod.Utilities
         public enum ECActivatableAbilityGroup : int
         {
             HungryGhostMonkAbilities = 1313,
-            BleedingWoundAbilities = 1414
+            BleedingWoundAbilities = 1414,
+            SkinwalkerChangeShapeAbilities = 1515
         }
 
         private static bool IsECGroup(this ActivatableAbilityGroup group)

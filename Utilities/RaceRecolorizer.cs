@@ -23,6 +23,7 @@ using Kingmaker.Visual;
 using TabletopTweaks.Core.ModLogic;
 using BlueprintCore.Blueprints.References;
 using UnityEngine.Experimental.Rendering;
+using static UnityModManagerNet.UnityModManager.TextureReplacer;
 
 namespace EbonsContentMod.Utilities
 {
@@ -35,6 +36,17 @@ namespace EbonsContentMod.Utilities
             var color = f / 255;
 
             return color;
+        }
+
+        public static Texture2D GetArmorRampByIndex(int i)
+        {
+            var RampEquipmentEEL = new EquipmentEntityLink() { AssetId = "ded027dd3a059ae4aa1e8cd93e450b03" };
+
+            var tex = RampEquipmentEEL.Load(true, false).PrimaryColorsProfile.Ramps[i];
+
+            if (tex != null) return tex;
+
+            return null;
         }
         
         public static T[] Arr<T>(params T[] val)
@@ -114,6 +126,56 @@ namespace EbonsContentMod.Utilities
                 "SuliRace_Human_Standard_VisualPreset_thin" => "719c81aab4a34296b0641ec0c055c87b",
                 "SuliRace_KEE_Body_Human" => "ff1c513fe90d4298862ecd377e40785c",
                 "SuliRace_Male_e7c86166041c1e04a92276abdab68afa" => "1204fcdf42f34391b1a7e6c8e4c0c98f",
+                "AndroidRace_Dhampir_Standard_VisualPreset" => "240116dd6b1c44e19d10f0aa668b8390",
+                "AndroidRace_Dhampir_Standard_VisualPreset_fat" => "33fad2b1194b423c953352803cf1f40b",
+                "AndroidRace_Dhampir_Standard_VisualPreset_thin" => "ebe6aa56109941569c3b4cb160920df6",
+                "AndroidRace_Female_ff3b4d7716516604aa46adb2443de3cf" => "a54e5276e7e840c281453d1c2df9ad97",
+                "AndroidRace_KEE_Body_Dhampir" => "fcdb650b923941dcb842695fdd8b9360",
+                "AndroidRace_Male_d697db672cb123d4fa5cf47baafc8d41" => "41055214715948f5839adbbd37cccc1f",
+                "AndroidRace_d73e1538363d26645aaeba0beaa4d250" => "fe69e5edd71144cb880193bcaaeaa6f8",
+                "IfritRace_Female_bb6988a21733fad4296ad22537248fea" => "446c6a57c3c2473982012253b9f5ae1d",
+                "IfritRace_Human_Standard_VisualPreset" => "1a30673ac8ab439886e7f4a363c7c1b4",
+                "IfritRace_Human_Standard_VisualPreset_fat" => "6749342952aa4fd1b60b5ae40f26e94d",
+                "IfritRace_Human_Standard_VisualPreset_thin" => "1186082c516648508b9f5f6c324fad9b",
+                "IfritRace_KEE_Body_Human" => "2ce8fd467f934c39b1d883f4bc3eda98",
+                "IfritRace_Male_e7c86166041c1e04a92276abdab68afa" => "3768a9de546e464c8c411df4e197e5b6",
+                "ChangelingRace_Dhampir_Standard_VisualPreset" => "f04fff99473f4b28b99ab0d2e88a5d5c",
+                "ChangelingRace_Dhampir_Standard_VisualPreset_fat" => "b471995ab3204efaaeb36bdd5f7084dd",
+                "ChangelingRace_Dhampir_Standard_VisualPreset_thin" => "3dc1b60001e74a29afe23a93c42e02b3",
+                "ChangelingRace_Female_ff3b4d7716516604aa46adb2443de3cf" => "633df1c579b54a4dae39ed4702d34744",
+                "ChangelingRace_KEE_Body_Dhampir" => "c2482b280b3e49c6a89107588c6ab4e0",
+                "ChangelingRace_Male_d697db672cb123d4fa5cf47baafc8d41" => "a787962fd56b4dd59245a830f914a3a5",
+                "FetchlingRace_Female_bb6988a21733fad4296ad22537248fea" => "a40370534f4443e7b1796bf01640c2bb",
+                "FetchlingRace_Human_Standard_VisualPreset" => "85ad7e96a55546aea3383e87deae6dc8",
+                "FetchlingRace_Human_Standard_VisualPreset_fat" => "3bee196166bf4c059e48486d3d5b2d84",
+                "FetchlingRace_Human_Standard_VisualPreset_thin" => "10e1e3276f554bb7b4c3ed4639be2638",
+                "FetchlingRace_KEE_Body_Human" => "148481d2c71f4cac965dcde4b4529a3b",
+                "FetchlingRace_Male_e7c86166041c1e04a92276abdab68afa" => "d38bfb6de2404b038c8ad70e188d090c",
+                "FetchlingRace_Dhampir_Standard_VisualPreset" => "6e39236a17b44950b273285564be9f5a",
+                "FetchlingRace_Dhampir_Standard_VisualPreset_fat" => "fb7e3778a2ad4391921bbd7d1f533ad4",
+                "FetchlingRace_Dhampir_Standard_VisualPreset_thin" => "677af1902f5845a0a6d45fe8ea6115ea",
+                "FetchlingRace_Female_ff3b4d7716516604aa46adb2443de3cf" => "b87a6340116d42b986c7876ea25a5a23",
+                "FetchlingRace_KEE_Body_Dhampir" => "092a2679f7b04eb4944a7dc8970d5d0a",
+                "FetchlingRace_Male_d697db672cb123d4fa5cf47baafc8d41" => "6077e898acc04dbd90995e6de23cb4e1",
+                "EbonsGoblinRace_Female_50a2873551cf0db4cb603811a78b6804" => "ce7b5ef43165456299f3f7bf8f4994f3",
+                "EbonsGoblinRace_Halfling_VisualPreset" => "584dd19ba08f43419eb1c351ae3cd571",
+                "EbonsGoblinRace_Halfling_VisualPreset_fat" => "68a35b30202d43e083bf449cc73854a0",
+                "EbonsGoblinRace_Halfling_VisualPreset_thin" => "0bcbdbddf5964ceaa1b44e09e7b523da",
+                "EbonsGoblinRace_KEE_Body_Halfling" => "5ae695f1231942ed941edde0faf2f5f9",
+                "EbonsGoblinRace_Male_d509ad2a15110a34cb793fec7c26214c" => "90aede131c03458988d1eb4c4814e8e5",
+                "EbonsGoblinRace_Female_e969fe61ab898284ebeb387accb994d9" => "7841da121c2142af85695de5c1b9ca2f",
+                "EbonsGoblinRace_Gnome_VisualPreset" => "7804980ce3664af0bf60de273dda2101",
+                "EbonsGoblinRace_Gnome_VisualPreset_fat" => "55a7801fb29748bcba95dce9693c5dd6",
+                "EbonsGoblinRace_Gnome_VisualPreset_thin" => "23c88ac37f844e2e8a4e3ed289a2e16b",
+                "EbonsGoblinRace_KEE_Body_Gnome" => "713748e69554448fb49c2c74bb0c72ca",
+                "EbonsGoblinRace_Male_ac15d06e7975ca74b970783daaef9b60" => "d59ab6dbcd504670a53eca2928debd17",
+                "EbonsGoblinRace_c5487e7e903d25a40be683767f3df0b4" => "42d3147c11d749e88b4387b3f32f6d1d",
+                "KuruRace_Female_bb6988a21733fad4296ad22537248fea" => "319461c4c16f4c7185d760d073486c1c",
+                "KuruRace_Human_Standard_VisualPreset" => "0b92dd46fe4d40fc93b1c373fcaee386",
+                "KuruRace_Human_Standard_VisualPreset_fat" => "4c29f5c83d3f44159b280b9c8d086ac6",
+                "KuruRace_Human_Standard_VisualPreset_thin" => "1b2949fd79384900a074414605805e64",
+                "KuruRace_KEE_Body_Human" => "5833274a60df4a6b86dcb452c77f6901",
+                "KuruRace_Male_e7c86166041c1e04a92276abdab68afa" => "42e9660e713a43329118bd32ab30475a",
                 _ => "Error"
             };
         }
@@ -163,9 +225,10 @@ namespace EbonsContentMod.Utilities
         }
 
         // Add handling for tails and horns
-        private static CustomizationOptions CreateMaleCustomizationOptions(BlueprintRace race, EquipmentEntityLink[] hair, EquipmentEntityLink[] heads, EquipmentEntityLink[] eyebrows, EquipmentEntityLink[] beards)
+        private static CustomizationOptions CreateMaleCustomizationOptions(BlueprintRace race, EquipmentEntityLink[] hair, EquipmentEntityLink[] heads, EquipmentEntityLink[] eyebrows, EquipmentEntityLink[] beards, bool NoBeards = false)
         {
-            if (beards.Length == 0) beards = race.MaleOptions.Beards;
+            if (beards.Length == 0 && NoBeards == false) beards = race.MaleOptions.Beards;
+            else if (NoBeards == true) beards = [];
 
             CustomizationOptions ret = new CustomizationOptions()
             {
@@ -220,11 +283,39 @@ namespace EbonsContentMod.Utilities
             return ramps;
         }
 
-        internal static EquipmentEntityLink PatchEntityLinkColor(BlueprintRace race, EquipmentEntityLink asset, List<Texture2D> Ramps, CharacterColorsProfile NewSkinColorsProfile = null, List<Texture2D> SecondaryRamps = null, BlueprintRace eyerace = null, bool isHair = false)
+        internal static List<Texture2D> CreateRampsFromColorsSimple(List<Color> colors)
+        {
+            List<Texture2D> ramps = [];
+
+            int i = 0;
+
+            foreach (Color color in colors)
+            {
+                Texture2D newtexture = new(1, 1, TextureFormat.RGB24, false)
+                {
+                    filterMode = FilterMode.Bilinear,
+                    wrapMode = TextureWrapMode.Clamp,
+                    wrapModeU = TextureWrapMode.Clamp,
+                    wrapModeV = TextureWrapMode.Clamp,
+                    wrapModeW = TextureWrapMode.Clamp,
+                };
+                newtexture.SetPixel(1, 1, color);
+                newtexture.Apply(true, false);
+                ramps.Add(newtexture);
+
+                i++;
+            }
+
+            return ramps;
+        }
+
+        internal static EquipmentEntityLink PatchEntityLinkColor(BlueprintRace race, EquipmentEntityLink asset, List<Texture2D> Ramps, CharacterColorsProfile NewSkinColorsProfile = null, List<Texture2D> SecondaryRamps = null, BlueprintRace eyerace = null, EquipmentEntityLink eyeEE = null, CharacterColorsProfile NewEyeColorsProfile = null)
         {
             Dictionary<string, Texture2D> EyeTextures = null;
+            Dictionary<string, Texture2D> EyeEETextures = null;
 
             if (eyerace != null) EyeTextures = GetRaceEyes(eyerace);
+            if (eyeEE != null) EyeEETextures = GetEEEyes(eyeEE);
 
             var newlink = asset.CreateDynamicScriptableObjectProxy<EquipmentEntity, EquipmentEntityLink>(ee =>
             {
@@ -235,7 +326,7 @@ namespace EbonsContentMod.Utilities
                 var SecondarySpecialRamps = ee.SecondaryColorsProfile.SpecialRamps;
                 var SecondaryName = ee.SecondaryColorsProfile.name;
 
-                ee.name = race.name + "_" + ee.name;
+                //ee.name = race.name + "_" + ee.name;
                 if (NewSkinColorsProfile != null)
                 {
                     ee.PrimaryColorsProfile = NewSkinColorsProfile;
@@ -245,6 +336,10 @@ namespace EbonsContentMod.Utilities
                     ee.PrimaryColorsProfile.name = race.name + "_" + PrimaryName;
                 }
                 else ee.PrimaryColorsProfile.Ramps = Ramps;
+                if(NewEyeColorsProfile != null)
+                {
+                    ee.SecondaryColorsProfile = NewEyeColorsProfile;
+                }
                 if (SecondaryRamps != null)
                 {
                     ee.SecondaryColorsProfile.Ramps = SecondaryRamps;
@@ -256,7 +351,7 @@ namespace EbonsContentMod.Utilities
                     ee.m_SecondaryRamps = SecondaryRamps;
                     ee.SecondaryRamps = SecondaryRamps;
                 }
-                if (eyerace != null)
+                if (eyerace != null && eyeEE == null)
                 {
                     foreach (BodyPart part in ee.BodyParts)
                     {
@@ -271,19 +366,34 @@ namespace EbonsContentMod.Utilities
                         }
                     }
                 }
+                else if (eyeEE != null)
+                {
+                    foreach (BodyPart part in ee.BodyParts)
+                    {
+                        if (part.Type == BodyPartType.Eyes && EyeEETextures != null)
+                        {
+                            part.Textures = new(part.Textures);
+                            part.Textures[0].ActiveTexture = EyeEETextures.GetValueSafe("Active");
+                            part.Textures[0].DiffuseTexture = EyeEETextures.GetValueSafe("Diffuse");
+                            part.Textures[0].MaskTexture = EyeEETextures.GetValueSafe("Mask");
+                            part.Textures[0].NormalTexture = EyeEETextures.GetValueSafe("Normal");
+                            part.Textures[0].RampShadowTexture = EyeEETextures.GetValueSafe("Shadow");
+                        }
+                    }
+                }
             });
 
             return newlink;
         }
 
-        internal static EquipmentEntityLink PatchHairLinkColor(BlueprintRace race, EquipmentEntityLink asset, List<Texture2D> Ramps, CharacterColorsProfile NewHairColorsProfile = null, List<Texture2D> SecondaryRamps = null, BlueprintRace eyerace = null, bool isHair = false)
+        internal static EquipmentEntityLink PatchHairLinkColor(BlueprintRace race, EquipmentEntityLink asset, List<Texture2D> Ramps, CharacterColorsProfile NewHairColorsProfile = null)
         {
             var newlink = asset.CreateDynamicScriptableObjectProxy<EquipmentEntity, EquipmentEntityLink>(ee =>
             {
                 var PrimaryRampDLCLocks = ee.PrimaryColorsProfile.RampDlcLocks;
                 var PrimarySpecialRamps = ee.PrimaryColorsProfile.SpecialRamps;
 
-                ee.name = race.name + "_" + ee.name;
+                //ee.name = race.name + "_" + ee.name;
                 ee.PrimaryColorsProfile = NewHairColorsProfile;
                 ee.PrimaryColorsProfile.Ramps = Ramps;
                 ee.PrimaryColorsProfile.RampDlcLocks = PrimaryRampDLCLocks;
@@ -295,7 +405,62 @@ namespace EbonsContentMod.Utilities
             return newlink;
         }
 
-        internal static BlueprintRaceVisualPresetReference[] BuildNewPresets(BlueprintRace race, List<Texture2D> Ramps, CharacterColorsProfile NewSkinColorsProfile)
+        internal static string PatchEEProfile(BlueprintRace race, EquipmentEntityLink asset, List<Texture2D> Ramps)
+        {
+            var name = race.name + "_" + asset.AssetId;
+            var guid = GetEntityNewGuidFromName(name);
+
+            if (guid == "Error")
+            {
+                var newGuid = BlueprintGuid.NewGuid();
+                string newline = "\"" + name + "\"" + " => " + "\"" + newGuid + "\"" + ",";
+                File.WriteAllLines(ToolOutputFilePath + "\\" + "RaceRecolorizer" + name + ".txt", [newline]);
+                return null;
+            }
+
+            var newlink = asset.CreateDynamicScriptableObjectProxy<EquipmentEntity, EquipmentEntityLink>(ee =>
+            {
+                ee.PrimaryColorsProfile = new CharacterColorsProfile();
+                ee.m_PrimaryRamps = Ramps;
+                ee.PrimaryRamps = Ramps;
+
+            }, guid);
+
+            return guid;
+        }
+
+        internal static EquipmentEntityLink RecolorEELink(EquipmentEntityLink asset, List<Texture2D> Ramps, string guid, bool RemovePrimaryProfile = false, bool RemoveSecondaryProfile = false, List<Texture2D> SecondaryRamps = null)
+        {
+            var newlink = asset.CreateDynamicScriptableObjectProxy<EquipmentEntity, EquipmentEntityLink>(ee =>
+            {
+                if (RemovePrimaryProfile == true)
+                {
+                    ee.PrimaryColorsProfile = new CharacterColorsProfile();
+                    //ee.SecondaryColorsProfile = new CharacterColorsProfile();
+                    //ee.SpecialPrimaryRamps = null;
+                    //ee.SpecialSecondaryRamps = null;
+                }
+                if (RemoveSecondaryProfile == true)
+                {
+                    //ee.PrimaryColorsProfile = new CharacterColorsProfile();
+                    ee.SecondaryColorsProfile = new CharacterColorsProfile();
+                    //ee.SpecialPrimaryRamps = null;
+                    //ee.SpecialSecondaryRamps = null;
+                }
+                ee.m_PrimaryRamps = Ramps;
+                ee.PrimaryRamps = Ramps;
+                if (SecondaryRamps != null)
+                {
+                    ee.SecondaryRamps = SecondaryRamps;
+                    ee.m_SecondaryRamps = SecondaryRamps;
+                }
+
+            }, guid);
+
+            return newlink;
+        }
+
+        internal static BlueprintRaceVisualPresetReference[] BuildNewPresets(BlueprintRace race, List<Texture2D> Ramps, CharacterColorsProfile NewSkinColorsProfile, EquipmentEntityLink CustomBody, EquipmentEntityLink CustomBodyNoRecolor)
         {
             BlueprintRaceVisualPreset[] presets = new BlueprintRaceVisualPreset[race.m_Presets.Length];
 
@@ -334,22 +499,33 @@ namespace EbonsContentMod.Utilities
                     FemaleEntityLinkGuid = null;
                 }
 
+                var MaleBody = skin.m_MaleArray[0];
+                var FemaleBody = skin.m_FemaleArray[0];
+
+                if (CustomBody != null) // Will need to break this up into male and female if I use it to handle more than the goblin I think
+                {
+                    MaleBody = CustomBody;
+                    FemaleBody = CustomBody;
+                }
+
                 // Copy the EELinks, give them the same color profile as the heads, and set them in place
-                var NewMaleLink = skin.m_MaleArray[0].CreateDynamicScriptableObjectProxyAlt<EquipmentEntity, EquipmentEntityLink>(ee =>
+                var NewMaleLink = MaleBody.CreateDynamicScriptableObjectProxyAlt<EquipmentEntity, EquipmentEntityLink>(ee =>
                 {
                     ee.PrimaryColorsProfile = NewSkinColorsProfile;
 
                 }, MaleEntityLinkGuid);
 
-                skin.m_MaleArray = Arr(new EquipmentEntityLink { AssetId = MaleEntityLinkGuid });
+                if (CustomBodyNoRecolor == null) skin.m_MaleArray = Arr(new EquipmentEntityLink { AssetId = MaleEntityLinkGuid });
+                else skin.m_MaleArray = Arr(CustomBodyNoRecolor);
 
-                var NewFemaleLink = skin.m_FemaleArray[0].CreateDynamicScriptableObjectProxyAlt<EquipmentEntity, EquipmentEntityLink>(ee =>
+                var NewFemaleLink = FemaleBody.CreateDynamicScriptableObjectProxyAlt<EquipmentEntity, EquipmentEntityLink>(ee =>
                 {
                     ee.PrimaryColorsProfile = NewSkinColorsProfile;
 
                 }, FemaleEntityLinkGuid);
 
-                skin.m_FemaleArray = Arr(new EquipmentEntityLink { AssetId = FemaleEntityLinkGuid });
+                if (CustomBodyNoRecolor == null) skin.m_FemaleArray = Arr(new EquipmentEntityLink { AssetId = FemaleEntityLinkGuid });
+                else skin.m_FemaleArray = Arr(CustomBodyNoRecolor);
 
                 // Add the skin blueprint
                 skin.AssetGuid = BlueprintGuid.Parse(SkinGuid);
@@ -372,7 +548,6 @@ namespace EbonsContentMod.Utilities
                         var newGuid = BlueprintGuid.NewGuid();
                         string newline = "\"" + p.name + "\"" + " => " + "\"" + newGuid + "\"" + ",";
                         File.WriteAllLines(ToolOutputFilePath + "\\" + "RaceRecolorizer" + p.name + ".txt", [newline]);
-                        //return null;
                     }
 
                     p.m_Skin = skin.ToReference<KingmakerEquipmentEntityReference>();
@@ -411,10 +586,35 @@ namespace EbonsContentMod.Utilities
             return null;
         }
 
+        internal static Dictionary<string, Texture2D> GetEEEyes(EquipmentEntityLink asset)
+        {
+
+            var BodyParts = asset.Load(true, false).BodyParts;
+
+            foreach (BodyPart part in BodyParts)
+            {
+                if (part.Type != BodyPartType.Eyes) continue;
+
+                Dictionary<string, Texture2D> EyeTextures = new()
+                {
+                    {"Active", part.Textures.First().ActiveTexture},
+                    {"Diffuse", part.Textures.First().DiffuseTexture},
+                    {"Mask", part.Textures.First().MaskTexture},
+                    {"Normal", part.Textures.First().NormalTexture},
+                    {"Shadow", part.Textures.First().RampShadowTexture}
+                };
+
+                return EyeTextures;
+            }
+
+            return null;
+        }
+
         // Add handling for tails and horns
-        public static BlueprintRace RecolorRace(BlueprintRace race, List<Color> headcolors, List<Color> haircolors, string[] sExtraHeadRamps = null, string[] sExtraHairRamps = null, List<Color> eyecolors = null, List<Color> horncolors = null, BlueprintRace eyerace = null, bool BaldRace = false, bool OnlyMalesBald = false, bool NoEyebrows = false, bool OnlyAddHeadColors = false, bool OnlyAddHairColors = false, bool OnlyAddEyeColors = false, BlueprintRace HeadSwapRace = null, EquipmentEntityLink[] CustomMaleHeads = null, EquipmentEntityLink[] CustomFemaleHeads = null, EquipmentEntityLink[] CustomMaleHairs = null, EquipmentEntityLink[] CustomFemaleHairs = null)
+        public static BlueprintRace RecolorRace(BlueprintRace race, List<Color> headcolors, List<Color> haircolors, string[] sExtraHeadRamps = null, string[] sExtraHairRamps = null, List<Color> eyecolors = null, List<Color> horncolors = null, BlueprintRace eyerace = null, EquipmentEntityLink eyeEE = null, bool BaldRace = false, bool OnlyMalesBald = false, bool NoEyebrows = false, bool NoBeards = false, bool OnlyAddHeadColors = false, bool OnlyAddHairColors = false, bool OnlyAddEyeColors = false, BlueprintRace HeadSwapRace = null, EquipmentEntityLink[] CustomMaleHeads = null, EquipmentEntityLink[] CustomFemaleHeads = null, EquipmentEntityLink[] CustomMaleHairs = null, EquipmentEntityLink[] CustomFemaleHairs = null, EquipmentEntityLink CustomBody = null, List<Texture2D> CustomHeadRamps = null, List<Texture2D> CustomEyeRamps = null, List<Texture2D> CustomHairRamps = null, EquipmentEntityLink CustomBodyNoRecolor = null, EquipmentEntityLink[] CustomMaleHeadsNoRecolor = null,  EquipmentEntityLink[] CustomFemaleHeadsNoRecolor = null, EquipmentEntityLink[] EyeLinkedEEs = null/*, bool OnlyFemale = false*/)
         {
             var HeadRamps = CreateRampsFromColors(race, headcolors);
+            if (CustomHeadRamps != null) HeadRamps = CustomHeadRamps;
             if (OnlyAddHeadColors)
             {
                 var NewHeadRamps = HeadRamps;
@@ -423,21 +623,31 @@ namespace EbonsContentMod.Utilities
             }
 
             var HairRamps = CreateRampsFromColors(race, haircolors);
+            if (CustomHairRamps != null) HairRamps = CustomHairRamps;
             if (OnlyAddHairColors)
             {
                 var NewHairRamps = HairRamps;
                 HairRamps = race.MaleOptions.Hair[1].Load().m_PrimaryRamps;
-                HairRamps.AddRange(NewHairRamps);
+                if (NewHairRamps.Count > 0) HairRamps.AddRange(NewHairRamps);
             }
 
             List<Texture2D> EyeRamps = null;
-            if (eyecolors != null) 
+            if (eyecolors != null)
             { 
                 EyeRamps = CreateRampsFromColors(race, eyecolors);
-                if (OnlyAddEyeColors) 
+                if (OnlyAddEyeColors)
                 {
                     var NewEyeRamps = EyeRamps;
                     EyeRamps = race.MaleOptions.Heads[1].Load().m_SecondaryRamps;
+                    EyeRamps.AddRange(NewEyeRamps);
+                }
+            }
+            if (CustomEyeRamps != null)
+            { 
+                EyeRamps = CustomEyeRamps;
+                if (OnlyAddEyeColors)
+                {
+                    var NewEyeRamps = CreateRampsFromColors(race, eyecolors);
                     EyeRamps.AddRange(NewEyeRamps);
                 }
             }
@@ -453,29 +663,39 @@ namespace EbonsContentMod.Utilities
 
             CharacterColorsProfile NewSkinColorsProfile = new();
             CharacterColorsProfile NewHairColorsProfile = new();
+            CharacterColorsProfile NewEyeColorsProfile = new();
+            if (eyecolors == null) NewEyeColorsProfile = null;
 
             // Define new head arrays.
             EquipmentEntityLink[] MaleHeadArray = [];
             EquipmentEntityLink[] FemaleHeadArray = [];
 
-            foreach (EquipmentEntityLink head in maleheads)
+            if (CustomMaleHeadsNoRecolor == null)
             {
-                var NewHead = PatchEntityLinkColor(race, head, HeadRamps, NewSkinColorsProfile, EyeRamps, eyerace);
-
-                if (NewHead != null)
+                foreach (EquipmentEntityLink head in maleheads)
                 {
-                    MaleHeadArray = MaleHeadArray.AppendToArray(NewHead);
+                    var NewHead = PatchEntityLinkColor(race, head, HeadRamps, NewSkinColorsProfile, EyeRamps, eyerace, eyeEE, NewEyeColorsProfile);
+
+                    if (NewHead != null)
+                    {
+                        MaleHeadArray = MaleHeadArray.AppendToArray(NewHead);
+                    }
+                }
+
+                foreach (EquipmentEntityLink head in femaleheads)
+                {
+                    var NewHead = PatchEntityLinkColor(race, head, HeadRamps, NewSkinColorsProfile, EyeRamps, eyerace, eyeEE, NewEyeColorsProfile);
+
+                    if (NewHead != null)
+                    {
+                        FemaleHeadArray = FemaleHeadArray.AppendToArray(NewHead);
+                    }
                 }
             }
-
-            foreach (EquipmentEntityLink head in femaleheads)
+            else
             {
-                var NewHead = PatchEntityLinkColor(race, head, HeadRamps, NewSkinColorsProfile, EyeRamps, eyerace);
-
-                if (NewHead != null)
-                {
-                    FemaleHeadArray = FemaleHeadArray.AppendToArray(NewHead);
-                }
+                MaleHeadArray = CustomMaleHeadsNoRecolor;
+                FemaleHeadArray = CustomFemaleHeadsNoRecolor;
             }
 
             var malehairs = race.MaleOptions.Hair;
@@ -548,25 +768,51 @@ namespace EbonsContentMod.Utilities
                 {
                     var NewBeard = PatchHairLinkColor(race, beard, HairRamps, NewHairColorsProfile);
 
-                    if (NewBeard != null)
+                    if (NewBeard != null && NoBeards == false)
                     {
                         MaleBeardArray = MaleBeardArray.AppendToArray(NewBeard);
                     }
                 }
             }
-            
-            var MaleOptions = CreateMaleCustomizationOptions(race, MaleHairArray, MaleHeadArray, MaleBrowArray, MaleBeardArray);
+
+            //var EyeRampsForEEs = race.MaleOptions.Heads[0].Load().m_SecondaryRamps;
+            var EyeRampsForEEs = MaleHeadArray[0].Load().m_SecondaryRamps;
+            if (EyeRamps != null) EyeRampsForEEs = EyeRamps;
+
+            string[] NewEyeLinkedEEStrings = [];
+            EquipmentEntityLink[] NewEyeLinkedEELinks = [];
+
+            if (EyeLinkedEEs != null)
+            {
+                foreach (EquipmentEntityLink EELink in EyeLinkedEEs)
+                {
+                    var NewEELink = PatchEEProfile(race, EELink, EyeRampsForEEs);
+
+                    if (NewEELink != null)
+                    {
+                        NewEyeLinkedEEStrings = NewEyeLinkedEEStrings.AppendToArray(NewEELink);
+                        NewEyeLinkedEELinks = NewEyeLinkedEELinks.AppendToArray(new EquipmentEntityLink() { AssetId = NewEELink });
+                    }
+                }
+            }
+
+            if (NewEyeLinkedEELinks.Length > 0) EELinker.RegisterEyeLink(race, NewEyeLinkedEELinks);
+
+            var MaleOptions = CreateMaleCustomizationOptions(race, MaleHairArray, MaleHeadArray, MaleBrowArray, MaleBeardArray, NoBeards);
             var FemaleOptions = CreateFemaleCustomizationOptions(race, FemaleHairArray, FemaleHeadArray, FemaleBrowArray);
 
-            var NewPresets = BuildNewPresets(race, HeadRamps, NewSkinColorsProfile);
+            var NewPresets = BuildNewPresets(race, HeadRamps, NewSkinColorsProfile, CustomBody, CustomBodyNoRecolor);
 
-            race = RaceConfigurator.For(race)
+            RaceConfigurator ReturnRace = RaceConfigurator.For(race)
                 .SetMaleOptions(MaleOptions)
                 .SetFemaleOptions(FemaleOptions)
-                .SetPresets(NewPresets[0], NewPresets[1], NewPresets[2]) // Hate doing it this way, but I can't remember the better way!
-                .Configure();
+                .SetPresets(NewPresets[0], NewPresets[1], NewPresets[2]); // Hate doing it this way, but I can't remember the better way!
 
-            return race;
+            if (NewEyeLinkedEEStrings.Length > 0) foreach (string EEL in NewEyeLinkedEEStrings) ReturnRace.AddEquipmentEntity(new EquipmentEntityLink() { AssetId = EEL});
+
+                var ReturnRaceReference = ReturnRace.Configure().ToReference<BlueprintRaceReference>();
+
+            return BlueprintTools.GetBlueprint<BlueprintRace>(ReturnRaceReference.ToString());
         }
     }
 }

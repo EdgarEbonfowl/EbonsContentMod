@@ -152,7 +152,7 @@ namespace EbonsContentMod.Races
             var Fortunate = FeatureConfigurator.New("SvirfneblinFortunate", "{E197124E-1474-4534-89BD-A8CE175ADFE9}")
                 .SetDisplayName(SvirfneblinFortunateDisplayName)
                 .SetDescription(SvirfneblinFortunateDescription)
-                .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.HalflingLuck.ToString()).Icon)
+                .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.ArchaeologistLuckFeature.ToString()).Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SaveFortitude, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SaveReflex, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SaveWill, value: 2)
@@ -233,6 +233,8 @@ namespace EbonsContentMod.Races
                 .AddFacts(new() { blur, blindness })
                 .AddAbilityResources(1, blurresource, true)
                 .AddAbilityResources(1, blindnessresource, true)
+                .AddReplaceCasterLevelOfAbility(spell: blindness)
+                .AddReplaceCasterLevelOfAbility(spell: blur)
                 .Configure();
 
             var Hatred = FeatureConfigurator.New("SvirfneblinHatred", "{5A7FB4E5-1D45-4EE6-9EBC-9EC9D224FE79}")

@@ -175,6 +175,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.EnlargePerson.ToString()).Icon)
                 .AddFacts(new() { enlargepersonability })
                 .AddAbilityResources(1, enlargepersonresource, true)
+                .AddReplaceCasterLevelOfAbility(spell: enlargepersonability)
                 .Configure();
 
             var invisibilityresource = AbilityResourceConfigurator.New("DuergarInvisibilityResource", "{5E90DBEB-27FF-4E35-A77F-D27FA0CEEA13}")

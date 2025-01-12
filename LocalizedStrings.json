@@ -784,6 +784,83 @@
   },
 
   {
+    "Key": "Sylph.EnergyResistance.Name",
+    "ProcessTemplates": false,
+    "enGB": "Energy Resistance"
+  },
+
+  {
+    "Key": "Sylph.EnergyResistance.Description",
+    "enGB": "Sylphs have electricity resistance 5."
+  },
+
+  {
+    "Key": "Sylph.FeatherStep.Name",
+    "ProcessTemplates": false,
+    "enGB": "Spell-Like Ability"
+  },
+
+  {
+    "Key": "Sylph.FeatherStep.Description",
+    "enGB": "Sylphs can use feather step 1/day (caster level equals the sylph's total level)."
+  },
+
+  {
+    "Key": "Sylph.AirAffinity.Name",
+    "ProcessTemplates": false,
+    "enGB": "Air Affinity"
+  },
+
+  {
+    "Key": "Sylph.AirAffinity.Description",
+    "enGB": "Sylph spellcasters receive a +1 racial bonus to caster level and saving throw DC when they cast any spell with the Electricity descriptor."
+  },
+
+  {
+    "Key": "Sylph.ElementalHeritage.Name",
+    "ProcessTemplates": false,
+    "enGB": "Elemental Heritage"
+  },
+
+  {
+    "Key": "Sylph.ElementalHeritage.Description",
+    "enGB": "Geniekin trace their lineage to beings from the various Elemental Planes. Though their progenitors are typically genies, this ancestry can derive from any number of elemental creatures. Furthermore, even geniekin whose ancestry includes only genies can manifest their elemental heritage in uncommon ways. The following heritages represent geniekin variants who have an affinity for different aspects of the elements, with new ability modifiers and spell-like abilities that replace the default racial traits."
+  },
+
+  {
+    "Key": "Sylph.SylphGeneral.Name",
+    "ProcessTemplates": false,
+    "enGB": "Sylph (General)"
+  },
+
+  {
+    "Key": "Sylph.SylphGeneral.Description",
+    "enGB": "Although many sylphs follow the general model of the sylph, many more do not. Those of different lineages may evince dramatically different manifestations of their heritage, both in appearance and in ability. \nSylphs receive a +2 racial bonus to Dexterity and Intelligence, a -2 penalty to Constitution, and the ability to cast Feather Step once per day as a spell-like ability at a caster level equal to the sylph's character level."
+  },
+
+  {
+    "Key": "Sylph.Smokesoul.Name",
+    "ProcessTemplates": false,
+    "enGB": "Smoke (Fume Sylph)"
+  },
+
+  {
+    "Key": "Sylph.Smokesoul.Description",
+    "enGB": "Veiled and surreptitious, smokesoul sylphs are natural deceivers, always concealing their true intentions. \nObfuscation, secrecy, and the shape of things not there: all these are the natural realms of smokesouls. They are experts at concealing both their bodies and motivations, and at making the insubstantial seem as real as any physical object. Smokesouls are drawn to areas of dangerous politics and intrigue, and many can be found pursuing whatever machinations amuse them. \nWith few distinguishing features save ashen skin and dark hair, smokesouls can be mistaken for any number of other races. Smokesouls often change their clothing, cosmetics, or style to keep their appearance in a constant state of flux. \nSmokesoul sylphs receive a +2 racial bonus to Dexterity and Charisma, a -2 penalty to Constitution, and the ability to cast Expeditious Retreat once per day as a spell-like ability at a caster level equal to the sylph's character level."
+  },
+
+  {
+    "Key": "Sylph.Stormsoul.Name",
+    "ProcessTemplates": false,
+    "enGB": "Stormsoul (Lightning Sylph)"
+  },
+
+  {
+    "Key": "Sylph.Stormsoul.Description",
+    "enGB": "With an abundance of confidence and a shortage of patience, stormsoul sylphs are personalities who cannot be ignored. \nWhen a stormsoul moves, either in word or in action, the world notices. Unafraid to speak their minds, they are both direct and unsubtle, and they make fierce allies. When friends are in need, stormsouls act without thinking and are always the first to leap to their aid. A stormsoul sylph has hair that always seems to move, even when there is no breeze, and acts with a sudden intensity that can seem out of control. Their eyes are the color of stormy water or lightning-lit skies, and even a casual glance from a stormsoul can seem severe.\nStormsoul sylphs receive a +2 racial bonus to Dexterity and Charisma, a -2 penalty to Wisdom, and the ability to cast Shocking Grasp once per day as a spell-like ability at a caster level equal to the sylph's character level."
+  },
+
+  {
     "Key": "Undine.Name",
     "ProcessTemplates": false,
     "enGB": "Undine"
@@ -792,6 +869,111 @@
   {
     "Key": "Undine.Description",
     "enGB": "Undines are humans who trace their ancestry to creatures from the Plane of Water. Even at first glance, one notices the potency of their ancestry, for an undine's very flesh mimics the color of lakes, seas, and oceans. Whether they have the blood of marids or water mephits as their kin, all undines define themselves through their ancestry. They perceive their individual differences as gifts and explore the supernatural aspects of their unique heritage to the fullest. \nThe undines are a proud race and show little outward fear. While good-natured and somewhat playful among their own kind, they behave with slightly more reserve and seriousness in the company of non-undines. They have excellent emotional control, and can edge their tempers from calm to raging and back again within but a few minutes. While some might dub their behavior erratic, undines are simply a bit more outwardly melodramatic than most races. Certainly, they are not moody and do not become angered, excited, or otherwise emotional without provocation. As close friends, some find them overly possessive, though they are also extremely protective of those they care about. \nUndines tend to settle near water, usually in warmer climates. Though land-dwellers, they spend a fair amount of time in the water. For this reason, most dress sparsely, wearing only enough clothing to protect themselves from the elements, and few wear shoes. They avoid wearing jewelry around their necks and keep their hair slicked back and tied into tight knots. This prevents hair or other objects from becoming a distraction or hindrance while swimming. Similarly, undines pursuing martial classes choose weapons that they can wield efficiently on land as well as in water."
+  },
+
+  {
+    "Key": "Undine.EnergyResistance.Name",
+    "ProcessTemplates": false,
+    "enGB": "Energy Resistance"
+  },
+
+  {
+    "Key": "Undine.EnergyResistance.Description",
+    "enGB": "Undines have cold resistance 5."
+  },
+
+  {
+    "Key": "Undine.WaterAffinity.Name",
+    "ProcessTemplates": false,
+    "enGB": "Water Affinity"
+  },
+
+  {
+    "Key": "Undine.WaterAffinity.Description",
+    "enGB": "Undine spellcasters receive a +1 racial bonus to caster level and saving throw DC when they cast any spell with the Cold descriptor."
+  },
+
+  {
+    "Key": "Undine.ElementalHeritage.Name",
+    "ProcessTemplates": false,
+    "enGB": "Elemental Heritage"
+  },
+
+  {
+    "Key": "Undine.ElementalHeritage.Description",
+    "enGB": "Geniekin trace their lineage to beings from the various Elemental Planes. Though their progenitors are typically genies, this ancestry can derive from any number of elemental creatures. Furthermore, even geniekin whose ancestry includes only genies can manifest their elemental heritage in uncommon ways. The following heritages represent geniekin variants who have an affinity for different aspects of the elements, with new ability modifiers and spell-like abilities that replace the default racial traits."
+  },
+
+  {
+    "Key": "Undine.UndineGeneral.Name",
+    "ProcessTemplates": false,
+    "enGB": "Undine (General)"
+  },
+
+  {
+    "Key": "Undine.UndineGeneral.Description",
+    "enGB": "Although many undines follow the general model of the undine, many more do not. Those of different lineages may evince dramatically different manifestations of their heritage, both in appearance and in ability. \nUndines receive a +2 racial bonus to Dexterity and Wisdom, a -2 penalty to Strength, and the ability to cast Hydraulic Push once per day as a spell-like ability at a caster level equal to the undine's character level."
+  },
+
+  {
+    "Key": "Undine.Mistsoul.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mistsoul (Vapor Undine)"
+  },
+
+  {
+    "Key": "Undine.Mistsoul.Description",
+    "enGB": "Soothing and insightful, mistsoul undines move through the world with airy resilience and earnest action. With gentle spirits and contemplative minds, mistsouls are drawn to the more mystic aspects of their element. Their ephemeral, vaporous natures can allow them to lull others into a dreamlike state, or facilitate a peaceful transition into the next life. They tend to seek out places where ideological and political struggles converge. Physically, mistsouls have rounded features and graceful deliberation in their movement. They prefer soft, high-quality garments of neutral or earth tones and simple jewelry chosen for significance rather than expense. \nMistsoul undines receive a +2 racial bonus to Constitution and Wisdom, a -2 penalty to Intelligance, and the ability to cast Obscuring Mist once per day as a spell-like ability at a caster level equal to the undine's character level."
+  },
+
+  {
+    "Key": "Undine.Rimesoul.Name",
+    "ProcessTemplates": false,
+    "enGB": "Rimesoul (Frost Undine)"
+  },
+
+  {
+    "Key": "Undine.Rimesoul.Description",
+    "enGB": "Rimesoul undines are distant and imperious, aloof in their intellect and hesitant to change their ways. Like their ice-coated ancestors, rimesouls represent the solidification of change. They have precise, ordered minds that take well to individual pursuits. Rimesouls often choose to live in sparsely populated areas. When they do live in cities, they prefer areas of disciplined culture. In appearance, rimesouls are frequently pale, sometimes with translucent or blue-tinged skin. Rimesouls usually dress in crisp, understated fashions that present an impression of austerity. \nRimesoul undines receive a +2 racial bonus to Dexterity and Intelligance, a -2 penalty to Charisma, and the ability to cast Chill Touch once per day as a spell-like ability at a caster level equal to the undine's character level."
+  },
+
+  {
+    "Key": "Undine.ChillTouch.Name",
+    "ProcessTemplates": false,
+    "enGB": "Chill Touch"
+  },
+
+  {
+    "Key": "Undine.ChillTouch.Touch.Name",
+    "ProcessTemplates": false,
+    "enGB": "Chill Touch (Touch)"
+  },
+
+  {
+    "Key": "Undine.ChillTouch.Description",
+    "enGB": "A touch from your hand, which glows with blue energy, disrupts the life force of living creatures. Each touch channels negative energy that deals 1d6 points of damage. The touched creature also takes 1 point of Strength damage unless it makes a successful Fortitude saving throw. You can use this melee touch attack up to one time per level.\nAn undead creature you touch takes no damage of either sort, but it must make a successful Will saving throw or flee as if panicked for 1d4 rounds + 1 round per caster level."
+  },
+
+  {
+    "Key": "Undine.ObscuringMist.Name",
+    "ProcessTemplates": false,
+    "enGB": "Obscuring Mist"
+  },
+
+  {
+    "Key": "Undine.ObscuringMist.Description",
+    "enGB": "A misty vapor arises around you. It is stationary. The vapor obscures all sight, including darkvision, beyond 5 feet. A creature 5 feet away has concealment (attacks have a 20% miss chance). Creatures farther away have total concealment (50% miss chance, and the attacker cannot use sight to locate the target)."
+  },
+
+  {
+    "Key": "Undine.HydraulicPush.Name",
+    "ProcessTemplates": false,
+    "enGB": "Hydraulic Push"
+  },
+
+  {
+    "Key": "Undine.HydraulicPush.Description",
+    "enGB": "You call forth a quick blast of water that knocks over and soaks one creature or square. You can use this blast of water to make a bull rush against any one creature or object. Your CMB for this bull rush is equal to your caster level plus your Intelligence, Wisdom, or Charisma modifier, whichever is highest. This bull rush does not provoke an attack of opportunity."
   },
 
   {
@@ -817,6 +999,39 @@
   },
 
   {
+    "Key": "Strix.Hatred.Name",
+    "ProcessTemplates": false,
+    "enGB": "Hatred"
+  },
+
+  {
+    "Key": "Strix.Hatred.Description",
+    "enGB": "Strix receive a +1 racial bonus on attack rolls against humanoid creatures with the human subtype because of their special training against these hated foes."
+  },
+
+  {
+    "Key": "Strix.Nocturnal.Name",
+    "ProcessTemplates": false,
+    "enGB": "Nocturnal"
+  },
+
+  {
+    "Key": "Strix.Nocturnal.Description",
+    "enGB": "Strix gain a +2 racial bonus on Perception and Stealth checks in dim light or darkness."
+  },
+
+  {
+    "Key": "Strix.Suspicious.Name",
+    "ProcessTemplates": false,
+    "enGB": "Suspicious"
+  },
+
+  {
+    "Key": "Strix.Suspicious.Description",
+    "enGB": "Strix receive a +2 racial bonus on saving throws against illusion spells and effects."
+  },
+
+  {
     "Key": "Drow.Name",
     "ProcessTemplates": false,
     "enGB": "Drow"
@@ -825,6 +1040,61 @@
   {
     "Key": "Drow.Description",
     "enGB": "Cruel and cunning, drow are a dark reflection of the elven race. Also called dark elves, they dwell deep underground in elaborate cities shaped from the rock of cyclopean caverns. Drow seldom make themselves known to surface folk, preferring to remain legends while advancing their sinister agendas through proxies and agents. Drow have no love for anyone but themselves, and are adept at manipulating other creatures. While they are not born evil, malignancy is deep-rooted in their culture and society, and nonconformists rarely survive for long. Some stories tell that given the right circumstances, a particularly hateful elf might turn into a drow, though such a transformation would require a truly heinous individual."
+  },
+
+  {
+    "Key": "Drow.WeaponFamiliarity.Name",
+    "ProcessTemplates": false,
+    "enGB": "Weapon Familiarity"
+  },
+
+  {
+    "Key": "Drow.WeaponFamiliarity.Description",
+    "enGB": "Drow are proficient with the hand crossbow, rapier, and shortsword."
+  },
+
+  {
+    "Key": "Drow.Immunities.Name",
+    "ProcessTemplates": false,
+    "enGB": "Immunities"
+  },
+
+  {
+    "Key": "Drow.Immunities.Description",
+    "enGB": "Drow are immune to magic sleep effects and gain a +2 racial bonus on saving throws against enchantment spells and effects."
+  },
+
+  {
+    "Key": "Drow.SpellResistance.Name",
+    "ProcessTemplates": false,
+    "enGB": "Spell Resistance"
+  },
+
+  {
+    "Key": "Drow.SpellResistance.Description",
+    "enGB": "Drow possess spell resistance (SR) equal to 6 plus their total number of class levels."
+  },
+
+  {
+    "Key": "Drow.SpellLike.Name",
+    "ProcessTemplates": false,
+    "enGB": "Spell-Like Ability"
+  },
+
+  {
+    "Key": "Drow.SpellLike.Description",
+    "enGB": "Drow can cast faerie fire once per day, using their total character level as caster level."
+  },
+
+  {
+    "Key": "Drow.AncestralGrudge.Name",
+    "ProcessTemplates": false,
+    "enGB": "Ancestral Grudge"
+  },
+
+  {
+    "Key": "Drow.AncestralGrudge.Description",
+    "enGB": "The enmity between the drow and elves and dwarves is long-standing and deeply entrenched. Drow gain a +1 bonus on attack rolls against humanoids with the dwarf or elf subtypes because of their special training against these reviled foes."
   },
 
   {
@@ -858,5 +1128,711 @@
   {
     "Key": "Suli.Description",
     "enGB": "Sulis, or suli-jann, are the descendents of mortals and jann. They manifest their otherworldly heritage in adolescence, or when awakened by an encounter with a genie. Strong and attractive, these dynamic individuals can call forth elemental energies to augment their prowess in combat. Neither genie nor quite human, sulis stand in two worlds and often feel as if they don’t belong to either."
-  }
+  },
+
+  {
+    "Key": "Suli.EnergyResistance.Name",
+    "ProcessTemplates": false,
+    "enGB": "Energy Resistance"
+  },
+
+  {
+    "Key": "Suli.EnergyResistance.Description",
+    "enGB": "Sulis have resistance to acid 5, cold 5, electricity 5, and fire 5."
+  },
+
+  {
+    "Key": "Suli.Negotiator.Name",
+    "ProcessTemplates": false,
+    "enGB": "Negotiator"
+  },
+
+  {
+    "Key": "Suli.Negotiator.Description",
+    "enGB": "Sulis are keen negotiators, and gain a +2 racial bonus on Diplomacy and Bluff checks."
+  },
+
+  {
+    "Key": "Suli.ElementalAssault.Name",
+    "ProcessTemplates": false,
+    "enGB": "Elemental Assault"
+  },
+
+  {
+    "Key": "Suli.ElementalAssault.Description",
+    "enGB": "Once per day as a swift action, a suli can shroud her arms in acid, cold, electricity, or fire. This lasts for one round per level, and can be dismissed as a free action. Unarmed strikes with her arms or hands (or attacks with weapons held in those hands) deal +1d6 points of damage of the appropriate energy type."
+  },
+
+  {
+    "Key": "Suli.ElementalAssaultFire.Name",
+    "ProcessTemplates": false,
+    "enGB": "Elemental Assault (Fire)"
+  },
+
+  {
+    "Key": "Suli.ElementalAssaultCold.Name",
+    "ProcessTemplates": false,
+    "enGB": "Elemental Assault (Cold)"
+  },
+
+  {
+    "Key": "Suli.ElementalAssaultElectricity.Name",
+    "ProcessTemplates": false,
+    "enGB": "Elemental Assault (Electricity)"
+  },
+
+  {
+    "Key": "Suli.ElementalAssaultAcid.Name",
+    "ProcessTemplates": false,
+    "enGB": "Elemental Assault (Acid)"
+  },
+
+  {
+    "Key": "Android.Name",
+    "ProcessTemplates": false,
+    "enGB": "Android"
+  },
+
+  {
+    "Key": "Android.Description",
+    "enGB": "Androids are superficially identical to humans in many ways, and to the uninformed it can be difficult to differentiate the two. In the right light, though, androids' alien nature is revealed by the metallic sheen in their eyes and the biological, tattoo-like circuitry that riddles their skin. Their bodies are completely artificial, though made of materials that mimic the flexibility, shape, and density of human flesh and bone. Their organs mirror those of humans so well that only by examining the materials and makeup of these systems—which use sheeny oils and polymer alloys rather than blood and marrow—could one guess that their physiology is alien. Androids are roughly the same size as humans; on average, they are 6 feet tall and weigh 200 pounds. \nShamans speak of great forges where androids are \"born\" from metal wombs and are cut from electrified umbilical cords. Even androids can’t refute or verify such stories, since most who emerge from ruins do so naked and without any memories beyond their initial egress into the wide, unfamiliar world. Their complex design is unlike that of any race known, leading many to suspect that they originated from a distant star system or even another galaxy. \nWhat separates androids from golems and other mindless constructs is that androids are living beings and as such possess souls. Similarly, androids don’t live forever, though barring violence or tragedy their bodies never deteriorate. Rather, an android’s cybernetic mind eventually shuts down and self-restarts after about a century, leaving its body vacant for several weeks as the old soul departs for its final reward in the Great Beyond and a fresh, new soul finds its way into the shell."
+  },
+
+  {
+    "Key": "Android.Alert.Name",
+    "ProcessTemplates": false,
+    "enGB": "Alert"
+  },
+
+  {
+    "Key": "Android.Alert.Description",
+    "enGB": "Androids gain a +4 racial bonus on Perception checks."
+  },
+
+  {
+    "Key": "Android.Emotionless.Name",
+    "ProcessTemplates": false,
+    "enGB": "Emotionless"
+  },
+
+  {
+    "Key": "Android.Emotionless.Description",
+    "enGB": "Androids have problems processing emotions properly, and thus take a -4 penalty on Bluff checks"
+  },
+
+  {
+    "Key": "Android.Constructed.Name",
+    "ProcessTemplates": false,
+    "enGB": "Constructed"
+  },
+
+  {
+    "Key": "Android.Constructed.Description",
+    "enGB": "Androids gain a +4 racial bonus on all saving throws against mind-affecting effects, paralysis, poison, and stun effects, are not subject to fatigue or exhaustion, and are immune to disease, fear, sleep, and emotion effects."
+  },
+
+  {
+    "Key": "Android.NaniteSurge.Name",
+    "ProcessTemplates": false,
+    "enGB": "Nanite Surge"
+  },
+
+  {
+    "Key": "Android.NaniteSurge.Description",
+    "enGB": "An android's body is infused with nanites. Once per day as a swift action, an android can cause her nanites to surge, granting a bonus equal to 3 + the android's character level on the next d20 roll made in the following round; this ability must be activated before the roll is made. When an android uses this power, her circuitry-tattoos glow with light equivalent to that of a torch in illumination for 1 round"
+  },
+
+  {
+    "Key": "Ifrit.Name",
+    "ProcessTemplates": false,
+    "enGB": "Ifrit"
+  },
+
+  {
+    "Key": "Ifrit.Description",
+    "enGB": "Humans whose ancestry includes beings of elemental fire such as efreet, ifrits are a passionate and fickle race. No ifrit is satisfied with a sedentary life; like a wildfire, ifrits must keep moving or burn away into nothingness. Ifrits not only adore flames, but personify multiple aspects of them as well, embodying both fire's dynamic, ever-changing energy and its destructive, pitiless nature."
+  },
+
+  {
+    "Key": "Ifrit.FireAffinity.Name",
+    "ProcessTemplates": false,
+    "enGB": "Fire Affinity"
+  },
+
+  {
+    "Key": "Ifrit.FireAffinity.Description",
+    "enGB": "Ifrit spellcasters receive a +1 racial bonus to caster level and saving throw DC when they cast any spell with the Fire descriptor."
+  },
+
+  {
+    "Key": "Ifrit.EnergyResistance.Name",
+    "ProcessTemplates": false,
+    "enGB": "Energy Resistance"
+  },
+
+  {
+    "Key": "Ifrit.EnergyResistance.Description",
+    "enGB": "Ifrits have fire resistance 5."
+  },
+
+  {
+    "Key": "Ifrit.SpellLike.Name",
+    "ProcessTemplates": false,
+    "enGB": "Spell-Like Ability"
+  },
+
+  {
+    "Key": "Ifrit.SpellLike.Description",
+    "enGB": "Ifrits can use burning hands 1/day as a spell-like ability (caster level equals the ifrit's level; DC 11 + Charisma modifier)."
+  },
+
+  {
+    "Key": "Ifrit.ElementalHeritage.Name",
+    "ProcessTemplates": false,
+    "enGB": "Elemental Heritage"
+  },
+
+  {
+    "Key": "Ifrit.ElementalHeritage.Description",
+    "enGB": "Geniekin trace their lineage to beings from the various Elemental Planes. Though their progenitors are typically genies, this ancestry can derive from any number of elemental creatures. Furthermore, even geniekin whose ancestry includes only genies can manifest their elemental heritage in uncommon ways. The following heritages represent geniekin variants who have an affinity for different aspects of the elements, with new ability modifiers and spell-like abilities that replace the default racial traits."
+  },
+
+  {
+    "Key": "Ifrit.IfritGeneral.Name",
+    "ProcessTemplates": false,
+    "enGB": "Ifrit (General)"
+  },
+
+  {
+    "Key": "Ifrit.IfritGeneral.Description",
+    "enGB": "Although many ifrits follow the general model of the ifrit, many more do not. Those of different lineages may evince dramatically different manifestations of their heritage, both in appearance and in ability. \nIfrits receive a +2 racial bonus to Dexterity and Charisma, a -2 penalty to Wisdom, and the ability to cast Burning Hands once per day as a spell-like ability at a caster level equal to the ifrit's character level."
+  },
+
+  {
+    "Key": "Ifrit.Lavasoul.Name",
+    "ProcessTemplates": false,
+    "enGB": "Lavasoul (Magma Ifrit)"
+  },
+
+  {
+    "Key": "Ifrit.Lavasoul.Description",
+    "enGB": "Like the primal fires of creation, lavasoul ifrits are both fluid and fixed, alternating between stability and violent alteration. Mutable and intense, lavasouls evoke the cycle of creation and destruction in their colorful lives, unafraid to pursue new paradigms when the old ones no longer suit them. Many are dark-skinned but riven with blazing lines, which are sometimes also reflected in bright hair or eye colors. They tend to embrace body modification, acquiring and discarding tattoos and piercings as they feel appropriate. Lavasouls can be found in places where seismic change is commonplace and destructive creation is not seen as a contradiction. \nLavasoul ifrits receive a +2 racial bonus to Constitution and Intelligence, a -2 penalty to Dexterity, and the ability to cast Firebelly once per day as a spell-like ability at a caster level equal to the ifrit's character level."
+  },
+
+  {
+    "Key": "Ifrit.Sunsoul.Name",
+    "ProcessTemplates": false,
+    "enGB": "Sunsoul (Solar Ifrit)"
+  },
+
+  {
+    "Key": "Ifrit.Sunsoul.Description",
+    "enGB": "Strong in character and in body, sunsoul ifrits are incurably optimistic agents of positive change. \nWith fire comes light, and the brightness of the sunsouls comes both from their affinity for positive energy and their own luminous attitudes. Where others despair, they labor on, striving to lead by example. Strong leaders and passionate ethos attract sunsouls, drawing them toward powerful religions or crusading nations. Sunsouls cannot easily hide their presence, and most would never try. Most sunsouls tend to have fair hair, often nearly white, and eyes that glow with a twinkle all their own. \nSome seem to glow from within, as if lit from inside by an inner sunlight. Unafraid to be seen, they dress in whatever styles please them, even when it means they stand out among populations either more daring or more conservative. \nSunsoul ifrits receive a +2 racial bonus to Strength and Charisma, a -2 penalty to Wisdom, and the ability to cast Flare Burst once per day as a spell-like ability at a caster level equal to the ifrit's character level."
+  },
+
+  {
+    "Key": "Fetchling.Name",
+    "ProcessTemplates": false,
+    "enGB": "Fetchling"
+  },
+
+  {
+    "Key": "Fetchling.Description",
+    "enGB": "Descended from humans trapped on the Shadow Plane, fetchlings are creatures of darkness and light intertwined. Generations of contact with that strange plane and its denizens have made fetchlings a race apart from humanity. While fetchlings acknowledge their origins, they exhibit little physical or cultural resemblance to their ancestors on the Material Plane, and are often insulted when compared to humans. Some members of the race also take offense at the name fetchling, as it was given to them by humans who saw them as little more than fetchers of rare materials from the Shadow Plane. Most fetchlings instead prefer to be called kayal, a word borrowed from Aklo that roughly translates to \"shadow people\" or \"dusk dwellers.\" Infused with the essence of the Shadow Plane and possessing human blood commingled with that of the Shadow Plane's natives, fetchlings have developed traits and abilities that complement their native plane's bleak and colorless terrain. Though most fetchlings treat the Shadow Plane as home, they often trade and deal with creatures of the Material Plane. Some fetchlings go so far as to create enclaves on the Material Plane in order to establish alliances and trade routes in areas where the boundary between the two planes is less distinct. These fetchlings often serve as merchants, middlemen, and guides for races on both sides of the planar boundary."
+  },
+
+  {
+    "Key": "Fetchling.ShadowBlending.Name",
+    "ProcessTemplates": false,
+    "enGB": "Shadow Blending"
+  },
+
+  {
+    "Key": "Fetchling.ShadowBlending.Description",
+    "enGB": "Attacks against a fetchling in dim light have a 50% miss chance. This ability does not grant total concealment; it just increases the miss chance."
+  },
+
+  {
+    "Key": "Fetchling.ShadowyResistance.Name",
+    "ProcessTemplates": false,
+    "enGB": "Shadowy Resistance"
+  },
+
+  {
+    "Key": "Fetchling.ShadowyResistance.Description",
+    "enGB": "Fetchlings have cold resistance 5 and electricity resistance 5."
+  },
+
+  {
+    "Key": "Fetchling.Skilled.Name",
+    "ProcessTemplates": false,
+    "enGB": "Skilled"
+  },
+
+  {
+    "Key": "Fetchling.Skilled.Description",
+    "enGB": "Fetchlings have a +2 racial bonus on Knowledge (planes) and Stealth checks."
+  },
+
+  {
+    "Key": "Changeling.Name",
+    "ProcessTemplates": false,
+    "enGB": "Changeling"
+  },
+
+  {
+    "Key": "Changeling.Description",
+    "enGB": "Changelings are the offspring of hags and their lovers taken through magic or madness. Dropped off on doorsteps of prospective foster parents, changelings are raised by strangers. Typically tall, slender, dark haired, and attractive, changelings otherwise resemble their fathers' race. They are always female, and their mismatched colored eyes and abnormally pale skin hint at their true heritage. At puberty, changelings receive \"the call,\" a hypnotic spiritual voice that beckons them to travel and discover their true origins. Changelings who ignore this call choose their own destiny; those who heed it discover their \"mother\" and may come into great power by transforming into hags themselves."
+  },
+
+  {
+    "Key": "Skinwalker.Name",
+    "ProcessTemplates": false,
+    "enGB": "Skinwalker"
+  },
+
+  {
+    "Key": "Skinwalker.Description",
+    "enGB": "Skinwalkers resemble humans much of the time, but they possess the uncanny ability to transform into bestial humanoids who combine the most fearsome aspects of flesh and fur. \nMost people believe skinwalkers are half-breeds of lycanthropes, or that they share some slight version of the curse of those creatures. Skinwalker shamans say they are chosen by nature or the gods to be a bridge between the world of humanity and the animal world. The truth may lie somewhere between these two ideas. For indeed, skinwalkers are those with a lycanthrope crouching somewhere in the branches of their family tree. These distant progeny of monstrous werewolves and other creatures of the night have special talents unlike those of most civilized peoples, and they arise randomly among remote humanoid populations as well as within their own secretive sects. A pair of humans may give birth to a skinwalker—the dormant lycanthropic ancestry making itself known in a child neither beast nor human—or a pair of skinwalker parents may produce a skinwalker child, though these couplings can sometimes produce human children as well."
+  },
+
+  {
+    "Key": "Skinwalker.Heritage.Name",
+    "ProcessTemplates": false,
+    "enGB": "Skinwalker Heritage"
+  },
+
+  {
+    "Key": "Skinwalker.Heritage.Description",
+    "enGB": "The base skinwalker is merely the most common of its kind but there are those who've inherited a larger share of their ancestors' animalistic beings, and in whom can be seen the traits of very specific types of lycanthropes. Whether the scions of wereboars, the grandchildren of werecrocodiles, or the distant progeny of wererats, these individuals possess stronger ties to their ancestors than other skinwalkers providing bonuses to different ability scores and skills, and also altering their shifted ability score bonus and bestial features."
+  },
+
+  {
+    "Key": "Ragebred.Name",
+    "ProcessTemplates": false,
+    "enGB": "Ragebred (Wereboar-kin)"
+  },
+
+  {
+    "Key": "Ragebred.Description",
+    "enGB": "Wereboar-kin are known for their fiery tempers, wide stubborn streaks, and strong familial bonds. The ragebred's tenacity and irrepressible expressiveness has also earned this race respect and a reputation as freedom fighters. Wereboar-kin are often ashamed of where their abilities come from and have no shortage of ill feelings for true wereboars, even if this hatred is mingled with martial respect. Wereboar-kin generally avoid large groups of people unless they feel confident of their own ability to buy, charm, or bully their way into power and respect. The ragebred who do live in busy social circles are those able to channel their strong emotions into far-reaching schemes, creative expression, or their professional crafts. Others choose the more common route of carving out a place where they hold power at the edge of civilization. More than one upstart liege has been a wereboar-kin who successfully created a place where he need not fear anyone's judgment. \nWereboar-kin sometimes struggle to maintain healthy relationships of any sort because of their mercurial natures and natural defensiveness, but some find camaraderie and strength by focusing on the strong emotions they share with their fellow wereboar-kin or humans who have known hardship. They have acquired the name \"ragebred\" for their habit of tempestuous romances that seem to be most successful when the couple engages in frequent bouts of dramatic conflict and affectionate reconciliation. \nRagebred skinwalkers receive a +2 racial bonus to Strength, a -2 penalty to Charisma, and a +2 racial bonus to Perception and Lore (Nature) skills. When in their bestial form, they gain a +2 racial bonus to Constitution, a primary gore attack that deals 1d6 damage, and a +10 foot racial bonus to movement speed."
+  },
+
+  {
+    "Key": "Ragebred.Skilled.Name",
+    "ProcessTemplates": false,
+    "enGB": "Skilled"
+  },
+
+  {
+    "Key": "Ragebred.Skilled.Description",
+    "enGB": "Ragebred skinwalkers recieve a +2 racial bonus to Perception and Lore (Nature) skill checks."
+  },
+
+  {
+    "Key": "Ragebred.ChangeShape.Name",
+    "ProcessTemplates": false,
+    "enGB": "Change Shape"
+  },
+
+  {
+    "Key": "Ragebred.ChangeShape.Description",
+    "enGB": "A ragebred skinwalker can change shape to and from a bestial form as a standard action. In bestial form, a ragebred skinwalker gains a +2 racial bonus to Constitution. While in this form, a ragebred skinwalker also gains a primary gore attack that deals 1d6 damage and a +10 foot racial bonus to movement speed."
+  },
+
+  {
+    "Key": "Coldborn.Name",
+    "ProcessTemplates": false,
+    "enGB": "Coldborn (Werebear-kin)"
+  },
+
+  {
+    "Key": "Coldborn.Description",
+    "enGB": "Werebear-kin are known and respected as defenders of the wilds. They tend to carve out niches as woodland guides, rangers, and recluses to whom humans can turn for guidance in the wilderness. \nThey are called coldborn because they often become torpid and withdrawn during the winter months unless they have matters to attend to, and they resume their typical demeanors with renewed energy at winter's end. \nAlthough they often avoid large settlements, coldborn are known to defy their ursine urges in favor of their humanlike desire for community, either forming small, intimate communities of their own (consisting of a few families or a chosen family of good friends) or arranging annual or seasonal gatherings to keep in touch with their fellows from all across the area. \nWerebear-kin are renowned for their industriousness, and often make a good living trading in skins, leather, and other products of the forest. This trade allows them to acquire useful tools for defending their homes and surviving lean times. It also means that they are often in contact with a few non-coldborn, though they regard most outsiders as greedy and obsessed with wealth and status. In northern and mountainous regions, this attitude has earned them a great deal of respect from monks. Like werebears, coldborn tend to be quite broad-shouldered, muscular, and strong-featured, but they generally do not share werebears' work-worn appearance unless they have actually known a life of hard labor. \nColdborn skinwalkers receive a +2 racial bonus to Constitution, a -2 penalty to Charisma, and a +2 racial bonus to Athletics and Lore (Nature) skills. When in their bestial form, they gain a +2 racial bonus to Wisdom, a primary gore attack that deals 1d6 damage, and two claw attacks which deal 1d4 damage."
+  },
+
+  {
+    "Key": "Coldborn.Skilled.Name",
+    "ProcessTemplates": false,
+    "enGB": "Skilled"
+  },
+
+  {
+    "Key": "Coldborn.Skilled.Description",
+    "enGB": "Coldborn skinwalkers recieve a +2 racial bonus to Athletics and Lore (Nature) skill checks."
+  },
+
+  {
+    "Key": "Coldborn.ChangeShape.Name",
+    "ProcessTemplates": false,
+    "enGB": "Change Shape"
+  },
+
+  {
+    "Key": "Coldborn.ChangeShape.Description",
+    "enGB": "A coldborn skinwalker can change shape to and from a bestial form as a standard action. In bestial form, a coldborn skinwalker gains a +2 racial bonus to Wisdom. While in this form, a coldborn skinwalker also gains a primary bite attack that deals 1d6 damage and two claw attacks that deal 1d4 damage."
+  },
+
+  {
+    "Key": "Fanglord.Name",
+    "ProcessTemplates": false,
+    "enGB": "Fanglord (Weretiger-kin)"
+  },
+
+  {
+    "Key": "Fanglord.Description",
+    "enGB": "Weretiger-kin are known for their fickle attitudes and unpredictable behavior. Usually, a fanglord makes his living by intimidation, cutthroat business dealings, political ploys, and military ventures. Very much like weretigers, they rarely congregate with others of their kind except as mated pairs or one or two parents with a few children, although they sometimes agree to form oligarchic arrangements of mutual protection with neighboring fanglords or weretigers when each of them can respect the other's strength. They often have aristocratic connections or the charm to fake it, and are happy to settle in affluent areas, where one fanglord typically claims dominion over anything from a small neighborhood to a large city district. \nWeretiger-kin tend to be exceptionally proud of their heritage and confident to the point of hubris regarding their authority over not only humans, but also animals. \nAlthough usually quite capable, fanglords are not opposed to waiting for just the right moment to spring a plan or strike against an enemy, making sure they can act with overwhelming effectiveness and completely negate the chance of an opponent fighting back. As a result, they make impeccable assassins and frustrating political enemies. Weretiger-kin often have large eyes, long noses, and sharp cheekbones.\nFanglord skinwalkers receive a +2 racial bonus to Dexterity, a -2 penalty to Wisdom, and a +2 racial bonus to Athletics and Perception skills. When in their bestial form, they gain a +2 racial bonus to Charisma, a primary bite attack that deals 1d6 damage, and a +10 foot racial bonus to movement speed."
+  },
+
+  {
+    "Key": "Fanglord.Skilled.Name",
+    "ProcessTemplates": false,
+    "enGB": "Skilled"
+  },
+
+  {
+    "Key": "Fanglord.Skilled.Description",
+    "enGB": "Fanglord skinwalkers recieve a +2 racial bonus to Athletics and Perception skill checks."
+  },
+
+  {
+    "Key": "Fanglord.ChangeShape.Name",
+    "ProcessTemplates": false,
+    "enGB": "Change Shape"
+  },
+
+  {
+    "Key": "Fanglord.ChangeShape.Description",
+    "enGB": "A fanglord skinwalker can change shape to and from a bestial form as a standard action. In bestial form, a fanglord skinwalker gains a +2 racial bonus to Charisma. While in this form, a fanglord skinwalker also gains a primary bite attack that deals 1d6 damage and a +10 foot racial bonus to movement speed."
+  },
+
+  {
+    "Key": "Nightskulk.Name",
+    "ProcessTemplates": false,
+    "enGB": "Nightskulk (Wererat-kin)"
+  },
+
+  {
+    "Key": "Nightskulk.Description",
+    "enGB": "Wererat-kin are common in urban areas, and like wererats, they usually rely on their stealth and cunning to get by in those metropolitan centers where they are persecuted. Many rogues and scoundrels think of a trace of rodent blood as a useful advantage, and some even falsely brag of having this trait to earn a quick reputation and intimidate rivals. True nightskulks, however, know that spreading such information only invites despair, for of all the skinwalkers nightskulks are perhaps the most universally despised. \nUnlike other skinwalkers, even large nightskulk communities often draw their culture almost completely from the surrounding human society, assimilating at the cost of losing their ancient skinwalker traditions. \nMost have found that the culture of infected and natural wererats in cities suits them, and can frequently be found consorting with these full-blooded lycanthropes. Lacking the wererat's ability to hide among true rats, nightskulks often specialize in hiding instead among humans. Although they try to maintain ties with other wererat-kin and true wererats for mutual security if possible, wererat-kin have learned that it is safest to remain hidden among the human masses and disappear whenever fear of lycanthropes would threaten to make pariahs out of an isolated community. Nightskulks tend to be short and wiry, with constantly darting eyes. Males often have thin, ragged mustaches, while females have thin, birdlike builds. Both sexes like to wear fine furs and soft, voluminous garments for warmth and to show off whatever wealth they possess.\nNightskulk skinwalkers receive a +2 racial bonus to Intelligence, a -2 penalty to Strength, and a +2 racial bonus to Lore (Nature) and Stealth skills. When in their bestial form, they gain a +2 racial bonus to Dexterity and a primary bite attack that deals 1d6 damage and can sicken opponents who fail a Fortitude save when bitten."
+  },
+
+  {
+    "Key": "Nightskulk.Skilled.Name",
+    "ProcessTemplates": false,
+    "enGB": "Skilled"
+  },
+
+  {
+    "Key": "Nightskulk.Skilled.Description",
+    "enGB": "Nightskulk skinwalkers recieve a +2 racial bonus to Lore (Nature) and Stealth skill checks."
+  },
+
+  {
+    "Key": "Nightskulk.ChangeShape.Name",
+    "ProcessTemplates": false,
+    "enGB": "Change Shape"
+  },
+
+  {
+    "Key": "Nightskulk.ChangeShape.Description",
+    "enGB": "A nightskulk skinwalker can change shape to and from a bestial form as a standard action. In bestial form, a nightskulk skinwalker gains a +2 racial bonus to Dexterity. While in this form, a fanglord skinwalker also gains a primary bite attack that deals 1d6 damage and sickens any bitten opponent who fails a Fortitude saving throw."
+  },
+
+  {
+    "Key": "Witchwolf.Name",
+    "ProcessTemplates": false,
+    "enGB": "Witchwolf (Werewolf-kin)"
+  },
+
+  {
+    "Key": "Witchwolf.Description",
+    "enGB": "Werewolf-kin are found in many areas, ranging from misty moors to dark alleys of bustling cities, and theirs is perhaps the most common visible skinwalker heritage to be found throughout the Inner Sea region and beyond. \nThey often dwell with werewolves or others of their kind in small, isolated settlements that resound with howls on the night of the full moon. Many werewolves and witchwolves live in seminomadic bands as traders, mystics, adventurers, or entertainers, allowing them to wreak havoc in remote settlements before slipping off into the darkness to escape the subsequent suspicion and hostility of townsfolk. Most such bands include only werewolves or only werewolf-kin, but occasionally one group adopts a member of the other sort out of circumstance or convenience, particularly if the two share common blood. \nWerewolf-kin generally have prominent eyebrows that grow together, long index fingers, or wild hair that seems impossible to tame. Witchwolf packs are often led by witches trained in a tradition of curses and transformation tied closely to the original curse of lycanthropy; these witches are also usually the most powerful members of their packs, though exceptions exist where a witch leads with the aid of a favored ally of incredible strength. Because werewolf-kin cannot recruit ordinary humans the way werewolves can, they tend to be more cautious and maintain closer bonds with their fellows than true werewolves usually do, and their bands typically consist of only one or a few extended families or possibly longtime friends. \nWhen witchwolves take bestial form, their eyes typically take on an amber or pale blue hue, their canines sharpen to points, patches of fur form on their skin, and their ears elongate as their senses are drastically heightened.\nWitchwolf skinwalkers receive a +2 racial bonus to Constitution, a -2 penalty to Intelligence, and a +2 racial bonus to Perception and Lore (Nature) skills. When in their bestial form, they gain a +2 racial bonus to Wisdom, a primary bite attack that deals 1d6 damage, and a +2 racial bonus to all saving throws."
+  },
+
+  {
+    "Key": "Witchwolf.Skilled.Name",
+    "ProcessTemplates": false,
+    "enGB": "Skilled"
+  },
+
+  {
+    "Key": "Witchwolf.Skilled.Description",
+    "enGB": "Witchwolf skinwalkers recieve a +2 racial bonus to Perception and Lore (Nature) skill checks."
+  },
+
+  {
+    "Key": "Witchwolf.ChangeShape.Name",
+    "ProcessTemplates": false,
+    "enGB": "Change Shape"
+  },
+
+  {
+    "Key": "Witchwolf.ChangeShape.Description",
+    "enGB": "A witchwolf skinwalker can change shape to and from a bestial form as a standard action. In bestial form, a witchwolf skinwalker gains a +2 racial bonus to Wisdom. While in this form, a witchwolf skinwalker also gains a primary bite attack that deals 1d6 damage and a +2 racial bonus to all saving throws."
+  },
+
+  {
+    "Key": "Bloodmarked.Name",
+    "ProcessTemplates": false,
+    "enGB": "Bloodmarked (Werebat-kin)"
+  },
+
+  {
+    "Key": "Bloodmarked.Description",
+    "enGB": "Bloodmarked, like werebats, are generally communal and often defer readily to their superiors within their flocks or even other leaders or employers. They tend to be gregarious yet savage, and enjoy using their unassuming natural forms to trick others before revealing their true bestial powers. Bloodmarked reveal their human ancestry in their ability to break from the group, make their own choices, and associate with humans without trying to force their way of life upon them, although troublemakers are strongly frowned upon and find it hard to get any other werebat-kin to take their side if in opposition to the group. \nLike werebats, bloodmarked are fond of elaborate social ceremonies that strengthen group cohesion and loyalty. \nWerebat-kin ceremonies often involve wearing bat skins, sacrificing animals or humanoids, and drinking blood. \nWerebat-kin are most commonly found near dense forests and jungles. With little trust for outsiders, werebat-kin often form insular communities at the fringes of civilized societies, with each bloodmarked being loyal to every member of the community and whichever leader has bested all challengers. Like other skinwalkers, however, bloodmarked are typically born into societies that don’t include others of their kind, and these individuals are inclined to seek out surrogate flocks, generally in the form of violent gangs, tight-knit adventuring parties, or even insular academic circles, according to the individual’s disposition. Bloodmarked are generally tall and slight, with dark hair and severe features. Poor eyesight is relatively common among werebat-kin, though they often hear and smell well enough to make up for it.\nBloodmarked skinwalkers receive a +2 racial bonus to Dexterity, a -2 penalty to Wisdom, and a +2 racial bonus to Athletics and Perception skills. When in their bestial form, they gain a +2 racial bonus to Charisma, a primary bite attack that deals 1d6 damage, and +10 foot racial bonus to movement speed."
+  },
+
+  {
+    "Key": "Bloodmarked.Skilled.Name",
+    "ProcessTemplates": false,
+    "enGB": "Skilled"
+  },
+
+  {
+    "Key": "Bloodmarked.Skilled.Description",
+    "enGB": "Bloodmarked skinwalkers recieve a +2 racial bonus to Athletics and Perception skill checks."
+  },
+
+  {
+    "Key": "Bloodmarked.ChangeShape.Name",
+    "ProcessTemplates": false,
+    "enGB": "Change Shape"
+  },
+
+  {
+    "Key": "Bloodmarked.ChangeShape.Description",
+    "enGB": "A bloodmarked skinwalker can change shape to and from a bestial form as a standard action. In bestial form, a bloodmarked skinwalker gains a +2 racial bonus to Charisma. While in this form, a bloodmarked skinwalker also gains a primary bite attack that deals 1d6 damage and a +10 racial bonus to movement speed."
+  },
+
+  {
+    "Key": "ClassicSkinwalker.Name",
+    "ProcessTemplates": false,
+    "enGB": "Skinwalker (General)"
+  },
+
+  {
+    "Key": "ClassicSkinwalker.Description",
+    "enGB": "Skinwalkers are well attuned to the natural order of things and value passion above reason. They gain +2 racial bonus to Wisdom, –2 penalty to Intelligence, and a +2 racial bonus to Lore (Nature) skill checks. While in their bestial form, they gain a +2 racial bonus to either Strength, Dexterity, or Constitution, along with two claw attacks that deal 1d4 damage and a +1 bonus to natural armor. Skinwalkers of specific heritages gain different ability score modifiers, as indicated."
+  },
+
+  {
+    "Key": "ClassicSkinwalker.Skilled.Name",
+    "ProcessTemplates": false,
+    "enGB": "Skilled"
+  },
+
+  {
+    "Key": "ClassicSkinwalker.Skilled.Description",
+    "enGB": "Skinwalkers recieve a +2 racial bonus to Lore (Nature) skill checks."
+  },
+
+  {
+    "Key": "ClassicSkinwalker.ChangeShapeStr.Name",
+    "ProcessTemplates": false,
+    "enGB": "Change Shape (Strength)"
+  },
+
+  {
+    "Key": "ClassicSkinwalker.ChangeShapeStr.Description",
+    "enGB": "A skinwalker can change shape to and from a bestial form as a standard action. In bestial form, a skinwalker gains a +2 racial bonus to either Strength, Dexterity, or Constitution. Additionally, the skinwalker gains two claw atacks dealing 1d4 damage and a +1 natural armor bonus when in bestial form."
+  },
+
+  {
+    "Key": "ClassicSkinwalker.ChangeShapeCon.Name",
+    "ProcessTemplates": false,
+    "enGB": "Change Shape (Constitution)"
+  },
+
+  {
+    "Key": "ClassicSkinwalker.ChangeShapeCon.Description",
+    "enGB": "A skinwalker can change shape to and from a bestial form as a standard action. In bestial form, a skinwalker gains a +2 racial bonus to either Strength, Dexterity, or Constitution. Additionally, the skinwalker gains two claw atacks dealing 1d4 damage and a +1 natural armor bonus when in bestial form."
+  },
+
+  {
+    "Key": "ClassicSkinwalker.ChangeShapeDex.Name",
+    "ProcessTemplates": false,
+    "enGB": "Change Shape (Dexterity)"
+  },
+
+  {
+    "Key": "ClassicSkinwalker.ChangeShapeDex.Description",
+    "enGB": "A skinwalker can change shape to and from a bestial form as a standard action. In bestial form, a skinwalker gains a +2 racial bonus to either Strength, Dexterity, or Constitution. Additionally, the skinwalker gains two claw atacks dealing 1d4 damage and a +1 natural armor bonus when in bestial form."
+  },
+
+  {
+    "Key": "Scaleheart.Name",
+    "ProcessTemplates": false,
+    "enGB": "Scaleheart (Werecrocodile-kin)"
+  },
+
+  {
+    "Key": "Scaleheart.Description",
+    "enGB": "Physically, scaleheart skinwalkers are thick-skinned and usually sluggish unless engaged in combat. They tend to be ruthless but patient. All are natural swimmers. In a pattern stretching all the way back to scalehearts' counterparts in Arcadia, scaleheart culture respects nothing so much as the ability to demonstrate power over others, most often physically but also through cunning and magic. Werecrocodile-kin are renowned for their surprising and violent displays of dominance they have an equally strong reputation for proving their superiority by manipulating and seducing prominent humans. Not as powerful or as solitary as true werecrocodiles, scalehearts prefer to form their own small waterside communities when they do collaborate. \nScaleheart skinwalkers receive a +2 racial bonus to Constitution, a -2 penalty to Wisdom, and a +2 racial bonus to Lore (Nature) and Stealth skills. When in their bestial form, they gain a +2 racial bonus to Strength, a primary bite attack that deals 1d6 damage, and the Ferocity feautre, allowing the scaleheart to fight on for one more round when reduced to 0 hit points. If the scaleheart is not brought above 0 hit points by the end of their next turn, they will fall unconscious."
+  },
+
+  {
+    "Key": "Scaleheart.Skilled.Name",
+    "ProcessTemplates": false,
+    "enGB": "Skilled"
+  },
+
+  {
+    "Key": "Scaleheart.Skilled.Description",
+    "enGB": "Scaleheart skinwalkers recieve a +2 racial bonus to Lore (Nature) and Stealth skill checks."
+  },
+
+  {
+    "Key": "Scaleheart.ChangeShape.Name",
+    "ProcessTemplates": false,
+    "enGB": "Change Shape"
+  },
+
+  {
+    "Key": "Scaleheart.ChangeShape.Description",
+    "enGB": "A scaleheart skinwalker can change shape to and from a bestial form as a standard action. In bestial form, a scaleheart skinwalker gains a +2 racial bonus to Strength. While in this form, a scaleheart skinwalker also gains a primary bite attack that deals 1d6 damage and the Ferocity feautre, allowing the scaleheart to fight on for one more round when reduced to 0 hit points. If the scaleheart is not brought above 0 hit points by the end of their next turn, they will fall unconscious."
+  },
+
+  {
+    "Key": "Goblin.Name",
+    "ProcessTemplates": false,
+    "enGB": "Goblin"
+  },
+
+  {
+    "Key": "Goblin.Description",
+    "enGB": "Goblins are a race of childlike creatures with a destructive and voracious nature that makes them almost universally despised. Weak and cowardly, goblins are frequently manipulated or enslaved by stronger creatures that need destructive, disposable foot soldiers. Those goblins that rely on their own wits to survive live on the fringes of society and feed on refuse and the weaker members of more civilized races. Most other races view them as virulent parasites that have proved impossible to exterminate. \nGoblins can eat nearly anything, but prefer a diet of meat and consider the flesh of humans and gnomes a rare and difficult-to-obtain delicacy. While they fear the bigger races, goblins’ short memories and bottomless appetites mean they frequently go to war or execute raids against other races to sate their pernicious urges and fill their vast larders."
+  },
+
+  {
+    "Key": "Goblin.FastMovement.Name",
+    "ProcessTemplates": false,
+    "enGB": "Fast Movement"
+  },
+
+  {
+    "Key": "Goblin.FastMovement.Description",
+    "enGB": "Goblins gain a +10 foot bonus to their base speed."
+  },
+
+  {
+    "Key": "Goblin.GoblinRacialTrait.Name",
+    "ProcessTemplates": false,
+    "enGB": "Goblin Racial Trait"
+  },
+
+  {
+    "Key": "Goblin.GoblinRacialTrait.Description",
+    "enGB": "Although many goblins follow the general model of the goblin, many more do not. Those of different lineages may evince dramatically different manifestations of their heritage, both in appearance and in ability."
+  },
+
+  {
+    "Key": "Goblin.Skilled.Name",
+    "ProcessTemplates": false,
+    "enGB": "Skilled (General Goblin)"
+  },
+
+  {
+    "Key": "Goblin.Skilled.Description",
+    "enGB": "Goblins gain a +4 racial bonus on Mobility and Stealth checks."
+  },
+
+  {
+    "Key": "Goblin.CityScavenger.Name",
+    "ProcessTemplates": false,
+    "enGB": "City Scavenger"
+  },
+
+  {
+    "Key": "Goblin.CityScavenger.Description",
+    "enGB": "Goblins who live within the boundaries of human cities survive by scavenging for refuse and hunting stray animals. Goblins with this trait gain a +2 racial bonus on Perception, Lore (Nature), and Knowledge (World) skill checks."
+  },
+
+  {
+    "Key": "Goblin.EatAnything.Name",
+    "ProcessTemplates": false,
+    "enGB": "Eat Anything"
+  },
+
+  {
+    "Key": "Goblin.EatAnything.Description",
+    "enGB": "Raised with little or no proper food, many goblins have learned to survive by eating whatever they happen across and can digest nearly anything without getting sick. Goblins with this trait gain a +4 on Lore (Nature) and a +4 racial bonus on saves versus effects that cause the nauseated or sickened conditions."
+  },
+
+  {
+    "Key": "Goblin.HardHeadBigTeeth.Name",
+    "ProcessTemplates": false,
+    "enGB": "Hard Head, Big Teeth"
+  },
+
+  {
+    "Key": "Goblin.HardHeadBigTeeth.Description",
+    "enGB": "Goblins are known for their balloon-like heads and enormous maws, but some have even more exaggeratedly large heads filled with razor-sharp teeth. Goblins with this trait gain a bite attack as a primary natural attack that deals 1d4 points of damage."
+  },
+
+  {
+    "Key": "Goblin.OversizedEars.Name",
+    "ProcessTemplates": false,
+    "enGB": "Oversized Ears"
+  },
+
+  {
+    "Key": "Goblin.OversizedEars.Description",
+    "enGB": "While goblins' ears are never dainty, these goblins have freakishly large ears capable of picking up even the smallest sounds. Goblins with this racial trait gain a +4 bonus on Perception checks."
+  },
+
+  {
+    "Key": "Goblin.TreeRunner.Name",
+    "ProcessTemplates": false,
+    "enGB": "Tree Runner"
+  },
+
+  {
+    "Key": "Goblin.TreeRunner.Description",
+    "enGB": "In trackless rain forests and marshes, it can be difficult to find dry ground to build on. goblin tribes living in such areas have learned to live in the treetops. These goblins gain a +4 racial bonus on Mobility and Athletics checks."
+  },
+
+  {
+    "Key": "Kuru.Name",
+    "ProcessTemplates": false,
+    "enGB": "Kuru"
+  },
+
+  {
+    "Key": "Kuru.Description",
+    "enGB": "Kuru are red-eyed humanoids often with disturbing tribal tattoos covering their faces. Their jagged teeth appear to have been filed down to points. \nWhile most kuru live in small tribal villages in or around ruins, some choose to abandon their cultic faith and seek adventure beyond the islands from which they hail, though such individuals are extremely rare."
+  },
+
+  {
+    "Key": "Kuru.BiteAttack.Name",
+    "ProcessTemplates": false,
+    "enGB": "Bite Attack"
+  },
+
+  {
+    "Key": "Kuru.BiteAttack.Description",
+    "enGB": "Kuru possess a natural bite attack that deals 1d6 points of damage."
+  },
+
+  {
+    "Key": "Kuru.BloodCourage.Name",
+    "ProcessTemplates": false,
+    "enGB": "Blood Courage"
+  },
+
+  {
+    "Key": "Kuru.BloodCourage.Description",
+    "enGB": "A kuru gains a +2 racial bonus to saving throws against fear effects."
+  },
+
+  {
+    "Key": "Kuru.CannabalisticVitality.Name",
+    "ProcessTemplates": false,
+    "enGB": "Cannabalistic Vitality"
+  },
+
+  {
+    "Key": "Kuru.CannabalisticVitality.Description",
+    "enGB": "When a kuru hits a living creature with its bite attack, he gains 1 temporary hit point for one day by ingesting the target's blood. This ability does not work on constructs or undead creatures."
+  },
 ]

@@ -15,6 +15,9 @@ using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using Kingmaker.UnitLogic.FactLogic;
 using EbonsContentMod.Components;
 using BlueprintCore.Utils.Assets;
+using Kingmaker.Blueprints.Classes.Spells;
+using Kingmaker.UnitLogic.Abilities.Blueprints;
+using BlueprintCore.Blueprints.CustomConfigurators.UnitLogic.Buffs;
 
 namespace EbonsContentMod.Races
 {
@@ -26,6 +29,16 @@ namespace EbonsContentMod.Races
                     RaceRecolorizer.GetColorsFromRGB(60f),
                     RaceRecolorizer.GetColorsFromRGB(60f),
                     RaceRecolorizer.GetColorsFromRGB(60f)
+                    ),
+                new Color( // Very Dark Gray
+                    RaceRecolorizer.GetColorsFromRGB(75f),
+                    RaceRecolorizer.GetColorsFromRGB(75f),
+                    RaceRecolorizer.GetColorsFromRGB(75f)
+                    ),
+                new Color( // Dark Gray
+                    RaceRecolorizer.GetColorsFromRGB(90f),
+                    RaceRecolorizer.GetColorsFromRGB(90f),
+                    RaceRecolorizer.GetColorsFromRGB(90f)
                     )
             ];
 
@@ -35,7 +48,17 @@ namespace EbonsContentMod.Races
                     RaceRecolorizer.GetColorsFromRGB(177f),
                     RaceRecolorizer.GetColorsFromRGB(6f),
                     RaceRecolorizer.GetColorsFromRGB(1f)
-                    )
+                    ),
+                new Color( // Dark Red
+                    RaceRecolorizer.GetColorsFromRGB(130f),
+                    RaceRecolorizer.GetColorsFromRGB(6f),
+                    RaceRecolorizer.GetColorsFromRGB(1f)
+                    ),
+                new Color( // Dark Red
+                    RaceRecolorizer.GetColorsFromRGB(100f),
+                    RaceRecolorizer.GetColorsFromRGB(6f),
+                    RaceRecolorizer.GetColorsFromRGB(1f)
+                    ),
             ];
 
         public static List<Color> RaceHairColors =
@@ -73,9 +96,23 @@ namespace EbonsContentMod.Races
         internal const string StrixWingsDisplayName = "Strix.StrixWings.Name";
         private static readonly string StrixWingsDescription = "Strix.StrixWings.Description";
 
+        internal const string StrixHatredDisplayName = "Strix.Hatred.Name";
+        private static readonly string StrixHatredDescription = "Strix.Hatred.Description";
+
+        internal const string StrixSuspiciousDisplayName = "Strix.Suspicious.Name";
+        private static readonly string StrixSuspiciousDescription = "Strix.Suspicious.Description";
+
+        internal const string StrixNocturnalDisplayName = "Strix.Nocturnal.Name";
+        private static readonly string StrixNocturnalDescription = "Strix.Nocturnal.Description";
+
         internal static void Configure()
         {
             var NewFemaleHairArray = FemaleHairs.AppendToArray(CopyRace.FemaleOptions.Hair);
+
+            //var MaleWingEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "876fbc0d239695a4790358a3be5d7c53" }, RaceRecolorizer.CreateRampsFromColorsSimple(RaceHeadColors), "{DBFF89D1-B634-47BC-9F8F-99CC55EC5835}");
+            //var FemaleWingEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "da9f766f4de989f4e865a2d019b55098" }, RaceRecolorizer.CreateRampsFromColorsSimple(RaceHeadColors), "{40ACE0C0-BE1B-4ADD-8186-456BFC5EE3AC}");
+
+            //EquipmentEntityLink[] WingLinks = [MaleWingEE, FemaleWingEE];
 
             var MaleWings = FeatureConfigurator.New("MaleStrixWings", "{F4A3FE52-7F4E-4D83-890F-7A00194B2AB2}")
                 .SetHideInUI(true)
@@ -87,6 +124,7 @@ namespace EbonsContentMod.Races
                     c.CheckInProgression = true;
                 })
                 .AddEquipmentEntity("876fbc0d239695a4790358a3be5d7c53")
+                //.AddEquipmentEntity(MaleWingEE)
                 .Configure();
 
             var FemaleWings = FeatureConfigurator.New("FemaleStrixWings", "{3752502C-0616-474C-9AE1-A5349A51EC78}")
@@ -99,6 +137,7 @@ namespace EbonsContentMod.Races
                     c.CheckInProgression = true;
                 })
                 .AddEquipmentEntity("da9f766f4de989f4e865a2d019b55098")
+                //.AddEquipmentEntity(FemaleWingEE)
                 .Configure();
 
             var StrixWingsBuffingFeature = FeatureConfigurator.New("StrixWingBuffingFeature", "{72D7FB33-9E78-49D6-BF5C-5A300C2445B5}")
@@ -111,9 +150,46 @@ namespace EbonsContentMod.Races
             var StrixWings = ProgressionConfigurator.New("StrixWings", "{A76CE8F7-A8B9-4333-8F0E-B6C98332D176}")
                 .SetDisplayName(StrixWingsDisplayName)
                 .SetDescription(StrixWingsDescription)
-                .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.WingsFeature.ToString()).Icon)
+                .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.FeatureWingsDraconicWhite.ToString()).Icon)
                 .SetGiveFeaturesForPreviousLevels(true)
                 .AddToLevelEntries(1, MaleWings, FemaleWings, StrixWingsBuffingFeature)
+                .Configure();
+
+            // Nocturnal
+
+            var NocturnalBuff = BuffConfigurator.New("StrixNocturnalBuff", "{C1A8AB56-409D-4DC6-8D64-D191D38CCC09}")
+                .SetDisplayName(StrixNocturnalDisplayName)
+                .SetDescription(StrixNocturnalDescription)
+                .SetIcon(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.Doom.ToString()).Icon)
+                .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillPerception, value: 2)
+                .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillStealth, value: 2)
+                .Configure();
+
+            var Nocturnal = FeatureConfigurator.New("StrixNocturnal", "{2031DB1D-DFB8-443B-BF8D-1EFA7EB26D06}")
+                .SetDisplayName(StrixNocturnalDisplayName)
+                .SetDescription(StrixNocturnalDescription)
+                .SetIcon(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.Doom.ToString()).Icon)
+                .AddComponent<Nocturnal>()
+                .Configure();
+
+            // Suspicious
+
+            var Suspicious = FeatureConfigurator.New("StrixSuspicious", "{347FFCF3-974E-4275-A826-D0D82E9D2960}")
+                .SetDisplayName(StrixSuspiciousDisplayName)
+                .SetDescription(StrixSuspiciousDescription)
+                .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.IllusionResistance.ToString()).Icon)
+                .AddSavingThrowBonusAgainstSchool(modifierDescriptor: ModifierDescriptor.Racial, school: SpellSchool.Illusion, value: 2)
+                .Configure();
+
+            // Hatred
+
+            var Hatred = FeatureConfigurator.New("StrixHatred", "{B9BFA52D-C33B-45CF-A5F3-1654210AC2DD}")
+                .SetDisplayName(StrixHatredDisplayName)
+                .SetDescription(StrixHatredDescription)
+                .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.HatredGoblinoidOrc.ToString()).Icon)
+                .AddAttackBonusAgainstFactOwner(1, checkedFact: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HumanRace.ToString()))
+                .AddAttackBonusAgainstFactOwner(1, checkedFact: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HalfElfRace.ToString()))
+                .AddAttackBonusAgainstFactOwner(1, checkedFact: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HalfOrcRace.ToString()))
                 .Configure();
             
             var race =
@@ -122,7 +198,7 @@ namespace EbonsContentMod.Races
                 .SetDisplayName(StrixDisplayName)
                 .SetDescription(StrixDescription)
                 .SetSelectableRaceStat(false)
-                .SetFeatures(StrixWings, FeatureRefs.KeenSenses.ToString())
+                .SetFeatures(StrixWings, Nocturnal, Suspicious, Hatred, FeatureRefs.KeenSenses.ToString())
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Dexterity, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Charisma, value: -2)
                 .SetRaceId(Race.Human)
@@ -130,6 +206,9 @@ namespace EbonsContentMod.Races
 
             // Recolor Race
             var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.OreadRace.ToString()), NoEyebrows: true, CustomMaleHeads: MaleHeads, CustomFemaleHeads: FemaleHeads, CustomFemaleHairs: NewFemaleHairArray);
+
+            // Register linked EEs
+            //EELinker.RegisterSkinLink(recoloredrace, WingLinks);
 
             // Add race to mount fixes
             RaceMountFixerizer.AddRaceToMountFixes(recoloredrace, CopyRace);

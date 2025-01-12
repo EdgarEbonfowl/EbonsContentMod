@@ -19,6 +19,14 @@ using BlueprintCore.Blueprints.Configurators.Root;
 using EbonsContentMod.Races;
 using EbonsContentMod.Bloodlines;
 using EbonsContentMod.Traits;
+using EbonsContentMod.Races.Skinwalkers;
+using EbonsContentMod.Utilities;
+using Kingmaker.BundlesLoading;
+using Kingmaker.Modding;
+using Kingmaker.ResourceLinks;
+using Kingmaker.SharedTypes;
+using System.IO;
+using UnityEngine;
 
 namespace EbonsContentMod;
 
@@ -46,6 +54,7 @@ public static class Main
         Main.ModEntry = modEntry;
         HarmonyInstance = new Harmony(modEntry.Info.Id);
         HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
+        CreateAssetLinks.LoadAllSettings();
         return true;
     }
 
@@ -59,6 +68,116 @@ public static class Main
     {
         HarmonyInstance.UnpatchAll(modEntry.Info.Id);
         return true;
+    }
+
+    [HarmonyPatch]
+    public static class AssetHandler
+    {
+        private static Dictionary<string, Shader> shadersByName;
+        private static Dictionary<string, Material> materialsByName;
+
+        // Search the Bundles sub-folder in the mod's install folder for the bundle/s.
+        [HarmonyPatch(typeof(OwlcatModificationsManager), nameof(OwlcatModificationsManager.TryLoadBundle)), HarmonyPrefix]
+        public static bool TryLoadBundle(string bundleName, ref AssetBundle __result)
+        {
+            if (CreateAssetLinks.Bundles.Contains(bundleName))
+            {
+                log.Log($"Main.TryLoadBundle: Loading bundle {bundleName}");
+
+                __result = AssetBundle.LoadFromFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Bundles", $"{bundleName}"));
+
+                // Since imported shaders are broken, swap the shaders in the bundle with a donor vanilla one.
+                EquipmentEntityLink DonorHead = new EquipmentEntityLink { AssetId = "4eea3ef5f2e01474ba5b03fe28324ad3" };
+                log.Log($"Main.TryLoadBundle: Harvesting vanilla donor head ee_head01_m_hm, AssetID {DonorHead.AssetId}");
+
+                if (shadersByName == null)
+                {
+                    shadersByName = new();
+                    shadersByName["Owlcat/Lit"] = DonorHead.Load(false).BodyParts[0].Material.shader;
+                }
+
+                log.Log($"Main.TryLoadBundle: Donor material = {DonorHead.Load(false).BodyParts[0].Material.name}, shader = {DonorHead.Load(false).BodyParts[0].Material.shader.name}");
+
+                var materialCollection = __result.LoadAllAssets<OwlcatModificationMaterialsInBundleAsset>();
+                log.Log($"Main.TryLoadBundle: Loading bundle MaterialsInBundle list {materialCollection}");
+
+                try
+                {
+                    if (materialCollection != null)
+                    {
+                        log.Log($"Main.TryLoadBundle: MaterialsInBundle length = {materialCollection.Length}");
+                        foreach (var entry in materialCollection)
+                        {
+                            for (int i = 0; i < entry.Materials.Length; i++)
+                            {
+                                var material = entry.Materials[i];
+                                log.Log($"Main.TryLoadBundle: Fixing material {i + 1}, {material.name}");
+
+                                if (material == null)
+                                {
+                                    log.Log("Main.TryLoadBundle: Null material, probably stale asset, skipping");
+                                    continue;
+                                }
+
+                                if (material.shader != null && shadersByName.TryGetValue(material.shader.name, out var replacement))
+                                {
+                                    log.Log("Main.TryLoadBundle: Attempting to replace bundle shader with donor shader");
+                                    material.shader = replacement;
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    log.Log($"Caught an exception trying to replace bundle material's shader!\n{e}");
+                }
+
+                return false;
+            }
+            return true;
+        }
+
+        // Map each asset to a bundle.
+        [HarmonyPatch(typeof(OwlcatModificationsManager), nameof(OwlcatModificationsManager.GetBundleNameForAsset)), HarmonyPrefix]
+        public static bool GetBundleNameForAsset(string guid, ref string __result)
+        {
+            if (CreateAssetLinks.AssetsInBundles.TryGetValue(guid, out var bundle))
+            {
+                log.Log($"Main.GetBundleNameForAsset: Redirecting asset with GUID {guid} to AssetBundle {bundle}");
+                __result = bundle;
+                return false;
+            }
+            return true;
+        }
+
+        [HarmonyPatch(typeof(OwlcatModificationsManager), nameof(OwlcatModificationsManager.GetDependenciesForBundle)), HarmonyPrefix]
+        public static bool GetDependenciesForBundle(string bundleName, ref DependencyData __result)
+        {
+            if (CreateAssetLinks.Bundles.Contains(bundleName))
+            {
+                __result = null;
+                return false;
+            }
+
+            return true;
+        }
+    }
+
+    [HarmonyPatch(typeof(AssetBundle))]
+    public static class AssetPatcher
+    {
+        public static Dictionary<string, Action<UnityEngine.Object>> LoadActions = new();
+
+        [HarmonyPatch(nameof(AssetBundle.LoadAsset), typeof(string), typeof(Type)), HarmonyPostfix]
+        public static void LoadAsset(string name, ref UnityEngine.Object __result)
+        {
+            if (LoadActions.TryGetValue(name, out var action))
+            {
+                log.Log($"Main.LoadAsset: Patching asset {name} on load");
+                action(__result);
+            }
+        }
     }
 
     /*private static void Onclick()
@@ -159,7 +278,7 @@ public static class Main
             }
         }
 
-        [HarmonyAfter("DarkCodex", "ExpandedContent", "PrestigePlus", "MysticalMayhem", "CharacterOptionsPlus", "TabletopTweaks-Base", "MicroscopicContentExpansion", "WOTR_MAKING_FRIENDS")]
+        [HarmonyAfter("DarkCodex", "ExpandedContent", "PrestigePlus", "MysticalMayhem", "CharacterOptionsPlus", "TabletopTweaks-Base", "MicroscopicContentExpansion", "WOTR_MAKING_FRIENDS", "DP_WOTR_PlayableRaceExp")]
         [HarmonyPatch(nameof(StartGameLoader.LoadAllJson)), HarmonyPostfix]
         static void HandleOtherMods()
         {
@@ -176,6 +295,13 @@ public static class Main
                 Drow.Configure();
                 Orc.Configure();
                 Suli.Configure();
+                Android.Configure();
+                Ifrit.Configure();
+                Fetchling.Configure();
+                //Changeling.Configure();
+                Skinwalker.Configure();
+                Goblin.Configure();
+                Kuru.Configure();
             }
             catch (Exception e)
             {
