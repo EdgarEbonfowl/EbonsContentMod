@@ -5,6 +5,8 @@ The following races have been added to the game and should work like the default
 
 - Sylph
 - Undine
+- Duergar
+- Svirfneblin
 
 ![image](https://github.com/user-attachments/assets/16eeaa4f-1789-4f2d-b50b-5e5ea39a851c)
 ![image](https://github.com/user-attachments/assets/e8687fa4-443f-4a53-878a-a24bffd588b0)
@@ -15,6 +17,8 @@ The following races have been added to the game and should work like the default
 ![image](https://github.com/user-attachments/assets/2e730b3c-5333-44ae-889a-8895f2b0a7b6)
 ![image](https://github.com/user-attachments/assets/74103851-f2c9-4a5f-a703-c1212eaa3a64)
 
+- Android circuitry colors!
 ![image](https://github.com/user-attachments/assets/d2ff9dcc-3ed6-4b53-bfe4-f79551f8f74a)
 
+- Different Change Shape forms for the skinwalker
 ![image](https://github.com/user-attachments/assets/5976579b-5da5-4464-ac79-a8f62c643c2c)
