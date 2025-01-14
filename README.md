@@ -62,7 +62,7 @@ If you don't see your favorite race here: the way I do races involves cloning, r
 - [Flamboyant Arcana](https://www.d20pfsrd.com/classes/base-classes/magus/magus-arcana/paizo-magus-arcana/flamboyant-arcana-ex "Flamboyant Arcana")
 
 ## Arcanist Exploits
-- [Arcane Discoveries](https://www.d20pfsrd.com/classes/core-classes/wizard/arcane-discoveries/ "Arcane Discoveries") are added to the exploit selection list per tabletop. You only can pick one, so choose wisely. The discoveries that are based on spell school are really only useful for the School Savant archetype which is added by [HomebrewArchetypes](https://www.nexusmods.com/pathfinderwrathoftherighteous/mods/279 "HomebrewArchetypes"). Integrated arcane discoveries:
+- [Arcane Discoveries](https://www.d20pfsrd.com/classes/core-classes/wizard/arcane-discoveries/ "Arcane Discoveries") are added to the exploit selection list per tabletop. You only can pick one, so choose wisely. You must have TabletopTweaks-Base installed for this feature to take effect. The discoveries that are based on spell school are really only useful for the School Savant archetype which is added by [HomebrewArchetypes](https://www.nexusmods.com/pathfinderwrathoftherighteous/mods/279 "HomebrewArchetypes"). Integrated arcane discoveries:
   - [Alchemical Affinity](https://www.d20pfsrd.com/classes/core-classes/wizard/arcane-discoveries/arcane-discoveries-paizo/alchemical-affinity/ "Alchemical Affinity")
   - [Faith Magic](https://www.d20pfsrd.com/classes/core-classes/wizard/arcane-discoveries/arcane-discoveries-paizo/faith-magic/ "Faith Magic")
   - [Idealize](https://www.d20pfsrd.com/classes/core-classes/wizard/arcane-discoveries/arcane-discoveries-paizo/idealize-su/ "Idealize")
