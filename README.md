@@ -21,7 +21,8 @@ The the mod adds the following races to the game and should work like the defaul
 - Android
 - Skinwalker
 - Goblin
-  - Female head is in the works. For now, play male goblin. Helmets/goggles will not look correct and should be hidden for now. Working on a permanent hiding solution for goblins.
+  - Female head is in the works. For now, play male goblin.
+  - Helmets/goggles will not look correct and should be hidden for now. Working on a permanent hiding solution for goblins.
 - Orc
 
 ![image](https://github.com/user-attachments/assets/16eeaa4f-1789-4f2d-b50b-5e5ea39a851c)
@@ -34,7 +35,9 @@ The the mod adds the following races to the game and should work like the defaul
 ![image](https://github.com/user-attachments/assets/74103851-f2c9-4a5f-a703-c1212eaa3a64)
 
 - Android circuitry colors!
+  
 ![image](https://github.com/user-attachments/assets/d2ff9dcc-3ed6-4b53-bfe4-f79551f8f74a)
 
 - Different Change Shape forms for the skinwalker
+  
 ![image](https://github.com/user-attachments/assets/5976579b-5da5-4464-ac79-a8f62c643c2c)
