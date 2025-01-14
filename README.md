@@ -1,9 +1,11 @@
 # Ebon's Content Mod
 
 ## Added Races
-The the mod adds the following races to the game and they should work like the default races. Note, I have not completed a playthrough with these races, so you may experience some strange behavior, especially in dialog, where the race type either is not recognized or, more likely, is recognized as some other race (an NPC calling your drow character an elf, for instnace).
+The the mod adds the following races to the game and they should work like the default races. Note, I have not completed a playthrough with these races, so you may experience some strange behavior, especially in dialog, where the race type either is not recognized or, more likely, is recognized as some other race (an NPC calling your drow character an elf, for instnace). That being said, if you encounter bugs, please report them!
 
-- Sylph
+If you don't see your favorite race here: the way I do races involves cloning, recoloring, and then cobling together base game assets (think Mr. Potatohead plus a paint brush), so only races that can be made from vanilla assets are included here. That means no tengu, no catfolk, etc. If you want me to make a race that would look acceptable with vanilla assets let me know OR if you have some 3D modeling skills and want to submit custom assets, I can make your race. Currently, only the goblin is using anything custom. Playable Mongrels and Ganzi will be coming in a future update.
+
+- [Sylph](https://www.d20pfsrd.com/races/other-races/featured-races/arg-sylph/ "Sylph")
 - Undine
 - Duergar
 - Svirfneblin
