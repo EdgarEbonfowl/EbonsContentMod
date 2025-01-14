@@ -1,7 +1,7 @@
 # Ebon's Content Mod
 
 ## Added Races
-The the mod adds the following races to the game and should work like the default races. Note, I have not completed a playthrough with these races, so you may experience so strange behavior, especially in dialog, where the race type either is not recognized or, more likely, is recognized as some other race (an NPC calling your drow character an elf, for instnace).
+The the mod adds the following races to the game and they should work like the default races. Note, I have not completed a playthrough with these races, so you may experience some strange behavior, especially in dialog, where the race type either is not recognized or, more likely, is recognized as some other race (an NPC calling your drow character an elf, for instnace).
 
 - Sylph
 - Undine
