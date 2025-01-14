@@ -13,6 +13,16 @@ The the mod adds the following races to the game and should work like the defaul
 - Suli
 - Fetchling
 - Drow
+- Changeling
+  - Should be female only. For now, male changelings are playable.
+- Kuru
+- Vishkanya
+- Shabti
+- Android
+- Skinwalker
+- Goblin
+  - Female head is in the works. For now, play male goblin. Helmets/goggles will not look correct and should be hidden for now. Working on a permanent hiding solution for goblins.
+- Orc
 
 ![image](https://github.com/user-attachments/assets/16eeaa4f-1789-4f2d-b50b-5e5ea39a851c)
 ![image](https://github.com/user-attachments/assets/e8687fa4-443f-4a53-878a-a24bffd588b0)
