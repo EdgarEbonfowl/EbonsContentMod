@@ -37,7 +37,7 @@ If you don't see your favorite race here: the way I do races involves cloning, r
 ![image](https://github.com/user-attachments/assets/2e730b3c-5333-44ae-889a-8895f2b0a7b6)
 ![image](https://github.com/user-attachments/assets/74103851-f2c9-4a5f-a703-c1212eaa3a64)
 
-- Android circuitry colors!
+- Android circuitry colors are linked to the eye color - how fun!
   
 ![image](https://github.com/user-attachments/assets/d2ff9dcc-3ed6-4b53-bfe4-f79551f8f74a)
 
