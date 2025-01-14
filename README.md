@@ -70,7 +70,7 @@ If you don't see your favorite race here: the way I do races involves cloning, r
   - [Opposition Research](https://www.d20pfsrd.com/classes/core-classes/wizard/arcane-discoveries/arcane-discoveries-paizo/opposition-research/ "Opposition Research")
   - [Yuelral's Blessing](https://aonprd.com/WizardArcaneDiscoveries.aspx "Yuelral's Blessing")
   - If you have [MysticalMayhem](https://gitgud.io/Kreaddy/mysticalmayhem "MysticalMayhem") the following arcane discoveries are also added:
-    - [School Expertise](
+    - School Expertise - this is homebrew, but not anything crazy so I added it
     - [Staff-Like Wand](https://www.d20pfsrd.com/classes/core-classes/wizard/arcane-discoveries/arcane-discoveries-paizo/staff-like-wand/ "Staff-Like Wand")
    
 ## Ability Fixes
