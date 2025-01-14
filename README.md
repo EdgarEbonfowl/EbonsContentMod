@@ -1,6 +1,8 @@
 # Ebon's Content Mod
 This mod was created to add new content into Wrath of the Righteous that wasn't represented in the other major content mods. This requires [TabletopTweaks-Core](https://github.com/Vek17/TabletopTweaks-Core "TabletopTweaks-Core") and is partially dependent upon [TabletopTweaks-Base](https://github.com/Vek17/TabletopTweaks-Base "TabletopTweaks-Base"), though it will work without it.
 
+If you want to read through my rationale for any implementation decisions I had to make along the way, please see my [Modder Notes](https://github.com/EdgarEbonfowl/EbonsContentMod/blob/main/ModderNotes.md "Modder Notes").
+
 ## Added Races
 This mod adds the following races to the game and they should work like the default races. Note, I have not completed a playthrough with these races, so you may experience some strange behavior, especially in dialog, where the race type either is not recognized or, more likely, is recognized as some other race (an NPC calling your drow character an elf, for instnace). That being said, if you encounter bugs, please report them!
 
