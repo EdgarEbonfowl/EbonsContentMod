@@ -78,7 +78,7 @@ namespace EbonsContentMod.Races.Skinwalkers.SkinwalkerHeritage
                 .SetDescription(ClassicSkinwalkerChangeShapeConDescription)
                 .SetIcon(changeshapeicon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Constitution, value: 2) // Shifted ability score bonus
-                .AddAdditionalLimb(ClawRef).AddAdditionalLimb(ClawRef) // Bestial feature 1
+                .AddEmptyHandWeaponOverride(false, false, weapon: ClawRef).AddEmptyHandWeaponOverride(false, false, weapon: ClawRef) // Bestial feature 1
                 .AddStatBonus(ModifierDescriptor.NaturalArmor, stat: StatType.AC, value: 1) // Bestial feature 2
                 .AddSpellDescriptorComponent(SpellDescriptor.Polymorph)
                 .AddComponent<AddEquipmentEntityBySex>(c =>
@@ -97,7 +97,7 @@ namespace EbonsContentMod.Races.Skinwalkers.SkinwalkerHeritage
                 .SetDescription(ClassicSkinwalkerChangeShapeDexDescription)
                 .SetIcon(changeshapeicon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Dexterity, value: 2) // Shifted ability score bonus
-                .AddAdditionalLimb(ClawRef).AddAdditionalLimb(ClawRef) // Bestial feature 1
+                .AddEmptyHandWeaponOverride(false, false, weapon: ClawRef).AddEmptyHandWeaponOverride(false, false, weapon: ClawRef) // Bestial feature 1
                 .AddStatBonus(ModifierDescriptor.NaturalArmor, stat: StatType.AC, value: 1) // Bestial feature 2
                 .AddSpellDescriptorComponent(SpellDescriptor.Polymorph)
                 .AddComponent<AddEquipmentEntityBySex>(c =>

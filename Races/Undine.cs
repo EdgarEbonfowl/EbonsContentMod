@@ -49,119 +49,119 @@ namespace EbonsContentMod.Races
     internal class Undine
     {
         public static List<Color> RaceHeadColors =
-            [
-                new Color( // Light Water
-                    RaceRecolorizer.GetColorsFromRGB(110f),
-                    RaceRecolorizer.GetColorsFromRGB(143f),
-                    RaceRecolorizer.GetColorsFromRGB(202f)
-                    ),
-                new Color( // Light Seafoam
-                    RaceRecolorizer.GetColorsFromRGB(134f),
-                    RaceRecolorizer.GetColorsFromRGB(162f),
-                    RaceRecolorizer.GetColorsFromRGB(164f)
-                    ),
-                new Color( // Deep Water //
-                    RaceRecolorizer.GetColorsFromRGB(71f),
-                    RaceRecolorizer.GetColorsFromRGB(114f),
-                    RaceRecolorizer.GetColorsFromRGB(154f)
-                    )
-            ];
+        [
+            new Color( // Light Water
+                RaceRecolorizer.GetColorsFromRGB(110f),
+                RaceRecolorizer.GetColorsFromRGB(143f),
+                RaceRecolorizer.GetColorsFromRGB(202f)
+                ),
+            new Color( // Light Seafoam
+                RaceRecolorizer.GetColorsFromRGB(134f),
+                RaceRecolorizer.GetColorsFromRGB(162f),
+                RaceRecolorizer.GetColorsFromRGB(164f)
+                ),
+            new Color( // Deep Water //
+                RaceRecolorizer.GetColorsFromRGB(71f),
+                RaceRecolorizer.GetColorsFromRGB(114f),
+                RaceRecolorizer.GetColorsFromRGB(154f)
+                )
+        ];
 
         public static List<Color> RaceEyeColors =
-            [
-                new Color( // White
-                    RaceRecolorizer.GetColorsFromRGB(182f),
-                    RaceRecolorizer.GetColorsFromRGB(182f),
-                    RaceRecolorizer.GetColorsFromRGB(182f)
-                    ),
-                new Color( // Light Purple
-                    RaceRecolorizer.GetColorsFromRGB(190f),
-                    RaceRecolorizer.GetColorsFromRGB(150f),
-                    RaceRecolorizer.GetColorsFromRGB(205f)
-                    ),
-                new Color( // Light Teal
-                    RaceRecolorizer.GetColorsFromRGB(143f),
-                    RaceRecolorizer.GetColorsFromRGB(220f),
-                    RaceRecolorizer.GetColorsFromRGB(203f)
-                    ),
-                new Color( // Light Blue
-                    RaceRecolorizer.GetColorsFromRGB(144f),
-                    RaceRecolorizer.GetColorsFromRGB(160f),
-                    RaceRecolorizer.GetColorsFromRGB(236f)
-                    )
-            ];
+        [
+            new Color( // White
+                RaceRecolorizer.GetColorsFromRGB(182f),
+                RaceRecolorizer.GetColorsFromRGB(182f),
+                RaceRecolorizer.GetColorsFromRGB(182f)
+                ),
+            new Color( // Light Purple
+                RaceRecolorizer.GetColorsFromRGB(190f),
+                RaceRecolorizer.GetColorsFromRGB(150f),
+                RaceRecolorizer.GetColorsFromRGB(205f)
+                ),
+            new Color( // Light Teal
+                RaceRecolorizer.GetColorsFromRGB(143f),
+                RaceRecolorizer.GetColorsFromRGB(220f),
+                RaceRecolorizer.GetColorsFromRGB(203f)
+                ),
+            new Color( // Light Blue
+                RaceRecolorizer.GetColorsFromRGB(144f),
+                RaceRecolorizer.GetColorsFromRGB(160f),
+                RaceRecolorizer.GetColorsFromRGB(236f)
+                )
+        ];
 
         public static List<Color> RaceHairColors =
-            [
-                new Color( // Dark blue
-                    RaceRecolorizer.GetColorsFromRGB(50f),
-                    RaceRecolorizer.GetColorsFromRGB(81f),
-                    RaceRecolorizer.GetColorsFromRGB(200f)
-                    ),
-                new Color( // Very blue
-                    RaceRecolorizer.GetColorsFromRGB(68f),
-                    RaceRecolorizer.GetColorsFromRGB(106f),
-                    RaceRecolorizer.GetColorsFromRGB(200f)
-                    ),
-                new Color( // Dark Purple
-                    RaceRecolorizer.GetColorsFromRGB(39f),
-                    RaceRecolorizer.GetColorsFromRGB(16f),
-                    RaceRecolorizer.GetColorsFromRGB(86f)
-                    ),
-                new Color( // Teal Seafoam
-                    RaceRecolorizer.GetColorsFromRGB(116f),
-                    RaceRecolorizer.GetColorsFromRGB(196f),
-                    RaceRecolorizer.GetColorsFromRGB(213f)
-                    ),
-                new Color( // Very Dark Blue
-                    RaceRecolorizer.GetColorsFromRGB(6f),
-                    RaceRecolorizer.GetColorsFromRGB(28f),
-                    RaceRecolorizer.GetColorsFromRGB(109f)
-                    ),
-                new Color( // Medium Purple
-                    RaceRecolorizer.GetColorsFromRGB(109f),
-                    RaceRecolorizer.GetColorsFromRGB(80f),
-                    RaceRecolorizer.GetColorsFromRGB(166f)
-                    ),
-                new Color( // Sea Green
-                    RaceRecolorizer.GetColorsFromRGB(38f),
-                    RaceRecolorizer.GetColorsFromRGB(155f),
-                    RaceRecolorizer.GetColorsFromRGB(143f)
-                    ),
-                new Color( // Almost Black Blue
-                    RaceRecolorizer.GetColorsFromRGB(6f),
-                    RaceRecolorizer.GetColorsFromRGB(16f),
-                    RaceRecolorizer.GetColorsFromRGB(59f)
-                    ),
-                new Color( // Light Blue
-                    RaceRecolorizer.GetColorsFromRGB(134f),
-                    RaceRecolorizer.GetColorsFromRGB(153f),
-                    RaceRecolorizer.GetColorsFromRGB(236f)
-                    ),
-                new Color( // Black
-                    RaceRecolorizer.GetColorsFromRGB(30f),
-                    RaceRecolorizer.GetColorsFromRGB(30f),
-                    RaceRecolorizer.GetColorsFromRGB(35f)
-                    )
-            ];
+        [
+            new Color( // Dark blue
+                RaceRecolorizer.GetColorsFromRGB(50f),
+                RaceRecolorizer.GetColorsFromRGB(81f),
+                RaceRecolorizer.GetColorsFromRGB(200f)
+                ),
+            new Color( // Very blue
+                RaceRecolorizer.GetColorsFromRGB(68f),
+                RaceRecolorizer.GetColorsFromRGB(106f),
+                RaceRecolorizer.GetColorsFromRGB(200f)
+                ),
+            new Color( // Dark Purple
+                RaceRecolorizer.GetColorsFromRGB(39f),
+                RaceRecolorizer.GetColorsFromRGB(16f),
+                RaceRecolorizer.GetColorsFromRGB(86f)
+                ),
+            new Color( // Teal Seafoam
+                RaceRecolorizer.GetColorsFromRGB(116f),
+                RaceRecolorizer.GetColorsFromRGB(196f),
+                RaceRecolorizer.GetColorsFromRGB(213f)
+                ),
+            new Color( // Very Dark Blue
+                RaceRecolorizer.GetColorsFromRGB(6f),
+                RaceRecolorizer.GetColorsFromRGB(28f),
+                RaceRecolorizer.GetColorsFromRGB(109f)
+                ),
+            new Color( // Medium Purple
+                RaceRecolorizer.GetColorsFromRGB(109f),
+                RaceRecolorizer.GetColorsFromRGB(80f),
+                RaceRecolorizer.GetColorsFromRGB(166f)
+                ),
+            new Color( // Sea Green
+                RaceRecolorizer.GetColorsFromRGB(38f),
+                RaceRecolorizer.GetColorsFromRGB(155f),
+                RaceRecolorizer.GetColorsFromRGB(143f)
+                ),
+            new Color( // Almost Black Blue
+                RaceRecolorizer.GetColorsFromRGB(6f),
+                RaceRecolorizer.GetColorsFromRGB(16f),
+                RaceRecolorizer.GetColorsFromRGB(59f)
+                ),
+            new Color( // Light Blue
+                RaceRecolorizer.GetColorsFromRGB(134f),
+                RaceRecolorizer.GetColorsFromRGB(153f),
+                RaceRecolorizer.GetColorsFromRGB(236f)
+                ),
+            new Color( // Black
+                RaceRecolorizer.GetColorsFromRGB(30f),
+                RaceRecolorizer.GetColorsFromRGB(30f),
+                RaceRecolorizer.GetColorsFromRGB(35f)
+                )
+        ];
 
         public static EquipmentEntityLink[] MaleHeads =
-            [
-                BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()).MaleOptions.Heads[0],
-                BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()).MaleOptions.Heads[3]
-            ];
+        [
+            BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()).MaleOptions.Heads[0],
+            BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()).MaleOptions.Heads[3]
+        ];
 
         public static EquipmentEntityLink[] FemaleHeads =
-            [
-                BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()).FemaleOptions.Heads[0],
-                BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()).FemaleOptions.Heads[3]
-            ];
+        [
+            BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()).FemaleOptions.Heads[0],
+            BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()).FemaleOptions.Heads[3]
+        ];
 
         public static EquipmentEntityLink[] FemaleHairs =
-            [
-                new EquipmentEntityLink() {AssetId = "afa22656ed5030c4ba273583ba2b3a16"}, // Long Wild Tiefling
-                new EquipmentEntityLink() {AssetId = "3897a5ce68b630548bb85db0a68a465a"}  // Tight French Braid
-            ];
+        [
+            new EquipmentEntityLink() {AssetId = "afa22656ed5030c4ba273583ba2b3a16"}, // Long Wild Tiefling
+            new EquipmentEntityLink() {AssetId = "3897a5ce68b630548bb85db0a68a465a"}  // Tight French Braid
+        ];
 
         public static BlueprintRace CopyRace = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HumanRace.ToString());
 

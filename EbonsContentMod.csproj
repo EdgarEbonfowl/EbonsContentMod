@@ -13,6 +13,9 @@
 		<RestoreAdditionalProjectSources>https://api.nuget.org/v3/index.json</RestoreAdditionalProjectSources>
 		<WrathData>$(LocalAppData)Low\Owlcat Games\Pathfinder Wrath Of The Righteous</WrathData>
 	</PropertyGroup>
+	<PropertyGroup>
+		<DefaultItemExcludes>$(DefaultItemExcludes);Bundles\**</DefaultItemExcludes>
+	</PropertyGroup>
 	<ItemGroup>
 		<Reference Include="$(WrathInstallDir)\Wrath_Data\Managed\Unity*.dll" />
 		<Reference Include="$(WrathInstallDir)\Wrath_Data\Managed\Core*.dll" />
@@ -26,6 +29,7 @@
 	<ItemGroup>
 		<None Include="Info.json" CopyToOutputDirectory="PreserveNewest" />
 		<None Include="LocalizedStrings.json" CopyToOutputDirectory="PreserveNewest" />
+		<None Include="GoblinTest_content" CopyToOutputDirectory="PreserveNewest" />
 	</ItemGroup>
 	<Target Name="ILRepack" AfterTargets="Build">
 		<ItemGroup>

@@ -144,12 +144,13 @@ namespace EbonsContentMod.Races
 
         public static EquipmentEntityLink[] MaleHairs =
         [
-            new EquipmentEntityLink() {AssetId = "e6cb686fb8663734f96ceeacfa2e2400"}, // Long Braids Male Elf
             new EquipmentEntityLink() {AssetId = "d69743688fc27584887a7c29a774289e"}, // Long Straight Male Elf
+            new EquipmentEntityLink() {AssetId = "e6cb686fb8663734f96ceeacfa2e2400"}, // Long Braids Male Elf
             new EquipmentEntityLink() {AssetId = "8e9394a7a860ead42b2d5acdfb35e3f5"}, // Ponytail Classic Male Elf
             new EquipmentEntityLink() {AssetId = "76cfc339d08471f4da919dcbdd2fceb1"}, // Short Male Half-Elf
             new EquipmentEntityLink() {AssetId = "4da3c565974930a40b51950ee671895e"}, // Slick Male Elf
-            new EquipmentEntityLink() {AssetId = "54aae291e3449c14792bbe2592228d4d"} // Medium Tiny Braid Male Elf
+            new EquipmentEntityLink() {AssetId = "54aae291e3449c14792bbe2592228d4d"}, // Medium Tiny Braid Male Elf
+            new EquipmentEntityLink() {AssetId = "b85db19d7adf6aa48b5dd2bb7bfe1502"} // Bald
         ];
 
         public static EquipmentEntityLink[] FemaleHairs =
@@ -162,6 +163,7 @@ namespace EbonsContentMod.Races
             new EquipmentEntityLink() {AssetId = "304b84351ffbde24190e56724178df5b"}, // Long Ember Female Elf
             new EquipmentEntityLink() {AssetId = "9ec441743ea20c5488e7f497992042ed"}, // Ponytail Lush Female Elf
             new EquipmentEntityLink() {AssetId = "39d65ebde5c324f41821b36258791ee5"}, // Side Kare Female Elf
+            new EquipmentEntityLink() {AssetId = "b85db19d7adf6aa48b5dd2bb7bfe1502"} // Bald
         ];
 
         // Need to implement this in the recolorizer first

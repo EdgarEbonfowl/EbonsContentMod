@@ -24,15 +24,15 @@ namespace EbonsContentMod.Races
     {
         public static List<Color> RaceHeadColors =
         [
-            new Color( // Near White
-                RaceRecolorizer.GetColorsFromRGB(160f),
-                RaceRecolorizer.GetColorsFromRGB(160f),
-                RaceRecolorizer.GetColorsFromRGB(165f)
-                ),
             new Color( // Very Lgiht Gray
                 RaceRecolorizer.GetColorsFromRGB(130f),
                 RaceRecolorizer.GetColorsFromRGB(130f),
                 RaceRecolorizer.GetColorsFromRGB(135f)
+                ),
+            new Color( // Near White
+                RaceRecolorizer.GetColorsFromRGB(160f),
+                RaceRecolorizer.GetColorsFromRGB(160f),
+                RaceRecolorizer.GetColorsFromRGB(165f)
                 ),
             new Color( // Gray
                 RaceRecolorizer.GetColorsFromRGB(100f),

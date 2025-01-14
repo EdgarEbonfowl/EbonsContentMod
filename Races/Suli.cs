@@ -31,115 +31,115 @@ namespace EbonsContentMod.Races
     internal class Suli
     {
         public static List<Color> RaceHeadColors =
-            [
-                new Color( // Bronze
-                    RaceRecolorizer.GetColorsFromRGB(126f),
-                    RaceRecolorizer.GetColorsFromRGB(101f),
-                    RaceRecolorizer.GetColorsFromRGB(73f)
-                    ),
-                new Color( // Ruddy
-                    RaceRecolorizer.GetColorsFromRGB(113f),
-                    RaceRecolorizer.GetColorsFromRGB(83f),
-                    RaceRecolorizer.GetColorsFromRGB(78f)
-                    ),
-                new Color( // Deep Bronze
-                    RaceRecolorizer.GetColorsFromRGB(116f),
-                    RaceRecolorizer.GetColorsFromRGB(86f),
-                    RaceRecolorizer.GetColorsFromRGB(50f)
-                    ),
-                new Color( // Gold
-                    RaceRecolorizer.GetColorsFromRGB(161f),
-                    RaceRecolorizer.GetColorsFromRGB(139f),
-                    RaceRecolorizer.GetColorsFromRGB(96f)
-                    ),
-                new Color( // Silver
-                    RaceRecolorizer.GetColorsFromRGB(136f),
-                    RaceRecolorizer.GetColorsFromRGB(132f),
-                    RaceRecolorizer.GetColorsFromRGB(132f)
-                    ),
-                new Color( // Sand
-                    RaceRecolorizer.GetColorsFromRGB(111f),
-                    RaceRecolorizer.GetColorsFromRGB(89f),
-                    RaceRecolorizer.GetColorsFromRGB(62f)
-                    ),
-                new Color( // Pink stone
-                    RaceRecolorizer.GetColorsFromRGB(169f),
-                    RaceRecolorizer.GetColorsFromRGB(132f),
-                    RaceRecolorizer.GetColorsFromRGB(132f)
-                    ),
-                new Color( // Deep Earth
-                    RaceRecolorizer.GetColorsFromRGB(76f),
-                    RaceRecolorizer.GetColorsFromRGB(59f),
-                    RaceRecolorizer.GetColorsFromRGB(37f)
-                    )
-            ];
+        [
+            new Color( // Bronze
+                RaceRecolorizer.GetColorsFromRGB(126f),
+                RaceRecolorizer.GetColorsFromRGB(101f),
+                RaceRecolorizer.GetColorsFromRGB(73f)
+                ),
+            new Color( // Ruddy
+                RaceRecolorizer.GetColorsFromRGB(113f),
+                RaceRecolorizer.GetColorsFromRGB(83f),
+                RaceRecolorizer.GetColorsFromRGB(78f)
+                ),
+            new Color( // Deep Bronze
+                RaceRecolorizer.GetColorsFromRGB(116f),
+                RaceRecolorizer.GetColorsFromRGB(86f),
+                RaceRecolorizer.GetColorsFromRGB(50f)
+                ),
+            new Color( // Gold
+                RaceRecolorizer.GetColorsFromRGB(161f),
+                RaceRecolorizer.GetColorsFromRGB(139f),
+                RaceRecolorizer.GetColorsFromRGB(96f)
+                ),
+            new Color( // Silver
+                RaceRecolorizer.GetColorsFromRGB(136f),
+                RaceRecolorizer.GetColorsFromRGB(132f),
+                RaceRecolorizer.GetColorsFromRGB(132f)
+                ),
+            new Color( // Sand
+                RaceRecolorizer.GetColorsFromRGB(111f),
+                RaceRecolorizer.GetColorsFromRGB(89f),
+                RaceRecolorizer.GetColorsFromRGB(62f)
+                ),
+            new Color( // Pink stone
+                RaceRecolorizer.GetColorsFromRGB(169f),
+                RaceRecolorizer.GetColorsFromRGB(132f),
+                RaceRecolorizer.GetColorsFromRGB(132f)
+                ),
+            new Color( // Deep Earth
+                RaceRecolorizer.GetColorsFromRGB(76f),
+                RaceRecolorizer.GetColorsFromRGB(59f),
+                RaceRecolorizer.GetColorsFromRGB(37f)
+                )
+        ];
 
         public static List<Color> RaceEyeColors =
-            [
-                new Color( // Fire
-                    RaceRecolorizer.GetColorsFromRGB(245f),
-                    RaceRecolorizer.GetColorsFromRGB(159f),
-                    RaceRecolorizer.GetColorsFromRGB(0f)
-                    ),
-                new Color( // Water
-                    RaceRecolorizer.GetColorsFromRGB(80f),
-                    RaceRecolorizer.GetColorsFromRGB(80f),
-                    RaceRecolorizer.GetColorsFromRGB(247f)
-                    ),
-                new Color( // Electric
-                    RaceRecolorizer.GetColorsFromRGB(153f),
-                    RaceRecolorizer.GetColorsFromRGB(190f),
-                    RaceRecolorizer.GetColorsFromRGB(255f)
-                    ),
-                new Color( // Acid
-                    RaceRecolorizer.GetColorsFromRGB(125f),
-                    RaceRecolorizer.GetColorsFromRGB(190f),
-                    RaceRecolorizer.GetColorsFromRGB(64f)
-                    ),
-                new Color( // White
-                    RaceRecolorizer.GetColorsFromRGB(190f),
-                    RaceRecolorizer.GetColorsFromRGB(190f),
-                    RaceRecolorizer.GetColorsFromRGB(190f)
-                    )
-            ];
+        [
+            new Color( // Fire
+                RaceRecolorizer.GetColorsFromRGB(245f),
+                RaceRecolorizer.GetColorsFromRGB(159f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+            new Color( // Water
+                RaceRecolorizer.GetColorsFromRGB(80f),
+                RaceRecolorizer.GetColorsFromRGB(80f),
+                RaceRecolorizer.GetColorsFromRGB(247f)
+                ),
+            new Color( // Electric
+                RaceRecolorizer.GetColorsFromRGB(153f),
+                RaceRecolorizer.GetColorsFromRGB(190f),
+                RaceRecolorizer.GetColorsFromRGB(255f)
+                ),
+            new Color( // Acid
+                RaceRecolorizer.GetColorsFromRGB(125f),
+                RaceRecolorizer.GetColorsFromRGB(190f),
+                RaceRecolorizer.GetColorsFromRGB(64f)
+                ),
+            new Color( // White
+                RaceRecolorizer.GetColorsFromRGB(190f),
+                RaceRecolorizer.GetColorsFromRGB(190f),
+                RaceRecolorizer.GetColorsFromRGB(190f)
+                )
+        ];
 
         public static List<Color> RaceHairColors =
-            [
-                new Color( // Black
-                    RaceRecolorizer.GetColorsFromRGB(30f),
-                    RaceRecolorizer.GetColorsFromRGB(30f),
-                    RaceRecolorizer.GetColorsFromRGB(30f)
-                    ),
-                new Color( // Brown
-                    RaceRecolorizer.GetColorsFromRGB(75f),
-                    RaceRecolorizer.GetColorsFromRGB(48f),
-                    RaceRecolorizer.GetColorsFromRGB(0f)
-                    ),
-                new Color( // Deep Brown
-                    RaceRecolorizer.GetColorsFromRGB(58f),
-                    RaceRecolorizer.GetColorsFromRGB(43f),
-                    RaceRecolorizer.GetColorsFromRGB(24f)
-                    ),
-                new Color( // Dark Gray
-                    RaceRecolorizer.GetColorsFromRGB(63f),
-                    RaceRecolorizer.GetColorsFromRGB(55f),
-                    RaceRecolorizer.GetColorsFromRGB(47f)
-                    ),
-                new Color( // Deep Ruddy Brown
-                    RaceRecolorizer.GetColorsFromRGB(101f),
-                    RaceRecolorizer.GetColorsFromRGB(61f),
-                    RaceRecolorizer.GetColorsFromRGB(43f)
-                    )
-            ];
+        [
+            new Color( // Black
+                RaceRecolorizer.GetColorsFromRGB(30f),
+                RaceRecolorizer.GetColorsFromRGB(30f),
+                RaceRecolorizer.GetColorsFromRGB(30f)
+                ),
+            new Color( // Brown
+                RaceRecolorizer.GetColorsFromRGB(75f),
+                RaceRecolorizer.GetColorsFromRGB(48f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+            new Color( // Deep Brown
+                RaceRecolorizer.GetColorsFromRGB(58f),
+                RaceRecolorizer.GetColorsFromRGB(43f),
+                RaceRecolorizer.GetColorsFromRGB(24f)
+                ),
+            new Color( // Dark Gray
+                RaceRecolorizer.GetColorsFromRGB(63f),
+                RaceRecolorizer.GetColorsFromRGB(55f),
+                RaceRecolorizer.GetColorsFromRGB(47f)
+                ),
+            new Color( // Deep Ruddy Brown
+                RaceRecolorizer.GetColorsFromRGB(101f),
+                RaceRecolorizer.GetColorsFromRGB(61f),
+                RaceRecolorizer.GetColorsFromRGB(43f)
+                )
+        ];
 
         public static EquipmentEntityLink[] FemaleHairs =
-            [
-                new EquipmentEntityLink() {AssetId = "afa22656ed5030c4ba273583ba2b3a16"}, // Long Wild Tiefling
-                new EquipmentEntityLink() {AssetId = "04c3eb6d7570d8d49b686516b7c4a4f8"}, // Long Camelia Hair
-                new EquipmentEntityLink() {AssetId = "779458079f7718c4bb960d9cef195339"}, // Long Wavy Braids
-                new EquipmentEntityLink() {AssetId = "1762cab3d178f53489f43ab791b87f9c"}, // Noble Braids - Dwarf
-                new EquipmentEntityLink() {AssetId = "3897a5ce68b630548bb85db0a68a465a"}  // Tight French Braid
-            ];
+        [
+            new EquipmentEntityLink() {AssetId = "afa22656ed5030c4ba273583ba2b3a16"}, // Long Wild Tiefling
+            new EquipmentEntityLink() {AssetId = "04c3eb6d7570d8d49b686516b7c4a4f8"}, // Long Camelia Hair
+            new EquipmentEntityLink() {AssetId = "779458079f7718c4bb960d9cef195339"}, // Long Wavy Braids
+            new EquipmentEntityLink() {AssetId = "1762cab3d178f53489f43ab791b87f9c"}, // Noble Braids - Dwarf
+            new EquipmentEntityLink() {AssetId = "3897a5ce68b630548bb85db0a68a465a"}  // Tight French Braid
+        ];
 
         public static BlueprintRace CopyRace = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HumanRace.ToString());
 

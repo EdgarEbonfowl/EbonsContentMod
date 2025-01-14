@@ -89,7 +89,8 @@ namespace EbonsContentMod.Races
             new EquipmentEntityLink() {AssetId = "b34b1532310a01440ac95dea9d0956e1"}, // Aasimar Ponytail Classic
             new EquipmentEntityLink() {AssetId = "6f7020d7788477d498233b40095320ff"}, // Aasimar Medium Mess
             new EquipmentEntityLink() {AssetId = "82378e98f50571f40a27188815b12973"}, // Aasimar Daeran
-            new EquipmentEntityLink() {AssetId = "4049f905c9dc7714793c654a577774b4"}  // Aasimar Military
+            new EquipmentEntityLink() {AssetId = "4049f905c9dc7714793c654a577774b4"}, // Aasimar Military
+            new EquipmentEntityLink() {AssetId = "b85db19d7adf6aa48b5dd2bb7bfe1502"}  // Bald
         ];
 
         // Good amount of clipping in all these, but oh well
@@ -99,7 +100,8 @@ namespace EbonsContentMod.Races
             new EquipmentEntityLink() {AssetId = "7522188768d3bcc4f9691eb3d0e68cfc"}, // Aasimar Long Back
             new EquipmentEntityLink() {AssetId = "e3a41513e3314e047ae3bbb41a00e7e4"}, // Aasimar Medium Anevia
             new EquipmentEntityLink() {AssetId = "5ad5704dd51861a4b80931cd4d33ebe6"}, // Aasimar Slick
-            new EquipmentEntityLink() {AssetId = "b6ed73aa8db434a48afab56b6296181d"}  // Aasimar Long Camelia
+            new EquipmentEntityLink() {AssetId = "b6ed73aa8db434a48afab56b6296181d"}, // Aasimar Long Camelia
+            new EquipmentEntityLink() {AssetId = "b85db19d7adf6aa48b5dd2bb7bfe1502"}  // Bald
         ];
 
         public static BlueprintRace CopyRace = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HumanRace.ToString());

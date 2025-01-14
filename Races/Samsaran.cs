@@ -64,32 +64,32 @@ namespace EbonsContentMod.Races
     internal class Samsaran
     {
         public static List<Color> RaceHeadColors =
-            [
-                new Color(0.173f, 0.455f, 0.78f),
-                new Color(0.118f, 0.573f, 0.824f),
-                new Color(0.0f, 0.5f, 1f),
-                new Color(0.322f, 0.439f, 0.816f),
-                new Color(0.301f, 0.333f, 0.863f)
-            ];
+        [
+            new Color(0.173f, 0.455f, 0.78f),
+            new Color(0.118f, 0.573f, 0.824f),
+            new Color(0.0f, 0.5f, 1f),
+            new Color(0.322f, 0.439f, 0.816f),
+            new Color(0.301f, 0.333f, 0.863f)
+        ];
 
         public static List<Color> RaceEyeColors =
-            [
-                new Color(0.75f, 0.75f, 0.75f)
-            ];
+        [
+            new Color(0.75f, 0.75f, 0.75f)
+        ];
 
         public static List<Color> RaceHairColors =
-            [
-                new Color(0.11764706f, 0.11764706f, 0.11764706f),
-                new Color(0.0f, 0.0f, 0.0f)
-            ];
+        [
+            new Color(0.11764706f, 0.11764706f, 0.11764706f),
+            new Color(0.0f, 0.0f, 0.0f)
+        ];
 
         public static EquipmentEntityLink[] FemaleHairs =
-            [
-                new EquipmentEntityLink() {AssetId = "04c3eb6d7570d8d49b686516b7c4a4f8"}, // Long Camelia Hair
-                new EquipmentEntityLink() {AssetId = "779458079f7718c4bb960d9cef195339"}, // Long Wavy Braids
-                new EquipmentEntityLink() {AssetId = "34bb68b3e4f03be44a1f0611a09530fc"}, // Crown Braids - Dwarf
-                new EquipmentEntityLink() {AssetId = "1762cab3d178f53489f43ab791b87f9c"}  // Noble Braids - Dwarf
-            ];
+        [
+            new EquipmentEntityLink() {AssetId = "04c3eb6d7570d8d49b686516b7c4a4f8"}, // Long Camelia Hair
+            new EquipmentEntityLink() {AssetId = "779458079f7718c4bb960d9cef195339"}, // Long Wavy Braids
+            new EquipmentEntityLink() {AssetId = "34bb68b3e4f03be44a1f0611a09530fc"}, // Crown Braids - Dwarf
+            new EquipmentEntityLink() {AssetId = "1762cab3d178f53489f43ab791b87f9c"}  // Noble Braids - Dwarf
+        ];
 
         public static BlueprintRace CopyRace = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HumanRace.ToString());
 

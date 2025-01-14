@@ -49,7 +49,7 @@ namespace EbonsContentMod.Races.Skinwalkers
 
             var BiteWeapon = ItemWeaponConfigurator.New("SkinwalkerBiteWeapon", "{8D16F61E-D521-4153-89C3-C3163016DBAF}")
                 .CopyFrom(ItemWeaponRefs.Bite1d6)
-                .SetAlwaysPrimary(true)
+                //.SetAlwaysPrimary(true)
                 .Configure();
 
             var ClawWeapon = ItemWeaponConfigurator.New("SkinwalkerClawWeapon", "{925F0A7D-259B-4781-B1D0-08EF832CCE59}")
@@ -58,7 +58,7 @@ namespace EbonsContentMod.Races.Skinwalkers
 
             var GoreWeapon = ItemWeaponConfigurator.New("SkinwalkerGoreWeapon", "{FA68944E-650C-4CAD-AEBC-EAC07EC0F93B}")
                 .CopyFrom(ItemWeaponRefs.Gore1d6)
-                .SetAlwaysPrimary(true)
+                //.SetAlwaysPrimary(true)
                 //.SetDamageDice(new DiceFormula() { m_Rolls = 1, m_Dice = DiceType.D6 })
                 .Configure();
 

@@ -1017,7 +1017,7 @@
 
   {
     "Key": "Strix.Nocturnal.Description",
-    "enGB": "Strix gain a +2 racial bonus on Perception and Stealth checks in dim light or darkness."
+    "enGB": "Strix gain a +2 bonus on Perception and Stealth checks in dim light or darkness."
   },
 
   {
@@ -1383,6 +1383,127 @@
   {
     "Key": "Changeling.Description",
     "enGB": "Changelings are the offspring of hags and their lovers taken through magic or madness. Dropped off on doorsteps of prospective foster parents, changelings are raised by strangers. Typically tall, slender, dark haired, and attractive, changelings otherwise resemble their fathers' race. They are always female, and their mismatched colored eyes and abnormally pale skin hint at their true heritage. At puberty, changelings receive \"the call,\" a hypnotic spiritual voice that beckons them to travel and discover their true origins. Changelings who ignore this call choose their own destiny; those who heed it discover their \"mother\" and may come into great power by transforming into hags themselves."
+  },
+
+  {
+    "Key": "Changeling.WitchBorn.Name",
+    "ProcessTemplates": false,
+    "enGB": "Witchborn"
+  },
+
+  {
+    "Key": "Changeling.WitchBorn.Description",
+    "enGB": "Witchborn changelings are talented witches. They gain a +2 bonus to Intelligence and Charisma a -2 penalty to Constitution."
+  },
+
+  {
+    "Key": "Changeling.ChangelingGeneral.Name",
+    "ProcessTemplates": false,
+    "enGB": "Changeling (General)"
+  },
+
+  {
+    "Key": "Changeling.ChangelingGeneral.Description",
+    "enGB": "Changelings gain a +2 bonus to Wisdom and Charisma a -2 penalty to Constitution."
+  },
+
+  {
+    "Key": "Changeling.HagHeritage.Name",
+    "ProcessTemplates": false,
+    "enGB": "Hag Heritage"
+  },
+
+  {
+    "Key": "Changeling.HagHeritage.Description",
+    "enGB": "Although many changelings follow the general model of the changeling, many more do not. Those of different lineages may evince dramatically different manifestations of their heritage, both in appearance and in ability."
+  },
+
+  {
+    "Key": "Changeling.Claws.Name",
+    "ProcessTemplates": false,
+    "enGB": "Claws"
+  },
+
+  {
+    "Key": "Changeling.Claws.Description",
+    "enGB": "Changelings' fingernails are hard and sharp, granting them two claw attacks (1d4 points of damage each)."
+  },
+
+  {
+    "Key": "Changeling.NaturalArmor.Name",
+    "ProcessTemplates": false,
+    "enGB": "Natural Armor"
+  },
+
+  {
+    "Key": "Changeling.NaturalArmor.Description",
+    "enGB": "Changelings have a +1 natural armor bonus."
+  },
+
+  {
+    "Key": "Changeling.HulkingChangeling.Name",
+    "ProcessTemplates": false,
+    "enGB": "Hulking Changeling (Annis Hag)"
+  },
+
+  {
+    "Key": "Changeling.HulkingChangeling.Description",
+    "enGB": "The changeling gains a +1 racial bonus on melee damage."
+  },
+
+  {
+    "Key": "Changeling.Pyrophile.Name",
+    "ProcessTemplates": false,
+    "enGB": "Pyrophile (Ash Hag)"
+  },
+
+  {
+    "Key": "Changeling.Pyrophile.Description",
+    "enGB": "The changeling gains a +1 racial bonus on damage rolls when using spells with the fire descriptor. This bonus increases by 1 for every 4 levels the changeling has beyond 1st."
+  },
+
+  {
+    "Key": "Changeling.GreenWidow.Name",
+    "ProcessTemplates": false,
+    "enGB": "Green Widow (Green Hag)"
+  },
+
+  {
+    "Key": "Changeling.GreenWidow.Description",
+    "enGB": "The changeling gains a +2 racial bonus on Bluff checks."
+  },
+
+  {
+    "Key": "Changeling.GazeBlindness.Name",
+    "ProcessTemplates": false,
+    "enGB": "Gaze Blindness (Mute Hag)"
+  },
+
+  {
+    "Key": "Changeling.GazeBlindness.Description",
+    "enGB": "The changeling gains a +2 racial bonus on saving throws against gaze attacks."
+  },
+
+  {
+    "Key": "Changeling.HeartstoneHeritor.Name",
+    "ProcessTemplates": false,
+    "enGB": "Heartstone Heritor (Night Hag)"
+  },
+
+  {
+    "Key": "Changeling.HeartstoneHeritor.Description",
+    "enGB": "The changeling gains a +2 racial bonus on saving throws against disease."
+  },
+
+  {
+    "Key": "Changeling.HagRacialTrait.Name",
+    "ProcessTemplates": false,
+    "enGB": "Hag Racial Trait"
+  },
+
+  {
+    "Key": "Changeling.HagRacialTrait.Description",
+    "enGB": "A changeling inherits a unique racial trait, depending on her mother's hag type."
   },
 
   {
@@ -1834,5 +1955,115 @@
   {
     "Key": "Kuru.CannabalisticVitality.Description",
     "enGB": "When a kuru hits a living creature with its bite attack, he gains 1 temporary hit point for one day by ingesting the target's blood. This ability does not work on constructs or undead creatures."
+  },
+
+  {
+    "Key": "Vishkanya.Name",
+    "ProcessTemplates": false,
+    "enGB": "Vishkanya"
+  },
+
+  {
+    "Key": "Vishkanya.Description",
+    "enGB": "Vishkanyas are a race of exotic humanoids with poisonous blood. Possessed of an alien beauty, these graceful humanoids see the world through serpentine eyes of burnished gold. Their supple skin is covered with tiny scales, often of a light green, which are sometimes arrayed in patterns not unlike those of a serpent. They cannot be generalized as good or evil, but since they truly speak with forked tongues, they are content to accept the gold they're offered and leave questions of morality to others."
+  },
+
+  {
+    "Key": "Vishkanya.PoisonResistance.Name",
+    "ProcessTemplates": false,
+    "enGB": "Poison Resistance"
+  },
+
+  {
+    "Key": "Vishkanya.PoisonResistance.Description",
+    "enGB": "A vishkanya has a racial bonus on saving throws against poison equal to its Hit Dice."
+  },
+
+  {
+    "Key": "Vishkanya.Limber.Name",
+    "ProcessTemplates": false,
+    "enGB": "Limber"
+  },
+
+  {
+    "Key": "Vishkanya.Limber.Description",
+    "enGB": "Vishkanyas receive a +2 racial bonus on Mobility and Stealth checks."
+  },
+
+  {
+    "Key": "Vishkanya.WeaponFamiliarity.Name",
+    "ProcessTemplates": false,
+    "enGB": "Weapon Familiarity"
+  },
+
+  {
+    "Key": "Vishkanya.WeaponFamiliarity.Description",
+    "enGB": "Vishkanyas are always proficient with kukri and starknife."
+  },
+
+  {
+    "Key": "Vishkanya.Toxic.Name",
+    "ProcessTemplates": false,
+    "enGB": "Toxic"
+  },
+
+  {
+    "Key": "Vishkanya.Toxic.Description",
+    "enGB": "A number of times per day equal to his Constitution modifier (minimum 1/day), a vishkanya can envenom a weapon that he wields with his toxic saliva. Applying venom in this way is a swift action. \nVishkanya Venom: Injury; save Fort DC 10 + 1/2 the vishkanya's Hit Dice + the vishkanya's Constitution modifier; frequency 1/round for 6 rounds; effect 1d2 Dex; cure 1 save."
+  },
+
+  {
+    "Key": "Shabti.Name",
+    "ProcessTemplates": false,
+    "enGB": "Shabti"
+  },
+
+  {
+    "Key": "Shabti.Description",
+    "enGB": "Death is more terrifying for those who have the best of life. Many rulers obsess over their mortality, the most brazen turning to the mystical arts, pouring their fears into splendid vessels, fashioning simulacra of themselves to bear the scourge of their god's judgment. In the mortal world, these icons are nothing but gold with a ruler's face and name, but in death, they are shabti. \nExisting as something between mortal souls, fabricated beings, and true children of the planes, shabti are immortal facsimiles of death-obsessed nobles. They serve out the sentences of their mortal twins, whether it be an infinity of torture or an eternity wandering the planes. Most never emerge from such trials, but some manage to find their own paths upon the planes. \nShabti typically look like idealized humans with perfect physiques and flawless features. They usually stand just over 6 feet tall and weigh between 150 and 210 pounds."
+  },
+
+  {
+    "Key": "Shabti.Immortal.Name",
+    "ProcessTemplates": false,
+    "enGB": "Immortal"
+  },
+
+  {
+    "Key": "Shabti.Immortal.Description",
+    "enGB": "Shabti do not age naturally and cannot die of old age. While some might come into being at age categories other than adulthood, they never leave their original age category. Shabti cannot be magically aged and are immune to any ability or effect that causes aging."
+  },
+
+  {
+    "Key": "Shabti.SpellLikeAbility.Name",
+    "ProcessTemplates": false,
+    "enGB": "Spell-Like Ability"
+  },
+
+  {
+    "Key": "Shabti.SpellLikeAbility.Description",
+    "enGB": "Shabti can use castigate once per day as a spell-like ability, with the caster level equal to the shabti's class level."
+  },
+
+  {
+    "Key": "Shabti.ResistLevelDrain.Name",
+    "ProcessTemplates": false,
+    "enGB": "Energy Drain Immunity"
+  },
+
+  {
+    "Key": "Shabti.ResistLevelDrain.Description",
+    "enGB": "A shabti is immune to all energy drain effects as well as any effect or ability that inflicts negative levels."
+  },
+
+  {
+    "Key": "Shabti.PastLifeKnowledge.Name",
+    "ProcessTemplates": false,
+    "enGB": "Past Life Knowledge"
+  },
+
+  {
+    "Key": "Shabti.PastLifeKnowledge.Description",
+    "enGB": "Shabti remember bits of their past lives. As a result, they treat all Knowledge and Lore skills as class skills."
   },
 ]

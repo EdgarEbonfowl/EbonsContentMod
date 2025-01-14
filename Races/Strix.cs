@@ -24,66 +24,66 @@ namespace EbonsContentMod.Races
     internal class Strix
     {
         public static List<Color> RaceHeadColors =
-            [
-                new Color( // Nearly Black
-                    RaceRecolorizer.GetColorsFromRGB(60f),
-                    RaceRecolorizer.GetColorsFromRGB(60f),
-                    RaceRecolorizer.GetColorsFromRGB(60f)
-                    ),
-                new Color( // Very Dark Gray
-                    RaceRecolorizer.GetColorsFromRGB(75f),
-                    RaceRecolorizer.GetColorsFromRGB(75f),
-                    RaceRecolorizer.GetColorsFromRGB(75f)
-                    ),
-                new Color( // Dark Gray
-                    RaceRecolorizer.GetColorsFromRGB(90f),
-                    RaceRecolorizer.GetColorsFromRGB(90f),
-                    RaceRecolorizer.GetColorsFromRGB(90f)
-                    )
-            ];
+        [
+            new Color( // Nearly Black
+                RaceRecolorizer.GetColorsFromRGB(60f),
+                RaceRecolorizer.GetColorsFromRGB(60f),
+                RaceRecolorizer.GetColorsFromRGB(60f)
+                ),
+            new Color( // Very Dark Gray
+                RaceRecolorizer.GetColorsFromRGB(75f),
+                RaceRecolorizer.GetColorsFromRGB(75f),
+                RaceRecolorizer.GetColorsFromRGB(75f)
+                ),
+            new Color( // Dark Gray
+                RaceRecolorizer.GetColorsFromRGB(90f),
+                RaceRecolorizer.GetColorsFromRGB(90f),
+                RaceRecolorizer.GetColorsFromRGB(90f)
+                )
+        ];
 
         public static List<Color> RaceEyeColors =
-            [
-                new Color( // Red
-                    RaceRecolorizer.GetColorsFromRGB(177f),
-                    RaceRecolorizer.GetColorsFromRGB(6f),
-                    RaceRecolorizer.GetColorsFromRGB(1f)
-                    ),
-                new Color( // Dark Red
-                    RaceRecolorizer.GetColorsFromRGB(130f),
-                    RaceRecolorizer.GetColorsFromRGB(6f),
-                    RaceRecolorizer.GetColorsFromRGB(1f)
-                    ),
-                new Color( // Dark Red
-                    RaceRecolorizer.GetColorsFromRGB(100f),
-                    RaceRecolorizer.GetColorsFromRGB(6f),
-                    RaceRecolorizer.GetColorsFromRGB(1f)
-                    ),
-            ];
+        [
+            new Color( // Red
+                RaceRecolorizer.GetColorsFromRGB(177f),
+                RaceRecolorizer.GetColorsFromRGB(6f),
+                RaceRecolorizer.GetColorsFromRGB(1f)
+                ),
+            new Color( // Dark Red
+                RaceRecolorizer.GetColorsFromRGB(130f),
+                RaceRecolorizer.GetColorsFromRGB(6f),
+                RaceRecolorizer.GetColorsFromRGB(1f)
+                ),
+            new Color( // Dark Red
+                RaceRecolorizer.GetColorsFromRGB(100f),
+                RaceRecolorizer.GetColorsFromRGB(6f),
+                RaceRecolorizer.GetColorsFromRGB(1f)
+                ),
+        ];
 
         public static List<Color> RaceHairColors =
-            [
-                new Color(0.75f, 0.75f, 0.78f), // White
-                new Color(0.86f, 0.86f, 0.89f) // Super White
-            ];
+        [
+            new Color(0.75f, 0.75f, 0.78f), // White
+            new Color(0.86f, 0.86f, 0.89f) // Super White
+        ];
 
         public static EquipmentEntityLink[] MaleHeads =
-            [
-                BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()).MaleOptions.Heads[2],
-                BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()).MaleOptions.Heads[1]
-            ];
+        [
+            BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()).MaleOptions.Heads[2],
+            BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()).MaleOptions.Heads[1]
+        ];
 
         public static EquipmentEntityLink[] FemaleHeads =
-            [
-                BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()).FemaleOptions.Heads[2],
-                BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()).FemaleOptions.Heads[1]
-            ];
+        [
+            BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()).FemaleOptions.Heads[2],
+            BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()).FemaleOptions.Heads[1]
+        ];
 
         public static EquipmentEntityLink[] FemaleHairs =
-            [
-                new EquipmentEntityLink() {AssetId = "3897a5ce68b630548bb85db0a68a465a"},
-                new EquipmentEntityLink() {AssetId = "04c3eb6d7570d8d49b686516b7c4a4f8"}
-            ];
+        [
+            new EquipmentEntityLink() {AssetId = "3897a5ce68b630548bb85db0a68a465a"},
+            new EquipmentEntityLink() {AssetId = "04c3eb6d7570d8d49b686516b7c4a4f8"}
+        ];
 
         public static BlueprintRace CopyRace = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HumanRace.ToString());
 
@@ -161,8 +161,8 @@ namespace EbonsContentMod.Races
                 .SetDisplayName(StrixNocturnalDisplayName)
                 .SetDescription(StrixNocturnalDescription)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.Doom.ToString()).Icon)
-                .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillPerception, value: 2)
-                .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillStealth, value: 2)
+                .AddStatBonus(ModifierDescriptor.UntypedStackable, stat: StatType.SkillPerception, value: 2)
+                .AddStatBonus(ModifierDescriptor.UntypedStackable, stat: StatType.SkillStealth, value: 2)
                 .Configure();
 
             var Nocturnal = FeatureConfigurator.New("StrixNocturnal", "{2031DB1D-DFB8-443B-BF8D-1EFA7EB26D06}")

@@ -148,9 +148,6 @@ namespace EbonsContentMod.Races
         internal const string SylphEnergyResistanceDisplayName = "Sylph.EnergyResistance.Name";
         private static readonly string SylphEnergyResistanceDescription = "Sylph.EnergyResistance.Description";
 
-        internal const string SylphFeatherStepDisplayName = "Sylph.FeatherStep.Name";
-        private static readonly string SylphFeatherStepDescription = "Sylph.FeatherStep.Description";
-
         internal const string SylphAirAffinityDisplayName = "Sylph.AirAffinity.Name";
         private static readonly string SylphAirAffinityDescription = "Sylph.AirAffinity.Description";
 
@@ -278,7 +275,7 @@ namespace EbonsContentMod.Races
                 .Configure();
 
             // Recolor Race
-            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.KitsuneRace.ToString()), CustomFemaleHairs: NewFemaleHairArray);
+            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, /*eyecolors: RaceEyeColors,*/ eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.KitsuneRace.ToString()), CustomFemaleHairs: NewFemaleHairArray, CustomEyeRamps: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.OreadRace.ToString()).FemaleOptions.m_Heads[0].Load(true, false).SecondaryColorsProfile.Ramps);
 
             // Re-order presets to make the race default to skinny and remove fat option
             var FinalRace = RaceConfigurator.For(recoloredrace)

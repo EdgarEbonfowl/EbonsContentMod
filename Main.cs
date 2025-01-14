@@ -35,14 +35,10 @@ namespace EbonsContentMod;
 #endif
 public static class Main
 {
+    internal const string Toggle1 = "Toggle1";
+
     internal static Harmony HarmonyInstance;
     internal static UnityModManager.ModEntry.ModLogger log;
-
-    /*private static readonly string RootKey = "mod-menu.ebonscontentmod-settings";
-    public static string GetKey(string partialKey)
-    {
-        return $"{RootKey}.{partialKey}";
-    }*/
 
     public static bool Load(UnityModManager.ModEntry modEntry)
     {
@@ -84,7 +80,8 @@ public static class Main
             {
                 log.Log($"Main.TryLoadBundle: Loading bundle {bundleName}");
 
-                __result = AssetBundle.LoadFromFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Bundles", $"{bundleName}"));
+                //__result = AssetBundle.LoadFromFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Bundles", $"{bundleName}"));
+                __result = AssetBundle.LoadFromFile(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), $"{bundleName}"));
 
                 // Since imported shaders are broken, swap the shaders in the bundle with a donor vanilla one.
                 EquipmentEntityLink DonorHead = new EquipmentEntityLink { AssetId = "4eea3ef5f2e01474ba5b03fe28324ad3" };
@@ -180,17 +177,6 @@ public static class Main
         }
     }
 
-    /*private static void Onclick()
-    {
-        var logg = new StringBuilder();
-        logg.AppendLine("Current settings: ");
-        ///log.AppendLine($"-Toggle: {CheckToggle()}");
-        logg.AppendLine($"-Default Slider Float: {ModMenu.ModMenu.GetSettingValue<float>(GetKey("float-default"))}");
-        logg.AppendLine($"-Slider Float: {ModMenu.ModMenu.GetSettingValue<float>(GetKey("float"))}");
-        logg.AppendLine($"-Default Slider Int: {ModMenu.ModMenu.GetSettingValue<int>(GetKey("int-default"))}");
-        logg.AppendLine($"-Slider Int: {ModMenu.ModMenu.GetSettingValue<int>(GetKey("int"))}");
-        log.Log(logg.ToString());
-    }*/
 #endif
     [HarmonyPatch(typeof(BlueprintsCache))]
     public static class BlueprintsCaches_Patch
@@ -201,24 +187,22 @@ public static class Main
         [HarmonyPatch(nameof(BlueprintsCache.Init)), HarmonyPostfix]
         public static void Init_Postfix()
         {
+            
             /*ModMenu.ModMenu.AddSettings(
-                SettingsBuilder.New(RootKey, ModMenuHelpers.CreateString("title", "Ebon's Content Mod"))
-                  .AddDefaultButton()
-                  .AddButton(
-                    Button.New(
-                      ModMenuHelpers.CreateString("button-desc", "Restart the game to apply changes!"), ModMenuHelpers.CreateString("button-text", "Do Not Turn Any Chosen Features Off"), Onclick))
+                SettingsBuilder.New("EbonsContentModSettings", ModMenuHelpers.CreateString("title", "Ebon's Content Mod"))
                   .AddToggle(
-                    Toggle.New(GetKey("BaneOfSpirit"), defaultValue: true, ModMenuHelpers.CreateString("BaneOfSpiritSetting", "Makes Bane of Spirit ability a free action again"))
+                    Toggle.New("BaneOfSpirit", defaultValue: true, ModMenuHelpers.CreateString("BaneOfSpiritSetting", "Makes Bane of Spirit ability a free action again"))
                       .ShowVisualConnection())
                   .AddToggle(
-                    Toggle.New(GetKey("ComeAndGetMe"), defaultValue: true, ModMenuHelpers.CreateString("ComeAndGetMeSetting", "Fixes Come and Get Me! to apply to teammates affected by Inspire Rage"))
+                    Toggle.New("ComeAndGetMe", defaultValue: true, ModMenuHelpers.CreateString("ComeAndGetMeSetting", "Fixes Come and Get Me! to apply to teammates affected by Inspire Rage"))
                       .ShowVisualConnection())
                   .AddToggle(
-                    Toggle.New(GetKey("CriticalRangeRevert"), defaultValue: false, ModMenuHelpers.CreateString("CriticalRangeRevertSetting", "Makes Improved Critical double all sources of threat range extension again"))
+                    Toggle.New("CriticalRangeRevert", defaultValue: false, ModMenuHelpers.CreateString("CriticalRangeRevertSetting", "Makes Improved Critical double all sources of threat range extension again"))
                       .ShowVisualConnection())
                   .AddToggle(
-                    Toggle.New(GetKey("DiscordantVoice"), defaultValue: true, ModMenuHelpers.CreateString("DiscordantVoiceSetting", "Discordant Voice now applies to any teammate in the aoe of ANY bard song"))
+                    Toggle.New("DiscordantVoice", defaultValue: true, ModMenuHelpers.CreateString("DiscordantVoiceSetting", "Discordant Voice now applies to any teammate in the aoe of ANY bard song"))
                       .ShowVisualConnection())
+
             );*/
 
             try
@@ -233,12 +217,12 @@ public static class Main
                 log.Log("Patching blueprints.");
                 // Insert your mod's patching methods here
                 // Example
-                /*if (ModMenu.ModMenu.GetSettingValue<bool>(GetKey("ComeAndGetMe")))*/
+                //if (ModMenu.ModMenu.GetSettingValue<bool>("ComeAndGetMe"))
                 ComeAndGetMe.Configure();
-                /*if (ModMenu.ModMenu.GetSettingValue<bool>(GetKey("DiscordantVoice")))*/
+                //if (ModMenu.ModMenu.GetSettingValue<bool>("DiscordantVoice"))
                 DiscordantVoice.Configure();
                 HungryGhostMonk.Configure();
-                /*if (ModMenu.ModMenu.GetSettingValue<bool>(GetKey("BaneOfSpirit")))*/
+                //if (ModMenu.ModMenu.GetSettingValue<bool>("BaneOfSpirit"))
                 BaneOfSpirit.Configure();
                 ShatterDefenses.Configure();
                 FlamboyantArcana.Configure();
@@ -298,10 +282,13 @@ public static class Main
                 Android.Configure();
                 Ifrit.Configure();
                 Fetchling.Configure();
-                //Changeling.Configure();
+                Changeling.Configure();
                 Skinwalker.Configure();
                 Goblin.Configure();
                 Kuru.Configure();
+                Vishkanya.Configure();
+                Shabti.Configure();
+                MultiProjectileSpellFix.Configure();
             }
             catch (Exception e)
             {

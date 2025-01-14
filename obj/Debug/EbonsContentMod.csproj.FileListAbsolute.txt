@@ -141,3 +141,4 @@ D:\WrathMods\EbonsContentMod\EbonsContentMod\obj\Debug\EbonsContentMod.csproj.Co
 D:\WrathMods\EbonsContentMod\EbonsContentMod\obj\Debug\EbonsCon.B48EB8C1.Up2Date
 D:\WrathMods\EbonsContentMod\EbonsContentMod\obj\Debug\EbonsContentMod.dll
 D:\WrathMods\EbonsContentMod\EbonsContentMod\obj\Debug\EbonsContentMod.pdb
+D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\GoblinTest_content

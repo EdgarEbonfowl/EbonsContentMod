@@ -211,7 +211,7 @@ namespace EbonsContentMod.Races
 
             // Recolor Race
             //var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, /*eyecolors: RaceEyeColors, */BaldRace: true, NoEyebrows: true, NoBeards: true, /*eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.OreadRace.ToString()),*/ /*CustomMaleHeads: GoblinHeads, CustomFemaleHeads: GoblinHeads,*/ CustomMaleHeadsNoRecolor: GoblinHeads, CustomFemaleHeadsNoRecolor: GoblinHeads, CustomBodyNoRecolor: GoblinBody/*, EyeLinkedEEs: NewEyeLinkedEEs*/);
-            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, CustomMaleHeads: GoblinHeads, CustomFemaleHeads: GoblinHeads, CustomBody: GoblinBody, BaldRace: true, NoEyebrows: true, NoBeards: true, CustomEyeRamps: CustomEyeRamps, CustomHeadRamps: CustomSkinRamps, eyeEE: ContactEEL);
+            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, CustomMaleHeads: GoblinHeads, /*CustomFemaleHeads: GoblinHeads,*/ CustomBody: GoblinBody, BaldRace: true, NoEyebrows: true, NoBeards: true, CustomEyeRamps: CustomEyeRamps, CustomHeadRamps: CustomSkinRamps, eyeEE: ContactEEL);
 
             // Mess around with the bones
             var standardskeleton = GameObject.Instantiate(recoloredrace.m_Presets[0].Get().MaleSkeleton);

@@ -76,7 +76,38 @@ namespace EbonsContentMod.Races
         public static List<Color> RaceHairColors =
         [
             new Color(0.11764706f, 0.11764706f, 0.11764706f),
-            new Color(0.0f, 0.0f, 0.0f)
+            new Color(0.0f, 0.0f, 0.0f),
+            new Color( // Dark Brown
+                RaceRecolorizer.GetColorsFromRGB(50f),
+                RaceRecolorizer.GetColorsFromRGB(35f),
+                RaceRecolorizer.GetColorsFromRGB(10f)
+                ),
+            new Color( // Brown
+                RaceRecolorizer.GetColorsFromRGB(72f),
+                RaceRecolorizer.GetColorsFromRGB(53f),
+                RaceRecolorizer.GetColorsFromRGB(13f)
+                ),
+            new Color( // Medium Brown
+                RaceRecolorizer.GetColorsFromRGB(85f),
+                RaceRecolorizer.GetColorsFromRGB(75f),
+                RaceRecolorizer.GetColorsFromRGB(55f)
+                ),
+            new Color( // Deep Red
+                RaceRecolorizer.GetColorsFromRGB(120f),
+                RaceRecolorizer.GetColorsFromRGB(55f),
+                RaceRecolorizer.GetColorsFromRGB(50f)
+                ),
+            new Color( // Deep Red-Brown
+                RaceRecolorizer.GetColorsFromRGB(100f),
+                RaceRecolorizer.GetColorsFromRGB(50f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+            new Color( // Orange
+                RaceRecolorizer.GetColorsFromRGB(140f),
+                RaceRecolorizer.GetColorsFromRGB(80f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+
         ];
 
         public static List<Texture2D> CustomSkinRamps =
@@ -128,7 +159,8 @@ namespace EbonsContentMod.Races
             new EquipmentEntityLink() {AssetId = "303578a648d8d344b8d3a9a94fe24d5a"}, // Long Wavy male Human
             new EquipmentEntityLink() {AssetId = "d174619e428101e41b5675bd6286b1d4"}, // Medium Male Tiefling
             new EquipmentEntityLink() {AssetId = "def666224ba24df4e954c03049b29a53"}, // Short Male Human
-            new EquipmentEntityLink() {AssetId = "50eac92ba30862940be4f70d329d070a"} // Long Wild Male Tiefling
+            new EquipmentEntityLink() {AssetId = "50eac92ba30862940be4f70d329d070a"}, // Long Wild Male Tiefling
+            new EquipmentEntityLink() {AssetId = "b85db19d7adf6aa48b5dd2bb7bfe1502"} // Bald
         ];
 
         public static EquipmentEntityLink[] FemaleHairs =
@@ -139,7 +171,8 @@ namespace EbonsContentMod.Races
             new EquipmentEntityLink() {AssetId = "afa22656ed5030c4ba273583ba2b3a16"}, // Long Wild Female Tiefling
             new EquipmentEntityLink() {AssetId = "ad6c23c1e8e7e374b9864dea8fcc381d"}, // Mohawk Wenduag Female Mongrel
             new EquipmentEntityLink() {AssetId = "f32da5106fa223844b88c426e36b5821"}, // Ponytail Classic Female Human
-            new EquipmentEntityLink() {AssetId = "d90a0bf179ad5884a98092b58d8f76ad"} // Mohawk Female Tiefling
+            new EquipmentEntityLink() {AssetId = "d90a0bf179ad5884a98092b58d8f76ad"}, // Mohawk Female Tiefling
+            new EquipmentEntityLink() {AssetId = "b85db19d7adf6aa48b5dd2bb7bfe1502"} // Bald
         ];
 
         public static BlueprintRace CopyRace = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HumanRace.ToString());
@@ -163,7 +196,7 @@ namespace EbonsContentMod.Races
         {
             var BiteWeapon = ItemWeaponConfigurator.New("KuruBiteWeapon", "{EBD45E84-C7F5-4B3A-AAE1-B3524FC68B20}")
                 .CopyFrom(ItemWeaponRefs.Bite1d6)
-                .SetAlwaysPrimary(true)
+                //.SetAlwaysPrimary(true)
                 .Configure();
 
             var ContactEEL = new EquipmentEntityLink() { AssetId = "c5487e7e903d25a40be683767f3df0b4" };
