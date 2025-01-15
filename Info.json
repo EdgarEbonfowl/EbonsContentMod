@@ -4,7 +4,7 @@
   "Author": "",
   "Version": "1.0.5",
   "ManagerVersion": "0.27.11",
-  "Requirements": [],
+  "Requirements": ["TabletopTweaks-Core", "WrathPatches"],
   "AssemblyName": "EbonsContentMod.dll",
   "EntryMethod": "EbonsContentMod.Main.Load",
   "HomePage": "",

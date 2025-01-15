@@ -174,7 +174,7 @@ namespace EbonsContentMod.Races
             var OversizedEars = FeatureConfigurator.New("EbonsGoblinOversizedEars", "{E290A6FA-3DC5-4AA9-BAF3-9AE24B0E4B70}")
                 .SetDisplayName(OversizedEarsDisplayName)
                 .SetDescription(OversizedEarsDescription)
-                .SetIcon(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.SoundBurst.ToString()).Icon) // Change
+                .SetIcon(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.SoundBurst.ToString()).Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillPerception, value: 4)
                 .Configure();
 

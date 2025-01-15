@@ -471,6 +471,7 @@ namespace EbonsContentMod.Bloodlines
             var SorcererOrcBloodline = ProgressionConfigurator.New(OrcSorcererBloodlineName, OrcSorcererBloodlineGuid)
                 .SetDisplayName(OrcSorcererBloodlineDisplayName)
                 .SetDescription(OrcSorcererBloodlineDescription)
+                .SetIcon(FeatureRefs.HalfOrcFerocity.Reference.Get().Icon)
                 .AddToClasses([
                     new BlueprintProgression.ClassWithLevel {
                         m_Class = sorcererclass
@@ -505,6 +506,7 @@ namespace EbonsContentMod.Bloodlines
             var CrossbloodedOrcBloodline = ProgressionConfigurator.New(OrcCrossbloodedBloodlineName, OrcCrossbloodedBloodlineGuid)
                 .SetDisplayName(OrcSorcererBloodlineDisplayName)
                 .SetDescription(OrcSorcererBloodlineDescription)
+                .SetIcon(FeatureRefs.HalfOrcFerocity.Reference.Get().Icon)
                 .AddToClasses([
                     new BlueprintProgression.ClassWithLevel {
                         m_Class = sorcererclass
@@ -536,6 +538,7 @@ namespace EbonsContentMod.Bloodlines
             var SeekerOrcBloodline = ProgressionConfigurator.New(OrcSeekerBloodlineName, OrcSeekerBloodlineGuid)
                 .SetDisplayName(OrcSorcererBloodlineDisplayName)
                 .SetDescription(OrcSorcererBloodlineDescription)
+                .SetIcon(FeatureRefs.HalfOrcFerocity.Reference.Get().Icon)
                 .AddToClasses([
                     new BlueprintProgression.ClassWithLevel {
                         m_Class = sorcererclass

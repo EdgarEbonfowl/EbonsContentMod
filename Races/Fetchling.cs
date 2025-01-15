@@ -106,12 +106,19 @@ namespace EbonsContentMod.Races
 
         public static EquipmentEntityLink[] MaleHairs =
         [
-                
+            
         ];
 
         public static EquipmentEntityLink[] FemaleHairs =
         [
-                
+            new EquipmentEntityLink() {AssetId = "92098e7849f8b8742bcbc03605016e85"}, // Long Wavy Female Dhampir
+            new EquipmentEntityLink() {AssetId = "04c3eb6d7570d8d49b686516b7c4a4f8"}, // Long Camelia Female Human
+            new EquipmentEntityLink() {AssetId = "af187dac5e1588d4a8fef2448d6ca779"}, // Long Female Dhampir
+            new EquipmentEntityLink() {AssetId = "fc77867c044d74c43b2f44a81129411e"}, // Medium Anevia Female Dhampir
+            new EquipmentEntityLink() {AssetId = "830e116d49d302346ab03e0e5009c39b"}, // Ponytail Classic Female Dhampir
+            new EquipmentEntityLink() {AssetId = "293c10a3e2836b74bb3da7d02b4cb6e7"}, // Side Kare Female Dhampir
+            new EquipmentEntityLink() {AssetId = "2599b71369003d645b0442088e4edb54"}, // Slick Female Dhampir
+            new EquipmentEntityLink() {AssetId = "a27662b6ffbceb64094060aa368eeb32"}, // Bob Cut Dhampir
         ];
 
         public static BlueprintRace CopyRace = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.DhampirRace.ToString());
@@ -177,7 +184,7 @@ namespace EbonsContentMod.Races
                 .Configure();
 
             // Recolor Race
-            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.AasimarRace.ToString())/*, CustomFemaleHairs: FemaleHairs, CustomMaleHairs: MaleHairs*/);
+            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.AasimarRace.ToString()), CustomFemaleHairs: FemaleHairs/*, CustomMaleHairs: MaleHairs*/);
 
             // Re-order presets to make the race default to skinny
             var FinalRace = RaceConfigurator.For(recoloredrace)

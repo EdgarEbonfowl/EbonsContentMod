@@ -60,11 +60,31 @@ namespace EbonsContentMod.Races
                 RaceRecolorizer.GetColorsFromRGB(119f),
                 RaceRecolorizer.GetColorsFromRGB(38f)
                 ),
+            new Color( // Bright Yellow Orange
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(165f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+            new Color( // Bright Orange
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(125f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
             new Color( // Fiery Red
                 RaceRecolorizer.GetColorsFromRGB(235f),
                 RaceRecolorizer.GetColorsFromRGB(73f),
                 RaceRecolorizer.GetColorsFromRGB(38f)
-                )
+                ),
+            new Color( // Bright Red Orange
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(90f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+            new Color( // Bright Yellow
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(215f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
         ];
 
         public static List<Color> RaceHairColors =
@@ -74,11 +94,31 @@ namespace EbonsContentMod.Races
                 RaceRecolorizer.GetColorsFromRGB(119f),
                 RaceRecolorizer.GetColorsFromRGB(38f)
                 ),
+            new Color( // Bright Yellow Orange
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(165f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+            new Color( // Bright Orange
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(125f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
             new Color( // Fiery Red
                 RaceRecolorizer.GetColorsFromRGB(235f),
                 RaceRecolorizer.GetColorsFromRGB(73f),
                 RaceRecolorizer.GetColorsFromRGB(38f)
-                )
+                ),
+            new Color( // Bright Red Orange
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(90f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+            new Color( // Bright Yellow
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(215f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
         ];
 
         public static EquipmentEntityLink[] MaleHairs =
@@ -102,6 +142,24 @@ namespace EbonsContentMod.Races
             new EquipmentEntityLink() {AssetId = "5ad5704dd51861a4b80931cd4d33ebe6"}, // Aasimar Slick
             new EquipmentEntityLink() {AssetId = "b6ed73aa8db434a48afab56b6296181d"}, // Aasimar Long Camelia
             new EquipmentEntityLink() {AssetId = "b85db19d7adf6aa48b5dd2bb7bfe1502"}  // Bald
+        ];
+        
+        public static List<Texture2D> CustomSkinRamps =
+        [
+            RaceRecolorizer.GetArmorRampByIndex(3),
+            RaceRecolorizer.GetArmorRampByIndex(1),
+            RaceRecolorizer.GetArmorRampByIndex(4),
+            RaceRecolorizer.GetArmorRampByIndex(5),
+            RaceRecolorizer.GetArmorRampByIndex(9),
+            RaceRecolorizer.GetArmorRampByIndex(13),
+            RaceRecolorizer.GetArmorRampByIndex(14),
+            RaceRecolorizer.GetArmorRampByIndex(15),
+            RaceRecolorizer.GetArmorRampByIndex(16),
+            RaceRecolorizer.GetArmorRampByIndex(22),
+            RaceRecolorizer.GetArmorRampByIndex(23),
+            RaceRecolorizer.GetArmorRampByIndex(77),
+            RaceRecolorizer.GetArmorRampByIndex(78),
+            RaceRecolorizer.GetArmorRampByIndex(79)
         ];
 
         public static BlueprintRace CopyRace = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HumanRace.ToString());
@@ -132,8 +190,11 @@ namespace EbonsContentMod.Races
 
         internal static void Configure()
         {
-            var MaleHornsEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "cecad00f0d5d83f4ba37aa45c11c1bbe" }, RaceRecolorizer.CreateRampsFromColorsSimple(RaceHeadColors), "{AD94B25F-00F8-41D7-9D1B-5CD56015844A}", true);
-            var FemaleHornsEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "ccd35c8508752f04582e7d3a55248afe" }, RaceRecolorizer.CreateRampsFromColorsSimple(RaceHeadColors), "{3206E92A-6AE6-4394-A313-C06E1F666A70}", true);
+            //var MaleHornsEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "cecad00f0d5d83f4ba37aa45c11c1bbe" }, RaceRecolorizer.CreateRampsFromColorsSimple(RaceHeadColors), "{AD94B25F-00F8-41D7-9D1B-5CD56015844A}", true);
+            //var FemaleHornsEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "ccd35c8508752f04582e7d3a55248afe" }, RaceRecolorizer.CreateRampsFromColorsSimple(RaceHeadColors), "{3206E92A-6AE6-4394-A313-C06E1F666A70}", true);
+
+            var MaleHornsEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "cecad00f0d5d83f4ba37aa45c11c1bbe" }, CustomSkinRamps, "{AD94B25F-00F8-41D7-9D1B-5CD56015844A}", true);
+            var FemaleHornsEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "ccd35c8508752f04582e7d3a55248afe" }, CustomSkinRamps, "{3206E92A-6AE6-4394-A313-C06E1F666A70}", true);
 
             List<BlueprintCharacterClassReference> AllClasses = [];
 
@@ -269,7 +330,7 @@ namespace EbonsContentMod.Races
                 .Configure();
 
             // Recolor Race
-            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.OreadRace.ToString()), CustomFemaleHairs: FemaleHairs, CustomMaleHairs: MaleHairs);
+            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.OreadRace.ToString()), CustomFemaleHairs: FemaleHairs, CustomMaleHairs: MaleHairs, CustomHeadRamps: CustomSkinRamps);
 
             // Register linked EEs
             EELinker.RegisterSkinLink(recoloredrace, HornsLinks);

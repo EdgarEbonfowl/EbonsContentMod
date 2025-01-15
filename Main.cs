@@ -11,7 +11,6 @@ using Kingmaker.Blueprints.JsonSystem;
 using EbonsContentMod.Abilities;
 using EbonsContentMod.Feats;
 using EbonsContentMod.Archetypes;
-using EbonsContentMod.Equipment;
 using EbonsContentMod.Menu;
 using System.Globalization;
 using TabletopTweaks.Core.Utilities;
@@ -215,16 +214,10 @@ public static class Main
                 Initialized = true;
 
                 log.Log("Patching blueprints.");
-                // Insert your mod's patching methods here
-                // Example
-                //if (ModMenu.ModMenu.GetSettingValue<bool>("ComeAndGetMe"))
+
                 ComeAndGetMe.Configure();
-                //if (ModMenu.ModMenu.GetSettingValue<bool>("DiscordantVoice"))
                 DiscordantVoice.Configure();
                 HungryGhostMonk.Configure();
-                //if (ModMenu.ModMenu.GetSettingValue<bool>("BaneOfSpirit"))
-                BaneOfSpirit.Configure();
-                ShatterDefenses.Configure();
                 FlamboyantArcana.Configure();
                 ArcaneDeed.Configure();
                 LightSensitivityTrait.Configure();
@@ -289,6 +282,8 @@ public static class Main
                 Vishkanya.Configure();
                 Shabti.Configure();
                 MultiProjectileSpellFix.Configure();
+                ArcanistExploits.Configure();
+                FaithMagic.Configure();
             }
             catch (Exception e)
             {

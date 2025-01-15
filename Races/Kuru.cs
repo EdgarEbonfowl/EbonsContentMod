@@ -299,13 +299,7 @@ namespace EbonsContentMod.Races
                 .SetDisplayName(CannabalisticVitalityDisplayName)
                 .SetDescription(CannabalisticVitalityDescription)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.CrushAndTearFeature.ToString()).Icon)
-                .AddComponent<AddInitiatorAttackWithWeaponTrigger>(c =>
-                {
-                    c.OnlyHit = true;
-                    c.CheckWeaponBlueprint = true;
-                    c.m_WeaponBlueprint = BiteWeapon.ToReference<BlueprintItemWeaponReference>();
-                    c.Action = actions;
-                })
+                .AddComponent<KuruBiteTempHP>()
                 .Configure();
 
             var LightSensitivity = BlueprintTools.GetBlueprint<BlueprintFeature>("{BBA86DB1-B3EF-4AB5-A412-A5910F2B8947}");

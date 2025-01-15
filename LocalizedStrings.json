@@ -87,6 +87,28 @@
   },
 
   {
+    "Key": "ArcanistOppositionResearch.Name",
+    "ProcessTemplates": false,
+    "enGB": "Arcanist Opposition Research"
+  },
+
+  {
+    "Key": "ArcanistOppositionResearch.Description",
+    "enGB": "Select one opposition school; preparing spells of this school now only requires one spell slot of the appropriate level instead of two."
+  },
+
+  {
+    "Key": "FaithMagic.Name",
+    "ProcessTemplates": false,
+    "enGB": "Faith Magic"
+  },
+
+  {
+    "Key": "FaithMagic.Description",
+    "enGB": "Select one spell granted by a domain belonging to the god you worship. This spell must be at least 2 levels lower than the highest-level arcanist spell you can cast. You can prepare this spell using a spell slot 1 level higher than the spell's actual level."
+  },
+
+  {
     "Key": "FlamboyantArcana.Name",
     "ProcessTemplates": false,
     "enGB": "Flamboyant Arcana"
@@ -1657,7 +1679,7 @@
 
   {
     "Key": "Nightskulk.ChangeShape.Description",
-    "enGB": "A nightskulk skinwalker can change shape to and from a bestial form as a standard action. In bestial form, a nightskulk skinwalker gains a +2 racial bonus to Dexterity. While in this form, a fanglord skinwalker also gains a primary bite attack that deals 1d6 damage and sickens any bitten opponent who fails a Fortitude saving throw."
+    "enGB": "A nightskulk skinwalker can change shape to and from a bestial form as a standard action. In bestial form, a nightskulk skinwalker gains a +2 racial bonus to Dexterity. While in this form, a fanglord skinwalker also gains a primary bite attack that deals 1d6 damage and sickens any bitten opponent for one round."
   },
 
   {

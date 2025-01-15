@@ -76,8 +76,7 @@ namespace EbonsContentMod.Races.Skinwalkers.SkinwalkerHeritage
                 .SetIcon(changeshapeicon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Dexterity, value: 2) // Shifted ability score bonus
                 .AddAdditionalLimb(BiteRef) // Bestial feature 1
-                // Need to make distraction component
-                //.AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Speed, value: 10) // Bestial feature 2
+                .AddInitiatorAttackRollTrigger(ActionsBuilder.New().ApplyBuffWithDurationSeconds(BuffRefs.Sickened.Reference.Get(), 6f).Build(), onlyHit: true, checkWeapon: true, weaponCategory: WeaponCategory.Bite)
                 .AddSpellDescriptorComponent(SpellDescriptor.Polymorph)
                 .AddComponent<AddEquipmentEntityBySex>(c =>
                 {
