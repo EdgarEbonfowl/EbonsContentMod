@@ -92,6 +92,7 @@ Different Change Shape forms for the skinwalker:
 
 ## Other Mods
 * This version will not play nice with Worldcrawl. If you use that mod, I have released a Worldcrawl-compatible version over on [Nexus Mods](https://www.nexusmods.com/pathfinderwrathoftherighteous/mods/758?tab=files "Nexus Mods"). The Worldcrawl version does not have the Collegiate Initiate archetype, but is otherwise unchanged. I will work on a solution that preserves the archetype, but for now, use that version if you use Worldcrawl.
+* The cloned parts created for the new races will not show up as editable options in Visual Adjustments 2. Everything else still will work fine. Maybe one day there will be a meeting of the minds to sort this issue out, but for now, know that is a limitation.
 
 ## Acknowledgements
 * WittleWolfie for [BlueprintCore](https://github.com/WittleWolfie/WW-Blueprint-Core/tree/main), an API that really speeds up the process.
