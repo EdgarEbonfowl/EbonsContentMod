@@ -4,7 +4,7 @@ This mod was created to add new content from tabletop to Wrath of the Righteous 
 If you want to read through my rationale for any implementation decisions I had to make along the way, please see my [Modder Notes](https://github.com/EdgarEbonfowl/EbonsContentMod/blob/main/ModderNotes.md "Modder Notes").
 
 ## Added Races
-This mod adds the following races to the game and they should work like the default races. Note, I have not completed a playthrough with these races, so you may experience some strange behavior, especially in dialog, where the race type either is not recognized or, more likely, is recognized as some other race (an NPC calling your drow character an elf, for instnace). That being said, if you encounter bugs, please report them!
+This mod adds the following races to the game and they should work like the default races. Note, I have not completed a playthrough with these races, so I cannot say for sure that you will not encounter problems. You may experience some strange behavior, especially in dialog, where the race type either is not recognized or, more likely, is recognized as some other race (an NPC calling your drow character an elf, for instnace). That being said, if you encounter bugs, please report them!
 
 **If you don't see your favorite race here:** the way I do races involves cloning, recoloring, and then cobbling together base game assets (think Mr. Potatohead plus a paint brush), so only races that can be made from vanilla assets are included here. That means no tengu, no catfolk, etc. If you want me to make a race that would look acceptable with vanilla assets let me know OR if you have some 3D modeling skills and want to submit custom assets, I can make your race. Currently, only the goblin is using anything custom. Playable Mongrels and Ganzi will be coming in a future update.
 
@@ -89,6 +89,10 @@ Different Change Shape forms for the skinwalker:
 ## Installation
 1. Download and install [Unity Mod Manager](https://github.com/newman55/unity-mod-manager).
 2. Drop the zip file from the relaease into the "Drop Zip Files Here" panel in the Unity Mod Manager UI in the "Mods" tab.
+
+## Other Mods
+* This version will not play nice with Worldcrawl. If you use that mod, I have released a Worldcrawl-compatible version over on [Nexus Mods](https://www.nexusmods.com/pathfinderwrathoftherighteous/mods/758?tab=files "Nexus Mods"). The Worldcrawl version does not have the Collegiate Initiate archetype, but is otherwise unchanged. I will work on a solution that preserves the archetype, but for now, use that version if you use Worldcrawl.
+* The cloned parts created for the new races will not show up as editable options in Visual Adjustments 2. Everything else still will work fine. Maybe one day there will be a meeting of the minds to sort this issue out, but for now, know that is a limitation.
 
 ## Acknowledgements
 * WittleWolfie for [BlueprintCore](https://github.com/WittleWolfie/WW-Blueprint-Core/tree/main), an API that really speeds up the process.
