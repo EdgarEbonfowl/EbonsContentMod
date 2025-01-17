@@ -193,9 +193,6 @@ namespace EbonsContentMod.Races
         private const string ChillTouchDescription = "Undine.ChillTouch.Description";
         private const string ChillTouchBaseDisplayName = "Undine.ChillTouch.Touch.Name";
 
-        internal const string ObscuringMistDisplayName = "Undine.ObscuringMist.Name";
-        private static readonly string ObscuringMistDescription = "Undine.ObscuringMist.Description";
-
         internal const string HydraulicPushDisplayName = "Undine.HydraulicPush.Name";
         private static readonly string HydraulicPushDescription = "Undine.HydraulicPush.Description";
 
@@ -259,84 +256,11 @@ namespace EbonsContentMod.Races
                 .SetType(AbilityType.SpellLike)
                 .Configure();
 
-            var ObscuringMistBuff = BuffConfigurator.New("UndineObscuringMistBuff", "{001754CA-D3D5-499E-8EB2-64F995704F7D}")
-                .SetDisplayName(ObscuringMistDisplayName)
-                .SetDescription(ObscuringMistDescription)
-                .SetIcon(FeatureRefs.CloudInfusion.Reference.Get().Icon)
-                .AddConcealment(concealment: Concealment.Partial, descriptor: ConcealmentDescriptor.Fog)
-                .AddConcealment(checkDistance: true, distanceGreater: 5.Feet(), concealment: Concealment.Total, descriptor: ConcealmentDescriptor.Fog)
-                .AddComponent<AddOutgoingConcealment>(c =>
-                {
-                    c.Descriptor = ConcealmentDescriptor.Fog;
-                    c.Concealment = Concealment.Partial;
-                    c.CheckDistance = false;
-                    c.CheckWeaponRangeType = false;
-                    c.DistanceGreater = 0.Feet();
-                    c.OnlyForAttacks = false;
-                    c.RangeType = WeaponRangeType.Melee;
-                })
-                .AddComponent<AddOutgoingConcealment>(c =>
-                {
-                    c.Descriptor = ConcealmentDescriptor.Fog;
-                    c.Concealment = Concealment.Total;
-                    c.CheckDistance = true;
-                    c.CheckWeaponRangeType = false;
-                    c.DistanceGreater = 5.Feet();
-                    c.OnlyForAttacks = false;
-                    c.RangeType = WeaponRangeType.Melee;
-                })
-                .Configure();
-
-            var ObscuringMistArea = AbilityAreaEffectConfigurator.New("UdineObscuringMistArea", "{967C4904-8D7E-42E6-9726-EB15D16BD8E6}")
-                .CopyFrom(AbilityAreaEffectRefs.MindFogArea)
-                .SetFx(BlueprintTools.GetBlueprint<BlueprintAbilityAreaEffect>(AbilityAreaEffectRefs.StinkingCloudArea.ToString()).Fx)
-                .SetSize(20.Feet())
-                .SetSpellResistance(false)
-                .AddAbilityAreaEffectBuff(buff: ObscuringMistBuff)
-                .Configure();
-
-            var ObscuringMist = AbilityConfigurator.NewSpell("UndineObscuringMist", "{20576BE2-2C0A-4A1A-A13D-AB5DF4FD3C80}", SpellSchool.Conjuration, false)
-                .CopyFrom(AbilityRefs.StinkingCloud, c => c is not (SpellListComponent or CraftInfoComponent or AbilityEffectRunAction or SpellListComponent or ContextRankConfig))
-                .SetDisplayName(ObscuringMistDisplayName)
-                .SetDescription(ObscuringMistDescription)
-                .SetIcon(FeatureRefs.CloudInfusion.Reference.Get().Icon)
-                .SetSpellResistance(false)
-                .AddAbilityEffectRunAction(ActionsBuilder.New().SpawnAreaEffect(ObscuringMistArea, new ContextDurationValue()
-                {
-                    Rate = DurationRate.Rounds,
-                    DiceType = DiceType.Zero,
-                    DiceCountValue = new ContextValue()
-                    {
-                        ValueType = ContextValueType.Simple,
-                        Value = 0,
-                        ValueRank = AbilityRankType.Default,
-                        ValueShared = AbilitySharedValue.Damage,
-                        Property = UnitProperty.None
-                    },
-                    BonusValue = new ContextValue()
-                    {
-                        ValueType = ContextValueType.Rank,
-                        Value = 0,
-                        ValueRank = AbilityRankType.Default,
-                        ValueShared = AbilitySharedValue.Damage,
-                        Property = UnitProperty.None
-                    },
-                    m_IsExtendable = true,
-                }, false).Build())
-                .AddComponent<ContextRankConfig>(c =>
-                {
-                    c.m_Type = AbilityRankType.Default;
-                    c.m_BaseValueType = ContextRankBaseValueType.CharacterLevel;
-                    c.m_Stat = StatType.Unknown;
-                    c.m_SpecificModifier = ModifierDescriptor.None;
-                    c.m_Progression = ContextRankProgression.AsIs;
-                    c.m_StartLevel = 0;
-                    c.m_StepLevel = 0;
-                    c.m_UseMax = true;
-                    c.m_Max = 20;
-                })
+            var blur = AbilityConfigurator.New("UndineBlur", "{368FA273-FBB7-4DBC-832C-3AF7CF15D247}")
+                .CopyFrom(AbilityRefs.Blur, c => c is not (SpellListComponent or CraftInfoComponent))
                 .AddAbilityResourceLogic(1, isSpendResource: true, requiredResource: SpellLikeResource)
                 .SetType(AbilityType.SpellLike)
+                .AddPretendSpellLevel(spellLevel: 2)
                 .Configure();
 
             var HydraulicPush = AbilityConfigurator.NewSpell("UndineHydraulicPush", "{E8D66656-9B93-4DE8-9372-419F14EEAF67}", SpellSchool.Evocation, false)
@@ -397,9 +321,9 @@ namespace EbonsContentMod.Races
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Constitution, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Wisdom, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Intelligence, value: -2)
-                .AddFacts([ObscuringMist])
+                .AddFacts([blur])
                 .AddAbilityResources(1, SpellLikeResource, true)
-                .AddReplaceCasterLevelOfAbility(spell: ObscuringMist)
+                .AddReplaceCasterLevelOfAbility(spell: blur)
                 .Configure();
 
             var UndineGeneral = FeatureConfigurator.New("UndineGeneral", "{FE92658B-828A-4BCD-8D94-72C2C5A6EFF3}")

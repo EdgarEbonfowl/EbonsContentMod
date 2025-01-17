@@ -63,6 +63,7 @@ using EbonsContentMod.Utilities;
 using BlueprintCore.Blueprints.Configurators.Classes.Selection;
 using static TabletopTweaks.Core.Utilities.SpellTools;
 using System.Xml.Linq;
+using Kingmaker.Craft;
 
 namespace EbonsContentMod.Archetypes
 {
@@ -125,7 +126,7 @@ namespace EbonsContentMod.Archetypes
                 }
 
                 NewSpell = AbilityConfigurator.NewSpell(name, guid, school, false)
-                    .CopyFrom(spellability, c => c is not (AbilityVariants or SpellListComponent))
+                    .CopyFrom(spellability, c => c is not (AbilityVariants or SpellListComponent or CraftInfoComponent or AbilityDeliverProjectile or AbilityDeliverDelay or AbilityDeliverTouch or ContextRankConfig))
                     .Configure();
 
                 foreach (BlueprintAbilityReference variant in Variants)
@@ -144,7 +145,7 @@ namespace EbonsContentMod.Archetypes
                     }
 
                     var NewSpellVariant = AbilityConfigurator.NewSpell(variantname, variantguid, variantschool, false)
-                        .CopyFrom(variantability, c => c is not (AbilityVariants or SpellListComponent))
+                        .CopyFrom(variantability, c => c is not (AbilityVariants or SpellListComponent or CraftInfoComponent or AbilityDeliverProjectile))
                         .AddAbilityResourceLogic(Math.Max((i + 1)/ 2, 1), isSpendResource: true, requiredResource: AbilityResourceRefs.ArcanistArcaneReservoirResource.ToString())
                         .Configure();
 
@@ -188,7 +189,7 @@ namespace EbonsContentMod.Archetypes
                 }
 
                 NewSpell = AbilityConfigurator.NewSpell(name, guid, school, false)
-                    .CopyFrom(spellability, c => c is not (AbilityVariants or SpellListComponent))
+                    .CopyFrom(spellability, c => c is not (AbilityVariants or SpellListComponent or CraftInfoComponent or AbilityDeliverProjectile))
                     .AddAbilityResourceLogic(Math.Max((i + 1) / 2, 1), isSpendResource: true, requiredResource: AbilityResourceRefs.ArcanistArcaneReservoirResource.ToString())
                     .Configure();
 

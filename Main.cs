@@ -262,7 +262,7 @@ public static class Main
             try
             {
                 EldritchScrapper.Configure();
-                CollegiateInitiate.Configure();
+                CollegiateInitiate.Configure(); // Not compatible with Worldcrawl yet
                 Samsaran.Configure();
                 Svirfneblin.Configure();
                 Duergar.Configure();
@@ -284,6 +284,7 @@ public static class Main
                 MultiProjectileSpellFix.Configure();
                 ArcanistExploits.Configure();
                 FaithMagic.Configure();
+                GarbageBin.Configure();
             }
             catch (Exception e)
             {

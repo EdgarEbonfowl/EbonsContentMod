@@ -1,5 +1,6 @@
 D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\Info.json
 D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\LocalizedStrings.json
+D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\GoblinTest_content
 D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\EbonsContentMod.dll
 D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\EbonsContentMod.pdb
 D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\Microsoft.Build.Framework.dll
@@ -141,4 +142,3 @@ D:\WrathMods\EbonsContentMod\EbonsContentMod\obj\Debug\EbonsContentMod.csproj.Co
 D:\WrathMods\EbonsContentMod\EbonsContentMod\obj\Debug\EbonsCon.B48EB8C1.Up2Date
 D:\WrathMods\EbonsContentMod\EbonsContentMod\obj\Debug\EbonsContentMod.dll
 D:\WrathMods\EbonsContentMod\EbonsContentMod\obj\Debug\EbonsContentMod.pdb
-D:\WrathMods\EbonsContentMod\EbonsContentMod\bin\Debug\GoblinTest_content

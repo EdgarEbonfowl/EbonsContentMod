@@ -301,7 +301,8 @@ namespace EbonsContentMod.Utilities
 
             var newlink = asset.CreateDynamicScriptableObjectProxy<EquipmentEntity, EquipmentEntityLink>(ee =>
             {
-                ee.PrimaryColorsProfile = new CharacterColorsProfile();
+                //ee.PrimaryColorsProfile = new CharacterColorsProfile();
+                ee.PrimaryColorsProfile = CreateInstance<CharacterColorsProfile>();
                 ee.m_PrimaryRamps = Ramps;
                 ee.PrimaryRamps = Ramps;
 
@@ -349,11 +350,13 @@ namespace EbonsContentMod.Utilities
 
                 if (RemovePrimaryProfile == true)
                 {
-                    ee.PrimaryColorsProfile = new CharacterColorsProfile();
+                    //ee.PrimaryColorsProfile = new CharacterColorsProfile();
+                    ee.PrimaryColorsProfile = CreateInstance<CharacterColorsProfile>();
                 }
                 if (RemoveSecondaryProfile == true)
                 {
-                    ee.SecondaryColorsProfile = new CharacterColorsProfile();
+                    //ee.SecondaryColorsProfile = new CharacterColorsProfile();
+                    ee.SecondaryColorsProfile = CreateInstance<CharacterColorsProfile>();
                 }
                 ee.m_PrimaryRamps = Ramps;
                 ee.PrimaryRamps = Ramps;
@@ -393,11 +396,13 @@ namespace EbonsContentMod.Utilities
 
                 if (RemovePrimaryProfile == true)
                 {
-                    ee.PrimaryColorsProfile = new CharacterColorsProfile();
+                    //ee.PrimaryColorsProfile = new CharacterColorsProfile();
+                    ee.PrimaryColorsProfile = CreateInstance<CharacterColorsProfile>();
                 }
                 if (RemoveSecondaryProfile == true)
                 {
-                    ee.SecondaryColorsProfile = new CharacterColorsProfile();
+                    //ee.SecondaryColorsProfile = new CharacterColorsProfile();
+                    ee.SecondaryColorsProfile = CreateInstance<CharacterColorsProfile>();
                 }
                 if (Ramps != null)
                 {
@@ -722,9 +727,12 @@ namespace EbonsContentMod.Utilities
             if (CustomMaleHeads != null) maleheads = CustomMaleHeads;
             if (CustomFemaleHeads != null) femaleheads = CustomFemaleHeads;
 
-            CharacterColorsProfile NewSkinColorsProfile = new();
-            CharacterColorsProfile NewHairColorsProfile = new();
-            CharacterColorsProfile NewEyeColorsProfile = new();
+            //CharacterColorsProfile NewSkinColorsProfile = new();
+            //CharacterColorsProfile NewHairColorsProfile = new();
+            //CharacterColorsProfile NewEyeColorsProfile = new();
+            CharacterColorsProfile NewSkinColorsProfile = CreateInstance<CharacterColorsProfile>();
+            CharacterColorsProfile NewHairColorsProfile = CreateInstance<CharacterColorsProfile>();
+            CharacterColorsProfile NewEyeColorsProfile = CreateInstance<CharacterColorsProfile>();
             if (eyecolors == null) NewEyeColorsProfile = null;
 
             // Define new head arrays.
