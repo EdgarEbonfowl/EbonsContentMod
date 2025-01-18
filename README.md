@@ -93,6 +93,11 @@ Different Change Shape forms for the skinwalker:
 1. Download and install [Unity Mod Manager](https://github.com/newman55/unity-mod-manager).
 2. Drop the zip file from the relaease into the "Drop Zip Files Here" panel in the Unity Mod Manager UI in the "Mods" tab.
 
+**Note:** This require the Doorstop installation method for Unity Mod Manager, most people do it this way, but if yours is installed using the Assembly method you can do one of these (you can see which method you used at the bottom of the "Install" tab):
+1. Uninstall UMM and reinstall using the Doorstop method
+2. Use WrathPatches to upgrade the game's Harmony version
+3. Copy `Harmony` from `Wrath_Data\Managed\UnityModManager` to `Wrath_Data\Managed`
+
 ## Other Mods
 * This version will not play nice with Worldcrawl. If you use that mod, I have released a Worldcrawl-compatible version over on [Nexus Mods](https://www.nexusmods.com/pathfinderwrathoftherighteous/mods/758?tab=files "Nexus Mods"). The Worldcrawl version does not have the Collegiate Initiate archetype, but is otherwise unchanged. I will work on a solution that preserves the archetype, but for now, use that version if you use Worldcrawl.
 * The cloned parts created for the new races will not show up as editable options in Visual Adjustments 2. Everything else still will work fine. Maybe one day there will be a meeting of the minds to sort this issue out, but for now, know that is a limitation.
