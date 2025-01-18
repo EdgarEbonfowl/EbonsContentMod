@@ -31,6 +31,8 @@ This mod adds the following races to the game and they should work like the defa
   - Female head is in the works. For now, play male goblin.
   - Helmets/goggles will not look correct and should be hidden for now. Working on a permanent hiding solution for goblins.
 - [Orc](https://www.d20pfsrd.com/races/other-races/featured-races/arg-orc/ "Orc")
+- [Rougarou](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/rougarou-player-characters/ "Rougarou")
+- [Nagaji](https://www.d20pfsrd.com/races/other-races/uncommon-races/arg-nagaji/ "Nagaji")
 
 Here is what all the new races look like:
 
@@ -42,6 +44,7 @@ Here is what all the new races look like:
 ![image](https://github.com/user-attachments/assets/bc51c095-1a2f-4278-82c9-6344438bad87)
 ![image](https://github.com/user-attachments/assets/2e730b3c-5333-44ae-889a-8895f2b0a7b6)
 ![image](https://github.com/user-attachments/assets/74103851-f2c9-4a5f-a703-c1212eaa3a64)
+![image](https://github.com/user-attachments/assets/d169d9b3-c125-49c9-b924-d7bc742ee6a0)
 
 Android circuitry colors are linked to the eye color - how fun!
   
