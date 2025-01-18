@@ -106,6 +106,34 @@ namespace EbonsContentMod.Utilities
             return ret;
         }
 
+        private static CustomizationOptions CreateMaleKitsuneCustomizationOptions(BlueprintRace race, EquipmentEntityLink[] heads)
+        {
+            CustomizationOptions ret = new CustomizationOptions()
+            {
+                Beards = race.MaleOptions.Beards,
+                Horns = race.MaleOptions.Horns,
+                m_Eyebrows = race.MaleOptions.Eyebrows,
+                m_Heads = Arr(heads),
+                m_Hair = race.MaleOptions.Hair,
+                TailSkinColors = race.MaleOptions.TailSkinColors
+            };
+
+            return ret;
+        }
+
+        private static CustomizationOptions CreateFemaleKitsuneCustomizationOptions(BlueprintRace race, EquipmentEntityLink[] heads)
+        {
+            CustomizationOptions ret = new CustomizationOptions();
+            ret.Beards = race.FemaleOptions.Beards;
+            ret.Horns = race.FemaleOptions.Horns;
+            ret.m_Eyebrows = race.FemaleOptions.Eyebrows;
+            ret.m_Hair = race.FemaleOptions.Hair;
+            ret.m_Heads = Arr(heads);
+            ret.TailSkinColors = race.FemaleOptions.TailSkinColors;
+
+            return ret;
+        }
+
         internal static List<Texture2D> CreateRampsFromColors(BlueprintRace race, List<Color> colors, string[] sExtraRamps = null)
         {
             List<Texture2D> ramps = [];
@@ -170,7 +198,20 @@ namespace EbonsContentMod.Utilities
             return ramps;
         }
 
-        internal static EquipmentEntityLink PatchEntityLinkColor(BlueprintRace race, EquipmentEntityLink asset, List<Texture2D> Ramps, CharacterColorsProfile NewSkinColorsProfile = null, List<Texture2D> SecondaryRamps = null, BlueprintRace eyerace = null, EquipmentEntityLink eyeEE = null, CharacterColorsProfile NewEyeColorsProfile = null)
+        public static EquipmentEntity RemoveBodyparts(EquipmentEntity asset, List<BodyPartType> parts)
+        {
+            foreach (BodyPartType part in parts)
+            {
+                for (int i = 0; i < asset.BodyParts.ToArray().Length; i++)
+                {
+                    if (asset.BodyParts[i].m_Type == ((long)part)) asset.BodyParts.RemoveAt(i);
+                }
+            }
+
+            return asset;
+        }
+
+        internal static EquipmentEntityLink PatchEntityLinkColor(BlueprintRace race, EquipmentEntityLink asset, List<Texture2D> Ramps, CharacterColorsProfile NewSkinColorsProfile = null, List<Texture2D> SecondaryRamps = null, BlueprintRace eyerace = null, EquipmentEntityLink eyeEE = null, CharacterColorsProfile NewEyeColorsProfile = null, List<BodyPartType> RemoveHeadParts = null)
         {
             var name = race.name + "_" + asset.Load(true, false).name + asset.AssetId;
             var guid = RaceFunctions.GetEntityNewGuidFromName(name);
@@ -197,6 +238,8 @@ namespace EbonsContentMod.Utilities
                 var SecondaryRampDLCLocks = ee.SecondaryColorsProfile.RampDlcLocks;
                 var SecondarySpecialRamps = ee.SecondaryColorsProfile.SpecialRamps;
                 var SecondaryName = ee.SecondaryColorsProfile.name;
+
+                if (RemoveHeadParts != null) ee = RemoveBodyparts(ee, RemoveHeadParts);
 
                 if (NewSkinColorsProfile != null)
                 {
@@ -336,17 +379,22 @@ namespace EbonsContentMod.Utilities
         /// <para>
         /// eyeEE = EquipmentEntityLink of a EquipmentEntity that you want to take the eye textures from and apply to your new EquipmentEntity's eye bodypart.
         /// </para>
+        /// <para>
+        /// BodyPartsToRemove = List&lt;BodyPartType&gt;, will remove all the BodyPartTypes in the list from the linked EquipmentEntity
+        /// </para>
         /// </remarks>
         /// <returns>
         /// New EquipmentEntityLink for the recolored EquipmentEntity
         /// </returns>
-        public static EquipmentEntityLink RecolorEELink(EquipmentEntityLink asset, List<Texture2D> Ramps, string guid, bool RemovePrimaryProfile = false, bool RemoveSecondaryProfile = false, List<Texture2D> SecondaryRamps = null, EquipmentEntityLink eyeEE = null)
+        public static EquipmentEntityLink RecolorEELink(EquipmentEntityLink asset, List<Texture2D> Ramps, string guid, bool RemovePrimaryProfile = false, bool RemoveSecondaryProfile = false, List<Texture2D> SecondaryRamps = null, EquipmentEntityLink eyeEE = null, List<BodyPartType> BodyPartsToRemove = null)
         {
             var newlink = asset.CreateDynamicScriptableObjectProxy<EquipmentEntity, EquipmentEntityLink>(ee =>
             {
                 Dictionary<string, Texture2D> EyeEETextures = null;
 
                 if (eyeEE != null) EyeEETextures = GetEEEyes(eyeEE);
+
+                if (BodyPartsToRemove != null) ee = RemoveBodyparts(ee, BodyPartsToRemove);
 
                 if (RemovePrimaryProfile == true)
                 {
@@ -615,6 +663,9 @@ namespace EbonsContentMod.Utilities
         /// OnlyMalesBald = bool, if true, and BaldRace is true, only male members of your race will be bald.
         /// </para>
         /// <para>
+        /// KitsuneBaldRace = bool, if true, will not assign anything but heads to male or female options. Use when copying the kitsune race.
+        /// </para>
+        /// <para>
         /// NoEyebrows = bool, if true, your race will not have eyebrows.
         /// </para>
         /// <para>
@@ -671,11 +722,14 @@ namespace EbonsContentMod.Utilities
         /// <para>
         /// StartMalesWithBeard = bool, if true, the "no beard" option will be added to the end of the beard array, making males appear appear with a beard by default.
         /// </para>
+        /// <para>
+        /// RemoveHeadParts = List&lt;BodyPartType&gt;, will remove all the BodyPartTypes indicated from the head EquipmentEntities 
+        /// </para>
         /// </remarks>
         /// <returns>
         /// New recolored race.
         /// </returns>
-        public static BlueprintRace RecolorRace(BlueprintRace race, List<Color> headcolors, List<Color> haircolors, /*string[] sExtraHeadRamps = null, string[] sExtraHairRamps = null,*/ List<Color> eyecolors = null, List<Color> horncolors = null, BlueprintRace eyerace = null, EquipmentEntityLink eyeEE = null, bool BaldRace = false, bool OnlyMalesBald = false, bool NoEyebrows = false, bool NoBeards = false, bool OnlyAddHeadColors = false, bool OnlyAddHairColors = false, bool OnlyAddEyeColors = false, BlueprintRace HeadSwapRace = null, EquipmentEntityLink[] CustomMaleHeads = null, EquipmentEntityLink[] CustomFemaleHeads = null, EquipmentEntityLink[] CustomMaleHairs = null, EquipmentEntityLink[] CustomFemaleHairs = null, EquipmentEntityLink CustomBody = null, List<Texture2D> CustomHeadRamps = null, List<Texture2D> CustomEyeRamps = null, List<Texture2D> CustomHairRamps = null, EquipmentEntityLink CustomBodyNoRecolor = null, EquipmentEntityLink[] CustomMaleHeadsNoRecolor = null,  EquipmentEntityLink[] CustomFemaleHeadsNoRecolor = null, EquipmentEntityLink[] EyeLinkedEEs = null, bool StartMalesWithBeard = false/*, bool OnlyFemale = false*/)
+        public static BlueprintRace RecolorRace(BlueprintRace race, List<Color> headcolors, List<Color> haircolors, /*string[] sExtraHeadRamps = null, string[] sExtraHairRamps = null,*/ List<Color> eyecolors = null, List<Color> horncolors = null, BlueprintRace eyerace = null, EquipmentEntityLink eyeEE = null, bool BaldRace = false, bool OnlyMalesBald = false, bool KitsuneBaldRace = false, bool NoEyebrows = false, bool NoBeards = false, bool OnlyAddHeadColors = false, bool OnlyAddHairColors = false, bool OnlyAddEyeColors = false, BlueprintRace HeadSwapRace = null, EquipmentEntityLink[] CustomMaleHeads = null, EquipmentEntityLink[] CustomFemaleHeads = null, EquipmentEntityLink[] CustomMaleHairs = null, EquipmentEntityLink[] CustomFemaleHairs = null, EquipmentEntityLink CustomBody = null, List<Texture2D> CustomHeadRamps = null, List<Texture2D> CustomEyeRamps = null, List<Texture2D> CustomHairRamps = null, EquipmentEntityLink CustomBodyNoRecolor = null, EquipmentEntityLink[] CustomMaleHeadsNoRecolor = null,  EquipmentEntityLink[] CustomFemaleHeadsNoRecolor = null, EquipmentEntityLink[] EyeLinkedEEs = null, bool StartMalesWithBeard = false, List<BodyPartType> RemoveHeadParts = null/*, bool OnlyFemale = false*/)
         {
             // TO DO: add handling for tails and horns
             
@@ -743,7 +797,7 @@ namespace EbonsContentMod.Utilities
             {
                 foreach (EquipmentEntityLink head in maleheads)
                 {
-                    var NewHead = PatchEntityLinkColor(race, head, HeadRamps, NewSkinColorsProfile, EyeRamps, eyerace, eyeEE, NewEyeColorsProfile);
+                    var NewHead = PatchEntityLinkColor(race, head, HeadRamps, NewSkinColorsProfile, EyeRamps, eyerace, eyeEE, NewEyeColorsProfile, RemoveHeadParts);
 
                     if (NewHead != null)
                     {
@@ -753,7 +807,7 @@ namespace EbonsContentMod.Utilities
 
                 foreach (EquipmentEntityLink head in femaleheads)
                 {
-                    var NewHead = PatchEntityLinkColor(race, head, HeadRamps, NewSkinColorsProfile, EyeRamps, eyerace, eyeEE, NewEyeColorsProfile);
+                    var NewHead = PatchEntityLinkColor(race, head, HeadRamps, NewSkinColorsProfile, EyeRamps, eyerace, eyeEE, NewEyeColorsProfile, RemoveHeadParts);
 
                     if (NewHead != null)
                     {
@@ -775,7 +829,8 @@ namespace EbonsContentMod.Utilities
 
             //var BaldHair = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HumanRace.ToString()).MaleOptions.Hair[9];
             // Just recolor the bald hair one time
-            var BaldHair = PatchHairLinkColor(race, new EquipmentEntityLink() { AssetId = "b85db19d7adf6aa48b5dd2bb7bfe1502" }, HairRamps, NewHairColorsProfile);
+            var BaldHair = new EquipmentEntityLink() { AssetId = "b85db19d7adf6aa48b5dd2bb7bfe1502" };
+            if (KitsuneBaldRace == false)  BaldHair = PatchHairLinkColor(race, new EquipmentEntityLink() { AssetId = "b85db19d7adf6aa48b5dd2bb7bfe1502" }, HairRamps, NewHairColorsProfile);
 
             // Could probably just set the arrays empty now to avoid loading the bald EEs extra times
             //if (BaldRace) malehairs = Arr(BaldHair);
@@ -786,89 +841,90 @@ namespace EbonsContentMod.Utilities
 
             EquipmentEntityLink[] MaleHairArray = [];
             EquipmentEntityLink[] FemaleHairArray = [];
-
-            foreach (EquipmentEntityLink hair in malehairs)
-            {
-                // Skip the bald hair so we don't repeat GUID lookups
-                if (hair.Load(true, false).name == "EE_EMPTY_HairStyleColors") continue;
-                if (hair.AssetId == "b85db19d7adf6aa48b5dd2bb7bfe1502") continue;
-
-                var NewHair = PatchHairLinkColor(race, hair, HairRamps, NewHairColorsProfile);
-
-                if (NewHair != null)
-                {
-                    MaleHairArray = MaleHairArray.AppendToArray(NewHair);
-                }
-            }
-
-            foreach (EquipmentEntityLink hair in femalehairs)
-            {
-                // Skip the bald hair so we don't repeat GUID lookups
-                if (hair.Load(true, false).name == "EE_EMPTY_HairStyleColors") continue;
-                if (hair.AssetId == "b85db19d7adf6aa48b5dd2bb7bfe1502") continue;
-
-                var NewHair = PatchHairLinkColor(race, hair, HairRamps, NewHairColorsProfile);
-
-                if (NewHair != null)
-                {
-                    FemaleHairArray = FemaleHairArray.AppendToArray(NewHair);
-                }
-            }
-
-            // Add the recolored bald hair to the end of the array
-            MaleHairArray = MaleHairArray.AppendToArray(BaldHair);
-            FemaleHairArray = FemaleHairArray.AppendToArray(BaldHair);
-
-            var malebrows = race.MaleOptions.Eyebrows;
-            var femalebrows = race.FemaleOptions.Eyebrows;
-
             EquipmentEntityLink[] MaleBrowArray = [];
             EquipmentEntityLink[] FemaleBrowArray = [];
-
-            foreach (EquipmentEntityLink brow in malebrows)
-            {
-                var NewBrow = PatchHairLinkColor(race, brow, HairRamps, NewHairColorsProfile);
-
-                if (NewBrow != null && NoEyebrows == false)
-                {
-                    MaleBrowArray = MaleBrowArray.AppendToArray(NewBrow);
-                }
-            }
-
-            foreach (EquipmentEntityLink brow in femalebrows)
-            {
-                var NewBrow = PatchHairLinkColor(race, brow, HairRamps, NewHairColorsProfile);
-
-                if (NewBrow != null && NoEyebrows == false)
-                {
-                    FemaleBrowArray = FemaleBrowArray.AppendToArray(NewBrow);
-                }
-            }
-
-            var malebeards = race.MaleOptions.Beards;
-
             EquipmentEntityLink[] MaleBeardArray = [];
 
-            if (StartMalesWithBeard == false) MaleBeardArray = MaleBeardArray.AppendToArray(BaldHair);
-
-            if (malebeards.Length > 0)
+            if (KitsuneBaldRace == false)
             {
-                foreach (EquipmentEntityLink beard in malebeards)
+                foreach (EquipmentEntityLink hair in malehairs)
                 {
                     // Skip the bald hair so we don't repeat GUID lookups
-                    if (beard.Load(true, false).name == "EE_EMPTY_HairStyleColors") continue;
-                    if (beard.AssetId == "b85db19d7adf6aa48b5dd2bb7bfe1502") continue;
+                    if (hair.Load(true, false).name == "EE_EMPTY_HairStyleColors") continue;
+                    if (hair.AssetId == "b85db19d7adf6aa48b5dd2bb7bfe1502") continue;
 
-                    var NewBeard = PatchHairLinkColor(race, beard, HairRamps, NewHairColorsProfile);
+                    var NewHair = PatchHairLinkColor(race, hair, HairRamps, NewHairColorsProfile);
 
-                    if (NewBeard != null && NoBeards == false)
+                    if (NewHair != null)
                     {
-                        MaleBeardArray = MaleBeardArray.AppendToArray(NewBeard);
+                        MaleHairArray = MaleHairArray.AppendToArray(NewHair);
                     }
                 }
-            }
 
-            if (StartMalesWithBeard == true) MaleBeardArray = MaleBeardArray.AppendToArray(BaldHair);
+                foreach (EquipmentEntityLink hair in femalehairs)
+                {
+                    // Skip the bald hair so we don't repeat GUID lookups
+                    if (hair.Load(true, false).name == "EE_EMPTY_HairStyleColors") continue;
+                    if (hair.AssetId == "b85db19d7adf6aa48b5dd2bb7bfe1502") continue;
+
+                    var NewHair = PatchHairLinkColor(race, hair, HairRamps, NewHairColorsProfile);
+
+                    if (NewHair != null)
+                    {
+                        FemaleHairArray = FemaleHairArray.AppendToArray(NewHair);
+                    }
+                }
+
+                // Add the recolored bald hair to the end of the array
+                MaleHairArray = MaleHairArray.AppendToArray(BaldHair);
+                FemaleHairArray = FemaleHairArray.AppendToArray(BaldHair);
+
+                var malebrows = race.MaleOptions.Eyebrows;
+                var femalebrows = race.FemaleOptions.Eyebrows;
+
+                foreach (EquipmentEntityLink brow in malebrows)
+                {
+                    var NewBrow = PatchHairLinkColor(race, brow, HairRamps, NewHairColorsProfile);
+
+                    if (NewBrow != null && NoEyebrows == false)
+                    {
+                        MaleBrowArray = MaleBrowArray.AppendToArray(NewBrow);
+                    }
+                }
+
+                foreach (EquipmentEntityLink brow in femalebrows)
+                {
+                    var NewBrow = PatchHairLinkColor(race, brow, HairRamps, NewHairColorsProfile);
+
+                    if (NewBrow != null && NoEyebrows == false)
+                    {
+                        FemaleBrowArray = FemaleBrowArray.AppendToArray(NewBrow);
+                    }
+                }
+
+                var malebeards = race.MaleOptions.Beards;
+
+                if (StartMalesWithBeard == false) MaleBeardArray = MaleBeardArray.AppendToArray(BaldHair);
+
+                if (malebeards.Length > 0)
+                {
+                    foreach (EquipmentEntityLink beard in malebeards)
+                    {
+                        // Skip the bald hair so we don't repeat GUID lookups
+                        if (beard.Load(true, false).name == "EE_EMPTY_HairStyleColors") continue;
+                        if (beard.AssetId == "b85db19d7adf6aa48b5dd2bb7bfe1502") continue;
+
+                        var NewBeard = PatchHairLinkColor(race, beard, HairRamps, NewHairColorsProfile);
+
+                        if (NewBeard != null && NoBeards == false)
+                        {
+                            MaleBeardArray = MaleBeardArray.AppendToArray(NewBeard);
+                        }
+                    }
+                }
+
+                if (StartMalesWithBeard == true) MaleBeardArray = MaleBeardArray.AppendToArray(BaldHair);
+            }
 
             //var EyeRampsForEEs = race.MaleOptions.Heads[0].Load().m_SecondaryRamps;
             List<Texture2D> EyeRampsForEEs = [];
@@ -895,7 +951,9 @@ namespace EbonsContentMod.Utilities
             if (NewEyeLinkedEELinks.Length > 0) EELinker.RegisterEyeLink(race, NewEyeLinkedEELinks);
 
             var MaleOptions = CreateMaleCustomizationOptions(race, MaleHairArray, MaleHeadArray, MaleBrowArray, MaleBeardArray, NoBeards);
+            if (KitsuneBaldRace == true) MaleOptions = CreateMaleKitsuneCustomizationOptions(race, MaleHeadArray);
             var FemaleOptions = CreateFemaleCustomizationOptions(race, FemaleHairArray, FemaleHeadArray, FemaleBrowArray);
+            if (KitsuneBaldRace == true) FemaleOptions = CreateFemaleKitsuneCustomizationOptions(race, FemaleHeadArray);
 
             var NewPresets = BuildNewPresets(race, HeadRamps, NewSkinColorsProfile, CustomBody, CustomBodyNoRecolor);
 

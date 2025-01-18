@@ -221,7 +221,6 @@ public static class Main
                 FlamboyantArcana.Configure();
                 ArcaneDeed.Configure();
                 LightSensitivityTrait.Configure();
-                OrcSorcererBloodline.Configure();
             }
             catch (Exception e)
             {
@@ -263,6 +262,7 @@ public static class Main
             {
                 EldritchScrapper.Configure();
                 CollegiateInitiate.Configure(); // Not compatible with Worldcrawl yet
+                OrcSorcererBloodline.Configure();
                 Samsaran.Configure();
                 Svirfneblin.Configure();
                 Duergar.Configure();
@@ -281,6 +281,8 @@ public static class Main
                 Kuru.Configure();
                 Vishkanya.Configure();
                 Shabti.Configure();
+                Rougarou.Configure();
+                Nagaji.Configure();
                 MultiProjectileSpellFix.Configure();
                 ArcanistExploits.Configure();
                 FaithMagic.Configure();

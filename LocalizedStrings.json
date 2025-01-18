@@ -1778,7 +1778,7 @@
 
   {
     "Key": "ClassicSkinwalker.ChangeShapeStr.Description",
-    "enGB": "A skinwalker can change shape to and from a bestial form as a standard action. In bestial form, a skinwalker gains a +2 racial bonus to either Strength, Dexterity, or Constitution. Additionally, the skinwalker gains two claw atacks dealing 1d4 damage and a +1 natural armor bonus when in bestial form."
+    "enGB": "A skinwalker can change shape to and from a bestial form as a standard action. In bestial form, a skinwalker gains a +2 racial bonus to either Strength, Dexterity, or Constitution. Additionally, the skinwalker gains two claw attacks dealing 1d4 damage and a +1 natural armor bonus when in bestial form."
   },
 
   {
@@ -1789,7 +1789,7 @@
 
   {
     "Key": "ClassicSkinwalker.ChangeShapeCon.Description",
-    "enGB": "A skinwalker can change shape to and from a bestial form as a standard action. In bestial form, a skinwalker gains a +2 racial bonus to either Strength, Dexterity, or Constitution. Additionally, the skinwalker gains two claw atacks dealing 1d4 damage and a +1 natural armor bonus when in bestial form."
+    "enGB": "A skinwalker can change shape to and from a bestial form as a standard action. In bestial form, a skinwalker gains a +2 racial bonus to either Strength, Dexterity, or Constitution. Additionally, the skinwalker gains two claw attacks dealing 1d4 damage and a +1 natural armor bonus when in bestial form."
   },
 
   {
@@ -1800,7 +1800,7 @@
 
   {
     "Key": "ClassicSkinwalker.ChangeShapeDex.Description",
-    "enGB": "A skinwalker can change shape to and from a bestial form as a standard action. In bestial form, a skinwalker gains a +2 racial bonus to either Strength, Dexterity, or Constitution. Additionally, the skinwalker gains two claw atacks dealing 1d4 damage and a +1 natural armor bonus when in bestial form."
+    "enGB": "A skinwalker can change shape to and from a bestial form as a standard action. In bestial form, a skinwalker gains a +2 racial bonus to either Strength, Dexterity, or Constitution. Additionally, the skinwalker gains two claw attacks dealing 1d4 damage and a +1 natural armor bonus when in bestial form."
   },
 
   {
@@ -2087,5 +2087,82 @@
   {
     "Key": "Shabti.PastLifeKnowledge.Description",
     "enGB": "Shabti remember bits of their past lives. As a result, they treat all Knowledge and Lore skills as class skills."
+  },
+
+  {
+    "Key": "Rougarou.Name",
+    "ProcessTemplates": false,
+    "enGB": "Rougarou"
+  },
+
+  {
+    "Key": "Rougarou.Description",
+    "enGB": "Rougarous are wolf-headed humanoids who can transform into wolves. While this sometimes confuses others into mistaking a rougarou for a werewolf, these humanoids are not lycanthropes. In fact, most detest werewolves and hunt them mercilessly. \nThe race isn’t numerous or widespread, and rougarous tend to live in secluded communities. They are very protective of their families and friends, and the communities they form tend to be strict and lawful. In their homeland, rougarous are most plentiful in southern swamps and marshes, where it is believed they originated, but have since spread throughout the rest of the world. \nWhile most of rougarou society is upstanding and trustworthy, as with any group there are some violent and aggressive members. These evil, loner rougarous occasionally form into packs that raid the countryside and prey upon the just and kind. Thankfully, rougarous are generally civilized and loyal, and most are quick to hunt down and punish their feral kin for their foul deeds. \nRougarous age like humans, but they tend to be slightly taller and heavier than typical humans."
+  },
+
+  {
+    "Key": "Rougarou.NaturalAttack.Name",
+    "ProcessTemplates": false,
+    "enGB": "Natural Attack"
+  },
+
+  {
+    "Key": "Rougarou.NaturalAttack.Description",
+    "enGB": "Rougarous have a bite attack that deals 1d4 points of damage. This is a secondary attack if a rougarou wields a manufactured weapon."
+  },
+
+  {
+    "Key": "Rougarou.ChangeShape.Name",
+    "ProcessTemplates": false,
+    "enGB": "Change Shape"
+  },
+
+  {
+    "Key": "Rougarou.ChangeShape.Description",
+    "enGB": "A rougarou can change shape at will into a wolf as a standard action, as beast shape I. A rougarou can revert to its true form as a swift action. \nBeast Shape I: You become a medium wolf. You gain a +2 size bonus to your Strength and a +2 natural armor bonus. Your movement speed is increased by 20 feet. You also gain a 1d6 bite attack and the tripping bite ability. \nTripping Bite: A wolf can attempt to trip its opponent as a free action if it hits with bite attack."
+  },
+
+  {
+    "Key": "Nagaji.Name",
+    "ProcessTemplates": false,
+    "enGB": "Nagaji"
+  },
+
+  {
+    "Key": "Nagaji.Description",
+    "enGB": "The nagaji are a race of ophidian humanoids with scaled skin that mimics the dramatic appearance of true nagas. Like serpents, they have forked tongues and lidless eyes, giving them an unblinking gaze that most other races find unnerving. Their physical forms are otherwise humanlike, raising wary speculation about their origins. It is widely believed that true nagas created them as a servitor race, through crossbreeding, magic, or both, and indeed nagaji revere nagas as living gods. Nagaji often inspire awe and fear among other humanoids, as much for their mysterious ancestry as for their talent for both swords and sorcery. \nBred in the ancient past by nagas seeking a servitor race that combined the loyalty of a slave with the versatility of the human form, the nagaji have long since developed into a vibrant and proud race."
+  },
+
+  {
+    "Key": "Nagaji.ArmoredScales.Name",
+    "ProcessTemplates": false,
+    "enGB": "Armored Scales"
+  },
+
+  {
+    "Key": "Nagaji.ArmoredScales.Description",
+    "enGB": "Nagaji have a +1 natural armor bonus from their scaly flesh."
+  },
+
+  {
+    "Key": "Nagaji.Resistant.Name",
+    "ProcessTemplates": false,
+    "enGB": "Resistant"
+  },
+
+  {
+    "Key": "Nagaji.Resistant.Description",
+    "enGB": "Nagaji receive a +2 racial saving throw bonus against mind-affecting effects and poison."
+  },
+
+  {
+    "Key": "Nagaji.SerpentSense.Name",
+    "ProcessTemplates": false,
+    "enGB": "Serpent Sense"
+  },
+
+  {
+    "Key": "Nagaji.SerpentSense.Description",
+    "enGB": "Nagaji receive a +2 racial bonus on Lore (Nature) checks, and a +4 racial bonus on Perception checks."
   },
 ]
