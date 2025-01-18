@@ -31,25 +31,28 @@ This mod adds the following races to the game and they should work like the defa
   - Female head is in the works. For now, play male goblin.
   - Helmets/goggles will not look correct and should be hidden for now. Working on a permanent hiding solution for goblins.
 - [Orc](https://www.d20pfsrd.com/races/other-races/featured-races/arg-orc/ "Orc")
+- [Rougarou](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/rougarou-player-characters/ "Rougarou")
+- [Nagaji](https://www.d20pfsrd.com/races/other-races/uncommon-races/arg-nagaji/ "Nagaji")
 
 Here is what all the new races look like:
 
-![image](https://github.com/user-attachments/assets/16eeaa4f-1789-4f2d-b50b-5e5ea39a851c)
-![image](https://github.com/user-attachments/assets/e8687fa4-443f-4a53-878a-a24bffd588b0)
-![image](https://github.com/user-attachments/assets/a6eb5d24-c22d-41c8-97ce-75a6572ef715)
-![image](https://github.com/user-attachments/assets/6f9e99aa-03d2-4cc0-bda3-afc35a64a5a9)
-![image](https://github.com/user-attachments/assets/a319c98c-0a67-40c6-a7a0-ca01a3cb9f1b)
-![image](https://github.com/user-attachments/assets/bc51c095-1a2f-4278-82c9-6344438bad87)
-![image](https://github.com/user-attachments/assets/2e730b3c-5333-44ae-889a-8895f2b0a7b6)
-![image](https://github.com/user-attachments/assets/74103851-f2c9-4a5f-a703-c1212eaa3a64)
+![ECM1](https://github.com/user-attachments/assets/6caac997-715a-4b6a-802a-4da565a8e65e)
+![ECM2](https://github.com/user-attachments/assets/3b50acfa-ee31-42ff-87dd-c377becbceb1)
+![ECM3](https://github.com/user-attachments/assets/ccd5e7d3-6ac9-485d-a086-cf29f1609de9)
+![ECM4](https://github.com/user-attachments/assets/8582439b-3204-46e5-a1c4-1689980e4a8a)
+![ECM5](https://github.com/user-attachments/assets/29d1714c-7684-49e2-a188-3e47fc057c9a)
+![ECM6](https://github.com/user-attachments/assets/86209339-c40e-404a-aa2f-50fca795ca74)
+![ECM7](https://github.com/user-attachments/assets/16249231-2e62-4e01-bacd-f7b1fe65bd57)
+![ECM8](https://github.com/user-attachments/assets/7a2253b8-8d51-4aa3-be85-b09581c36857)
+![ECM11](https://github.com/user-attachments/assets/ea765d50-3259-478b-a636-0c6bdd461e3e)
 
 Android circuitry colors are linked to the eye color - how fun!
   
-![image](https://github.com/user-attachments/assets/d2ff9dcc-3ed6-4b53-bfe4-f79551f8f74a)
+![ECM9](https://github.com/user-attachments/assets/9012c1d3-8344-4542-9f15-da893f0a9d1e)
 
 Different Change Shape forms for the skinwalker:
   
-![image](https://github.com/user-attachments/assets/5976579b-5da5-4464-ac79-a8f62c643c2c)
+![ECM10](https://github.com/user-attachments/assets/7e685556-bd92-49a8-a8ae-87f8d01a4812)
 
 ## Archetypes
 - **Arcanist**
@@ -89,6 +92,11 @@ Different Change Shape forms for the skinwalker:
 ## Installation
 1. Download and install [Unity Mod Manager](https://github.com/newman55/unity-mod-manager).
 2. Drop the zip file from the relaease into the "Drop Zip Files Here" panel in the Unity Mod Manager UI in the "Mods" tab.
+
+**Note:** This require the Doorstop installation method for Unity Mod Manager, most people do it this way, but if yours is installed using the Assembly method you can do one of these (you can see which method you used at the bottom of the "Install" tab):
+1. Uninstall UMM and reinstall using the Doorstop method
+2. Use WrathPatches to upgrade the game's Harmony version
+3. Copy `Harmony` from `Wrath_Data\Managed\UnityModManager` to `Wrath_Data\Managed`
 
 ## Other Mods
 * This version will not play nice with Worldcrawl. If you use that mod, I have released a Worldcrawl-compatible version over on [Nexus Mods](https://www.nexusmods.com/pathfinderwrathoftherighteous/mods/758?tab=files "Nexus Mods"). The Worldcrawl version does not have the Collegiate Initiate archetype, but is otherwise unchanged. I will work on a solution that preserves the archetype, but for now, use that version if you use Worldcrawl.
