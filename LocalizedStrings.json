@@ -2165,4 +2165,267 @@
     "Key": "Nagaji.SerpentSense.Description",
     "enGB": "Nagaji receive a +2 racial bonus on Lore (Nature) checks, and a +4 racial bonus on Perception checks."
   },
+
+  {
+    "Key": "Mongrel.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mongrel"
+  },
+
+  {
+    "Key": "Mongrel.Description",
+    "enGB": "For most people, the mongrels are little more than an urban legend. They are believed to be the descendants of those who fought in the First Crusade, when the crusaders had little experience in dealing with the unique hazards the Worldwound presented. As the story goes, during the First Crusade, many unknowingly exposed themselves to fell energies and nightmarish radiations. In the years that followed, a shocking number of children born to the crusaders were hideously deformed. Many of these unfortunate innocents were put to death by overzealous inquisitors or even fellow crusaders, but some parents fled underground to raise their children outside of the light of intolerance. \nWhether or not this story is true, the mongrels are quite real, and inhabit the vast underground catacombs and caverns below the cities. Despite their monstrous appearances, mongrels are generally hardworking and peaceful creatures. No two mongrels look the same: each of them usually has characteristics from several different creatures. This strange mixture enforces mongrels' place away from society, for they are shunned by all who fear their twisted appearance. Mistaken as enemies by all, mongrels prefer to be left alone. A tragically short lifespan limits the creatures' population growth — mongrels rarely live past 35 years."
+  },
+
+  {
+    "Key": "Mongrel.MongrelHornsRequisiteFeature.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mongrel Horns"
+  },
+
+  {
+    "Key": "Mongrel.MongrelEyesRequisiteFeature.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mongrel Eyes"
+  },
+
+  {
+    "Key": "Mongrel.MongrelEarsRequisiteFeature.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mongrel Ears"
+  },
+
+  {
+    "Key": "Mongrel.MongrelTailRequisiteFeature.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mongrel Tail"
+  },
+
+  {
+    "Key": "Mongrel.TieflingTail.Name",
+    "ProcessTemplates": false,
+    "enGB": "Tiefling Tail"
+  },
+
+  {
+    "Key": "Mongrel.MajorMutation.Name",
+    "ProcessTemplates": false,
+    "enGB": "Major Deformity"
+  },
+
+  {
+    "Key": "Mongrel.MajorMutation.Description",
+    "enGB": "No two mongrels look the same. One may have a face that is half hobgoblin, half lizardfolk, with one human-like foot and one cloven hoof, while his sister may have elven ears, a dwarven beard, orc tusks, and clawed hands. Each mongrel usually has characteristics from many different creatures. This strange mixture enforces mongrels' place in the edges of the world, for they are shunned by all who fear their twisted appearance."
+  },
+
+  {
+    "Key": "Mongrel.Stagseed.Name",
+    "ProcessTemplates": false,
+    "enGB": "Stagseed"
+  },
+
+  {
+    "Key": "Mongrel.Stagseed.Description",
+    "enGB": "Resembling large, robust forest ungulates, stagseed mongrel must shed the velvet from their horns each season to make room for new growth."
+  },
+
+  {
+    "Key": "Mongrel.Rockskin.Name",
+    "ProcessTemplates": false,
+    "enGB": "Rockskin"
+  },
+
+  {
+    "Key": "Mongrel.Rockskin.Description",
+    "enGB": "Encrusted with a dermal layer of rocky minerals, rockskin mongrels are often mistaken for the halfbreed children of oreads."
+  },
+
+  {
+    "Key": "Mongrel.Coldblood.Name",
+    "ProcessTemplates": false,
+    "enGB": "Coldblood"
+  },
+
+  {
+    "Key": "Mongrel.Coldblood.Description",
+    "enGB": "Despite the name and their scaly skin, coldblood mongrels are mammals, as are all members of their race."
+  },
+
+  {
+    "Key": "Mongrel.Forestkin.Name",
+    "ProcessTemplates": false,
+    "enGB": "Forestkin"
+  },
+
+  {
+    "Key": "Mongrel.Forestkin.Description",
+    "enGB": "Thick leg fur and large, swept-back horns make Forestkin mongrels resemble first-world creatures of myth."
+  },
+
+  {
+    "Key": "Mongrel.Bullbred.Name",
+    "ProcessTemplates": false,
+    "enGB": "Bullbred"
+  },
+
+  {
+    "Key": "Mongrel.Bullbred.Description",
+    "enGB": "With twisted horns, dense muscle, and thick, black fur, these mongrels resemble bulls aesthetically, if not in temperment."
+  },
+
+  {
+    "Key": "Mongrel.Monkeyborn.Name",
+    "ProcessTemplates": false,
+    "enGB": "Monkeyborn"
+  },
+
+  {
+    "Key": "Mongrel.Monkeyborn.Description",
+    "enGB": "Monkeyborn mongrels are often mistaken for primitive primates when outsiders observe the thick fur that covers the majority of their bodies and limbs."
+  },
+
+  {
+    "Key": "Mongrel.Spiderheart.Name",
+    "ProcessTemplates": false,
+    "enGB": "Spiderheart"
+  },
+
+  {
+    "Key": "Mongrel.Spiderheart.Description",
+    "enGB": "Despite often posessing jovial and kind personalities, other mongrels tend to avoid spiderheart mongrels due to their predatory, alien appearance."
+  },
+
+  {
+    "Key": "Mongrel.Raptorwing.Name",
+    "ProcessTemplates": false,
+    "enGB": "Raptorwing"
+  },
+
+  {
+    "Key": "Mongrel.Raptorwing.Description",
+    "enGB": "The expansive pure-white feathered wings of raptorwing mongrels give them a benevolent and imperious bearing even if they don't provide them with the ability to fly."
+  },
+
+  {
+    "Key": "Mongrel.MinorMutation.Name",
+    "ProcessTemplates": false,
+    "enGB": "Minor Deformity"
+  },
+
+  {
+    "Key": "Mongrel.MinorMutation.Description",
+    "enGB": "Mongrels possess divergent traits both dramatic and subtle, but it is the small differences that truly set all members of the race apart visually."
+  },
+
+  {
+    "Key": "Mongrel.MismatchedEarsI.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mismatched Ears I"
+  },
+
+  {
+    "Key": "Mongrel.MismatchedEarsII.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mismatched Ears II"
+  },
+
+  {
+    "Key": "Mongrel.Cataracts.Name",
+    "ProcessTemplates": false,
+    "enGB": "Cataracts"
+  },
+
+  {
+    "Key": "Mongrel.AasimarEyes.Name",
+    "ProcessTemplates": false,
+    "enGB": "Aasimar Eyes"
+  },
+
+  {
+    "Key": "Mongrel.KitsuneEyes.Name",
+    "ProcessTemplates": false,
+    "enGB": "Kitsune Eyes"
+  },
+
+  {
+    "Key": "Mongrel.DhampirEyes.Name",
+    "ProcessTemplates": false,
+    "enGB": "Dhampir Eyes"
+  },
+
+  {
+    "Key": "Mongrel.OreadEyes.Name",
+    "ProcessTemplates": false,
+    "enGB": "Oread Eyes"
+  },
+
+  {
+    "Key": "Mongrel.ElfEyes.Name",
+    "ProcessTemplates": false,
+    "enGB": "Elf Eyes"
+  },
+
+  {
+    "Key": "Mongrel.TieflingEyes.Name",
+    "ProcessTemplates": false,
+    "enGB": "Tiefling Eyes"
+  },
+
+  {
+    "Key": "Mongrel.CatEyes.Name",
+    "ProcessTemplates": false,
+    "enGB": "Cat Eyes"
+  },
+
+  {
+    "Key": "Mongrel.MongrelHornsI.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mongrel Horns I"
+  },
+
+  {
+    "Key": "Mongrel.MongrelHornsII.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mongrel Horns II"
+  },
+
+  {
+    "Key": "Mongrel.MongrelHornsIII.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mongrel Horns III"
+  },
+
+  {
+    "Key": "Mongrel.MongrelHornsIV.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mongrel Horns IV"
+  },
+
+  {
+    "Key": "Mongrel.MongrelHornsV.Name",
+    "ProcessTemplates": false,
+    "enGB": "Mongrel Horns V"
+  },
+
+  {
+    "Key": "Mongrel.NaturalArmor.Name",
+    "ProcessTemplates": false,
+    "enGB": "Natural Armor"
+  },
+
+  {
+    "Key": "Mongrel.NaturalArmor.Description",
+    "enGB": "Mongrels have a +2 natural armor bonus."
+  },
+
+  {
+    "Key": "Mongrel.Skilled.Name",
+    "ProcessTemplates": false,
+    "enGB": "Skilled"
+  },
+
+  {
+    "Key": "Mongrel.Skilled.Description",
+    "enGB": "Living on the fringes of society, hated by other races, mongrels must learn how to move about without being detected and utilize deception to stay alive. Mongrels gain a +4 racial bonus to Stealth checks and Trickery checks."
+  },
 ]

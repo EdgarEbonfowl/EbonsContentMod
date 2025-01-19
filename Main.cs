@@ -283,6 +283,7 @@ public static class Main
                 Shabti.Configure();
                 Rougarou.Configure();
                 Nagaji.Configure();
+                Mongrel.Configure();
                 MultiProjectileSpellFix.Configure();
                 ArcanistExploits.Configure();
                 FaithMagic.Configure();

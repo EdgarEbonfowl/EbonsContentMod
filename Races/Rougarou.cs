@@ -134,6 +134,7 @@ namespace EbonsContentMod.Races
                     enterTransition: Helpers.CreateCopy(BlueprintTools.GetBlueprint<BlueprintBuff>(BuffRefs.BeastShapeIBuff.ToString()).GetComponent<Polymorph>().m_EnterTransition),
                     exitTransition: Helpers.CreateCopy(BlueprintTools.GetBlueprint<BlueprintBuff>(BuffRefs.BeastShapeIBuff.ToString()).GetComponent<Polymorph>().m_ExitTransition),
                     transitionExternal: Helpers.CreateCopy(BlueprintTools.GetBlueprint<BlueprintBuff>(BuffRefs.BeastShapeIBuff.ToString()).GetComponent<Polymorph>().m_TransitionExternal))
+                .AddPolymorphBonuses(4)
                 .AddSpellDescriptorComponent(SpellDescriptor.Polymorph)
                 .AddBuffMovementSpeed(value: 20)
                 .AddReplaceAsksList("a05bf641a3fb6e3498707ac9814f583b")

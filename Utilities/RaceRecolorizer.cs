@@ -386,7 +386,7 @@ namespace EbonsContentMod.Utilities
         /// <returns>
         /// New EquipmentEntityLink for the recolored EquipmentEntity
         /// </returns>
-        public static EquipmentEntityLink RecolorEELink(EquipmentEntityLink asset, List<Texture2D> Ramps, string guid, bool RemovePrimaryProfile = false, bool RemoveSecondaryProfile = false, List<Texture2D> SecondaryRamps = null, EquipmentEntityLink eyeEE = null, List<BodyPartType> BodyPartsToRemove = null)
+        public static EquipmentEntityLink RecolorEELink(EquipmentEntityLink asset, List<Texture2D> Ramps, string guid, bool RemovePrimaryProfile = false, bool RemoveSecondaryProfile = false, List<Texture2D> SecondaryRamps = null, EquipmentEntityLink eyeEE = null, List<BodyPartType> BodyPartsToRemove = null, bool SetColorProfileRamps = false, bool RemovePresets = false, bool SkipPrimaryColors = false, CharacterColorsProfile NewPrimaryColorsProfile = null, CharacterColorsProfile NewSecondaryColorsProfile = null)
         {
             var newlink = asset.CreateDynamicScriptableObjectProxy<EquipmentEntity, EquipmentEntityLink>(ee =>
             {
@@ -396,23 +396,43 @@ namespace EbonsContentMod.Utilities
 
                 if (BodyPartsToRemove != null) ee = RemoveBodyparts(ee, BodyPartsToRemove);
 
-                if (RemovePrimaryProfile == true)
+                if (RemovePrimaryProfile == true && NewPrimaryColorsProfile == null)
                 {
                     //ee.PrimaryColorsProfile = new CharacterColorsProfile();
                     ee.PrimaryColorsProfile = CreateInstance<CharacterColorsProfile>();
                 }
-                if (RemoveSecondaryProfile == true)
+                if (NewPrimaryColorsProfile != null)
+                {
+                        ee.PrimaryColorsProfile = NewPrimaryColorsProfile;
+                }
+                if (RemoveSecondaryProfile == true && NewSecondaryColorsProfile == null)
                 {
                     //ee.SecondaryColorsProfile = new CharacterColorsProfile();
                     ee.SecondaryColorsProfile = CreateInstance<CharacterColorsProfile>();
                 }
-                ee.m_PrimaryRamps = Ramps;
-                ee.PrimaryRamps = Ramps;
+                if (NewSecondaryColorsProfile != null)
+                {
+                    ee.PrimaryColorsProfile = NewSecondaryColorsProfile;
+                }
+                if (SkipPrimaryColors == false)
+                {
+                    ee.m_PrimaryRamps = Ramps;
+                    ee.PrimaryRamps = Ramps;
+                }
+                if (SetColorProfileRamps == true)
+                {
+                    ee.PrimaryColorsProfile.Ramps = Ramps;
+                }
                 if (SecondaryRamps != null)
                 {
                     ee.SecondaryRamps = SecondaryRamps;
                     ee.m_SecondaryRamps = SecondaryRamps;
                 }
+                if (SetColorProfileRamps == true && SecondaryRamps != null)
+                {
+                    ee.SecondaryColorsProfile.Ramps = SecondaryRamps;
+                }
+                if (RemovePresets == true) ee.ColorPresets = null;
                 if (eyeEE != null)
                 {
                     foreach (BodyPart part in ee.BodyParts)
