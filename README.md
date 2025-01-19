@@ -33,6 +33,7 @@ This mod adds the following races to the game and they should work like the defa
 - [Orc](https://www.d20pfsrd.com/races/other-races/featured-races/arg-orc/ "Orc")
 - [Rougarou](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/rougarou-player-characters/ "Rougarou")
 - [Nagaji](https://www.d20pfsrd.com/races/other-races/uncommon-races/arg-nagaji/ "Nagaji")
+- [Mongrel](https://www.d20pfsrd.com/bestiary/monster-listings/monstrous-humanoids/mongrelman/ "Mongrel")
 
 Here is what all the new races look like:
 
@@ -45,6 +46,7 @@ Here is what all the new races look like:
 ![ECM7](https://github.com/user-attachments/assets/16249231-2e62-4e01-bacd-f7b1fe65bd57)
 ![ECM8](https://github.com/user-attachments/assets/7a2253b8-8d51-4aa3-be85-b09581c36857)
 ![ECM11](https://github.com/user-attachments/assets/ea765d50-3259-478b-a636-0c6bdd461e3e)
+![ECM12](https://github.com/user-attachments/assets/51f6066e-aba0-4463-9d54-23406ea16fec)
 
 Android circuitry colors are linked to the eye color - how fun!
   
