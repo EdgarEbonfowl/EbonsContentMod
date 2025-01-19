@@ -7,6 +7,7 @@ In making this mod, I generally tried to follow exact implementations of tableto
 - Drow: among their spell-like abilities, only faerie fire is in-game, so that is what they got. Their Poison Use feature does nothing in Wrath, so it was swapped for its alternative racial tait Ancestral Grudge.
 - Ifrit: slight alterations to SLAs to use spells already in-game.
 - Kuru: blood courage just implemented as a bonus to all saves against fear as the actual mechanic is not reproducible.
+- Mongrel: Mongrels are technically homebrew as a player race, but since Wrath has them at least mostly integrated as a race, I used their stats plus the mongrelman monster entry for reference on their skill bonuses.
 - Nagaji: Low-light Vision (which became Keen Senses per above point) was rolled into Serpent's Sense, otherwise one ability would be cancelled out.
 - Rougarou: their Change Shape ability was made unlimited use. Beast Shape I is not great in this game as you can't use weapons, and Skinwalkers' Change Shape ability provides similar bonuses and is unlimited use.
 - Samasaran: slight alterations to SLAs to use spells already in-game. Mystic Past Life adds spells to spellbook rather than spell list as the latter is not possible as far as I know. There should be very little effective difference.
