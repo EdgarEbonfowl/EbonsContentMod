@@ -143,7 +143,10 @@ namespace EbonsContentMod.Races
             new EquipmentEntityLink() {AssetId = "b6ed73aa8db434a48afab56b6296181d"}, // Aasimar Long Camelia
             new EquipmentEntityLink() {AssetId = "b85db19d7adf6aa48b5dd2bb7bfe1502"}  // Bald
         ];
-        
+
+        public static List<Texture2D> TieflingSkinRamps = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()).MaleOptions.Heads[0].Load(true, false).PrimaryRamps;
+
+
         public static List<Texture2D> CustomSkinRamps =
         [
             RaceRecolorizer.GetArmorRampByIndex(3),
@@ -151,6 +154,7 @@ namespace EbonsContentMod.Races
             RaceRecolorizer.GetArmorRampByIndex(4),
             RaceRecolorizer.GetArmorRampByIndex(5),
             RaceRecolorizer.GetArmorRampByIndex(9),
+            TieflingSkinRamps[11],
             RaceRecolorizer.GetArmorRampByIndex(13),
             RaceRecolorizer.GetArmorRampByIndex(14),
             RaceRecolorizer.GetArmorRampByIndex(15),

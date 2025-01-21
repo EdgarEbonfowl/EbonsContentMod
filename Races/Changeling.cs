@@ -18,6 +18,7 @@ using Kingmaker.Blueprints.Classes.Selection;
 using Kingmaker.Blueprints.Classes.Spells;
 using BlueprintCore.Utils.Types;
 using Kingmaker.UnitLogic.Mechanics;
+using Kingmaker.Visual.CharacterSystem;
 
 namespace EbonsContentMod.Races
 {
@@ -377,7 +378,7 @@ namespace EbonsContentMod.Races
                 .SetSelectableRaceStat(false)
                 .SetFeatures(HagHeritageSelection, HagRacialTrait, NaturalArmor, Claws, FeatureRefs.KeenSenses.ToString())
                 .AddEquipmentEntity(MonoContact)
-                .SetRaceId(Race.Human)
+                .SetRaceId(Race.HalfElf)
                 .Configure();
 
             // Recolor Race

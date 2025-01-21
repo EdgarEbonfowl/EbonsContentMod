@@ -157,6 +157,24 @@ namespace EbonsContentMod.Races
                 )
         ];
 
+        public static List<Texture2D> CustomEyeRamps =
+        [
+            RaceRecolorizer.GetArmorRampByIndex(25),
+            RaceRecolorizer.GetArmorRampByIndex(26),
+            RaceRecolorizer.GetArmorRampByIndex(31),
+            RaceRecolorizer.GetArmorRampByIndex(32),
+            RaceRecolorizer.GetArmorRampByIndex(33),
+            RaceRecolorizer.GetArmorRampByIndex(38),
+            RaceRecolorizer.GetArmorRampByIndex(39),
+            RaceRecolorizer.GetArmorRampByIndex(40),
+            RaceRecolorizer.GetArmorRampByIndex(7),
+            RaceRecolorizer.GetArmorRampByIndex(73),
+            RaceRecolorizer.GetArmorRampByIndex(74),
+            RaceRecolorizer.GetArmorRampByIndex(17),
+            RaceRecolorizer.GetArmorRampByIndex(18),
+            RaceRecolorizer.GetArmorRampByIndex(19)
+        ];
+
         public static EquipmentEntityLink[] FemaleHairs =
         [
             new EquipmentEntityLink() {AssetId = "1762cab3d178f53489f43ab791b87f9c"}, // Noble Braids - Dwarf
@@ -365,7 +383,7 @@ namespace EbonsContentMod.Races
                 .Configure();
 
             // Recolor Race
-            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, eyeEE: ContactEEL, CustomFemaleHairs: FemaleHairs, CustomMaleHairs: MaleHairs);
+            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, eyeEE: ContactEEL, CustomFemaleHairs: FemaleHairs, CustomMaleHairs: MaleHairs, CustomEyeRamps: CustomEyeRamps);
 
             // Re-order presets to make the race default to skinny and remove fat option
             var FinalRace = RaceConfigurator.For(recoloredrace)

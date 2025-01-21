@@ -182,7 +182,7 @@ namespace EbonsContentMod.Races
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Wisdom, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Intelligence, value: -2)
                 .SetFeatures(ChangeShapeFeature, NaturalAttack, FeatureRefs.KeenSenses.ToString())
-                .SetRaceId(Race.Human)
+                .SetRaceId(Race.Kitsune)
                 .ClearSpecialDollTypes()
                 .Configure();
 

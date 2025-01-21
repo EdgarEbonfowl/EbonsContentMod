@@ -284,6 +284,7 @@ public static class Main
                 Rougarou.Configure();
                 Nagaji.Configure();
                 Mongrel.Configure();
+                Ganzi.Configure();
                 MultiProjectileSpellFix.Configure();
                 ArcanistExploits.Configure();
                 FaithMagic.Configure();

@@ -2428,4 +2428,136 @@
     "Key": "Mongrel.Skilled.Description",
     "enGB": "Living on the fringes of society, hated by other races, mongrels must learn how to move about without being detected and utilize deception to stay alive. Mongrels gain a +4 racial bonus to Stealth checks and Trickery checks."
   },
+
+  {
+    "Key": "Ganzi.Name",
+    "ProcessTemplates": false,
+    "enGB": "Ganzi"
+  },
+
+  {
+    "Key": "Ganzi.Description",
+    "enGB": "Unlike the crossbreed aasimars and tieflings, ganzi are mutations caused by generations of exposure to chaotic energies in the Material Plane. \nGanzi share many traits with proteans. They are fluid and flexible, resilient, resistant to the energies of decay and entropy, and can sense the delicate currents of chaos that bind the planes together, alerting them to danger and deception and allowing enterprising ganzi to stir those eddies and rewrite a creature's fortunes. They also share the proteans' curiosity and disdain for order, compulsively wandering the world to see what can be seen."
+  },
+
+  {
+    "Key": "Ganzi.MaelstromResistance.Name",
+    "ProcessTemplates": false,
+    "enGB": "Maelstrom Resistance"
+  },
+
+  {
+    "Key": "Ganzi.MaelstromResistance.Description",
+    "enGB": "Ganzis have acid resistance 5, electricity resistance 5, and sonic resistance 5, and they gain a +2 racial bonus on saving throws against spells of the polymorph subschool."
+  },
+
+  {
+    "Key": "Ganzi.Skilled.Name",
+    "ProcessTemplates": false,
+    "enGB": "Skilled"
+  },
+
+  {
+    "Key": "Ganzi.Skilled.Description",
+    "enGB": "Ganzis gain a +2 racial bonus on Bluff and Lore (Nature) checks."
+  },
+
+  {
+    "Key": "Ganzi.Oddity.Name",
+    "ProcessTemplates": false,
+    "enGB": "Oddity"
+  },
+
+  {
+    "Key": "Ganzi.Oddity.Description",
+    "enGB": "As creatures infused with the entropic forces of the Maelstrom, all ganzis have a distinct and unusual oddity that manifests as a physical or magical ability that sets the ganzi apart."
+  },
+
+  {
+    "Key": "Ganzi.PrehensileTail.Name",
+    "ProcessTemplates": false,
+    "enGB": "Prehensile Tail"
+  },
+
+  {
+    "Key": "Ganzi.PrehensileTail.Description",
+    "enGB": "Ganzis with lineages that are particularly influenced by the presence of proteans often have colorful feathers, scales, or skin, and a long serpentine tail. This tail can be used to carry items. While ganzis with this oddity cannot wield weapons with their tails, they can use their tails to retrieve potions and consume them as a swift action."
+  },
+
+  {
+    "Key": "Ganzi.EntropicFlesh.Name",
+    "ProcessTemplates": false,
+    "enGB": "Entropic Flesh"
+  },
+
+  {
+    "Key": "Ganzi.EntropicFlesh.Description",
+    "enGB": "Ganzis with lineages that link strongly to chaos beasts retain some of their ancestors' immunity to transformation. In addition to gaining a +2 bonus on Mobility checks and to CMD against grapple combat maneuvers, when such ganzis are affected by a hostile transmutation effect (such as polymorphing or petrification), they can attempt a new saving throw at the start of their next turn to end the effect. They gain a +4 bonus on this second saving throw, but if they fail, the transmutation effect persists as long as it normally would."
+  },
+
+  {
+    "Key": "Ganzi.WeaponPlay.Name",
+    "ProcessTemplates": false,
+    "enGB": "Weapon Play"
+  },
+
+  {
+    "Key": "Ganzi.WeaponPlay.Description",
+    "enGB": "Ganzis with lineages that link to the valkyries manifest their heritage in their skill in combat. Such ganzis are always proficient with all simple and martial weapons, and they can qualify for feats normally available only to fighters (such as Weapon Specialization) even if they don’t have any fighter class levels."
+  },
+
+  {
+    "Key": "Ganzi.SLA.Name",
+    "ProcessTemplates": false,
+    "enGB": "Spell-Like Ability"
+  },
+
+  {
+    "Key": "Ganzi.SLA.Description",
+    "enGB": "Ganzis whose chaotic influences rise from regions other than the Maelstrom or its inhabitants often manifest an oddity that duplicates the effects of a specific spell. Such ganzis gain a spell-like ability, usable once per day at a caster level equal to the ganzi's HD."
+  },
+
+  {
+    "Key": "Ganzi.RacingMind.Name",
+    "ProcessTemplates": false,
+    "enGB": "Racing Mind"
+  },
+
+  {
+    "Key": "Ganzi.RacingMind.Description",
+    "enGB": "A ganzi whose lineage is linked to hunduns might inherit an aspect of the outsiders' chaotic minds. The ganzi's churning vortex of thoughts bolsters it against mental attacks, granting the ganzi a +2 bonus on saving throws against mind-affecting effects."
+  },
+
+  {
+    "Key": "Ganzi.AmorphousLimbs.Name",
+    "ProcessTemplates": false,
+    "enGB": "Amorphous Limbs"
+  },
+
+  {
+    "Key": "Ganzi.AmorphousLimbs.Description",
+    "enGB": "The influence of the Maelstrom manifests in the ganzi's ability to transform one of her limbs at will, into a natural weapon such as a massive clawed arm. The ganzi gains a natural claw attack that deals 1d6 damage."
+  },
+
+  {
+    "Key": "Ganzi.VestigialWings.Name",
+    "ProcessTemplates": false,
+    "enGB": "Vestigial Wings"
+  },
+
+  {
+    "Key": "Ganzi.VestigialWings.Description",
+    "enGB": "The ganzi has a pair of small, vestigial wings, likely but not limited to resembling those of a flying creature or some manner of construct. Though these appendages do not grant flight, these ganzis can use their wings to stabilize themselves when they're thrown off balance. Such ganzis gain a +1 bonus on Reflex saving throws and a +2 bonus on Mobility skill checks."
+  },
+
+  {
+    "Key": "Ganzi.UncannyAura.Name",
+    "ProcessTemplates": false,
+    "enGB": "Uncanny Aura"
+  },
+
+  {
+    "Key": "Ganzi.UncannyAura.Description",
+    "enGB": "Some ganzis have an unsettling aura of chaos that rattles hostile creatures that venture too close. Once per day as a standard action, such a ganzi can activate an uncanny aura; enemies within 30 feet must succeed at a Will saving throw (DC = 10 + half the ganzi's Hit Dice + the ganzi's Charisma modifier) or become frightened until the beginning of the ganzi's next turn. The aura remains for a number of rounds equal to the ganzi's Charisma modifier (minimum 1 round). Once a creature has been affected by an uncanny aura, whether it failed its save or not, it cannot be affected again for 24 hours."
+  },
 ]

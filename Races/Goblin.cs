@@ -49,9 +49,14 @@ namespace EbonsContentMod.Races
             new EquipmentEntityLink() {AssetId = "41fb4c393c6a67141b6e7d48911e38a1"}
         ];
 
+        public static List<Texture2D> HalfOrcSkinRamps = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HalfOrcRace.ToString()).MaleOptions.Heads[0].Load(true, false).PrimaryRamps;
+
         public static List<Texture2D> CustomSkinRamps =
         [
             GoblinHeads[0].Load().PrimaryColorsProfile.Ramps[6],
+            HalfOrcSkinRamps[0],
+            HalfOrcSkinRamps[2],
+            HalfOrcSkinRamps[4],
             GoblinHeads[0].Load().PrimaryColorsProfile.Ramps[1],
             GoblinHeads[0].Load().PrimaryColorsProfile.Ramps[0],
             GoblinHeads[0].Load().PrimaryColorsProfile.Ramps[2],
