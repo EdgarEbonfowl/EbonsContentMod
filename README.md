@@ -35,6 +35,7 @@ This mod adds the following races to the game and they should work like the defa
 - [Nagaji](https://www.d20pfsrd.com/races/other-races/uncommon-races/arg-nagaji/ "Nagaji")
 - [Mongrel](https://www.d20pfsrd.com/bestiary/monster-listings/monstrous-humanoids/mongrelman/ "Mongrel")
 - [Ganzi](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/ganzi/ "Ganzi")
+- Ascending Succubus (Owlbrew)
 
 Here is what all the new races look like:
 
@@ -49,6 +50,7 @@ Here is what all the new races look like:
 ![ECM11](https://github.com/user-attachments/assets/ea765d50-3259-478b-a636-0c6bdd461e3e)
 ![ECM12](https://github.com/user-attachments/assets/51f6066e-aba0-4463-9d54-23406ea16fec)
 ![ECM13](https://github.com/user-attachments/assets/7750bb7e-a264-49b3-b1b7-52fcfb4d2df9)
+![ECM14](https://github.com/user-attachments/assets/3e2c2f58-08ed-4db4-80ce-b58945e52d07)
 
 Android circuitry colors are linked to the eye color - how fun!
   
