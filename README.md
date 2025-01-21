@@ -34,6 +34,7 @@ This mod adds the following races to the game and they should work like the defa
 - [Rougarou](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/rougarou-player-characters/ "Rougarou")
 - [Nagaji](https://www.d20pfsrd.com/races/other-races/uncommon-races/arg-nagaji/ "Nagaji")
 - [Mongrel](https://www.d20pfsrd.com/bestiary/monster-listings/monstrous-humanoids/mongrelman/ "Mongrel")
+- [Ganzi](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/ganzi/ "Ganzi")
 
 Here is what all the new races look like:
 
@@ -47,6 +48,7 @@ Here is what all the new races look like:
 ![ECM8](https://github.com/user-attachments/assets/7a2253b8-8d51-4aa3-be85-b09581c36857)
 ![ECM11](https://github.com/user-attachments/assets/ea765d50-3259-478b-a636-0c6bdd461e3e)
 ![ECM12](https://github.com/user-attachments/assets/51f6066e-aba0-4463-9d54-23406ea16fec)
+![ECM13](https://github.com/user-attachments/assets/7750bb7e-a264-49b3-b1b7-52fcfb4d2df9)
 
 Android circuitry colors are linked to the eye color - how fun!
   
@@ -95,7 +97,7 @@ Different Change Shape forms for the skinwalker:
 1. Download and install [Unity Mod Manager](https://github.com/newman55/unity-mod-manager).
 2. Drop the zip file from the relaease into the "Drop Zip Files Here" panel in the Unity Mod Manager UI in the "Mods" tab.
 
-**Note:** This require the Doorstop installation method for Unity Mod Manager, most people do it this way, but if yours is installed using the Assembly method you can do one of these (you can see which method you used at the bottom of the "Install" tab):
+**Note:** This requires the Doorstop installation method for Unity Mod Manager, most people do it this way, but if yours is installed using the Assembly method you can do one of these (you can see which method you used at the bottom of the "Install" tab):
 1. Uninstall UMM and reinstall using the Doorstop method
 2. Use WrathPatches to upgrade the game's Harmony version
 3. Copy `Harmony` from `Wrath_Data\Managed\UnityModManager` to `Wrath_Data\Managed`
