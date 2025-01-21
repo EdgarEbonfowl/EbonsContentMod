@@ -150,13 +150,13 @@ namespace EbonsContentMod.Races
             CustomSkinColors.AddRange(BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HalfElfRace.ToString()).MaleOptions.Heads[0].Load().PrimaryRamps);
 
             var CustomHairColors = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.GnomeRace.ToString()).MaleOptions.Hair[0].Load().PrimaryRamps;
-            CustomHairColors.AddRange(BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.DhampirRace.ToString()).MaleOptions.Heads[0].Load().PrimaryRamps);
-            CustomHairColors.AddRange(BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HalfElfRace.ToString()).MaleOptions.Heads[0].Load().PrimaryRamps);
+            CustomHairColors.AddRange(BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.DhampirRace.ToString()).MaleOptions.Hair[0].Load().PrimaryRamps);
+            CustomHairColors.AddRange(BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HalfElfRace.ToString()).MaleOptions.Hair[0].Load().PrimaryRamps);
 
             var CustomEyeColors = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.KitsuneRace.ToString()).MaleOptions.Heads[0].Load().SecondaryRamps;
-            CustomEyeColors.AddRange(BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.OreadRace.ToString()).MaleOptions.Heads[0].Load().PrimaryRamps);
-            CustomEyeColors.AddRange(BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.GnomeRace.ToString()).MaleOptions.Heads[0].Load().PrimaryRamps);
-            CustomEyeColors.AddRange(BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.DhampirRace.ToString()).MaleOptions.Heads[0].Load().PrimaryRamps);
+            CustomEyeColors.AddRange(BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.OreadRace.ToString()).MaleOptions.Heads[0].Load().SecondaryRamps);
+            CustomEyeColors.AddRange(BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.GnomeRace.ToString()).MaleOptions.Heads[0].Load().SecondaryRamps);
+            CustomEyeColors.AddRange(BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.DhampirRace.ToString()).MaleOptions.Heads[0].Load().SecondaryRamps);
 
             var ContactEEL = new EquipmentEntityLink() { AssetId = "c5487e7e903d25a40be683767f3df0b4" };
 

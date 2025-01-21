@@ -25,6 +25,7 @@ using BlueprintCore.Blueprints.References;
 using UnityEngine.Experimental.Rendering;
 using static UnityModManagerNet.UnityModManager.TextureReplacer;
 using UniRx;
+using System.Linq.Expressions;
 
 namespace EbonsContentMod.Utilities
 {
@@ -503,7 +504,7 @@ namespace EbonsContentMod.Utilities
             return newlink;
         }
 
-        internal static BlueprintRaceVisualPresetReference[] BuildNewPresets(BlueprintRace race, List<Texture2D> Ramps, CharacterColorsProfile NewSkinColorsProfile, EquipmentEntityLink CustomBody, EquipmentEntityLink CustomBodyNoRecolor)
+        internal static BlueprintRaceVisualPresetReference[] BuildNewPresets(BlueprintRace race, List<Texture2D> Ramps, CharacterColorsProfile NewSkinColorsProfile, EquipmentEntityLink CustomBody, EquipmentEntityLink CustomBodyNoRecolor, bool RaceHasTail = false, EquipmentEntityLink CustomTail = null)
         {
             BlueprintRaceVisualPreset[] presets = new BlueprintRaceVisualPreset[race.m_Presets.Length];
 
@@ -542,6 +543,43 @@ namespace EbonsContentMod.Utilities
                     FemaleEntityLinkGuid = null;
                 }
 
+                EquipmentEntityLink MaleTail = null;
+                EquipmentEntityLink FemaleTail = null;
+                string MaleTailLinkGuid = null;
+                string FemaleTailLinkGuid = null;
+
+                if (RaceHasTail == true)
+                {
+                    MaleTailLinkGuid = RaceFunctions.GetEntityNewGuidFromName(race.name + "_Male_" + skin.m_MaleArray[1].AssetId);
+
+                    if (MaleTailLinkGuid == "Error")
+                    {
+                        var newGuid = BlueprintGuid.NewGuid();
+                        string newline = "\"" + race.name + "_Male_" + skin.m_MaleArray[1].AssetId + "\"" + " => " + "\"" + newGuid + "\"" + ",";
+                        File.WriteAllLines(ToolOutputFilePath + "\\" + "RaceRecolorizer" + race.name + "_Male_" + skin.m_MaleArray[1].AssetId + ".txt", [newline]);
+                        MaleTailLinkGuid = null;
+                    }
+
+                    FemaleTailLinkGuid = RaceFunctions.GetEntityNewGuidFromName(race.name + "_Female_" + skin.m_FemaleArray[1].AssetId);
+
+                    if (FemaleTailLinkGuid == "Error")
+                    {
+                        var newGuid = BlueprintGuid.NewGuid();
+                        string newline = "\"" + race.name + "_Female_" + skin.m_FemaleArray[1].AssetId + "\"" + " => " + "\"" + newGuid + "\"" + ",";
+                        File.WriteAllLines(ToolOutputFilePath + "\\" + "RaceRecolorizer" + race.name + "_Female_" + skin.m_FemaleArray[1].AssetId + ".txt", [newline]);
+                        FemaleTailLinkGuid = null;
+                    }
+
+                    MaleTail = skin.m_MaleArray[1];
+                    FemaleTail = skin.m_FemaleArray[1];
+
+                    if (CustomTail != null) // Will need to break this up into male and female if I use it to handle more than the goblin I think
+                    {
+                        MaleTail = CustomTail;
+                        FemaleTail = CustomTail;
+                    }
+                }
+                
                 var MaleBody = skin.m_MaleArray[0];
                 var FemaleBody = skin.m_FemaleArray[0];
 
@@ -569,6 +607,25 @@ namespace EbonsContentMod.Utilities
 
                 if (CustomBodyNoRecolor == null) skin.m_FemaleArray = Arr(new EquipmentEntityLink { AssetId = FemaleEntityLinkGuid });
                 else skin.m_FemaleArray = Arr(CustomBodyNoRecolor);
+
+                if (RaceHasTail == true)
+                {
+                    var NewMaleTailLink = MaleTail.CreateDynamicScriptableObjectProxyAlt<EquipmentEntity, EquipmentEntityLink>(ee =>
+                    {
+                        ee.PrimaryColorsProfile = NewSkinColorsProfile;
+
+                    }, MaleTailLinkGuid);
+
+                    skin.m_MaleArray = skin.m_MaleArray.AppendToArray(NewMaleTailLink);
+
+                    var NewFemaleTailLink = FemaleTail.CreateDynamicScriptableObjectProxyAlt<EquipmentEntity, EquipmentEntityLink>(ee =>
+                    {
+                        ee.PrimaryColorsProfile = NewSkinColorsProfile;
+
+                    }, FemaleTailLinkGuid);
+
+                    skin.m_FemaleArray = skin.m_FemaleArray.AppendToArray(NewFemaleTailLink);
+                }
 
                 // Add the skin blueprint
                 skin.AssetGuid = BlueprintGuid.Parse(SkinGuid);
@@ -749,7 +806,7 @@ namespace EbonsContentMod.Utilities
         /// <returns>
         /// New recolored race.
         /// </returns>
-        public static BlueprintRace RecolorRace(BlueprintRace race, List<Color> headcolors, List<Color> haircolors, /*string[] sExtraHeadRamps = null, string[] sExtraHairRamps = null,*/ List<Color> eyecolors = null, List<Color> horncolors = null, BlueprintRace eyerace = null, EquipmentEntityLink eyeEE = null, bool BaldRace = false, bool OnlyMalesBald = false, bool KitsuneBaldRace = false, bool NoEyebrows = false, bool NoBeards = false, bool OnlyAddHeadColors = false, bool OnlyAddHairColors = false, bool OnlyAddEyeColors = false, BlueprintRace HeadSwapRace = null, EquipmentEntityLink[] CustomMaleHeads = null, EquipmentEntityLink[] CustomFemaleHeads = null, EquipmentEntityLink[] CustomMaleHairs = null, EquipmentEntityLink[] CustomFemaleHairs = null, EquipmentEntityLink CustomBody = null, List<Texture2D> CustomHeadRamps = null, List<Texture2D> CustomEyeRamps = null, List<Texture2D> CustomHairRamps = null, EquipmentEntityLink CustomBodyNoRecolor = null, EquipmentEntityLink[] CustomMaleHeadsNoRecolor = null,  EquipmentEntityLink[] CustomFemaleHeadsNoRecolor = null, EquipmentEntityLink[] EyeLinkedEEs = null, bool StartMalesWithBeard = false, List<BodyPartType> RemoveHeadParts = null/*, bool OnlyFemale = false*/)
+        public static BlueprintRace RecolorRace(BlueprintRace race, List<Color> headcolors, List<Color> haircolors, /*string[] sExtraHeadRamps = null, string[] sExtraHairRamps = null,*/ List<Color> eyecolors = null, List<Color> horncolors = null, BlueprintRace eyerace = null, EquipmentEntityLink eyeEE = null, bool BaldRace = false, bool OnlyMalesBald = false, bool KitsuneBaldRace = false, bool NoEyebrows = false, bool NoBeards = false, bool OnlyAddHeadColors = false, bool OnlyAddHairColors = false, bool OnlyAddEyeColors = false, BlueprintRace HeadSwapRace = null, EquipmentEntityLink[] CustomMaleHeads = null, EquipmentEntityLink[] CustomFemaleHeads = null, EquipmentEntityLink[] CustomMaleHairs = null, EquipmentEntityLink[] CustomFemaleHairs = null, EquipmentEntityLink CustomBody = null, List<Texture2D> CustomHeadRamps = null, List<Texture2D> CustomEyeRamps = null, List<Texture2D> CustomHairRamps = null, EquipmentEntityLink CustomBodyNoRecolor = null, EquipmentEntityLink[] CustomMaleHeadsNoRecolor = null,  EquipmentEntityLink[] CustomFemaleHeadsNoRecolor = null, EquipmentEntityLink[] EyeLinkedEEs = null, bool StartMalesWithBeard = false, List<BodyPartType> RemoveHeadParts = null/*, bool OnlyFemale = false*/, bool RaceHasTail = false, EquipmentEntityLink CustomTail = null)
         {
             // TO DO: add handling for tails and horns
             
@@ -975,7 +1032,7 @@ namespace EbonsContentMod.Utilities
             var FemaleOptions = CreateFemaleCustomizationOptions(race, FemaleHairArray, FemaleHeadArray, FemaleBrowArray);
             if (KitsuneBaldRace == true) FemaleOptions = CreateFemaleKitsuneCustomizationOptions(race, FemaleHeadArray);
 
-            var NewPresets = BuildNewPresets(race, HeadRamps, NewSkinColorsProfile, CustomBody, CustomBodyNoRecolor);
+            var NewPresets = BuildNewPresets(race, HeadRamps, NewSkinColorsProfile, CustomBody, CustomBodyNoRecolor, RaceHasTail, CustomTail);
 
             RaceConfigurator ReturnRace = RaceConfigurator.For(race)
                 .SetMaleOptions(MaleOptions)

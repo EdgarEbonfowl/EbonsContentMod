@@ -2560,4 +2560,26 @@
     "Key": "Ganzi.UncannyAura.Description",
     "enGB": "Some ganzis have an unsettling aura of chaos that rattles hostile creatures that venture too close. Once per day as a standard action, such a ganzi can activate an uncanny aura; enemies within 30 feet must succeed at a Will saving throw (DC = 10 + half the ganzi's Hit Dice + the ganzi's Charisma modifier) or become frightened until the beginning of the ganzi's next turn. The aura remains for a number of rounds equal to the ganzi's Charisma modifier (minimum 1 round). Once a creature has been affected by an uncanny aura, whether it failed its save or not, it cannot be affected again for 24 hours."
   },
+
+  {
+    "Key": "AscendingSuccubus.Name",
+    "ProcessTemplates": false,
+    "enGB": "Ascending Succubus"
+  },
+
+  {
+    "Key": "AscendingSuccubus.Description",
+    "enGB": "A demon who has overcome their evil nature is such a rare occurrence that most people don't even believe in their existence. The path of ascension is long and thorny: before truly achieving virtue, a demon spends many years in spiritual search and repentance, between good and evil, every moment risking to fall back into the depths of sin. An ascending demon loses most of their demonic powers, which helps them to battle the temptation to return to their old ways, but also leaves them vulnerable to retaliation from other demons, who loathe the idea of a rebellion against evil."
+  },
+
+  {
+    "Key": "AscendingSuccubus.SuccubusWings.Name",
+    "ProcessTemplates": false,
+    "enGB": "Succubus Wings"
+  },
+
+  {
+    "Key": "AscendingSuccubus.SuccubusWings.Description",
+    "enGB": "You gain a pair of wings that grant a +3 dodge bonus to AC against melee attacks and immunity to ground-based effects, such as difficult terrain."
+  },
 ]
