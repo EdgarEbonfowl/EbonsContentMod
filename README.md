@@ -36,6 +36,7 @@ This mod adds the following races to the game and they should work like the defa
 - [Mongrel](https://www.d20pfsrd.com/bestiary/monster-listings/monstrous-humanoids/mongrelman/ "Mongrel")
 - [Ganzi](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/ganzi/ "Ganzi")
 - Ascending Succubus (Owlbrew)
+- [Hobgoblin](https://www.d20pfsrd.com/races/other-races/featured-races/arg-hobgoblin "Hobgoblin")
 
 Here is what all the new races look like:
 
@@ -50,7 +51,7 @@ Here is what all the new races look like:
 ![ECM11](https://github.com/user-attachments/assets/ea765d50-3259-478b-a636-0c6bdd461e3e)
 ![ECM12](https://github.com/user-attachments/assets/51f6066e-aba0-4463-9d54-23406ea16fec)
 ![ECM13](https://github.com/user-attachments/assets/7750bb7e-a264-49b3-b1b7-52fcfb4d2df9)
-![ECM14](https://github.com/user-attachments/assets/bf7c7fdc-bd31-4edb-a1b7-6ab00d0d2827)
+![ECM14](https://github.com/user-attachments/assets/91d35bb4-acbb-4918-8fd0-4553277f3393)
 
 Android circuitry colors are linked to the eye color - how fun!
   
