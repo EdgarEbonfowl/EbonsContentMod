@@ -286,6 +286,7 @@ public static class Main
                 Mongrel.Configure();
                 Ganzi.Configure();
                 AscendingSuccubus.Configure();
+                Hobgoblin.Configure();
                 MultiProjectileSpellFix.Configure();
                 ArcanistExploits.Configure();
                 FaithMagic.Configure();

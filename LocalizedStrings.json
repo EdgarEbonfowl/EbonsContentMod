@@ -2582,4 +2582,114 @@
     "Key": "AscendingSuccubus.SuccubusWings.Description",
     "enGB": "You gain a pair of wings that grant a +3 dodge bonus to AC against melee attacks and immunity to ground-based effects, such as difficult terrain."
   },
+
+  {
+    "Key": "Hobgoblin.Name",
+    "ProcessTemplates": false,
+    "enGB": "Hobgoblin"
+  },
+
+  {
+    "Key": "Hobgoblin.Description",
+    "enGB": "Fierce and militaristic, hobgoblins survive by conquest. The raw materials to fuel their war machines come from raids, their armaments and buildings from the toil of slaves worked to death. Naturally ambitious and envious, hobgoblins seek to better themselves at the expense of others of their kind, yet in battle they put aside petty differences and fight with discipline rivaling that of the finest soldiers. Hobgoblins have little love or trust for one another, and even less for outsiders. Life for these brutes consists of duty to those of higher station, domination of those below, and the rare opportunities to seize personal glory and elevate their status."
+  },
+
+  {
+    "Key": "Hobgoblin.Sneaky.Name",
+    "ProcessTemplates": false,
+    "enGB": "Sneaky (General Hobgoblin)"
+  },
+
+  {
+    "Key": "Hobgoblin.Sneaky.Description",
+    "enGB": "Hobgoblins receive a +4 racial bonus on Stealth checks."
+  },
+
+  {
+    "Key": "Hobgoblin.Authoritative.Name",
+    "ProcessTemplates": false,
+    "enGB": "Authoritative"
+  },
+
+  {
+    "Key": "Hobgoblin.Authoritative.Description",
+    "enGB": "Hobgoblins often develop a knack for controlling others. They gain a +2 racial bonus on Diplomacy and Intimidate checks. Additionally, Persuasion is always a class skill for them."
+  },
+
+  {
+    "Key": "Hobgoblin.BattleHardened.Name",
+    "ProcessTemplates": false,
+    "enGB": "Battle Hardened"
+  },
+
+  {
+    "Key": "Hobgoblin.BattleHardened.Description",
+    "enGB": "Incessant drills make defense second nature to some hobgoblins. Hobgoblins with this racial trait gain a +1 bonus to CMD."
+  },
+
+  {
+    "Key": "Hobgoblin.Fearsome.Name",
+    "ProcessTemplates": false,
+    "enGB": "Fearsome"
+  },
+
+  {
+    "Key": "Hobgoblin.Fearsome.Description",
+    "enGB": "Some hobgoblins scorn caution and subtlety for swagger and bluster. Hobgoblins with this racial trait gain a +4 racial bonus on Intimidate checks."
+  },
+
+  {
+    "Key": "Hobgoblin.Magehunter.Name",
+    "ProcessTemplates": false,
+    "enGB": "Magehunter"
+  },
+
+  {
+    "Key": "Hobgoblin.Magehunter.Description",
+    "enGB": "Hobgoblins hate and fear arcane casters. A magehunter gains a +2 racial bonus on Knowledge (Arcana) checks and a +1 racial bonus on attack rolls against arcane spellcasters."
+  },
+
+  {
+    "Key": "Hobgoblin.PitBoss.Name",
+    "ProcessTemplates": false,
+    "enGB": "Pit Boss"
+  },
+
+  {
+    "Key": "Hobgoblin.PitBoss.Description",
+    "enGB": "Slave blood fuels the hobgoblin war machine. Pit bosses extract the last breath of labor from their charges with a liberal touch of the lash and are experts at subduing unruly subordinates. Hobgoblins with this racial trait gain a +1 racial bonus on combat maneuver checks made to disarm or trip."
+  },
+
+  {
+    "Key": "Hobgoblin.SlaveHunter.Name",
+    "ProcessTemplates": false,
+    "enGB": "Slave Hunter"
+  },
+
+  {
+    "Key": "Hobgoblin.SlaveHunter.Description",
+    "enGB": "Hobgoblin slavers excel at tracking down runaway slaves and surviving in filthy conditions. Hobgoblins with this racial trait gain a +2 racial bonus on Survival checks and a +2 racial bonus on saving throws against disease."
+  },
+
+  {
+    "Key": "Hobgoblin.Unfit.Name",
+    "ProcessTemplates": false,
+    "enGB": "Unfit"
+  },
+
+  {
+    "Key": "Hobgoblin.Unfit.Description",
+    "enGB": "Hobgoblins who failed to secure a position in the military hold the lowest status in hobgoblin society, and quickly learn the value of currying favor with their betters. Hobgoblins with this racial trait gain proficiency in a single martial weapon and +1 racial bonus on Bluff and Diplomacy checks."
+  },
+
+  {
+    "Key": "Hobgoblin.HobgoblinRacialTrait.Name",
+    "ProcessTemplates": false,
+    "enGB": "Hobgoblin Racial Trait"
+  },
+
+  {
+    "Key": "Hobgoblin.HobgoblinRacialTrait.Description",
+    "enGB": "Although many hobgoblins follow the general model of the hobgoblin, many more do not. Those of different backgrounds may evince dramatically different manifestations of their heritage, both in appearance and in ability."
+  },
 ]

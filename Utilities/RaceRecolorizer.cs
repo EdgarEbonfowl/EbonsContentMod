@@ -212,7 +212,7 @@ namespace EbonsContentMod.Utilities
             return asset;
         }
 
-        internal static EquipmentEntityLink PatchEntityLinkColor(BlueprintRace race, EquipmentEntityLink asset, List<Texture2D> Ramps, CharacterColorsProfile NewSkinColorsProfile = null, List<Texture2D> SecondaryRamps = null, BlueprintRace eyerace = null, EquipmentEntityLink eyeEE = null, CharacterColorsProfile NewEyeColorsProfile = null, List<BodyPartType> RemoveHeadParts = null)
+        internal static EquipmentEntityLink PatchEntityLinkColor(BlueprintRace race, EquipmentEntityLink asset, List<Texture2D> Ramps, CharacterColorsProfile NewSkinColorsProfile = null, List<Texture2D> SecondaryRamps = null, BlueprintRace eyerace = null, EquipmentEntityLink eyeEE = null, CharacterColorsProfile NewEyeColorsProfile = null, List<BodyPartType> RemoveHeadParts = null, BlueprintRace EarRaceMale = null, BlueprintRace EarRaceFemale = null)
         {
             var name = race.name + "_" + asset.Load(true, false).name + asset.AssetId;
             var guid = RaceFunctions.GetEntityNewGuidFromName(name);
@@ -241,6 +241,45 @@ namespace EbonsContentMod.Utilities
                 var SecondaryName = ee.SecondaryColorsProfile.name;
 
                 if (RemoveHeadParts != null) ee = RemoveBodyparts(ee, RemoveHeadParts);
+
+                if (EarRaceMale != null)
+                { 
+                    BodyPart Ears = null;
+
+                    foreach (BodyPart part in EarRaceMale.MaleOptions.Heads[0].Load(true, false).BodyParts)
+                    {
+                        if (part.Type == BodyPartType.Ears)
+                        {
+                            Ears = part;
+                        }
+                    }
+
+                    if (Ears != null)
+                    {
+                        ee = RemoveBodyparts(ee, [BodyPartType.Ears]);
+                        ee.BodyParts.Add(Ears);
+                    }
+                }
+
+                if (EarRaceFemale != null)
+                {
+                    BodyPart Ears = null;
+
+                    foreach (BodyPart part in EarRaceFemale.FemaleOptions.Heads[0].Load(true, false).BodyParts)
+                    {
+                        if (part.Type == BodyPartType.Ears)
+                        {
+                            Ears = part;
+                            break;
+                        }
+                    }
+
+                    if (Ears != null)
+                    {
+                        ee = RemoveBodyparts(ee, [BodyPartType.Ears]);
+                        ee.BodyParts.Add(Ears);
+                    }
+                }
 
                 if (NewSkinColorsProfile != null)
                 {
@@ -806,7 +845,7 @@ namespace EbonsContentMod.Utilities
         /// <returns>
         /// New recolored race.
         /// </returns>
-        public static BlueprintRace RecolorRace(BlueprintRace race, List<Color> headcolors, List<Color> haircolors, /*string[] sExtraHeadRamps = null, string[] sExtraHairRamps = null,*/ List<Color> eyecolors = null, List<Color> horncolors = null, BlueprintRace eyerace = null, EquipmentEntityLink eyeEE = null, bool BaldRace = false, bool OnlyMalesBald = false, bool KitsuneBaldRace = false, bool NoEyebrows = false, bool NoBeards = false, bool OnlyAddHeadColors = false, bool OnlyAddHairColors = false, bool OnlyAddEyeColors = false, BlueprintRace HeadSwapRace = null, EquipmentEntityLink[] CustomMaleHeads = null, EquipmentEntityLink[] CustomFemaleHeads = null, EquipmentEntityLink[] CustomMaleHairs = null, EquipmentEntityLink[] CustomFemaleHairs = null, EquipmentEntityLink CustomBody = null, List<Texture2D> CustomHeadRamps = null, List<Texture2D> CustomEyeRamps = null, List<Texture2D> CustomHairRamps = null, EquipmentEntityLink CustomBodyNoRecolor = null, EquipmentEntityLink[] CustomMaleHeadsNoRecolor = null,  EquipmentEntityLink[] CustomFemaleHeadsNoRecolor = null, EquipmentEntityLink[] EyeLinkedEEs = null, bool StartMalesWithBeard = false, List<BodyPartType> RemoveHeadParts = null/*, bool OnlyFemale = false*/, bool RaceHasTail = false, EquipmentEntityLink CustomTail = null)
+        public static BlueprintRace RecolorRace(BlueprintRace race, List<Color> headcolors, List<Color> haircolors, /*string[] sExtraHeadRamps = null, string[] sExtraHairRamps = null,*/ List<Color> eyecolors = null, List<Color> horncolors = null, BlueprintRace eyerace = null, EquipmentEntityLink eyeEE = null, bool BaldRace = false, bool OnlyMalesBald = false, bool KitsuneBaldRace = false, bool NoEyebrows = false, bool NoBeards = false, bool OnlyAddHeadColors = false, bool OnlyAddHairColors = false, bool OnlyAddEyeColors = false, BlueprintRace HeadSwapRace = null, EquipmentEntityLink[] CustomMaleHeads = null, EquipmentEntityLink[] CustomFemaleHeads = null, EquipmentEntityLink[] CustomMaleHairs = null, EquipmentEntityLink[] CustomFemaleHairs = null, EquipmentEntityLink CustomBody = null, List<Texture2D> CustomHeadRamps = null, List<Texture2D> CustomEyeRamps = null, List<Texture2D> CustomHairRamps = null, EquipmentEntityLink CustomBodyNoRecolor = null, EquipmentEntityLink[] CustomMaleHeadsNoRecolor = null,  EquipmentEntityLink[] CustomFemaleHeadsNoRecolor = null, EquipmentEntityLink[] EyeLinkedEEs = null, bool StartMalesWithBeard = false, List<BodyPartType> RemoveHeadParts = null/*, bool OnlyFemale = false*/, bool RaceHasTail = false, EquipmentEntityLink CustomTail = null, BlueprintRace EarRace = null)
         {
             // TO DO: add handling for tails and horns
             
@@ -874,7 +913,7 @@ namespace EbonsContentMod.Utilities
             {
                 foreach (EquipmentEntityLink head in maleheads)
                 {
-                    var NewHead = PatchEntityLinkColor(race, head, HeadRamps, NewSkinColorsProfile, EyeRamps, eyerace, eyeEE, NewEyeColorsProfile, RemoveHeadParts);
+                    var NewHead = PatchEntityLinkColor(race, head, HeadRamps, NewSkinColorsProfile, EyeRamps, eyerace, eyeEE, NewEyeColorsProfile, RemoveHeadParts, EarRaceMale: EarRace);
 
                     if (NewHead != null)
                     {
@@ -884,7 +923,7 @@ namespace EbonsContentMod.Utilities
 
                 foreach (EquipmentEntityLink head in femaleheads)
                 {
-                    var NewHead = PatchEntityLinkColor(race, head, HeadRamps, NewSkinColorsProfile, EyeRamps, eyerace, eyeEE, NewEyeColorsProfile, RemoveHeadParts);
+                    var NewHead = PatchEntityLinkColor(race, head, HeadRamps, NewSkinColorsProfile, EyeRamps, eyerace, eyeEE, NewEyeColorsProfile, RemoveHeadParts, EarRaceFemale: EarRace);
 
                     if (NewHead != null)
                     {
