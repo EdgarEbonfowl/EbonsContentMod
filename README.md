@@ -29,7 +29,6 @@ This mod adds the following races to the game and they should work like the defa
 - [Skinwalker](https://www.d20pfsrd.com/races/other-races/more-races/standard-races-1-10-rp/skinwalkers-10-rp/ "Skinwalker")
 - [Goblin](https://www.d20pfsrd.com/races/other-races/featured-races/arg-goblin/ "Goblin")
   - Female head is in the works. For now, play male goblin.
-  - Helmets/goggles will not look correct and should be hidden for now. Working on a permanent hiding solution for goblins.
 - [Orc](https://www.d20pfsrd.com/races/other-races/featured-races/arg-orc/ "Orc")
 - [Rougarou](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/rougarou-player-characters/ "Rougarou")
 - [Nagaji](https://www.d20pfsrd.com/races/other-races/uncommon-races/arg-nagaji/ "Nagaji")
