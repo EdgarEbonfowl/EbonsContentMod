@@ -19,6 +19,12 @@ using Kingmaker.UnitLogic.Abilities.Blueprints;
 using Kingmaker.Blueprints.Classes.Selection;
 using Kingmaker.Visual.CharacterSystem;
 using Kingmaker.Blueprints.CharGen;
+using Kingmaker.UI.Common;
+using Microsoft.Build.Framework.XamlTypes;
+using EbonsContentMod.utilities;
+using Kingmaker.Items.Slots;
+using Kingmaker.Blueprints.Items.Equipment;
+using Kingmaker.Items;
 
 namespace EbonsContentMod.Races
 {
@@ -267,6 +273,11 @@ namespace EbonsContentMod.Races
 
             // Add race to mount fixes
             RaceMountFixerizer.AddRaceToMountFixes(FinalRace, CopyRace);
+
+            // Register hidden ItemTypes
+            ItemsFilter.ItemType[] HiddenItems = [ItemsFilter.ItemType.Head, ItemsFilter.ItemType.Glasses];
+
+            RaceEquipmentHiderizer.AddRaceHiddenItems(FinalRace, HiddenItems);
 
             // Add race to race list
             var raceRef = FinalRace.ToReference<BlueprintRaceReference>();

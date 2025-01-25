@@ -332,11 +332,10 @@ namespace EbonsContentMod.Races
                 .SetDisplayName(PyrophileDisplayName)
                 .SetDescription(PyrophileDescription)
                 .SetIcon(FeatureRefs.FiresFuryFeature.Reference.Get().Icon)
-                .AddComponent<AddEnergyDamageToSpellsByDescriptor>(c =>
+                .AddComponent<PyrophileDamageBonus>(c =>
                 {
                     c.SpellDescriptor = SpellDescriptor.Fire;
                     c.SpellsOnly = true;
-                    c.Value = ContextValues.Rank();
                 })
                 .AddContextRankConfig(ContextRankConfigs.CharacterLevel().WithStartPlusDivStepProgression(4))
                 .Configure();

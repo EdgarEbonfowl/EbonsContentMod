@@ -174,9 +174,9 @@ namespace EbonsContentMod.Races
                 .Configure();
 
             var EntropicFleshEEL = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "33c1acb9aaa60dc448691b6d63fcb22f" }, RaceRecolorizer.CreateRampsFromColorsSimple(new List<Color>() { new Color( // Pink-Purple
-                RaceRecolorizer.GetColorsFromRGB(140f), // 140
-                RaceRecolorizer.GetColorsFromRGB(0f),
-                RaceRecolorizer.GetColorsFromRGB(90f) // 75
+                RaceRecolorizer.GetColorsFromRGB(145f), // 140
+                RaceRecolorizer.GetColorsFromRGB(75f),
+                RaceRecolorizer.GetColorsFromRGB(100f) // 75
                 )}), "{DC1E4CE3-6291-440C-816F-222E7D0D62CA}", true, true);
 
             var EntropicFlesh = FeatureConfigurator.New("GanziEntropicFlesh", "{EE019616-298A-4EFF-AB9F-ED79C4AAE0B0}") // Need to add the transmutation re-roll or just give a bonus to saves
@@ -367,19 +367,20 @@ namespace EbonsContentMod.Races
                 .AddEquipmentEntity(RacingMindHeadEE)
                 .Configure();
 
-            var RightAmorphousLimbsEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "86127616283ae7741ae3e813904865cc" }, RaceRecolorizer.CreateRampsFromColorsSimple(new List<Color>() { new Color( // Pink-Purple
-                RaceRecolorizer.GetColorsFromRGB(140f), // 140
-                RaceRecolorizer.GetColorsFromRGB(0f),
-                RaceRecolorizer.GetColorsFromRGB(90f) // 75
-                )}), "{3F3D11E6-F9AD-4F36-BB3B-77B42AFA8DAE}", true, true,
-                BodyPartsToRemove: new List<BodyPartType>() { BodyPartType.Eyes, BodyPartType.Head, BodyPartType.Ears, BodyPartType.Torso, BodyPartType.NeckTorso, BodyPartType.UpperArms, BodyPartType.UpperLegs, BodyPartType.LowerLegs, BodyPartType.Feet });
-
-            var LeftAmorphousLimbsEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "7109791d63944254589b908564604c79" }, RaceRecolorizer.CreateRampsFromColorsSimple(new List<Color>() { new Color( // Pink-Purple
-                RaceRecolorizer.GetColorsFromRGB(140f), // 140
-                RaceRecolorizer.GetColorsFromRGB(0f),
-                RaceRecolorizer.GetColorsFromRGB(90f) // 75
-                )}), "{902C55AD-0678-4941-B881-02CDF179683D}", true, true,
-                BodyPartsToRemove: new List<BodyPartType>() { BodyPartType.Eyes, BodyPartType.Head, BodyPartType.Ears, BodyPartType.Torso, BodyPartType.NeckTorso, BodyPartType.UpperArms, BodyPartType.UpperLegs, BodyPartType.LowerLegs, BodyPartType.Feet });
+            var AmorphousLimbsFurEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "1aeb459da29dca341a78317170eec262" },
+                RaceRecolorizer.CreateRampsFromColorsSimple(new List<Color>()
+                {new Color( // Dark Pink
+                    RaceRecolorizer.GetColorsFromRGB(90f),
+                    RaceRecolorizer.GetColorsFromRGB(40f),
+                    RaceRecolorizer.GetColorsFromRGB(60f)
+                    )}
+                ), "{2C096337-B17E-45CE-A3F4-DDC2BD4877D6}", true, true,
+                RaceRecolorizer.CreateRampsFromColorsSimple(new List<Color>()
+                    {new Color( // Pink
+                        RaceRecolorizer.GetColorsFromRGB(145f),
+                        RaceRecolorizer.GetColorsFromRGB(75f),
+                        RaceRecolorizer.GetColorsFromRGB(100f)
+                        )}), BodyPartsToRemove: new List<BodyPartType>() { BodyPartType.Eyes });
 
             var AmorphousLimbs = FeatureConfigurator.New("GanziAmorphousLimbs", "{36B31D24-9DFD-44BD-BA6F-D404C2C66D40}")
                 .SetDisplayName(AmorphousLimbsDisplayName)
@@ -387,8 +388,9 @@ namespace EbonsContentMod.Races
                 .SetIcon(ItemWeaponRefs.Claw1d6.Reference.Get().Icon)
                 .AddEmptyHandWeaponOverride(false, false, weapon: ItemWeaponRefs.Claw1d6.Reference.Get()).AddEmptyHandWeaponOverride(false, false, weapon: ItemWeaponRefs.Claw1d6.Reference.Get())
                 //.AddFacts(["b09147e9b63b49b89c90361fbad90a68"]) // Shifter claws look dumb
-                .AddEquipmentEntity(RightAmorphousLimbsEE)
-                .AddEquipmentEntity(LeftAmorphousLimbsEE)
+                //.AddEquipmentEntity(RightAmorphousLimbsEE)
+                //.AddEquipmentEntity(LeftAmorphousLimbsEE)
+                .AddEquipmentEntity(AmorphousLimbsFurEE)
                 .Configure();
 
             var MaleVestigialWings = FeatureConfigurator.New("GanziMaleVestigialWings", "{2C28ECB6-2A6A-4735-9BF3-0D202A9DA944}")

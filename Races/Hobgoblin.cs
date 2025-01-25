@@ -32,6 +32,8 @@ using BlueprintCore.Conditions.Builder;
 using BlueprintCore.Conditions.Builder.ContextEx;
 using Kingmaker.RuleSystem.Rules;
 using BlueprintCore.Blueprints.Configurators.Classes.Selection;
+using EbonsContentMod.utilities;
+using Kingmaker.UI.Common;
 
 namespace EbonsContentMod.Races
 {
@@ -503,6 +505,11 @@ namespace EbonsContentMod.Races
 
             // Add race to mount fixes
             RaceMountFixerizer.AddRaceToMountFixes(FinalRace, CopyRace);
+
+            // Register hidden ItemTypes
+            ItemsFilter.ItemType[] HiddenItems = [ItemsFilter.ItemType.Head, ItemsFilter.ItemType.Glasses];
+
+            RaceEquipmentHiderizer.AddRaceHiddenItems(FinalRace, HiddenItems);
 
             // Add race to race list
             var raceRef = FinalRace.ToReference<BlueprintRaceReference>();

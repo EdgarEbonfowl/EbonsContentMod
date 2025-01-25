@@ -42,17 +42,45 @@ namespace EbonsContentMod.Components
         {
         }
 
-        // Token: 0x040099F2 RID: 39410
         public SpellDescriptorWrapper SpellDescriptor;
 
-        // Token: 0x040099F3 RID: 39411
         public bool SpellsOnly = true;
 
-        // Token: 0x040099F4 RID: 39412
         public bool UseContextBonus;
 
-        // Token: 0x040099F5 RID: 39413
         [ShowIf("UseContextBonus")]
         public ContextValue Value;
+    }
+
+    internal class PyrophileDamageBonus : UnitFactComponentDelegate, IInitiatorRulebookHandler<RuleCalculateDamage>, IRulebookHandler<RuleCalculateDamage>, ISubscriber, IInitiatorRulebookSubscriber
+    {
+        public void OnEventAboutToTrigger(RuleCalculateDamage evt)
+        {
+            MechanicsContext context = evt.Reason.Context;
+            if (((context != null) ? context.SourceAbility : null) == null)
+            {
+                return;
+            }
+            if (!context.SpellDescriptor.HasAnyFlag(this.SpellDescriptor) || (!context.SourceAbility.IsSpell && this.SpellsOnly) || context.SourceAbility.Type == AbilityType.Physical)
+            {
+                return;
+            }
+            foreach (BaseDamage baseDamage in evt.DamageBundle)
+            {
+                if (!baseDamage.Precision)
+                {
+                    int bonus = 1 + (evt.Initiator.Progression.CharacterLevel - 1) / 4;
+                    baseDamage.AddModifier(bonus, base.Fact);
+                }
+            }
+        }
+
+        public void OnEventDidTrigger(RuleCalculateDamage evt)
+        {
+        }
+
+        public SpellDescriptorWrapper SpellDescriptor;
+
+        public bool SpellsOnly = true;
     }
 }

@@ -43,6 +43,7 @@ using Kingmaker.UnitLogic.Mechanics;
 using Kingmaker.UnitLogic.Mechanics.Components;
 using Kingmaker.RuleSystem.Rules;
 using Kingmaker.UnitLogic.Mechanics.Actions;
+using Kingmaker.Visual.CharacterSystem;
 
 namespace EbonsContentMod.Utilities
 {
@@ -343,6 +344,20 @@ namespace EbonsContentMod.Utilities
                 //.AddAbilityResourceLogic(1, isSpendResource: true, requiredResource: SpellLikeResource)
                 .SetType(AbilityType.SpellLike)
                 .Configure();
+
+            var RightAmorphousLimbsEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "86127616283ae7741ae3e813904865cc" }, RaceRecolorizer.CreateRampsFromColorsSimple(new List<Color>() { new Color( // Pink-Purple
+                RaceRecolorizer.GetColorsFromRGB(140f), // 140
+                RaceRecolorizer.GetColorsFromRGB(0f),
+                RaceRecolorizer.GetColorsFromRGB(90f) // 75
+                )}), "{3F3D11E6-F9AD-4F36-BB3B-77B42AFA8DAE}", true, true,
+                BodyPartsToRemove: new List<BodyPartType>() { BodyPartType.Eyes, BodyPartType.Head, BodyPartType.Ears, BodyPartType.Torso, BodyPartType.NeckTorso, BodyPartType.UpperLegs, BodyPartType.LowerLegs, BodyPartType.Feet });
+
+            var LeftAmorphousLimbsEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "7109791d63944254589b908564604c79" }, RaceRecolorizer.CreateRampsFromColorsSimple(new List<Color>() { new Color( // Pink-Purple
+                RaceRecolorizer.GetColorsFromRGB(140f), // 140
+                RaceRecolorizer.GetColorsFromRGB(0f),
+                RaceRecolorizer.GetColorsFromRGB(90f) // 75
+                )}), "{902C55AD-0678-4941-B881-02CDF179683D}", true, true,
+                BodyPartsToRemove: new List<BodyPartType>() { BodyPartType.Eyes, BodyPartType.Head, BodyPartType.Ears, BodyPartType.Torso, BodyPartType.NeckTorso, BodyPartType.UpperLegs, BodyPartType.LowerLegs, BodyPartType.Feet });
         }
     }
 }
