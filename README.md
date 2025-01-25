@@ -50,7 +50,7 @@ Here is what all the new races look like:
 ![ECM8](https://github.com/user-attachments/assets/7a2253b8-8d51-4aa3-be85-b09581c36857)
 ![ECM11](https://github.com/user-attachments/assets/ea765d50-3259-478b-a636-0c6bdd461e3e)
 ![ECM12](https://github.com/user-attachments/assets/51f6066e-aba0-4463-9d54-23406ea16fec)
-![ECM13](https://github.com/user-attachments/assets/7750bb7e-a264-49b3-b1b7-52fcfb4d2df9)
+![ECM13](https://github.com/user-attachments/assets/a21a7a45-5c07-4f8d-8ff5-242cf1a88662)
 ![ECM14](https://github.com/user-attachments/assets/91d35bb4-acbb-4918-8fd0-4553277f3393)
 
 Android circuitry colors are linked to the eye color - how fun!
