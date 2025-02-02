@@ -32,7 +32,7 @@ This mod adds the following races to the game and they should work like the defa
 - [Orc](https://www.d20pfsrd.com/races/other-races/featured-races/arg-orc/ "Orc")
 - [Rougarou](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/rougarou-player-characters/ "Rougarou")
 - [Nagaji](https://www.d20pfsrd.com/races/other-races/uncommon-races/arg-nagaji/ "Nagaji")
-- [Mongrel](https://www.d20pfsrd.com/bestiary/monster-listings/monstrous-humanoids/mongrelman/ "Mongrel")
+- [Mongrel](https://www.d20pfsrd.com/bestiary/monster-listings/monstrous-humanoids/mongrelman/ "Mongrel") (Owlbrew)
 - [Ganzi](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/ganzi/ "Ganzi")
 - Ascending Succubus (Owlbrew)
 - [Hobgoblin](https://www.d20pfsrd.com/races/other-races/featured-races/arg-hobgoblin "Hobgoblin")
