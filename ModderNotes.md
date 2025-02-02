@@ -5,6 +5,8 @@ In making this mod, I generally tried to follow exact implementations of tableto
 - Nearly all races: low-light/darkvision are not a thing in Wrath, so I followed Owlcat's example of just giving any race with those features Keen Senses and calling it good.
 - Android: Exceptional Senses (which became Keen Senses per above point) was rolled into Alert, otherwise one ability would be cancelled out. Constructed does not prevent morale bonuses. I don't think this is possible, it is a massive downside in this game specifically, and Owlcat did the same thing with undead in allowing them to still get morale bonuses, so I followed their example. Currently, all androids are bald. I could find no definitive answer regarding whether they have hair or not, but Owlcat's android was bald so I went with that. I may change this later.
 - Drow: among their spell-like abilities, only faerie fire is in-game, so that is what they got. Their Poison Use feature does nothing in Wrath, so it was swapped for its alternative racial tait Ancestral Grudge.
+- Ganzi: Ganzi oddities are crazy divergent in power level making their implementation challenging. Prehensile tail gives swift action potions - this is equivalent to a mythic ability, but I don't know if that is an indication of how good prehensile tail is or how weaksauce Emergency Potion is. Amorphous Limbs is correctly on a toggle but has no cooldown. Quibble was made to work as a swift action Ill Omen since you can't shoose when to force a re-roll.
+- Hobgoblin: Pitboss gives the CMB bonus to all disarm and trip maneuver checks as whips aren't a thing in Wrath.
 - Ifrit: slight alterations to SLAs to use spells already in-game.
 - Kuru: blood courage just implemented as a bonus to all saves against fear as the actual mechanic is not reproducible.
 - Mongrel: Mongrels are technically homebrew as a player race, but since Wrath has them at least mostly integrated as a race, I used their stats plus the mongrelman monster entry for reference on their skill bonuses.
@@ -24,3 +26,8 @@ In making this mod, I generally tried to follow exact implementations of tableto
 - Hungry Ghost Monk: this is a traditional monk archetype and Owlcat chose the unchained monk for Wrath. Luckily, Owlcat also provided a model for how traditinal monk should work in their system and I used that archetype to determine where the new features should go and what they should replace. This is basically equivalent to the tabletop version with a few features arriving one level earlier. I did not include Punishing Kick replacing Stunning Fist as I wasn't sure how to implement it and, frankly, it seemes relatively unimportant thematically and mechanically for the archetype - I may add it later, but not likely.
 - Eldritch Scrapper: their bonus combat feats are not implemented as "floating feats" that can be changed once per day, but rather permanent bonus combat feat selections. This is how the Brawler was implemented in mods for both Kingmaker and Wrath, so I decided to follow suit.
 
+## Sorcerer Bloodlines
+- Some bonus spells and bloodline feats were changed when nonexistant or impossible in Wrath. Care was taken to preserve the bloodline's theme and power level when choosing replacements.
+
+## Magus Arcana
+- Arcane Deed: added the Swashbuckler deeds that still do anything considering the massive nerf errata to the ability. If I ever figure out toggles, I may go back and do a pre-errata version that can give you all the possible deeds.
