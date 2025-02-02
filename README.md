@@ -70,7 +70,11 @@ Different Change Shape forms for the skinwalker:
  
 ## Bloodlines
 - [Orc Sorcerer Bloodline](https://www.d20pfsrd.com/classes/core-classes/sorcerer/bloodlines/bloodlines-from-paizo/orc-bloodline/ "Orc Sorcerer Bloodline")
-  - Requires TabletopTweaks-Base
+- [Protean Sorcerer Bloodline](https://www.d20pfsrd.com/classes/core-classes/sorcerer/bloodlines/bloodlines-from-paizo/protean-bloodline/ "Protean Sorcerer Bloodline")
+  - All bloodlines require TabletopTweaks-Base
+ 
+## Bloodline Mutations
+- [Blood Havoc](https://www.d20pfsrd.com/classes/core-classes/sorcerer/bloodlines/bloodline-mutations/blood-havoc/ "Blood Havoc")
 
 ## Magus Arcana
 - [Arcane Deed](https://www.d20pfsrd.com/classes/base-classes/magus/magus-arcana/paizo-magus-arcana/arcane-deed-ex/ "Arcane Deed")
