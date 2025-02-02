@@ -103,7 +103,7 @@ namespace EbonsContentMod.Bloodlines
             var OrcSorcererBloodlineArcana = FeatureConfigurator.New("OrcSorcererBloodlineArcana", "{7EFCA415-649A-4FB4-BC92-1FBB5BA271A1}") // done
                 .SetDisplayName(OrcSorcererBloodlineArcanaDisplayName)
                 .SetDescription(OrcSorcererBloodlineArcanaDescription)
-                .SetIcon(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.ElementalBodyIBase.ToString()).Icon)
+                .SetIcon(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.SummonElementalHugeBase.ToString()).Icon)
                 .AddFacts([FeatureRefs.KeenSenses.ToString()])
                 .AddComponent<OrcBloodlineArcana>(c =>
                 {
@@ -118,7 +118,7 @@ namespace EbonsContentMod.Bloodlines
             var OrcSorcererBloodlineArcanaProgression = ProgressionConfigurator.New("OrcSorcererBloodlineArcanaProgression", "{E33D77CC-95A3-486F-B8B4-5FC303045C8C}") // done
                 .SetDisplayName(OrcSorcererBloodlineArcanaDisplayName)
                 .SetDescription(OrcSorcererBloodlineArcanaDescription)
-                .SetIcon(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.ElementalBodyIBase.ToString()).Icon)
+                .SetIcon(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.SummonElementalHugeBase.ToString()).Icon)
                 .SetIsClassFeature(true)
                 .SetGiveFeaturesForPreviousLevels(true)
                 .SetRanks(1)
@@ -129,7 +129,7 @@ namespace EbonsContentMod.Bloodlines
             var OrcSorcererBloodlineClassSkill = FeatureConfigurator.New("OrcSorcererBloodlineClassSkill", "{D2EC1525-3BB8-4DB3-8194-146E9EF9BF9C}") // done
                 .SetDisplayName(OrcSorcererBloodlineClassSkillDisplayName)
                 .SetDescription(OrcSorcererBloodlineClassSkillDescription)
-                .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.SkillFocusLoreNature.ToString()).Icon)
+                .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.BloodlineFeyClassSkill.ToString()).Icon)
                 .AddComponent<AddClassSkill>(c => {
                     c.Skill = StatType.SkillLoreNature;
                 })
@@ -570,10 +570,17 @@ namespace EbonsContentMod.Bloodlines
                 .AddPrerequisiteNoFeature(OrcSorcererBloodlineRequisiteFeature)
                 .Configure();
 
-            BloodlineTools.RegisterSorcererFeatSelection(OrcSorcererBloodlineFeats, SorcererOrcBloodline);
-            BloodlineTools.RegisterSorcererBloodline(SorcererOrcBloodline);
-            BloodlineTools.RegisterCrossbloodedBloodline(CrossbloodedOrcBloodline);
-            BloodlineTools.RegisterSeekerBloodline(SeekerOrcBloodline);
+            try
+            {
+                BloodlineTools.RegisterSorcererFeatSelection(OrcSorcererBloodlineFeats, SorcererOrcBloodline);
+                BloodlineTools.RegisterSorcererBloodline(SorcererOrcBloodline);
+                BloodlineTools.RegisterCrossbloodedBloodline(CrossbloodedOrcBloodline);
+                BloodlineTools.RegisterSeekerBloodline(SeekerOrcBloodline);
+            }
+            finally
+            {
+                // finished
+            }
         }
     }
 }

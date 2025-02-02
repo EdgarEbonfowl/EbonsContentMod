@@ -109,6 +109,7 @@ namespace EbonsContentMod.Races.Skinwalkers.SkinwalkerHeritage
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.HumanSkilled.ToString()).Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillLoreNature, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillPerception, value: 2)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // Make base feature
@@ -118,6 +119,7 @@ namespace EbonsContentMod.Races.Skinwalkers.SkinwalkerHeritage
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Strength, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Charisma, value: -2)
                 .AddFacts(new() { skills, changeshape })
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             return feat;

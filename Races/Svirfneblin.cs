@@ -147,6 +147,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(SvirfneblinDefensiveTrainingDescription)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.GnomeDefensiveTrainingGiants.ToString()).Icon)
                 .AddStatBonus(ModifierDescriptor.Dodge, stat: StatType.AC, value: 2)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Fortunate = FeatureConfigurator.New("SvirfneblinFortunate", "{E197124E-1474-4534-89BD-A8CE175ADFE9}")
@@ -156,6 +157,7 @@ namespace EbonsContentMod.Races
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SaveFortitude, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SaveReflex, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SaveWill, value: 2)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var SpellResistance = FeatureConfigurator.New("SvirfneblinSpellResistance", "{C22DCC71-17EA-4EEC-9E1E-AC66C003D0C2}")
@@ -191,6 +193,7 @@ namespace EbonsContentMod.Races
                     m_SpecificModifier = ModifierDescriptor.None,
                     m_Progression = ContextRankProgression.AsIs
                 })
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // Add the underground enhancement to stealth
@@ -199,6 +202,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(SvirfneblinSkilledDescription)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.HumanSkilled.ToString()).Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillStealth, value: 2)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var blurresource = AbilityResourceConfigurator.New("SvirfneblinBlurResource", "{28F9F9CB-3F1D-4BB1-B534-ED53673F0A87}")
@@ -235,6 +239,7 @@ namespace EbonsContentMod.Races
                 .AddAbilityResources(1, blindnessresource, true)
                 .AddReplaceCasterLevelOfAbility(spell: blindness)
                 .AddReplaceCasterLevelOfAbility(spell: blur)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Hatred = FeatureConfigurator.New("SvirfneblinHatred", "{5A7FB4E5-1D45-4EE6-9EBC-9EC9D224FE79}")
@@ -245,6 +250,7 @@ namespace EbonsContentMod.Races
                 .AddAttackBonusAgainstFactOwner(1, checkedFact: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.DwarfRace.ToString()))
                 .AddAttackBonusAgainstFactOwner(1, checkedFact: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.DuergarRace.ToString()))
                 .AddAttackBonusAgainstFactOwner(1, checkedFact: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.DuergarTyrantRace.ToString()))
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var race =

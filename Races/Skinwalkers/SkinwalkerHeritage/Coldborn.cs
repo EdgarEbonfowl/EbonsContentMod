@@ -23,6 +23,7 @@ using Kingmaker.Blueprints.Items.Weapons;
 using Kingmaker.Blueprints;
 using BlueprintCore.Actions.Builder.ContextEx;
 using EbonsContentMod.Components;
+using Kingmaker.Visual.CharacterSystem;
 
 namespace EbonsContentMod.Races.Skinwalkers.SkinwalkerHeritage
 {
@@ -69,6 +70,38 @@ namespace EbonsContentMod.Races.Skinwalkers.SkinwalkerHeritage
                     RaceRecolorizer.GetColorsFromRGB(255f)
                     )}), "{F44608D1-57E2-49D9-9DB4-E9D951617F0F}");
 
+            var FemaleClawsEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "0fe6ca359f6292540a5430327647dc01" }, RaceRecolorizer.CreateRampsFromColorsSimple(new List<Color>()
+                {new Color( // Medium brown
+                    RaceRecolorizer.GetColorsFromRGB(70f),
+                    RaceRecolorizer.GetColorsFromRGB(40f),
+                    RaceRecolorizer.GetColorsFromRGB(0f)
+                    )}
+            ), "{9F31B749-02C1-4789-953E-BC56316B668D}", true, true,
+            RaceRecolorizer.CreateRampsFromColorsSimple(new List<Color>()
+                {new Color( // Brown
+                    RaceRecolorizer.GetColorsFromRGB(100f),
+                    RaceRecolorizer.GetColorsFromRGB(60f),
+                    RaceRecolorizer.GetColorsFromRGB(0f)
+                    )}),
+                BodyPartsToRemove: [BodyPartType.Torso, BodyPartType.UpperArms, BodyPartType.Forearms, BodyPartType.UpperLegs, BodyPartType.LowerLegs, BodyPartType.Spaulders, BodyPartType.Skirt, BodyPartType.Cuffs, BodyPartType.Belt, BodyPartType.BeltBag, BodyPartType.Feet], SetLayer: 209,
+                HandCopyEE: ShiftedSkin);
+
+            var MaleClawsEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "3c638ac1505198b4fa587f04ca655718" }, RaceRecolorizer.CreateRampsFromColorsSimple(new List<Color>()
+                {new Color( // Medium brown
+                    RaceRecolorizer.GetColorsFromRGB(70f),
+                    RaceRecolorizer.GetColorsFromRGB(40f),
+                    RaceRecolorizer.GetColorsFromRGB(0f)
+                    )}
+            ), "{0BD0A7AB-E00C-48D2-9913-1D7E4ABEAACA}", true, true,
+            RaceRecolorizer.CreateRampsFromColorsSimple(new List<Color>()
+                {new Color( // Brown
+                    RaceRecolorizer.GetColorsFromRGB(100f),
+                    RaceRecolorizer.GetColorsFromRGB(60f),
+                    RaceRecolorizer.GetColorsFromRGB(0f)
+                    )}),
+                BodyPartsToRemove: [BodyPartType.Torso, BodyPartType.UpperArms, BodyPartType.Forearms, BodyPartType.UpperLegs, BodyPartType.LowerLegs, BodyPartType.Spaulders, BodyPartType.Skirt, BodyPartType.Cuffs, BodyPartType.Belt, BodyPartType.BeltBag, BodyPartType.Feet], SetLayer: 209,
+                HandCopyEE: ShiftedSkin);
+
             //Make buff
             var ShiftedBuff = BuffConfigurator.New("SkinwalkerColdbornChangeShapeBuff", "{04116FBD-5A62-4A1A-8E2D-66C1DE20028F}")
                 .SetDisplayName(ColdbornChangeShapeDisplayName)
@@ -82,6 +115,11 @@ namespace EbonsContentMod.Races.Skinwalkers.SkinwalkerHeritage
                 {
                     c.FemaleEquipmentEntity = new EquipmentEntityLink() { AssetId = "7b27b2063f548794e845e0ee8ea7b91b" };
                     c.MaleEquipmentEntity = new EquipmentEntityLink() { AssetId = "6ae0e2be0e8f9f54981033b4a61f11ed" };
+                })
+                .AddComponent<AddEquipmentEntityBySex>(c =>
+                {
+                    c.FemaleEquipmentEntity = FemaleClawsEE;
+                    c.MaleEquipmentEntity = MaleClawsEE;
                 })
                 .AddEquipmentEntity(ShiftedSkin)
                 .AddEquipmentEntity(ShiftedEyes)
@@ -109,6 +147,7 @@ namespace EbonsContentMod.Races.Skinwalkers.SkinwalkerHeritage
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.HumanSkilled.ToString()).Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillAthletics, value: 2) // Skill bonus 1
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillLoreNature, value: 2) // Skill bonus 2
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // Make base feature
@@ -118,6 +157,7 @@ namespace EbonsContentMod.Races.Skinwalkers.SkinwalkerHeritage
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Constitution, value: 2) // Ability score bonus
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Charisma, value: -2) // Ability score penalty
                 .AddFacts(new() { skills, changeshape })
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             return feat;

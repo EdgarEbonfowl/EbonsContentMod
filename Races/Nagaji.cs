@@ -141,6 +141,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(ArmoredScalesDescription)
                 .SetIcon(FeatureRefs.InvulnerableDefensesShifterFeature.Reference.Get().Icon)
                 .AddStatBonus(ModifierDescriptor.NaturalArmor, stat: StatType.AC, value: 1)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Resistant = FeatureConfigurator.New("NagajiResistant", "{DDB7A933-6546-4865-BD0F-FFFA755556D7}")
@@ -149,6 +150,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(FeatureRefs.ResistNaturesLure.Reference.Get().Icon)
                 .AddSavingThrowBonusAgainstDescriptor(2, modifierDescriptor: ModifierDescriptor.Racial, spellDescriptor: SpellDescriptor.MindAffecting)
                 .AddSavingThrowBonusAgainstDescriptor(2, modifierDescriptor: ModifierDescriptor.Racial, spellDescriptor: SpellDescriptor.Poison)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var SerpentSense = FeatureConfigurator.New("SerpentSenseNagaji", "{9179643D-AFCC-40EE-91EF-42114B10C434}")
@@ -157,6 +159,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(AbilityRefs.Poison.Reference.Get().Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillPerception, value: 4)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillLoreNature, value: 2)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var race =

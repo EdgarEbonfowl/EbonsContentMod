@@ -175,6 +175,7 @@ namespace EbonsContentMod.Races
                 .AddDamageResistanceEnergy(type: DamageEnergyType.Cold, value: 5)
                 .AddDamageResistanceEnergy(type: DamageEnergyType.Electricity, value: 5)
                 .AddDamageResistanceEnergy(type: DamageEnergyType.Acid, value: 5)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Negotiator = FeatureConfigurator.New("SuliNegotiator", "{79BA33CC-B515-42E1-8117-F97390901CA2}")
@@ -183,6 +184,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.Persuasive.ToString()).Icon) // Change
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.CheckDiplomacy, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.CheckBluff, value: 2)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // Elemental Assault
@@ -448,6 +450,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(AbilityRefs.ElementalFistAblility.Reference.Get().Icon)
                 .AddFacts([ElementalAssaultAbility])
                 .AddAbilityResources(1, ElementalAssaultResource, true)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var race =

@@ -163,6 +163,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(ChangeShapeDescription)
                 .SetIcon(AbilityRefs.AspectOfTheWolf.Reference.Get().Icon)
                 .AddFacts([ChangeShape])
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var NaturalAttack = FeatureConfigurator.New("RougarouNaturalAttack", "{19BAD70E-C12F-472F-9887-217B10F9680B}")
@@ -170,6 +171,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(NaturalAttackDescription)
                 .SetIcon(AbilityRefs.AcidMaw.Reference.Get().Icon)
                 .AddAdditionalLimb(weapon: ItemWeaponRefs.Bite1d4.ToString())
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var race =

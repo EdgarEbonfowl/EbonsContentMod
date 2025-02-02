@@ -155,6 +155,7 @@ namespace EbonsContentMod.Races
                 .AddConditionImmunity(Kingmaker.UnitLogic.UnitCondition.Paralyzed)
                 .AddBuffDescriptorImmunity(descriptor: SpellDescriptor.Poison)
                 .AddComponent<DuergarImmunitiesComponent>()
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var enlargepersonresource = AbilityResourceConfigurator.New("DuergarEnlargePersonResource", "{8EA4B4C6-CB46-4E9E-8113-F4A0ABFE661A}")
@@ -176,6 +177,7 @@ namespace EbonsContentMod.Races
                 .AddFacts(new() { enlargepersonability })
                 .AddAbilityResources(1, enlargepersonresource, true)
                 .AddReplaceCasterLevelOfAbility(spell: enlargepersonability)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var invisibilityresource = AbilityResourceConfigurator.New("DuergarInvisibilityResource", "{5E90DBEB-27FF-4E35-A77F-D27FA0CEEA13}")
@@ -196,6 +198,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.GnomeMagic.ToString()).Icon)
                 .AddFacts(new() { invisibilityability })
                 .AddAbilityResources(1, invisibilityresource, true)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var race =

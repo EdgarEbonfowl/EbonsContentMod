@@ -115,9 +115,9 @@ namespace EbonsContentMod.Races
             //EquipmentEntityLink[] WingLinks = [MaleWingEE, FemaleWingEE];
 
             var MaleWings = FeatureConfigurator.New("MaleStrixWings", "{F4A3FE52-7F4E-4D83-890F-7A00194B2AB2}")
-                .SetHideInUI(true)
-                .SetHideNotAvailibleInUI(true)
-                .SetHideInCharacterSheetAndLevelUp(true)
+                .SetDisplayName(StrixWingsDisplayName)
+                .SetDescription(StrixWingsDescription)
+                .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.FeatureWingsDraconicWhite.ToString()).Icon)
                 .AddComponent<PrerequisiteSex>(c =>
                 {
                     c.gender = Gender.Male;
@@ -125,12 +125,13 @@ namespace EbonsContentMod.Races
                 })
                 .AddEquipmentEntity("876fbc0d239695a4790358a3be5d7c53")
                 //.AddEquipmentEntity(MaleWingEE)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var FemaleWings = FeatureConfigurator.New("FemaleStrixWings", "{3752502C-0616-474C-9AE1-A5349A51EC78}")
-                .SetHideInUI(true)
-                .SetHideNotAvailibleInUI(true)
-                .SetHideInCharacterSheetAndLevelUp(true)
+                .SetDisplayName(StrixWingsDisplayName)
+                .SetDescription(StrixWingsDescription)
+                .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.FeatureWingsDraconicWhite.ToString()).Icon)
                 .AddComponent<PrerequisiteSex>(c =>
                 {
                     c.gender = Gender.Female;
@@ -138,6 +139,7 @@ namespace EbonsContentMod.Races
                 })
                 .AddEquipmentEntity("da9f766f4de989f4e865a2d019b55098")
                 //.AddEquipmentEntity(FemaleWingEE)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var StrixWingsBuffingFeature = FeatureConfigurator.New("StrixWingBuffingFeature", "{72D7FB33-9E78-49D6-BF5C-5A300C2445B5}")
@@ -153,6 +155,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.FeatureWingsDraconicWhite.ToString()).Icon)
                 .SetGiveFeaturesForPreviousLevels(true)
                 .AddToLevelEntries(1, MaleWings, FemaleWings, StrixWingsBuffingFeature)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // Nocturnal
@@ -170,6 +173,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(StrixNocturnalDescription)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.Doom.ToString()).Icon)
                 .AddComponent<Nocturnal>()
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // Suspicious
@@ -179,6 +183,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(StrixSuspiciousDescription)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.IllusionResistance.ToString()).Icon)
                 .AddSavingThrowBonusAgainstSchool(modifierDescriptor: ModifierDescriptor.Racial, school: SpellSchool.Illusion, value: 2)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // Hatred
@@ -190,6 +195,7 @@ namespace EbonsContentMod.Races
                 .AddAttackBonusAgainstFactOwner(1, checkedFact: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HumanRace.ToString()))
                 .AddAttackBonusAgainstFactOwner(1, checkedFact: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HalfElfRace.ToString()))
                 .AddAttackBonusAgainstFactOwner(1, checkedFact: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HalfOrcRace.ToString()))
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
             
             var race =

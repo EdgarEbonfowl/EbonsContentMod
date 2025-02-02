@@ -277,7 +277,15 @@ namespace EbonsContentMod.Races
 
         internal static void Configure()
         {
+            var HalfElfFemaleBody = new EquipmentEntityLink() { AssetId = "861171cdd3930a84faab08ab85ba924a" };
+            var HalfElfMaleBody = new EquipmentEntityLink() { AssetId = "39763b45a3c0ff94ea6acbba28024168" };
             var MonoContact = RaceRecolorizer.SwitchEEEyeTexture(new EquipmentEntityLink() { AssetId = "a47bac4deb099fc4b86a2e01bb425cc5" }, "{861AF139-E068-40F7-B4F9-48FBBA297ACF}", eyeEE: new EquipmentEntityLink() { AssetId = "86127616283ae7741ae3e813904865cc" });
+            var FemaleClawsEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "0fe6ca359f6292540a5430327647dc01" }, RaceRecolorizer.CreateRampsFromColorsSimple(RaceHeadColors), "{A3156602-36D4-4FCC-9CC2-D865774C6C1E}",
+                BodyPartsToRemove: [BodyPartType.Torso, BodyPartType.UpperArms, BodyPartType.Forearms, BodyPartType.UpperLegs, BodyPartType.LowerLegs, BodyPartType.Spaulders, BodyPartType.Skirt, BodyPartType.Cuffs, BodyPartType.Belt, BodyPartType.BeltBag, BodyPartType.Feet], SetLayer: 209,
+                HandCopyEE: HalfElfFemaleBody);
+            var MaleClawsEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "3c638ac1505198b4fa587f04ca655718" }, RaceRecolorizer.CreateRampsFromColorsSimple(RaceHeadColors), "{55224D54-F61C-4F8D-9EA0-A47B6206FF31}",
+                BodyPartsToRemove: [BodyPartType.Torso, BodyPartType.UpperArms, BodyPartType.Forearms, BodyPartType.UpperLegs, BodyPartType.LowerLegs, BodyPartType.Spaulders, BodyPartType.Skirt, BodyPartType.Cuffs, BodyPartType.Belt, BodyPartType.BeltBag, BodyPartType.Feet], SetLayer: 209,
+                HandCopyEE: HalfElfMaleBody);
 
             var ClawRef = ItemWeaponRefs.Claw1d4.Reference.Get();
             
@@ -286,13 +294,43 @@ namespace EbonsContentMod.Races
                 .SetDescription(NaturalArmorDescription)
                 .SetIcon(FeatureRefs.InvulnerableDefensesShifterFeature.Reference.Get().Icon)
                 .AddStatBonus(ModifierDescriptor.NaturalArmor, stat: StatType.AC, value: 1)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
-            var Claws = FeatureConfigurator.New("ChangelingClaws", "{CB631D55-9A5E-451D-BC81-1D053C7A8CDF}")
+            var MaleClaws = FeatureConfigurator.New("MaleChangelingClaws", "{F75349F5-15CC-4F95-BE30-CE485A13F44A}")
+                .SetDisplayName(ClawsDisplayName)
+                .SetDescription(ClawsDescription)
+                .SetIcon(FeatureRefs.HagRivenClawsFeatureLevel1.Reference.Get().Icon)
+                .AddComponent<PrerequisiteSex>(c =>
+                {
+                    c.gender = Gender.Male;
+                    c.CheckInProgression = true;
+                })
+                .AddEquipmentEntity(MaleClawsEE)
+                .SetGroups(FeatureGroup.Racial)
+                .Configure();
+
+            var FemaleClaws = FeatureConfigurator.New("FemaleChangelingClaws", "{E6FEB67C-3F0C-4D2E-ADDA-876165387BBD}")
+                .SetDisplayName(ClawsDisplayName)
+                .SetDescription(ClawsDescription)
+                .SetIcon(FeatureRefs.HagRivenClawsFeatureLevel1.Reference.Get().Icon)
+                .AddComponent<PrerequisiteSex>(c =>
+                {
+                    c.gender = Gender.Female;
+                    c.CheckInProgression = true;
+                })
+                .AddEquipmentEntity(FemaleClawsEE)
+                .SetGroups(FeatureGroup.Racial)
+                .Configure();
+
+            var Claws = ProgressionConfigurator.New("ChangelingClaws", "{CB631D55-9A5E-451D-BC81-1D053C7A8CDF}")
                 .SetDisplayName(ClawsDisplayName)
                 .SetDescription(ClawsDescription)
                 .SetIcon(FeatureRefs.HagRivenClawsFeatureLevel1.Reference.Get().Icon)
                 .AddEmptyHandWeaponOverride(false, false, weapon: ClawRef).AddEmptyHandWeaponOverride(false, false, weapon: ClawRef)
+                .SetGiveFeaturesForPreviousLevels(true)
+                .AddToLevelEntries(1, MaleClaws, FemaleClaws)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // Hag Heritage
@@ -302,6 +340,7 @@ namespace EbonsContentMod.Races
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Intelligence, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Charisma, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Constitution, value: -2)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var ChangelingGeneral = FeatureConfigurator.New("ChangelingGeneral", "{0EBC1384-1A22-4E38-8144-BDE1FF481358}")
@@ -310,6 +349,7 @@ namespace EbonsContentMod.Races
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Wisdom, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Charisma, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Constitution, value: -2)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var HagHeritageSelection = FeatureSelectionConfigurator.New("ChngelingHagHeritageSelection", "{FEBF7D59-84F8-41F0-B1FE-F5D31BBE009C}")
@@ -326,6 +366,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(HulkingChangelingDescription)
                 .SetIcon(FeatureRefs.HagboundWitchHunchedMusclesFeature.Reference.Get().Icon) // check
                 .AddWeaponParametersDamageBonus(ranged: false)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Pyrophile = FeatureConfigurator.New("ChangelingPyrophile", "{0086F0FC-0F0E-45FE-ABDF-046F87AB9799}")
@@ -338,6 +379,7 @@ namespace EbonsContentMod.Races
                     c.SpellsOnly = true;
                 })
                 .AddContextRankConfig(ContextRankConfigs.CharacterLevel().WithStartPlusDivStepProgression(4))
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var GreenWidow = FeatureConfigurator.New("ChangelingGreenWidow", "{73F7D34A-4CDA-4E81-9DA1-2CEF29BA61F4}")
@@ -345,6 +387,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(GreenWidowDescription)
                 .SetIcon(FeatureRefs.CurdleThoughtsFeature.Reference.Get().Icon) // check
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.CheckBluff, value: 2)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var GazeBlindness = FeatureConfigurator.New("ChangelingGazeBlindness", "{250330A5-83F2-492A-93CF-E966C1BC1853}")
@@ -352,6 +395,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(GazeBlindnessDescription)
                 .SetIcon(AbilityRefs.Blindness.Reference.Get().Icon) // change
                 .AddSavingThrowBonusAgainstDescriptor(2, modifierDescriptor: ModifierDescriptor.Racial, spellDescriptor: SpellDescriptor.GazeAttack)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var HeartstoneHeritor = FeatureConfigurator.New("ChangelingHeartstoneHeritor", "{F281CDC1-F6C0-4052-A42A-559D0E8D21F1}")
@@ -359,6 +403,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(HeartstoneHeritorDescription)
                 .SetIcon(FeatureRefs.PurityOfBody.Reference.Get().Icon) // change
                 .AddSavingThrowBonusAgainstDescriptor(2, modifierDescriptor: ModifierDescriptor.Racial, spellDescriptor: SpellDescriptor.Disease)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var HagRacialTrait = FeatureSelectionConfigurator.New("ChngelingHagRacialTraitSelection", "{B3F25336-EA68-42E9-8C4D-4ADDCE8957E1}")
@@ -385,6 +430,11 @@ namespace EbonsContentMod.Races
 
             // Add race to mount fixes
             RaceMountFixerizer.AddRaceToMountFixes(recoloredrace, CopyRace);
+
+            // Register linked EEs
+            EquipmentEntityLink[] SkinLinks = [FemaleClawsEE, MaleClawsEE];
+
+            EELinker.RegisterSkinLink(recoloredrace, SkinLinks);
 
             // Add race to race list
             var raceRef = recoloredrace.ToReference<BlueprintRaceReference>();

@@ -26,100 +26,11 @@ namespace EbonsContentMod.Races
 {
     internal class Drow
     {
-        public static List<Color> RaceHeadColors =
-            [
-                new Color( // Near Black
-                    RaceRecolorizer.GetColorsFromRGB(45f),
-                    RaceRecolorizer.GetColorsFromRGB(45f),
-                    RaceRecolorizer.GetColorsFromRGB(50f)
-                    ),
-                new Color( // Dark Blue - slight gray
-                    RaceRecolorizer.GetColorsFromRGB(74f),
-                    RaceRecolorizer.GetColorsFromRGB(74f),
-                    RaceRecolorizer.GetColorsFromRGB(120f)
-                    ),
-                new Color( // Dark Gray
-                    RaceRecolorizer.GetColorsFromRGB(90f),
-                    RaceRecolorizer.GetColorsFromRGB(90f),
-                    RaceRecolorizer.GetColorsFromRGB(95f)
-                    ),
-                new Color( // Medium Blue
-                    RaceRecolorizer.GetColorsFromRGB(94f),
-                    RaceRecolorizer.GetColorsFromRGB(102f),
-                    RaceRecolorizer.GetColorsFromRGB(175f)
-                    ),
-                new Color( // Light Gray-Blue
-                    RaceRecolorizer.GetColorsFromRGB(128f),
-                    RaceRecolorizer.GetColorsFromRGB(136f),
-                    RaceRecolorizer.GetColorsFromRGB(190f)
-                    ),
-                new Color( // Medium Dark Gray with Purple
-                    RaceRecolorizer.GetColorsFromRGB(75f),
-                    RaceRecolorizer.GetColorsFromRGB(61f),
-                    RaceRecolorizer.GetColorsFromRGB(68f)
-                    ),
-                new Color( // Blue Gray
-                    RaceRecolorizer.GetColorsFromRGB(87f),
-                    RaceRecolorizer.GetColorsFromRGB(91f),
-                    RaceRecolorizer.GetColorsFromRGB(125f)
-                    ),
-                new Color( // Very Dark Blue
-                    RaceRecolorizer.GetColorsFromRGB(44f),
-                    RaceRecolorizer.GetColorsFromRGB(44f),
-                    RaceRecolorizer.GetColorsFromRGB(99f)
-                    ),
-                new Color( // Medium Dark Gray-Blue
-                    RaceRecolorizer.GetColorsFromRGB(77f),
-                    RaceRecolorizer.GetColorsFromRGB(82f),
-                    RaceRecolorizer.GetColorsFromRGB(103f)
-                    ),
-                new Color( // Dark Purple-Blue
-                    RaceRecolorizer.GetColorsFromRGB(52f),
-                    RaceRecolorizer.GetColorsFromRGB(45f),
-                    RaceRecolorizer.GetColorsFromRGB(75f)
-                    )
-            ];
+        public static List<Color> RaceHeadColors = [];
 
-        public static List<Color> RaceEyeColors =
-            [
-                new Color( // White
-                    RaceRecolorizer.GetColorsFromRGB(182f),
-                    RaceRecolorizer.GetColorsFromRGB(182f),
-                    RaceRecolorizer.GetColorsFromRGB(182f)
-                    ),
-                new Color( // Red
-                    RaceRecolorizer.GetColorsFromRGB(140f),
-                    RaceRecolorizer.GetColorsFromRGB(6f),
-                    RaceRecolorizer.GetColorsFromRGB(1f)
-                    ),
-                new Color( // Very light fuscia
-                    RaceRecolorizer.GetColorsFromRGB(233f),
-                    RaceRecolorizer.GetColorsFromRGB(196f),
-                    RaceRecolorizer.GetColorsFromRGB(241f)
-                    ),
-                new Color( // Perrywinkle
-                    RaceRecolorizer.GetColorsFromRGB(119f),
-                    RaceRecolorizer.GetColorsFromRGB(125f),
-                    RaceRecolorizer.GetColorsFromRGB(237f)
-                    ),
-                new Color( // Medium Deep Blue-Purple
-                    RaceRecolorizer.GetColorsFromRGB(102f),
-                    RaceRecolorizer.GetColorsFromRGB(78f),
-                    RaceRecolorizer.GetColorsFromRGB(175f)
-                    ),
-                new Color( // Light turqois
-                    RaceRecolorizer.GetColorsFromRGB(149f),
-                    RaceRecolorizer.GetColorsFromRGB(199f),
-                    RaceRecolorizer.GetColorsFromRGB(186f)
-                    )
-            ];
+        public static List<Color> RaceEyeColors = [];
 
-        public static List<Color> RaceHairColors =
-            [
-                new Color(0.75f, 0.75f, 0.78f), // White
-                new Color(0f, 0f, 0f), // Black
-                new Color(0.86f, 0.86f, 0.89f) // Super White
-            ];
+        public static List<Color> RaceHairColors = [];
 
         public static List<Texture2D> CustomEyeRamps =
         [
@@ -142,6 +53,77 @@ namespace EbonsContentMod.Races
             RaceRecolorizer.GetArmorRampByIndex(69)
         ];
 
+        public static List<Texture2D> CustomHeadRamps =
+        [
+            RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.DhampirRace.Reference.Get(), 4),
+            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Near Black
+                RaceRecolorizer.GetColorsFromRGB(45f),
+                RaceRecolorizer.GetColorsFromRGB(45f),
+                RaceRecolorizer.GetColorsFromRGB(50f)
+                )),
+            RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.TieflingRace.Reference.Get(), 6),
+            RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.DhampirRace.Reference.Get(), 3),
+            RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.TieflingRace.Reference.Get(), 4),
+            RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.TieflingRace.Reference.Get(), 5),
+            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Dark Blue - slight gray
+                RaceRecolorizer.GetColorsFromRGB(74f),
+                RaceRecolorizer.GetColorsFromRGB(74f),
+                RaceRecolorizer.GetColorsFromRGB(120f)
+                )),
+            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Medium Blue
+                RaceRecolorizer.GetColorsFromRGB(94f),
+                RaceRecolorizer.GetColorsFromRGB(102f),
+                RaceRecolorizer.GetColorsFromRGB(175f)
+                )),
+            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Light Gray-Blue
+                RaceRecolorizer.GetColorsFromRGB(128f),
+                RaceRecolorizer.GetColorsFromRGB(136f),
+                RaceRecolorizer.GetColorsFromRGB(190f)
+                )),
+            RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.TieflingRace.Reference.Get(), 13),
+            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Dark Gray
+                RaceRecolorizer.GetColorsFromRGB(90f),
+                RaceRecolorizer.GetColorsFromRGB(90f),
+                RaceRecolorizer.GetColorsFromRGB(95f)
+                )),
+            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Medium Dark Gray with Purple
+                RaceRecolorizer.GetColorsFromRGB(75f),
+                RaceRecolorizer.GetColorsFromRGB(61f),
+                RaceRecolorizer.GetColorsFromRGB(68f)
+                )),
+            RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.TieflingRace.Reference.Get(), 7),
+            RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.TieflingRace.Reference.Get(), 8),
+            RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.DhampirRace.Reference.Get(), 9),
+            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Blue Gray
+                RaceRecolorizer.GetColorsFromRGB(87f),
+                RaceRecolorizer.GetColorsFromRGB(91f),
+                RaceRecolorizer.GetColorsFromRGB(125f)
+                )),
+            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Very Dark Blue
+                RaceRecolorizer.GetColorsFromRGB(44f),
+                RaceRecolorizer.GetColorsFromRGB(44f),
+                RaceRecolorizer.GetColorsFromRGB(99f)
+                )),
+            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Medium Dark Gray-Blue
+                RaceRecolorizer.GetColorsFromRGB(77f),
+                RaceRecolorizer.GetColorsFromRGB(82f),
+                RaceRecolorizer.GetColorsFromRGB(103f)
+                )),
+            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Dark Purple-Blue
+                RaceRecolorizer.GetColorsFromRGB(52f),
+                RaceRecolorizer.GetColorsFromRGB(45f),
+                RaceRecolorizer.GetColorsFromRGB(75f)
+                ))
+        ];
+
+        public static List<Texture2D> CustomHairRamps =
+        [
+            RaceRecolorizer.GetRaceHairRampByIndex(RaceRefs.DhampirRace.Reference.Get(), 0),
+            RaceRecolorizer.CreateSingleRampFromColor(new Color(0.75f, 0.75f, 0.78f)), // White
+            RaceRecolorizer.CreateSingleRampFromColor(new Color(0f, 0f, 0f)), // Black
+            RaceRecolorizer.CreateSingleRampFromColor(new Color(0.86f, 0.86f, 0.89f)) // Super White
+        ];
+
         public static EquipmentEntityLink[] MaleHairs =
         [
             new EquipmentEntityLink() {AssetId = "d69743688fc27584887a7c29a774289e"}, // Long Straight Male Elf
@@ -150,7 +132,7 @@ namespace EbonsContentMod.Races
             new EquipmentEntityLink() {AssetId = "76cfc339d08471f4da919dcbdd2fceb1"}, // Short Male Half-Elf
             new EquipmentEntityLink() {AssetId = "4da3c565974930a40b51950ee671895e"}, // Slick Male Elf
             new EquipmentEntityLink() {AssetId = "54aae291e3449c14792bbe2592228d4d"}, // Medium Tiny Braid Male Elf
-            new EquipmentEntityLink() {AssetId = "b85db19d7adf6aa48b5dd2bb7bfe1502"} // Bald
+            new EquipmentEntityLink() {AssetId = "b85db19d7adf6aa48b5dd2bb7bfe1502"}  // Bald
         ];
 
         public static EquipmentEntityLink[] FemaleHairs =
@@ -163,7 +145,7 @@ namespace EbonsContentMod.Races
             new EquipmentEntityLink() {AssetId = "304b84351ffbde24190e56724178df5b"}, // Long Ember Female Elf
             new EquipmentEntityLink() {AssetId = "9ec441743ea20c5488e7f497992042ed"}, // Ponytail Lush Female Elf
             new EquipmentEntityLink() {AssetId = "39d65ebde5c324f41821b36258791ee5"}, // Side Kare Female Elf
-            new EquipmentEntityLink() {AssetId = "b85db19d7adf6aa48b5dd2bb7bfe1502"} // Bald
+            new EquipmentEntityLink() {AssetId = "b85db19d7adf6aa48b5dd2bb7bfe1502"}  // Bald
         ];
 
         // Need to implement this in the recolorizer first
@@ -206,12 +188,14 @@ namespace EbonsContentMod.Races
                 .SetDescription(WeaponFamiliarityDescription)
                 .SetIcon(FeatureRefs.ElvenWeaponFamiliarity.Reference.Get().Icon)
                 .AddProficiencies(weaponProficiencies: [WeaponCategory.HandCrossbow, WeaponCategory.Rapier, WeaponCategory.Shortsword])
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
             
             var Immunities = FeatureConfigurator.New("EbonsDrowImmunities", "{63E861DE-09DC-4343-8506-AD51E4B996DF}")
                 .CopyFrom(FeatureRefs.ElvenImmunities)
                 .SetDisplayName(ImmunitiesDisplayName)
                 .SetDescription(ImmunitiesDescription)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var SpellResistance = FeatureConfigurator.New("EbonsDrowSpellResistance", "{67E1769C-C6A9-4009-A6AF-1F7CA903F0C5}")
@@ -247,6 +231,7 @@ namespace EbonsContentMod.Races
                     m_SpecificModifier = ModifierDescriptor.None,
                     m_Progression = ContextRankProgression.AsIs
                 })
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // Spell-Like Abilities
@@ -269,6 +254,7 @@ namespace EbonsContentMod.Races
                 .AddFacts(new() { SpellLikeAbility })
                 .AddAbilityResources(1, SpellLikeResource, true)
                 .AddReplaceCasterLevelOfAbility(spell: SpellLikeAbility)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var AncestralGrudge = FeatureConfigurator.New("EbonsDrowAncestralGrudge", "{238942FB-B8FD-490D-9E3D-AF89E83AC695}")
@@ -278,6 +264,7 @@ namespace EbonsContentMod.Races
                 .AddAttackBonusAgainstFactOwner(1, checkedFact: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.ElfRace.ToString()))
                 .AddAttackBonusAgainstFactOwner(1, checkedFact: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HalfElfRace.ToString()))
                 .AddAttackBonusAgainstFactOwner(1, checkedFact: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.DwarfRace.ToString()))
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var LightSensitivity = BlueprintTools.GetBlueprint<BlueprintFeature>("{BBA86DB1-B3EF-4AB5-A412-A5910F2B8947}");
@@ -296,7 +283,7 @@ namespace EbonsContentMod.Races
                 .Configure();
 
             // Recolor Race
-            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, CustomEyeRamps: CustomEyeRamps, eyeEE: ContactEEL, CustomFemaleHairs: FemaleHairs, CustomMaleHairs: MaleHairs);
+            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, CustomEyeRamps: CustomEyeRamps, CustomHeadRamps: CustomHeadRamps, CustomHairRamps: CustomHairRamps, eyeEE: ContactEEL, CustomFemaleHairs: FemaleHairs, CustomMaleHairs: MaleHairs);
 
             // Add race to mount fixes
             RaceMountFixerizer.AddRaceToMountFixes(recoloredrace, CopyRace);

@@ -51,6 +51,7 @@ using Kingmaker.Designers.Mechanics.Buffs;
 using Kingmaker.Visual.CharacterSystem;
 using Kingmaker.RuleSystem;
 using Kingmaker.UnitLogic.Abilities;
+using Kingmaker.UnitLogic.Commands.Base;
 
 namespace EbonsContentMod.Races
 {
@@ -130,6 +131,10 @@ namespace EbonsContentMod.Races
         internal const string UncannyAuraDisplayName = "Ganzi.UncannyAura.Name";
         private static readonly string UncannyAuraDescription = "Ganzi.UncannyAura.Description";
 
+        internal const string QuibbleDisplayName = "Ganzi.Quibble.Name";
+        private static readonly string QuibbleDescription = "Ganzi.Quibble.Description";
+
+
         internal static void Configure()
         {
             var DhampirSkinColors = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.DhampirRace.ToString()).MaleOptions.Heads[0].Load().PrimaryRamps;
@@ -171,6 +176,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(FeatureRefs.ChokingBombFeature.Reference.Get().Icon)
                 .AddMechanicsFeature(AddMechanicsFeature.MechanicsFeatureType.FastPotion)
                 .AddEquipmentEntity("ab9ab7d63fb738249a1a1e9ec6b6c4ff")
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var EntropicFleshEEL = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "33c1acb9aaa60dc448691b6d63fcb22f" }, RaceRecolorizer.CreateRampsFromColorsSimple(new List<Color>() { new Color( // Pink-Purple
@@ -186,6 +192,7 @@ namespace EbonsContentMod.Races
                 .AddStatBonus(ModifierDescriptor.UntypedStackable, stat: StatType.SkillMobility, value: 2)
                 .AddCMDBonusAgainstManeuvers(ModifierDescriptor.UntypedStackable, [CombatManeuver.Grapple], 2)
                 .AddEquipmentEntity(EntropicFleshEEL)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var MaleWeaponPlayEEL = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "21f2c5004173a514982d8491a55734d4" }, new List<Texture2D>(), "{827DBF12-5D56-4A5B-8F57-A31BA319FCAF}", true, true, SkipPrimaryColors: true,
@@ -195,27 +202,29 @@ namespace EbonsContentMod.Races
                 BodyPartsToRemove: new List<BodyPartType>() { BodyPartType.Eyes, BodyPartType.Head, BodyPartType.Ears, BodyPartType.UpperLegs, BodyPartType.LowerLegs, BodyPartType.Feet });
 
             var MaleWeaponPlay = FeatureConfigurator.New("GanziMaleWeaponPlay", "{3CD7AAF4-F849-43D9-AF5A-6D546959A64C}")
-                .SetHideInUI(true)
-                .SetHideNotAvailibleInUI(true)
-                .SetHideInCharacterSheetAndLevelUp(true)
+                .SetDisplayName(WeaponPlayDisplayName)
+                .SetDescription(WeaponPlayDescription)
+                .SetIcon(FeatureRefs.WeaponMastery.Reference.Get().Icon)
                 .AddComponent<PrerequisiteSex>(c =>
                 {
                     c.gender = Gender.Male;
                     c.CheckInProgression = true;
                 })
                 .AddEquipmentEntity(MaleWeaponPlayEEL)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var FemaleWeaponPlay = FeatureConfigurator.New("GanziFemaleWeaponPlay", "{DA58B3C1-01F7-4C61-8EA9-D6B03897C7DF}")
-                .SetHideInUI(true)
-                .SetHideNotAvailibleInUI(true)
-                .SetHideInCharacterSheetAndLevelUp(true)
+                .SetDisplayName(WeaponPlayDisplayName)
+                .SetDescription(WeaponPlayDescription)
+                .SetIcon(FeatureRefs.WeaponMastery.Reference.Get().Icon)
                 .AddComponent<PrerequisiteSex>(c =>
                 {
                     c.gender = Gender.Female;
                     c.CheckInProgression = true;
                 })
                 .AddEquipmentEntity(FemaleWeaponPlayEEL)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var WeaponPlay = ProgressionConfigurator.New("GanziWeaponPlay", "{C0159091-492A-4C29-9AD6-34497277AB33}")
@@ -225,6 +234,7 @@ namespace EbonsContentMod.Races
                 .AddFacts([FeatureRefs.MartialWeaponProficiency.ToString(), FeatureRefs.SimpleWeaponProficiency.ToString()])
                 .AddClassLevelsForPrerequisites(fakeClass: CharacterClassRefs.FighterClass.Reference.Get(), forSelection: FeatureSelectionRefs.BasicFeatSelection.Reference.Get(), modifier: 1.0, summand: 0)
                 .AddToLevelEntries(1, FemaleWeaponPlay, MaleWeaponPlay)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // May need to go up or down one with ramp index for best color
@@ -244,6 +254,7 @@ namespace EbonsContentMod.Races
                 .AddAbilityResources(1, SpellLikeResource, true)
                 .AddReplaceCasterLevelOfAbility(spell: HideousLaughter)
                 .AddEquipmentEntity(SLAEyesEE)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Blur = AbilityConfigurator.New("GanziBlurAbility", "{51E8D931-1FDD-4C22-BED4-A38F3147DE95}")
@@ -260,6 +271,7 @@ namespace EbonsContentMod.Races
                 .AddAbilityResources(1, SpellLikeResource, true)
                 .AddReplaceCasterLevelOfAbility(spell: Blur)
                 .AddEquipmentEntity(SLAEyesEE)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var AcidArrow = AbilityConfigurator.New("GanziAcidArrowAbility", "{9407B82B-6249-410A-9219-8A1276FE7BC6}")
@@ -276,6 +288,7 @@ namespace EbonsContentMod.Races
                 .AddAbilityResources(1, SpellLikeResource, true)
                 .AddReplaceCasterLevelOfAbility(spell: AcidArrow)
                 .AddEquipmentEntity(SLAEyesEE)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var MirrorImage = AbilityConfigurator.New("GanziMirrorImageAbility", "{AD9486C0-4CD6-4FD2-9FBD-8615D5B643C2}")
@@ -292,6 +305,7 @@ namespace EbonsContentMod.Races
                 .AddAbilityResources(1, SpellLikeResource, true)
                 .AddReplaceCasterLevelOfAbility(spell: MirrorImage)
                 .AddEquipmentEntity(SLAEyesEE)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var ScorchingRay = AbilityConfigurator.New("GanziScorchingRayAbility", "{58046244-920F-43AD-B473-6E190ECCDC20}")
@@ -308,6 +322,7 @@ namespace EbonsContentMod.Races
                 .AddAbilityResources(1, SpellLikeResource, true)
                 .AddReplaceCasterLevelOfAbility(spell: ScorchingRay)
                 .AddEquipmentEntity(SLAEyesEE)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var ResistEnergy = AbilityConfigurator.New("GanziResistEnergyAbility", "{262974ED-CD5D-4501-9B36-10CF59BCEF36}")
@@ -324,6 +339,7 @@ namespace EbonsContentMod.Races
                 .AddAbilityResources(1, SpellLikeResource, true)
                 .AddReplaceCasterLevelOfAbility(spell: ResistEnergy)
                 .AddEquipmentEntity(SLAEyesEE)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var SeeInvisibility = AbilityConfigurator.New("GanziSeeInvisibilityAbility", "{0C7DDBB7-1BD9-4C3B-9356-55B9D3A1586A}")
@@ -340,6 +356,7 @@ namespace EbonsContentMod.Races
                 .AddAbilityResources(1, SpellLikeResource, true)
                 .AddReplaceCasterLevelOfAbility(spell: SeeInvisibility)
                 .AddEquipmentEntity(SLAEyesEE)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var SLA = FeatureSelectionConfigurator.New("GanziSLASelection", "{51E53370-8281-42F6-B0E1-A0B2EAC3B862}")
@@ -347,6 +364,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(SLADescription)
                 .SetIcon(FeatureRefs.GnomeMagic.Reference.Get().Icon)
                 .AddToAllFeatures(HideousLaughterFeat, BlurFeat, AcidArrowFeat, MirrorImageFeat, ScorchingRayFeat, ResistEnergyFeat, SeeInvisibilityFeat)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var RacingMindEyesEE = RaceRecolorizer.RecolorEELink(ContactEEL, new List<Texture2D>() { RaceRecolorizer.GetArmorRampByIndex(25) }, "{BDA49850-96F7-427F-907A-4B6E4D84B3D9}", true, true);
@@ -365,56 +383,83 @@ namespace EbonsContentMod.Races
                 .AddSavingThrowBonusAgainstDescriptor(2, modifierDescriptor: ModifierDescriptor.UntypedStackable, spellDescriptor: SpellDescriptor.MindAffecting)
                 .AddEquipmentEntity(RacingMindEyesEE)
                 .AddEquipmentEntity(RacingMindHeadEE)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
-            var AmorphousLimbsFurEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "1aeb459da29dca341a78317170eec262" },
-                RaceRecolorizer.CreateRampsFromColorsSimple(new List<Color>()
-                {new Color( // Dark Pink
-                    RaceRecolorizer.GetColorsFromRGB(90f),
-                    RaceRecolorizer.GetColorsFromRGB(40f),
-                    RaceRecolorizer.GetColorsFromRGB(60f)
-                    )}
-                ), "{2C096337-B17E-45CE-A3F4-DDC2BD4877D6}", true, true,
-                RaceRecolorizer.CreateRampsFromColorsSimple(new List<Color>()
-                    {new Color( // Pink
-                        RaceRecolorizer.GetColorsFromRGB(145f),
-                        RaceRecolorizer.GetColorsFromRGB(75f),
-                        RaceRecolorizer.GetColorsFromRGB(100f)
-                        )}), BodyPartsToRemove: new List<BodyPartType>() { BodyPartType.Eyes });
+            var HumanMaleBody = new EquipmentEntityLink() { AssetId = "e7c86166041c1e04a92276abdab68afa" };
+            var HumanFemaleBody = new EquipmentEntityLink() { AssetId = "bb6988a21733fad4296ad22537248fea" };
+
+            var FemaleClawsEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "0fe6ca359f6292540a5430327647dc01" }, CustomSkinColors, "{4880E096-42EC-432B-9FD8-E63A8F3444B2}",
+                BodyPartsToRemove: [BodyPartType.Torso, BodyPartType.UpperArms, BodyPartType.Forearms, BodyPartType.UpperLegs, BodyPartType.LowerLegs, BodyPartType.Spaulders, BodyPartType.Skirt, BodyPartType.Cuffs, BodyPartType.Belt, BodyPartType.BeltBag, BodyPartType.Feet], SetLayer: 209,
+                HandCopyEE: HumanFemaleBody);
+            var MaleClawsEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "3c638ac1505198b4fa587f04ca655718" }, CustomSkinColors, "{4AF2BCD1-1ED4-465A-BFBD-2C5AB7A1BA05}",
+                BodyPartsToRemove: [BodyPartType.Torso, BodyPartType.UpperArms, BodyPartType.Forearms, BodyPartType.UpperLegs, BodyPartType.LowerLegs, BodyPartType.Spaulders, BodyPartType.Skirt, BodyPartType.Cuffs, BodyPartType.Belt, BodyPartType.BeltBag, BodyPartType.Feet], SetLayer: 209,
+                HandCopyEE: HumanMaleBody);
+
+            var AmorphousLimbsSkinEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "a5ce3d53774ed6844a64f25820d82b3b" }, CustomSkinColors, "{3D97BF9C-2DEF-46DA-861B-8C51B17F3AA9}", true);
+
+            var AmorphousLimbsShiftedBuff = BuffConfigurator.New("GanziAmorphousLimbsBuff", "{505FC465-A1B9-4155-B653-8AEB8A94A2DD}")
+                .SetDisplayName(AmorphousLimbsDisplayName)
+                .SetDescription(AmorphousLimbsDescription)
+                .SetIcon(ItemWeaponRefs.Claw1d6.Reference.Get().Icon)
+                .AddEmptyHandWeaponOverride(false, false, weapon: ItemWeaponRefs.Claw1d6.Reference.Get()).AddEmptyHandWeaponOverride(false, false, weapon: ItemWeaponRefs.Claw1d6.Reference.Get())
+                .AddComponent<AddEquipmentEntityBySex>(c =>
+                {
+                    c.FemaleEquipmentEntity = FemaleClawsEE;
+                    c.MaleEquipmentEntity = MaleClawsEE;
+                })
+                .SetFxOnStart("352469f228a3b1f4cb269c7ab0409b8e")
+                .SetFxOnRemove("352469f228a3b1f4cb269c7ab0409b8e")
+                .Configure();
+
+            var AmorphousLimbsActivatableAbility = ActivatableAbilityConfigurator.New("GanziAmorphousLimbsActivatableAbility", "{E8C163B1-BC37-47A5-96FB-5A5915A357CD}")
+                .SetDisplayName(AmorphousLimbsDisplayName)
+                .SetDescription(AmorphousLimbsDescription)
+                .SetIcon(ItemWeaponRefs.Claw1d6.Reference.Get().Icon)
+                .SetDeactivateImmediately(true)
+                .SetDeactivateIfOwnerDisabled(true)
+                .SetActivateWithUnitCommand(UnitCommand.CommandType.Swift)
+                .SetBuff(AmorphousLimbsShiftedBuff)
+                .Configure();
 
             var AmorphousLimbs = FeatureConfigurator.New("GanziAmorphousLimbs", "{36B31D24-9DFD-44BD-BA6F-D404C2C66D40}")
                 .SetDisplayName(AmorphousLimbsDisplayName)
                 .SetDescription(AmorphousLimbsDescription)
                 .SetIcon(ItemWeaponRefs.Claw1d6.Reference.Get().Icon)
-                .AddEmptyHandWeaponOverride(false, false, weapon: ItemWeaponRefs.Claw1d6.Reference.Get()).AddEmptyHandWeaponOverride(false, false, weapon: ItemWeaponRefs.Claw1d6.Reference.Get())
-                //.AddFacts(["b09147e9b63b49b89c90361fbad90a68"]) // Shifter claws look dumb
-                //.AddEquipmentEntity(RightAmorphousLimbsEE)
-                //.AddEquipmentEntity(LeftAmorphousLimbsEE)
-                .AddEquipmentEntity(AmorphousLimbsFurEE)
+                .AddEquipmentEntity(AmorphousLimbsSkinEE)
+                .AddFacts([AmorphousLimbsActivatableAbility])
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
+            var MaleVestigialWingsEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "89343a8dc170abb46ae15c11775e867a" }, [], "{4406263D-6F9F-4D3C-9201-99242CD86104}", SkipPrimaryColors: true, ScaleEE: [.5f, .5f, .7f]);
+            var FemaleVestigialWingsEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "96122c0bb0c483e46a53b8c9d05a1c39" }, [], "{39138787-26D6-4679-A95B-3F840C7A73E5}", SkipPrimaryColors: true, ScaleEE: [.5f, .5f, .7f]);
+
             var MaleVestigialWings = FeatureConfigurator.New("GanziMaleVestigialWings", "{2C28ECB6-2A6A-4735-9BF3-0D202A9DA944}")
-                .SetHideInUI(true)
-                .SetHideNotAvailibleInUI(true)
-                .SetHideInCharacterSheetAndLevelUp(true)
+                .SetDisplayName(VestigialWingsDisplayName)
+                .SetDescription(VestigialWingsDescription)
+                .SetIcon(FeatureRefs.FeralWings.Reference.Get().Icon)
                 .AddComponent<PrerequisiteSex>(c =>
                 {
                     c.gender = Gender.Male;
                     c.CheckInProgression = true;
                 })
-                .AddEquipmentEntity("89343a8dc170abb46ae15c11775e867a")
+                //.AddEquipmentEntity("89343a8dc170abb46ae15c11775e867a")
+                .AddEquipmentEntity(MaleVestigialWingsEE)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var FemaleVestigialWings = FeatureConfigurator.New("GanziFemaleVestigialWings", "{29AF389C-9805-41CB-BA06-5FEF80490E5C}")
-                .SetHideInUI(true)
-                .SetHideNotAvailibleInUI(true)
-                .SetHideInCharacterSheetAndLevelUp(true)
+                .SetDisplayName(VestigialWingsDisplayName)
+                .SetDescription(VestigialWingsDescription)
+                .SetIcon(FeatureRefs.FeralWings.Reference.Get().Icon)
                 .AddComponent<PrerequisiteSex>(c =>
                 {
                     c.gender = Gender.Female;
                     c.CheckInProgression = true;
                 })
-                .AddEquipmentEntity("96122c0bb0c483e46a53b8c9d05a1c39")
+                //.AddEquipmentEntity("96122c0bb0c483e46a53b8c9d05a1c39")
+                .AddEquipmentEntity(FemaleVestigialWingsEE)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var VestigialWings = ProgressionConfigurator.New("GanziVestigialWings", "{1ABB191C-AA30-448F-AEA6-629ADCEDC1B2}")
@@ -424,6 +469,7 @@ namespace EbonsContentMod.Races
                 .AddStatBonus(ModifierDescriptor.UntypedStackable, stat: StatType.SaveReflex, value: 1)
                 .AddStatBonus(ModifierDescriptor.UntypedStackable, stat: StatType.SkillMobility, value: 2)
                 .AddToLevelEntries(1, FemaleVestigialWings, MaleVestigialWings)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var UncannyAuraEyesEE = RaceRecolorizer.RecolorEELink(ContactEEL, new List<Texture2D>() { RaceRecolorizer.GetArmorRampByIndex(13) }, "{179FDD12-AE6B-425A-ABE8-39A4AEC84688}", true, true);
@@ -546,6 +592,41 @@ namespace EbonsContentMod.Races
                 .AddAbilityResources(1, SpellLikeResource, true)
                 .AddFacts([UncannyAuraAbility])
                 .AddEquipmentEntity(UncannyAuraEyesEE)
+                .SetGroups(FeatureGroup.Racial)
+                .Configure();
+
+            var QuibbleFurEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "1aeb459da29dca341a78317170eec262" },
+                RaceRecolorizer.CreateRampsFromColorsSimple(new List<Color>()
+                {new Color( // Dark Pink
+                    RaceRecolorizer.GetColorsFromRGB(90f),
+                    RaceRecolorizer.GetColorsFromRGB(40f),
+                    RaceRecolorizer.GetColorsFromRGB(60f)
+                    )}
+                ), "{2C096337-B17E-45CE-A3F4-DDC2BD4877D6}", true, true,
+                RaceRecolorizer.CreateRampsFromColorsSimple(new List<Color>()
+                    {new Color( // Pink
+                        RaceRecolorizer.GetColorsFromRGB(145f),
+                        RaceRecolorizer.GetColorsFromRGB(75f),
+                        RaceRecolorizer.GetColorsFromRGB(100f)
+                        )}), BodyPartsToRemove: new List<BodyPartType>() { BodyPartType.Eyes });
+
+            var Quibble = AbilityConfigurator.New("GanziQuibbleAbility", "{5B60669C-C915-44A2-8DDF-1801CB98AF4F}")
+                .CopyFrom(AbilityRefs.IllOmen, c => c is not (SpellListComponent or SpellDescriptorComponent or CraftInfoComponent))
+                .AddAbilityResourceLogic(1, isSpendResource: true, requiredResource: SpellLikeResource)
+                .SetType(AbilityType.Supernatural)
+                .AddPretendSpellLevel(spellLevel: 1)
+                .AddSpellDescriptorComponent(SpellDescriptor.Curse)
+                .SetActionType(Kingmaker.UnitLogic.Commands.Base.UnitCommand.CommandType.Swift)
+                .Configure();
+
+            var QuibbleFeat = FeatureConfigurator.New("GanziQuibble", "{73BC2FA4-AAAC-4E06-9BC4-DC038014C1D8}")
+                .SetDisplayName(QuibbleDisplayName)
+                .SetDescription(QuibbleDescription)
+                .SetIcon(AbilityRefs.IllOmen.Reference.Get().Icon)
+                .AddAbilityResources(1, SpellLikeResource, true)
+                .AddReplaceCasterLevelOfAbility(spell: Quibble)
+                .AddEquipmentEntity(QuibbleFurEE)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Oddity = FeatureSelectionConfigurator.New("GanziOdditySelection", "{F96E9F98-28E7-440F-BED8-2C57060A8883}")
@@ -553,7 +634,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(OddityDescription)
                 .SetIcon(AbilityRefs.MagusSpellRecall.Reference.Get().Icon)
                 .SetObligatory(true)
-                .AddToAllFeatures(PrehensileTail, EntropicFlesh, WeaponPlay, SLA, RacingMind, AmorphousLimbs, VestigialWings, UncannyAura)
+                .AddToAllFeatures(PrehensileTail, EntropicFlesh, WeaponPlay, SLA, RacingMind, AmorphousLimbs, VestigialWings, UncannyAura, QuibbleFeat)
                 .SetGroup(FeatureGroup.Racial)
                 .Configure();
             
@@ -565,6 +646,7 @@ namespace EbonsContentMod.Races
                 .AddDamageResistanceEnergy(type: DamageEnergyType.Acid, value: 5)
                 .AddDamageResistanceEnergy(type: DamageEnergyType.Sonic, value: 5)
                 .AddSavingThrowBonusAgainstDescriptor(2, modifierDescriptor: ModifierDescriptor.Racial, spellDescriptor: SpellDescriptor.Polymorph)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Skilled = FeatureConfigurator.New("GanziSkilled", "{06E961F8-4C64-4726-BE50-F4167B1A9C83}")
@@ -573,6 +655,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.HumanSkilled.ToString()).Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.CheckBluff, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillLoreNature, value: 2)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var race =
@@ -593,11 +676,14 @@ namespace EbonsContentMod.Races
 
             // Add race to mount fixes
             RaceMountFixerizer.AddRaceToMountFixes(recoloredrace, CopyRace);
-            //RaceMountFixerizer.AddRaceToMountFixes(race, CopyRace);
+
+            // Register linked EEs
+            EquipmentEntityLink[] SkinLinks = [AmorphousLimbsSkinEE, MaleClawsEE, FemaleClawsEE];
+
+            EELinker.RegisterSkinLink(recoloredrace, SkinLinks);
 
             // Add race to race list
             var raceRef = recoloredrace.ToReference<BlueprintRaceReference>();
-            //var raceRef = race.ToReference<BlueprintRaceReference>();
             ref var races = ref BlueprintRoot.Instance.Progression.m_CharacterRaces;
 
             var length = races.Length;

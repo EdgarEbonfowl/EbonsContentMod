@@ -198,6 +198,7 @@ namespace EbonsContentMod.Races
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.CheckDiplomacy, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.CheckIntimidate, value: 2)
                 .AddClassSkill(StatType.SkillPersuasion)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var BattleHardened = FeatureConfigurator.New("HobgoblinBattleHardened", "{7E1599E7-0E40-462B-B079-E5F81204F061}")
@@ -205,6 +206,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(BattleHardenedDescription)
                 .SetIcon(FeatureRefs.ArmoredHulkIndomitableStance.Reference.Get().Icon) // Also: Self Sufficient
                 .AddStatBonus(ModifierDescriptor.UntypedStackable, stat: StatType.AdditionalCMD, value: 1)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Fearsome = FeatureConfigurator.New("HobgoblinFearsome", "{A493335F-8207-431B-A692-9F97B2E3560F}")
@@ -212,6 +214,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(FearsomeDescription)
                 .SetIcon(AbilityRefs.Rage.Reference.Get().Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.CheckIntimidate, value: 4)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Magehunter = FeatureConfigurator.New("HobgoblinMagehunter", "{D3CCF252-5107-4607-AA70-6BE2EEEDDE4D}")
@@ -220,6 +223,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(FeatureRefs.SpellCombatFeature.Reference.Get().Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillKnowledgeArcana, value: 2)
                 .AddAttackBonusConditional(1, false, ConditionsBuilder.New().TargetIsArcaneCaster().Build(), ModifierDescriptor.Racial)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var PitBoss = FeatureConfigurator.New("HobgoblinPitBoss", "{AF9B3B08-DD2A-415F-8F1B-2475E11CDECD}")
@@ -227,6 +231,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(PitBossDescription)
                 .SetIcon(FeatureRefs.BowlingInfusionFeature.Reference.Get().Icon)
                 .AddCMBBonusForManeuver(descriptor: ModifierDescriptor.Racial, maneuvers: [CombatManeuver.Disarm, CombatManeuver.Trip], value: 1)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var SlaveHunter = FeatureConfigurator.New("HobgoblinSlaveHunter", "{8BDCDEE9-260E-442C-948F-70F694305161}")
@@ -235,6 +240,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(FeatureRefs.UrbanHunterCaptor.Reference.Get().Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillLoreNature, value: 2)
                 .AddSavingThrowBonusAgainstDescriptor(modifierDescriptor: ModifierDescriptor.Racial, spellDescriptor: SpellDescriptor.Disease, value: 2)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Sneaky = FeatureConfigurator.New("HobgoblinStealthy", "{2B94C089-DE7F-454E-969A-B6326694C818}")
@@ -242,6 +248,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(SneakyDescription)
                 .SetIcon(FeatureSelectionRefs.RogueTalentSelection.Reference.Get().Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillStealth, value: 4)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Unfit = ParametrizedFeatureConfigurator.New("HobgoblinUnfit", "{3C7D2711-719F-43B5-89B0-E0334AADE848}")
@@ -254,6 +261,7 @@ namespace EbonsContentMod.Races
                 .SetParameterType(FeatureParameterType.WeaponCategory)
                 .SetWeaponSubCategory(WeaponSubCategory.Martial)
                 .SetRequireProficiency(false)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             /*var Unfit = ProgressionConfigurator.New("HobgoblinUnfit", "{311C8411-CECC-42EA-8802-E0812D1D1788}")
@@ -281,6 +289,7 @@ namespace EbonsContentMod.Races
                 .SetGiveFeaturesForPreviousLevels(true)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillPerception, value: 2)
                 .AddToLevelEntries(1, HobgoblinFemaleEars, HobgoblinMaleEars)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var race =

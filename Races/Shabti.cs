@@ -160,6 +160,7 @@ namespace EbonsContentMod.Races
                     c.Age = UnitPartAgeTTT.AgeLevel.Venerable;
                     c.Type = UnitPartAgeTTT.NegateType.Physical;
                 })
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var ResistLevelDrain = FeatureConfigurator.New("ShabtiResistLevelDrain", "{7008F988-5BDA-4ED5-9FC8-E1A003AB4974}")
@@ -168,6 +169,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(AbilityRefs.DeathWard.Reference.Get().Icon)
                 .AddImmunityToEnergyDrain()
                 .AddBuffDescriptorImmunity(descriptor: SpellDescriptor.NegativeLevel)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var PastLifeKnowledge = FeatureConfigurator.New("ShabtiPastLifeKnowledge", "{DF99A87F-A44D-4E24-83FF-B9D9E0B6F98C}")
@@ -178,6 +180,7 @@ namespace EbonsContentMod.Races
                 .AddClassSkill(StatType.SkillKnowledgeWorld)
                 .AddClassSkill(StatType.SkillLoreNature)
                 .AddClassSkill(StatType.SkillLoreReligion)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var SpellLikeResource = AbilityResourceConfigurator.New("ShabtiSpellLikeResource", "{3FBA18E1-10BA-4942-97E4-BE4F9D31AAB8}")
@@ -200,6 +203,7 @@ namespace EbonsContentMod.Races
                 .AddFacts([Castigate])
                 .AddAbilityResources(1, SpellLikeResource, true)
                 .AddReplaceCasterLevelOfAbility(spell: Castigate)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var race =

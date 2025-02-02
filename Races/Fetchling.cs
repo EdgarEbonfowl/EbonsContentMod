@@ -152,6 +152,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(FetchlingShadowBlendingDescription)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.Blur.ToString()).Icon)
                 .AddComponent<ShadowBlending>()
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var ShadowyResistance = FeatureConfigurator.New("FetchlingShadowyResistance", "{14F40656-D3DF-474A-BC7E-2A29424BC1AB}")
@@ -160,6 +161,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.ProtectionFromEnergy.ToString()).Icon)
                 .AddDamageResistanceEnergy(type: DamageEnergyType.Cold, value: 5)
                 .AddDamageResistanceEnergy(type: DamageEnergyType.Electricity, value: 5)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Skilled = FeatureConfigurator.New("FetchlingSkilled", "{A2D69EDD-FFE3-48A2-B8F9-341C045CF8F6}")
@@ -168,6 +170,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.HumanSkilled.ToString()).Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillKnowledgeArcana, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillStealth, value: 2)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var race =

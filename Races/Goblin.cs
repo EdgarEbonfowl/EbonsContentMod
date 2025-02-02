@@ -135,6 +135,7 @@ namespace EbonsContentMod.Races
                 .SetDisplayName(FastMovementDisplayName)
                 .SetDescription(FastMovementDescription)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureSelectionRefs.RogueTalentSelection.ToString()).Icon)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // Goblin racial traits
@@ -147,6 +148,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.HumanSkilled.ToString()).Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillMobility, value: 4)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillStealth, value: 4)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // City Scavenger
@@ -158,6 +160,7 @@ namespace EbonsContentMod.Races
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillPerception, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillLoreNature, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillKnowledgeWorld, value: 2)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // Eat Anything
@@ -169,6 +172,7 @@ namespace EbonsContentMod.Races
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillLoreNature, value: 4)
                 .AddSavingThrowBonusAgainstDescriptor(4, modifierDescriptor: ModifierDescriptor.Racial, spellDescriptor: SpellDescriptor.Sickened)
                 .AddSavingThrowBonusAgainstDescriptor(4, modifierDescriptor: ModifierDescriptor.Racial, spellDescriptor: SpellDescriptor.Nauseated)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // Hard Head, Big Teeth
@@ -178,6 +182,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(HardHeadBigTeethDescription)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.AcidMaw.ToString()).Icon)
                 .AddAdditionalLimb(weapon: ItemWeaponRefs.Bite1d4.ToString())
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // Oversized Ears
@@ -187,6 +192,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(OversizedEarsDescription)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.SoundBurst.ToString()).Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillPerception, value: 4)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // Tree Runner
@@ -197,6 +203,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.DruidWoodlandStride.ToString()).Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillMobility, value: 4)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillAthletics, value: 4)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var GoblinRacialTraitSelection = FeatureSelectionConfigurator.New("EbonsGoblinRacialTraitSelection", "{5AAD6811-E1E5-47A8-B4A3-1943ABE39685}")

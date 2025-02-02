@@ -58,6 +58,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(OrcFerocityDescription)
                 .AddMechanicsFeature(MechanicsFeatureType.Ferocity)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.HalfOrcFerocity.ToString()).Icon)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var race =

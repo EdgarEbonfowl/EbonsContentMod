@@ -681,6 +681,9 @@ namespace EbonsContentMod.Races
 
             // Raptorwing
 
+            var MaleRaptorwingEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "632dbfaaf86513645a465598fa536892" }, [], "{71BB3892-22FE-4EFB-AA8D-0E10FEE06DD5}", SkipPrimaryColors: true, ScaleEE: [.65f, .65f, .9f]);
+            var FemaleRaptorwingEE = RaceRecolorizer.RecolorEELink(new EquipmentEntityLink() { AssetId = "419520afa5191ee4bb8d33fc75d2fd29" }, [], "{D3907AB8-20A7-4AA4-ADFF-C6D51D6864B0}", SkipPrimaryColors: true, ScaleEE: [.65f, .65f, .9f]);
+
             var FemaleRaptorwing = FeatureConfigurator.New("MongrelFemaleRaptorwing", "{B3B302C2-7F57-469D-90B2-00C3B07534DF}")
                 .SetHideInUI(true)
                 .SetHideNotAvailibleInUI(true)
@@ -690,7 +693,8 @@ namespace EbonsContentMod.Races
                     c.gender = Gender.Female;
                     c.CheckInProgression = true;
                 })
-                .AddEquipmentEntity("419520afa5191ee4bb8d33fc75d2fd29")
+                //.AddEquipmentEntity("419520afa5191ee4bb8d33fc75d2fd29")
+                .AddEquipmentEntity(FemaleRaptorwingEE)
                 .Configure();
 
             var MaleRaptorwing = FeatureConfigurator.New("MongrelMaleRaptorwing", "{6BD0ABA8-182E-4DF8-8391-FC5E8EF9342A}")
@@ -702,7 +706,8 @@ namespace EbonsContentMod.Races
                     c.gender = Gender.Male;
                     c.CheckInProgression = true;
                 })
-                .AddEquipmentEntity("632dbfaaf86513645a465598fa536892")
+                //.AddEquipmentEntity("632dbfaaf86513645a465598fa536892")
+                .AddEquipmentEntity(MaleRaptorwingEE)
                 .Configure();
 
             var Raptorwing = ProgressionConfigurator.New("RaptorWingmongrel", "{A99D1724-6357-4145-B2C6-051DF7C44EAB}")
@@ -727,6 +732,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(NaturalArmorDescription)
                 .SetIcon(FeatureRefs.InvulnerableDefensesShifterFeature.Reference.Get().Icon)
                 .AddStatBonus(ModifierDescriptor.NaturalArmor, stat: StatType.AC, value: 2)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Skilled = FeatureConfigurator.New("EbonsMongrelSkilled", "{15547075-FAC3-49A0-8904-DB6BDC516A64}")
@@ -735,6 +741,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.HumanSkilled.ToString()).Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillStealth, value: 4)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillThievery, value: 4)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var race =

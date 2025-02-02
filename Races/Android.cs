@@ -22,6 +22,7 @@ using BlueprintCore.Actions.Builder;
 using BlueprintCore.Actions.Builder.ContextEx;
 using Kingmaker.UnitLogic.Mechanics.Components;
 using Kingmaker.UnitLogic.Abilities;
+using System.Linq;
 
 namespace EbonsContentMod.Races
 {
@@ -58,6 +59,46 @@ namespace EbonsContentMod.Races
                 RaceRecolorizer.GetColorsFromRGB(80f),
                 RaceRecolorizer.GetColorsFromRGB(93f),
                 RaceRecolorizer.GetColorsFromRGB(109f)
+                ),
+            new Color( // Washed out skin
+                RaceRecolorizer.GetColorsFromRGB(124f),
+                RaceRecolorizer.GetColorsFromRGB(97f),
+                RaceRecolorizer.GetColorsFromRGB(92f)
+                ),
+            new Color( // Skin
+                RaceRecolorizer.GetColorsFromRGB(146f),
+                RaceRecolorizer.GetColorsFromRGB(97f),
+                RaceRecolorizer.GetColorsFromRGB(79f)
+                ),
+            new Color( // Dark Skin
+                RaceRecolorizer.GetColorsFromRGB(117f),
+                RaceRecolorizer.GetColorsFromRGB(85f),
+                RaceRecolorizer.GetColorsFromRGB(57f)
+                ),
+            new Color( // Very Dark Skin
+                RaceRecolorizer.GetColorsFromRGB(86f),
+                RaceRecolorizer.GetColorsFromRGB(56f),
+                RaceRecolorizer.GetColorsFromRGB(38f)
+                ),
+            new Color( // Light Pink Skin
+                RaceRecolorizer.GetColorsFromRGB(167f),
+                RaceRecolorizer.GetColorsFromRGB(124f),
+                RaceRecolorizer.GetColorsFromRGB(124f)
+                ),
+            new Color( // Pink Skin
+                RaceRecolorizer.GetColorsFromRGB(145f),
+                RaceRecolorizer.GetColorsFromRGB(100f),
+                RaceRecolorizer.GetColorsFromRGB(100f)
+                ),
+            new Color( // Light Blue Skin
+                RaceRecolorizer.GetColorsFromRGB(135f),
+                RaceRecolorizer.GetColorsFromRGB(135f),
+                RaceRecolorizer.GetColorsFromRGB(160f)
+                ),
+            new Color( // Lavendar Skin
+                RaceRecolorizer.GetColorsFromRGB(130f),
+                RaceRecolorizer.GetColorsFromRGB(105f),
+                RaceRecolorizer.GetColorsFromRGB(130f)
                 ),
         ];
 
@@ -139,11 +180,18 @@ namespace EbonsContentMod.Races
 
         internal static void Configure()
         {
+            var MaleHairs = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.AasimarRace.ToString()).MaleOptions.Hair.AppendToArray(BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HumanRace.ToString()).MaleOptions.Hair);
+            var FemaleHairs = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.AasimarRace.ToString()).FemaleOptions.Hair.AppendToArray(BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HumanRace.ToString()).FemaleOptions.Hair);
+            var HairColors = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HumanRace.ToString()).MaleOptions.Hair[0].Load(true, false).PrimaryColorsProfile.Ramps;
+            HairColors.AddRange(BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.OreadRace.ToString()).MaleOptions.Hair[0].Load(true, false).PrimaryColorsProfile.Ramps);
+            HairColors = HairColors.Distinct().ToList();
+
             var Alert = FeatureConfigurator.New("AndroidAlert", "{50D50AB3-D6DA-4D62-8C4B-E46DE01FB632}")
                 .SetDisplayName(AlertDisplayName)
                 .SetDescription(AlertDescription)
                 .SetIcon(FeatureRefs.HunterTactics.Reference.Get().Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillPerception, value: 4)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
              
             var Emotionless = FeatureConfigurator.New("AndroidEmotionless", "{B0D49F9E-16EE-4C0F-8419-8E5B2E619445}") // Icon
@@ -151,6 +199,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(EmotionlessDescription)
                 .SetIcon(FeatureRefs.MindGamesFeature.Reference.Get().Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.CheckBluff, value: -4)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
             
             var Constructed = FeatureConfigurator.New("AndroidConstructed", "{64168E5C-8C84-4ECD-B2B2-556A9662F288}") // Icon
@@ -167,6 +216,7 @@ namespace EbonsContentMod.Races
                 .AddBuffDescriptorImmunity(descriptor: SpellDescriptor.Sleep)
                 .AddBuffDescriptorImmunity(descriptor: SpellDescriptor.Fear)
                 .AddBuffDescriptorImmunity(descriptor: SpellDescriptor.Emotion)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // Nanite Surge
@@ -255,6 +305,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.RemoveDisease.ToString()).Icon) // Change
                 .AddFacts(new() { NaniteSurgeAbility })
                 .AddAbilityResources(1, NaniteSurgeResource, true)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var race =
@@ -271,7 +322,7 @@ namespace EbonsContentMod.Races
                 .Configure();
 
             // Recolor Race
-            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, BaldRace: true, EyeLinkedEEs: NewEyeLinkedEEs);
+            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, BaldDefault: true, EyeLinkedEEs: NewEyeLinkedEEs, CustomMaleHairs: MaleHairs, CustomFemaleHairs: FemaleHairs, CustomHairRamps: HairColors);
 
             // Add race to mount fixes
             RaceMountFixerizer.AddRaceToMountFixes(recoloredrace, CopyRace);

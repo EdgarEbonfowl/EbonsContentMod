@@ -157,6 +157,7 @@ namespace EbonsContentMod.Races
                 .AddSavingThrowBonusAgainstDescriptor(2, modifierDescriptor: ModifierDescriptor.Racial, spellDescriptor: SpellDescriptor.Death)
                 .AddSavingThrowBonusAgainstDescriptor(2, modifierDescriptor: ModifierDescriptor.Racial, spellDescriptor: SpellDescriptor.ChannelNegativeHarm)
                 .AddSavingThrowBonusAgainstDescriptor(2, modifierDescriptor: ModifierDescriptor.Racial, spellDescriptor: SpellDescriptor.NegativeLevel)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             return feat;
@@ -170,6 +171,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.SkillFocusPhysique.ToString()).Icon)
                 .AddBuffSkillBonus(StatType.SkillAthletics, 2, ModifierDescriptor.Racial)
                 .AddClassSkill(StatType.SkillAthletics)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Mobility = FeatureConfigurator.New("ShardsOfThePastMobility1", "{2A138500-9972-44AA-BA86-DB08BA5BCA44}")
@@ -178,6 +180,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.SkillFocusAcrobatics.ToString()).Icon)
                 .AddBuffSkillBonus(StatType.SkillMobility, 2, ModifierDescriptor.Racial)
                 .AddClassSkill(StatType.SkillMobility)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Stealth = FeatureConfigurator.New("ShardsOfThePastStealth1", "{3663414F-44A8-4544-8822-00F001C61E77}")
@@ -186,6 +189,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.SkillFocusStealth.ToString()).Icon)
                 .AddBuffSkillBonus(StatType.SkillStealth, 2, ModifierDescriptor.Racial)
                 .AddClassSkill(StatType.SkillStealth)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Trickery = FeatureConfigurator.New("ShardsOfThePastTrickery1", "{C665DBD7-68D4-4203-9354-E87DD47B9490}")
@@ -194,6 +198,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.SkillFocusThievery.ToString()).Icon)
                 .AddBuffSkillBonus(StatType.SkillThievery, 2, ModifierDescriptor.Racial)
                 .AddClassSkill(StatType.SkillThievery)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Arcana = FeatureConfigurator.New("ShardsOfThePastArcana1", "{C5E15394-64C9-4931-B45E-EA0AE2C0A1B3}")
@@ -202,6 +207,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.SkillFocusKnowledgeArcana.ToString()).Icon)
                 .AddBuffSkillBonus(StatType.SkillKnowledgeArcana, 2, ModifierDescriptor.Racial)
                 .AddClassSkill(StatType.SkillKnowledgeArcana)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var World = FeatureConfigurator.New("ShardsOfThePastWorld1", "{D6CB06F4-C330-41E5-9EBF-E20279D242C7}")
@@ -210,6 +216,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.SkillFocusKnowledgeWorld.ToString()).Icon)
                 .AddBuffSkillBonus(StatType.SkillKnowledgeWorld, 2, ModifierDescriptor.Racial)
                 .AddClassSkill(StatType.SkillKnowledgeWorld)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Nature = FeatureConfigurator.New("ShardsOfThePastNature1", "{07EE34E6-317D-49F0-B029-3ECEC9A994FE}")
@@ -218,6 +225,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.SkillFocusLoreNature.ToString()).Icon)
                 .AddBuffSkillBonus(StatType.SkillLoreNature, 2, ModifierDescriptor.Racial)
                 .AddClassSkill(StatType.SkillLoreNature)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Religion = FeatureConfigurator.New("ShardsOfThePastReligion1", "{F751C243-325F-4EBA-9F53-EDB716AD840C}")
@@ -226,6 +234,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.SkillFocusLoreReligion.ToString()).Icon)
                 .AddBuffSkillBonus(StatType.SkillLoreReligion, 2, ModifierDescriptor.Racial)
                 .AddClassSkill(StatType.SkillLoreReligion)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Perception = FeatureConfigurator.New("ShardsOfThePastPerception1", "{7434B857-355A-4B77-9F7E-06ABA6E1EF81}")
@@ -234,6 +243,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.SkillFocusPerception.ToString()).Icon)
                 .AddBuffSkillBonus(StatType.SkillPerception, 2, ModifierDescriptor.Racial)
                 .AddClassSkill(StatType.SkillPerception)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Persuasion = FeatureConfigurator.New("ShardsOfThePastPersuasion1", "{210464C8-EB14-498A-95A9-87904E23D2E0}")
@@ -242,6 +252,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.SkillFocusDiplomacy.ToString()).Icon)
                 .AddBuffSkillBonus(StatType.SkillPersuasion, 2, ModifierDescriptor.Racial)
                 .AddClassSkill(StatType.SkillPersuasion)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var UMD = FeatureConfigurator.New("ShardsOfThePastUMD1", "{60C8AFB2-7DA7-4406-9CC3-1264D6478465}")
@@ -250,6 +261,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.SkillFocusUseMagicDevice.ToString()).Icon)
                 .AddBuffSkillBonus(StatType.SkillUseMagicDevice, 2, ModifierDescriptor.Racial)
                 .AddClassSkill(StatType.SkillUseMagicDevice)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var feat = FeatureSelectionConfigurator.New("SamsaranShardsOfThePast1", "{484B5905-3A7C-4DD5-BF61-5112ACFADEF3}")
@@ -257,7 +269,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(ShardsOfThePastDescription)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeatureSelection>(FeatureSelectionRefs.SkillFocusSelection.ToString()).Icon)
                 .AddToAllFeatures(Athletics, Mobility, Stealth, Trickery, Arcana, World, Nature, Religion, Perception, Persuasion, UMD)
-                .SetGroup(FeatureGroup.Feat)
+                .SetGroup(FeatureGroup.Racial)
                 .SetObligatory(true)
                 .Configure();
 
@@ -276,6 +288,7 @@ namespace EbonsContentMod.Races
                 .SetGiveFeaturesForPreviousLevels(true)
                 .SetReapplyOnLevelUp(false)
                 .AddToLevelEntries(1, ShardsOfThePast, ShardsOfThePast)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             return feat;
@@ -426,6 +439,7 @@ namespace EbonsContentMod.Races
                     c.SpellLevelPenalty = 0;
                     c.SpellLevel = 0;
                 })
+                .SetGroups(FeatureGroup.Trait)
                 .Configure();
 
             if (i > 0) ParametrizedFeatureConfigurator.For(guid).AddPrerequisiteStatValue(CastingStat, MinimumStat, true).Configure();
@@ -557,6 +571,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(MysticPastLifeDescription)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintAbility>(AbilityRefs.MagusSpellRecall.ToString()).m_Icon)
                 .SetHideNotAvailibleInUI()
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
                 foreach (BlueprintCharacterClass spellcasterclass in MysticPastLifeClasses)
@@ -610,6 +625,7 @@ namespace EbonsContentMod.Races
                 .AddFacts(new() { ability })
                 .AddAbilityResources(1, resource, true)
                 .AddReplaceCasterLevelOfAbility(spell: ability)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             return feat;

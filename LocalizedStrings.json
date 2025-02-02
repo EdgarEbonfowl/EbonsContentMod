@@ -632,7 +632,7 @@
 
   {
     "Key": "OrcSorcererBloodlineFeats.Description",
-    "enGB": "At 7th level, and every six levels thereafter, a sorcerer receives one bonus feat, chosen from a list specific to each bloodline. The sorcerer must meet the prerequisites for these bonus feats. \nBonus Feats: Diehard, Endurance, Great Fortitude. Intimidating Prowess, Power Attack, Toughness, and Metamagic (Empower Spell)."
+    "enGB": "At 7th level, and every six levels thereafter, a sorcerer receives one bonus feat, chosen from a list specific to each bloodline. The sorcerer must meet the prerequisites for these bonus feats. \nBonus Feats: Diehard, Endurance, Great Fortitude, Intimidating Prowess, Power Attack, Toughness, and Metamagic (Empower Spell)."
   },
 
   {
@@ -2536,7 +2536,7 @@
 
   {
     "Key": "Ganzi.AmorphousLimbs.Description",
-    "enGB": "The influence of the Maelstrom manifests in the ganzi's ability to transform one of her limbs at will, into a natural weapon such as a massive clawed arm. The ganzi gains a natural claw attack that deals 1d6 damage."
+    "enGB": "The influence of the Maelstrom manifests in the ganzi's ability to transform her limbs into a natural weapon such as a massive clawed arm. At will, the ganzi can activate this ability as a swift action to gain two natural claw attacks that deal 1d6 damage."
   },
 
   {
@@ -2559,6 +2559,17 @@
   {
     "Key": "Ganzi.UncannyAura.Description",
     "enGB": "Some ganzis have an unsettling aura of chaos that rattles hostile creatures that venture too close. Once per day as a standard action, such a ganzi can activate an uncanny aura; enemies within 30 feet must succeed at a Will saving throw (DC = 10 + half the ganzi's Hit Dice + the ganzi's Charisma modifier) or become frightened until the beginning of the ganzi's next turn. The aura remains for a number of rounds equal to the ganzi's Charisma modifier (minimum 1 round). Once a creature has been affected by an uncanny aura, whether it failed its save or not, it cannot be affected again for 24 hours."
+  },
+
+  {
+    "Key": "Ganzi.Quibble.Name",
+    "ProcessTemplates": false,
+    "enGB": "Quibble"
+  },
+
+  {
+    "Key": "Ganzi.Quibble.Description",
+    "enGB": "For most ganzis, the influence of chaos is relatively subtle and manifests as an ability to infect others with entropy and unexpected bad luck. Once per day as a swift action, a ganzi can twist probability and alter the luck of a single creature within 20 feet that fails its Will save, forcing it to roll its next d20 roll twice and take the worse result as with the Ill Omen spell. For every five character levels you have, the target must roll twice on an additional d20 roll (to a maximum of five rolls at 20th level). This is a curse effect."
   },
 
   {
@@ -2691,5 +2702,188 @@
   {
     "Key": "Hobgoblin.HobgoblinRacialTrait.Description",
     "enGB": "Although many hobgoblins follow the general model of the hobgoblin, many more do not. Those of different backgrounds may evince dramatically different manifestations of their heritage, both in appearance and in ability."
+  },
+
+  {
+    "Key": "ProteanSorcererBloodline.Name",
+    "ProcessTemplates": false,
+    "enGB": "Protean Bloodline"
+  },
+
+  {
+    "Key": "ProteanSorcererBloodline.Description",
+    "enGB": "You have in your veins the ever-changing wildness of primal chaos, the raw essence of unbound creation. Your mind and spirit burst with the constant inspiration of consummate freedom, though you have difficulty following through on a task when another, new and exciting, catches your interest."
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineClassSkill.Name",
+    "ProcessTemplates": false,
+    "enGB": "Class Skill - Lore (Nature)"
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineClassSkill.Description",
+    "enGB": "Additional class skill from the potean bloodline."
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineSpells.Description",
+    "enGB": "At 3rd level, and every two levels thereafter, a sorcerer learns an additional spell, derived from her bloodline."
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineFeats.Name",
+    "ProcessTemplates": false,
+    "enGB": "Bloodline Feat Selection"
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineFeats.Description",
+    "enGB": "At 7th level, and every six levels thereafter, a sorcerer receives one bonus feat, chosen from a list specific to each bloodline. The sorcerer must meet the prerequisites for these bonus feats. \nBonus Feats: Agile Maneuvers, Defensive Combat Training, Great Fortitude, Improved Great Fortitude, Spell Focus, Toughness, and Metamagic (Empower Spell)."
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineRequisiteFeature.Name",
+    "ProcessTemplates": false,
+    "enGB": "Protean Bloodline"
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineRequisiteFeature.Description",
+    "enGB": "Protean bloodline requisite feature."
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineArcana.Name",
+    "ProcessTemplates": false,
+    "enGB": "Protean Bloodline Arcana"
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineArcana.Description",
+    "enGB": "Your magic of creation and changing is hard to unravel. The DC to dispel transmutation or conjuration spells that you cast is increased by +4."
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineProtoplasm.Name",
+    "ProcessTemplates": false,
+    "enGB": "Protoplasm"
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineProtoplasmImmobile.Name",
+    "ProcessTemplates": false,
+    "enGB": "Protoplasm (Immobilized)"
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineProtoplasmEntangled.Name",
+    "ProcessTemplates": false,
+    "enGB": "Protoplasm (Entangled)"
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineProtoplasm.Description",
+    "enGB": "At 1st level, you can create a ball of entropic protoplasm and hurl it at targets within close range. The sorcerer makes a ranged touch attack and a successful hit inflicts the entangled condition on the target and inflicts 1 point of acid damage per round for 1d3 rounds. If the target fails a Reflex save, the protoplasm also glues the target to the floor, preventing movement. Each round, a target can attempt to break free of the entangling protoplasm by making a combat maneuver check, Athletics check, or Mobility check against the DC of this ability. You may use this ability a number of times per day equal to 3 + your Charisma modifier."
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineResistances.Name",
+    "ProcessTemplates": false,
+    "enGB": "Protean Resistnaces"
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineResistances.Description",
+    "enGB": "At 3rd level, you gain resist acid 5 and a +2 bonus on saving throws against polymorph, petrification, and transmutation spells or effects. At 9th level, you gain resist acid 10 and your save bonus increases to +4."
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineRealityWrinkle.Name",
+    "ProcessTemplates": false,
+    "enGB": "Reality Wrinkle"
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineRealityWrinkle.Description",
+    "enGB": "At 9th level, you can surround yourself with a mobile, 10-foot-radius emanation of mutable reality. This rippling distortion grants a 20% miss chance to all allies inside the aura as with the blur spell. You may use this ability a number of rounds per day equal to your sorcerer level, though this duration need not be continuous."
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineBlackTentacles.Name",
+    "ProcessTemplates": false,
+    "enGB": "Black Tentacles"
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineBlackTentacles.Description",
+    "enGB": "Every enemy creature within the area of the spell is the target of a combat maneuver check made to grapple each round at the beginning of your turn, including the round that black tentacles is cast. Enemies that enter the area of effect are also automatically attacked. The tentacles do not provoke attacks of opportunity. When determining the tentacles' CMB, the tentacles use your caster level as their base attack bonus and receive a +4 bonus due to their Strength and a +1 size bonus. Roll only once for the entire spell effect each round and apply the result to all creatures in the area of effect. \nIf the tentacles succeed in grappling a foe, that foe takes 1d6+4 points of damage and gains the grappled condition. Grappled opponents cannot move without first breaking the grapple. All other movement is prohibited unless the creature breaks the grapple first. The black tentacles spell receives a +5 bonus on grapple checks made against opponents it is already grappling, but cannot move foes or pin foes. Each round that black tentacles succeeds on a grapple check, it deals an additional 1d6+4 points of damage. The CMD of black tentacles, for the purposes of escaping the grapple, is equal to 10 + its CMB."
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineSpatialTear.Name",
+    "ProcessTemplates": false,
+    "enGB": "Spatial Tear"
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineSpatialTear.Description",
+    "enGB": "At 15th level, once per day, you can unravel the fibers of reality and ride along them as they snap back into place. This power functions as dimension door, while also creating a mass of black tentacles centered on your former location. Both of these effects use your sorcerer level as the caster level. At 20th level, you can use this ability twice per day."
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineSpatialTearSingle.Name",
+    "ProcessTemplates": false,
+    "enGB": "Spatial Tear (Caster)"
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineSpatialTearMass.Name",
+    "ProcessTemplates": false,
+    "enGB": "Spatial Tear (Mass)"
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineAvatarOfChaos.Name",
+    "ProcessTemplates": false,
+    "enGB": "Avatar Of Chaos"
+  },
+
+  {
+    "Key": "ProteanSorcererBloodlineAvatarOfChaos.Description",
+    "enGB": "At 20th level, you are infused with the essence of raw chaos. You gain immunity to acid, petrification, and polymorph effects (except when cast on self), as well as a +2 bonus to save DCs of spells with the Chaos descriptor and on checks to overcome spell resistance against lawful creatures."
+  },
+
+  {
+    "Key": "BloodlineMutation.BloodHavoc.Name",
+    "ProcessTemplates": false,
+    "enGB": "Blood Havoc"
+  },
+
+  {
+    "Key": "BloodlineMutation.BloodHavoc.Description",
+    "enGB": "Whenever you cast a spell that deals damage, add 1 point of damage per die rolled. This benefit applies only to damaging spells that belong to schools you have selected with Spell Focus or that are bloodline spells for your bloodline."
+  },
+
+  {
+    "Key": "BloodlineMutation.BloodIntensity.Name",
+    "ProcessTemplates": false,
+    "enGB": "Blood Intensity"
+  },
+
+  {
+    "Key": "BloodlineMutation.BloodIntensity.Description",
+    "enGB": "Whenever you cast a bloodrager or sorcerer spell that deals damage, you can increase its maximum number of damage dice by an amount equal to your Strength or Charisma modifier, whichever is higher. This otherwise functions as—and does not stack with—the Intensified Spell feat. You can use this ability once per day at 3rd level and one additional time per day for every 4 caster levels you have beyond 3rd, up to five times per day at 19th level."
+  },
+
+  {
+    "Key": "BloodlineMutation.BloodPiercing.Name",
+    "ProcessTemplates": false,
+    "enGB": "Blood Piercing"
+  },
+
+  {
+    "Key": "BloodlineMutation.BloodPiercing.Description",
+    "enGB": "When you cast a bloodrager or sorcerer spell that deals damage, creatures affected by the spell reduce their energy resistance and spell resistance against the spell's effects by an amount equal to your Strength or Charisma modifier, whichever is higher. You can use this ability once per day at 4th level and one additional time per day for every 5 caster levels you have beyond 3rd, up to four times per day at 18th level."
   },
 ]

@@ -242,6 +242,7 @@ namespace EbonsContentMod.Races
                 .AddIncreaseSpellDescriptorDC(1, SpellDescriptor.Fire, modifierDescriptor: ModifierDescriptor.Racial)
                 .SetGiveFeaturesForPreviousLevels(true)
                 .AddToLevelEntries(1, MaleIfritHorns, FemaleIfritHorns)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var EnergyResistance = FeatureConfigurator.New("IfritEnergyResistance", "{2AEECCDD-CA8B-4AC6-B8A9-C00B08E7F75F}")
@@ -249,6 +250,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(IfritEnergyResistanceDescription)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.BloodlineDraconicRedResistancesAbilityLevel1.ToString()).Icon)
                 .AddDamageResistanceEnergy(type: DamageEnergyType.Fire, value: 5)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var SpellLikeResource = AbilityResourceConfigurator.New("IfritSpellLikeResource", "{5CB64827-9781-4C59-A030-4219BC7E5197}")
@@ -291,6 +293,7 @@ namespace EbonsContentMod.Races
                 .AddFacts([FireBelly])
                 .AddAbilityResources(1, SpellLikeResource, true)
                 .AddReplaceCasterLevelOfAbility(spell: FireBelly)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Sunsoul = FeatureConfigurator.New("IfritSunsoul", "{0F452365-699D-48D1-8D5A-5402353D9F88}")
@@ -302,6 +305,7 @@ namespace EbonsContentMod.Races
                 .AddFacts([FlareBurst])
                 .AddAbilityResources(1, SpellLikeResource, true)
                 .AddReplaceCasterLevelOfAbility(spell: FlareBurst)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var IfritGeneral = FeatureConfigurator.New("IfritGeneral", "{FB5A6297-42CE-4EBA-973A-02FFD98B1ACE}")
@@ -313,6 +317,7 @@ namespace EbonsContentMod.Races
                 .AddFacts([BurningHands])
                 .AddAbilityResources(1, SpellLikeResource, true)
                 .AddReplaceCasterLevelOfAbility(spell: BurningHands)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var IfritElementalHeritageSelection = FeatureSelectionConfigurator.New("IfritElementalHeritageSelection", "{5AE79B6B-57C3-42A0-8714-829A5299825F}")

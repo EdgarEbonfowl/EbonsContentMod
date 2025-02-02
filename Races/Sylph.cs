@@ -172,6 +172,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(SylphEnergyResistanceDescription)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.BloodlineDraconicBlueResistancesAbilityLevel1.ToString()).Icon)
                 .AddDamageResistanceEnergy(type: DamageEnergyType.Electricity, value: 5)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var SpellLikeResource = AbilityResourceConfigurator.New("SylphFeatherStepResource", "{847EE70E-F33F-4EC7-9B83-9FA5128FD1E0}")
@@ -185,6 +186,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintProgression>(ProgressionRefs.BloodlineElementalAirProgression.ToString()).Icon)
                 .AddIncreaseSpellDescriptorCasterLevel(1, SpellDescriptor.Electricity, modifierDescriptor: ModifierDescriptor.Racial)
                 .AddIncreaseSpellDescriptorDC(1, SpellDescriptor.Electricity, modifierDescriptor: ModifierDescriptor.Racial)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // Elemental Heritage
@@ -230,6 +232,7 @@ namespace EbonsContentMod.Races
                 .AddFacts([ExpeditiousRetreat])
                 .AddAbilityResources(1, SpellLikeResource, true)
                 .AddReplaceCasterLevelOfAbility(spell: ExpeditiousRetreat)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Stormsoul = FeatureConfigurator.New("SylphStormsoul", "{492386CC-43B2-4AD3-9050-08EE2A3009BD}")
@@ -242,6 +245,7 @@ namespace EbonsContentMod.Races
                 .AddAbilityResources(1, SpellLikeResource, true)
                 .AddReplaceCasterLevelOfAbility(spell: ShockingGrasp)
                 .AddReplaceCasterLevelOfAbility(spell: ShockingGraspEffect)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var SylphGeneral = FeatureConfigurator.New("SylphGeneral", "{51B6AD50-738B-4DF8-BD75-D0DB4FA21F1C}")
@@ -253,6 +257,7 @@ namespace EbonsContentMod.Races
                 .AddFacts([FeatherStep])
                 .AddAbilityResources(1, SpellLikeResource, true)
                 .AddReplaceCasterLevelOfAbility(spell: FeatherStep)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var SylphElementalHeritageSelection = FeatureSelectionConfigurator.New("SylphElementalHeritageSelection", "{3B1902B3-B8A7-423B-82FB-3D6EA0220E37}")

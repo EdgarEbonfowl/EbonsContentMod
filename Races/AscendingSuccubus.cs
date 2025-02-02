@@ -114,9 +114,9 @@ namespace EbonsContentMod.Races
                 .Configure();
 
             var MaleWings = FeatureConfigurator.New("MaleAscendingSuccubusWings", "{519F0A93-22EC-4300-89AE-97D4E558034C}")
-                .SetHideInUI(true)
-                .SetHideNotAvailibleInUI(true)
-                .SetHideInCharacterSheetAndLevelUp(true)
+                .SetDisplayName(SuccubusWingsDisplayName)
+                .SetDescription(SuccubusWingsDescription)
+                .SetIcon(FeatureRefs.FeatureWingsDraconicWhite.Reference.Get().Icon)
                 .AddComponent<PrerequisiteSex>(c =>
                 {
                     c.gender = Gender.Male;
@@ -124,12 +124,13 @@ namespace EbonsContentMod.Races
                 })
                 .AddEquipmentEntity("23b3eed8f78e69c40a2c6d416cac2f9e")
                 .AddEquipmentEntity(MaleHornsEE)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var FemaleWings = FeatureConfigurator.New("FemaleAscendingSuccubusWings", "{21D50270-33B5-40AD-9D3A-B31B83C56C59}")
-                .SetHideInUI(true)
-                .SetHideNotAvailibleInUI(true)
-                .SetHideInCharacterSheetAndLevelUp(true)
+                .SetDisplayName(SuccubusWingsDisplayName)
+                .SetDescription(SuccubusWingsDescription)
+                .SetIcon(FeatureRefs.FeatureWingsDraconicWhite.Reference.Get().Icon)
                 .AddComponent<PrerequisiteSex>(c =>
                 {
                     c.gender = Gender.Female;
@@ -137,6 +138,7 @@ namespace EbonsContentMod.Races
                 })
                 .AddEquipmentEntity("317c89eb4850e0a45a5eb3e4ae0124a9")
                 .AddEquipmentEntity(FemaleHornsEE)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var NewSuccubusWingsFeature = ProgressionConfigurator.New("NewAscendingSuccubusWingsFeature", "{31DF9402-18E4-4FB8-86B9-DDAF1A2F3733}")
@@ -146,15 +148,18 @@ namespace EbonsContentMod.Races
                 .SetGiveFeaturesForPreviousLevels(true)
                 .AddToLevelEntries(1, MaleWings, FemaleWings)
                 .AddFacts([NewSuccubusWingsBuff])
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             FeatureConfigurator.For(FeatureRefs.AscendingSuccubusDR)
                 .SetIcon(AbilityRefs.ProtectionFromEnergy.Reference.Get().Icon)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             FeatureConfigurator.For(FeatureRefs.AscendingSuccubusVampiricTouchFeature)
                 .SetDisplayName(AbilityRefs.VampiricTouch.Reference.Get().m_DisplayName)
                 .SetIcon(AbilityRefs.VampiricTouch.Reference.Get().Icon)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var race =

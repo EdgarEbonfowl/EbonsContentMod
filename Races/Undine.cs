@@ -313,6 +313,7 @@ namespace EbonsContentMod.Races
                 .AddFacts([ChillTouch])
                 .AddAbilityResources(1, SpellLikeResource, true)
                 .AddReplaceCasterLevelOfAbility(spell: ChillTouch)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Mistsoul = FeatureConfigurator.New("UndineMistsoul", "{EAA925F4-C8CF-4CA0-ABE6-9632B4B78069}")
@@ -324,6 +325,7 @@ namespace EbonsContentMod.Races
                 .AddFacts([blur])
                 .AddAbilityResources(1, SpellLikeResource, true)
                 .AddReplaceCasterLevelOfAbility(spell: blur)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var UndineGeneral = FeatureConfigurator.New("UndineGeneral", "{FE92658B-828A-4BCD-8D94-72C2C5A6EFF3}")
@@ -335,6 +337,7 @@ namespace EbonsContentMod.Races
                 .AddFacts([HydraulicPush])
                 .AddAbilityResources(1, SpellLikeResource, true)
                 .AddReplaceCasterLevelOfAbility(spell: HydraulicPush)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var UndineElementalHeritageSelection = FeatureSelectionConfigurator.New("UndineElementalHeritageSelection", "{8219CCA3-3A7D-4785-B273-F23032413991}")
@@ -351,6 +354,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(EnergyResistanceDescription)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.BloodlineDraconicWhiteResistancesAbilityLevel1.ToString()).Icon)
                 .AddDamageResistanceEnergy(type: DamageEnergyType.Cold, value: 5)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // Water Affinity
@@ -360,6 +364,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.BloodlineElementalWaterArcana.ToString()).Icon)
                 .AddIncreaseSpellDescriptorCasterLevel(1, SpellDescriptor.Cold, modifierDescriptor: ModifierDescriptor.Racial)
                 .AddIncreaseSpellDescriptorDC(1, SpellDescriptor.Cold, modifierDescriptor: ModifierDescriptor.Racial)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var race =

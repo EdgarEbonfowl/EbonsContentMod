@@ -262,7 +262,7 @@ public static class Main
             {
                 EldritchScrapper.Configure();
                 CollegiateInitiate.Configure(); // Not compatible with Worldcrawl yet
-                OrcSorcererBloodline.Configure();
+                ConfigureBloodlines.Configure();
                 Samsaran.Configure();
                 Svirfneblin.Configure();
                 Duergar.Configure();

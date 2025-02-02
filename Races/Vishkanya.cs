@@ -232,6 +232,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(FeatureRefs.PoisonImmunity.Reference.Get().Icon)
                 .AddSavingThrowBonusAgainstDescriptor(ContextValues.Rank(), modifierDescriptor: ModifierDescriptor.Racial, spellDescriptor: SpellDescriptor.Poison)
                 .AddContextRankConfig(ContextRankConfigs.CharacterLevel())
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var Limber = FeatureConfigurator.New("VishkanyaLimber", "{4BE4A9DD-34CF-4228-ABC0-52CBF467AF44}")
@@ -240,6 +241,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(FeatureRefs.Evasion.Reference.Get().Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillMobility, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillStealth, value: 2)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var ToxicResource = AbilityResourceConfigurator.New("VishkanyaToxicResource", "{F95920B9-AA87-43A1-9EBD-2C57D58A673F}")
@@ -359,6 +361,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(ToxicDescription)
                 .SetIcon(FeatureRefs.AssassinCreatePoison.Reference.Get().Icon)
                 .AddFacts([ToxicResource, ToxicAbility])
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var WeaponFamiliarity = FeatureConfigurator.New("VishkanyaWeaponFamiliarity", "{888BA5C3-F92E-4019-B14D-5D52F5FEF38B}")
@@ -367,6 +370,7 @@ namespace EbonsContentMod.Races
                 //.SetIcon(FeatureRefs.ElvenWeaponFamiliarity.Reference.Get().Icon)
                 .SetIcon(ItemWeaponRefs.StandardKukri.Reference.Get().Icon)
                 .AddProficiencies(weaponProficiencies: [WeaponCategory.Kukri, WeaponCategory.Starknife])
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var race =

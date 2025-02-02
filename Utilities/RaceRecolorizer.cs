@@ -26,12 +26,15 @@ using UnityEngine.Experimental.Rendering;
 using static UnityModManagerNet.UnityModManager.TextureReplacer;
 using UniRx;
 using System.Linq.Expressions;
+using Kingmaker.UI.MVVM._PCView.TacticalCombat.Result;
 
 namespace EbonsContentMod.Utilities
 {
     internal class RaceRecolorizer
     {
         internal static string ToolOutputFilePath = Main.ModEntry.Path + "ToolOutput";
+
+
 
         public static float GetColorsFromRGB(float f)
         {
@@ -50,7 +53,34 @@ namespace EbonsContentMod.Utilities
 
             return null;
         }
-        
+
+        public static Texture2D GetRaceSkinRampByIndex(BlueprintRace race, int i)
+        {
+            var tex = race.MaleOptions.Heads[0].Load(true, false).PrimaryColorsProfile.Ramps[i];
+
+            if (tex != null) return tex;
+
+            return null;
+        }
+
+        public static Texture2D GetRaceEyeRampByIndex(BlueprintRace race, int i)
+        {
+            var tex = race.MaleOptions.Heads[0].Load(true, false).SecondaryColorsProfile.Ramps[i];
+
+            if (tex != null) return tex;
+
+            return null;
+        }
+
+        public static Texture2D GetRaceHairRampByIndex(BlueprintRace race, int i)
+        {
+            var tex = race.MaleOptions.Hair[0].Load(true, false).PrimaryColorsProfile.Ramps[i];
+
+            if (tex != null) return tex;
+
+            return null;
+        }
+
         public static T[] Arr<T>(params T[] val)
         {
             return val;
@@ -197,6 +227,33 @@ namespace EbonsContentMod.Utilities
             }
 
             return ramps;
+        }
+
+        /// <summary>
+        /// Creates a single ramp from a color
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// color = color you want to create a ramp from.
+        /// </para>
+        /// </remarks>
+        /// <returns>
+        /// New Texture2D created from the color passed to the function.
+        /// </returns>
+        public static Texture2D CreateSingleRampFromColor(Color color)
+        {
+            Texture2D newtexture = new(1, 1, TextureFormat.RGB24, false)
+            {
+                filterMode = FilterMode.Bilinear,
+                wrapMode = TextureWrapMode.Clamp,
+                wrapModeU = TextureWrapMode.Clamp,
+                wrapModeV = TextureWrapMode.Clamp,
+                wrapModeW = TextureWrapMode.Clamp,
+            };
+            newtexture.SetPixel(1, 1, color);
+            newtexture.Apply(true, false);
+
+            return newtexture;
         }
 
         public static EquipmentEntity RemoveBodyparts(EquipmentEntity asset, List<BodyPartType> parts)
@@ -426,13 +483,19 @@ namespace EbonsContentMod.Utilities
         /// <returns>
         /// New EquipmentEntityLink for the recolored EquipmentEntity
         /// </returns>
-        public static EquipmentEntityLink RecolorEELink(EquipmentEntityLink asset, List<Texture2D> Ramps, string guid, bool RemovePrimaryProfile = false, bool RemoveSecondaryProfile = false, List<Texture2D> SecondaryRamps = null, EquipmentEntityLink eyeEE = null, List<BodyPartType> BodyPartsToRemove = null, bool SetColorProfileRamps = false, bool RemovePresets = false, bool SkipPrimaryColors = false, CharacterColorsProfile NewPrimaryColorsProfile = null, CharacterColorsProfile NewSecondaryColorsProfile = null)
+        public static EquipmentEntityLink RecolorEELink(EquipmentEntityLink asset, List<Texture2D> Ramps, string guid, bool RemovePrimaryProfile = false, bool RemoveSecondaryProfile = false, List<Texture2D> SecondaryRamps = null, EquipmentEntityLink eyeEE = null, List<BodyPartType> BodyPartsToRemove = null, bool SetColorProfileRamps = false, bool RemovePresets = false, bool SkipPrimaryColors = false, CharacterColorsProfile NewPrimaryColorsProfile = null, CharacterColorsProfile NewSecondaryColorsProfile = null, float[] ScaleEE = null, int SetLayer = -1, EquipmentEntityLink HandCopyEE = null, EquipmentEntityLink FootCopyEE = null)
         {
             var newlink = asset.CreateDynamicScriptableObjectProxy<EquipmentEntity, EquipmentEntityLink>(ee =>
             {
                 Dictionary<string, Texture2D> EyeEETextures = null;
+                Dictionary<string, Texture2D> HandEETextures = null;
+                Dictionary<string, Texture2D> FootEETextures = null;
 
                 if (eyeEE != null) EyeEETextures = GetEEEyes(eyeEE);
+
+                if (HandCopyEE != null) HandEETextures = GetEEHandTexture(HandCopyEE);
+
+                if (FootCopyEE != null) FootEETextures = GetEEFootTexture(FootCopyEE);
 
                 if (BodyPartsToRemove != null) ee = RemoveBodyparts(ee, BodyPartsToRemove);
 
@@ -485,6 +548,59 @@ namespace EbonsContentMod.Utilities
                             part.Textures[0].MaskTexture = EyeEETextures.GetValueSafe("Mask");
                             part.Textures[0].NormalTexture = EyeEETextures.GetValueSafe("Normal");
                             part.Textures[0].RampShadowTexture = EyeEETextures.GetValueSafe("Shadow");
+                        }
+                    }
+                }
+                if (ScaleEE != null)
+                {
+                    ee.OutfitParts[0].m_Scale = new Vector3(x: ScaleEE[0], y: ScaleEE[1], z: ScaleEE[2]);
+                }
+                if (SetLayer != -1)
+                {
+                    ee.Layer = SetLayer;
+                }
+                if (HandCopyEE != null)
+                {
+                    /*BodyPart CopyHands = null;
+
+                    foreach (BodyPart part in HandCopyEE.Load(true, false).BodyParts)
+                    {
+                        if (part.Type == BodyPartType.Hands)
+                        {
+                            CopyHands = part;
+                            break;
+                        }
+                    }*/
+
+                    foreach (BodyPart part in ee.BodyParts)
+                    {
+                        if (part.Type == BodyPartType.Hands && HandEETextures != null)
+                        {
+                            part.Textures = new(part.Textures);
+                            part.Textures[0].ActiveTexture = HandEETextures.GetValueSafe("Active");
+                            part.Textures[0].DiffuseTexture = HandEETextures.GetValueSafe("Diffuse");
+                            part.Textures[0].MaskTexture = HandEETextures.GetValueSafe("Mask");
+                            part.Textures[0].NormalTexture = HandEETextures.GetValueSafe("Normal");
+                            part.Textures[0].RampShadowTexture = HandEETextures.GetValueSafe("Shadow");
+                            /*if (CopyHands != null)
+                            {
+                                part.m_SkinnedRenderer = CopyHands.m_SkinnedRenderer;
+                            }*/
+                        }
+                    }
+                }
+                if (FootCopyEE != null)
+                {
+                    foreach (BodyPart part in ee.BodyParts)
+                    {
+                        if (part.Type == BodyPartType.Feet && FootEETextures != null)
+                        {
+                            part.Textures = new(part.Textures);
+                            part.Textures[0].ActiveTexture = FootEETextures.GetValueSafe("Active");
+                            part.Textures[0].DiffuseTexture = FootEETextures.GetValueSafe("Diffuse");
+                            part.Textures[0].MaskTexture = FootEETextures.GetValueSafe("Mask");
+                            part.Textures[0].NormalTexture = FootEETextures.GetValueSafe("Normal");
+                            part.Textures[0].RampShadowTexture = FootEETextures.GetValueSafe("Shadow");
                         }
                     }
                 }
@@ -747,6 +863,54 @@ namespace EbonsContentMod.Utilities
             return null;
         }
 
+        internal static Dictionary<string, Texture2D> GetEEHandTexture(EquipmentEntityLink asset)
+        {
+
+            var BodyParts = asset.Load(true, false).BodyParts;
+
+            foreach (BodyPart part in BodyParts)
+            {
+                if (part.Type != BodyPartType.Hands) continue;
+
+                Dictionary<string, Texture2D> HandTextures = new()
+                {
+                    {"Active", part.Textures.First().ActiveTexture},
+                    {"Diffuse", part.Textures.First().DiffuseTexture},
+                    {"Mask", part.Textures.First().MaskTexture},
+                    {"Normal", part.Textures.First().NormalTexture},
+                    {"Shadow", part.Textures.First().RampShadowTexture}
+                };
+
+                return HandTextures;
+            }
+
+            return null;
+        }
+
+        internal static Dictionary<string, Texture2D> GetEEFootTexture(EquipmentEntityLink asset)
+        {
+
+            var BodyParts = asset.Load(true, false).BodyParts;
+
+            foreach (BodyPart part in BodyParts)
+            {
+                if (part.Type != BodyPartType.Feet) continue;
+
+                Dictionary<string, Texture2D> FootTextures = new()
+                {
+                    {"Active", part.Textures.First().ActiveTexture},
+                    {"Diffuse", part.Textures.First().DiffuseTexture},
+                    {"Mask", part.Textures.First().MaskTexture},
+                    {"Normal", part.Textures.First().NormalTexture},
+                    {"Shadow", part.Textures.First().RampShadowTexture}
+                };
+
+                return FootTextures;
+            }
+
+            return null;
+        }
+
         /// <summary>
         /// Creates a recolored version of a given race.
         /// </summary>
@@ -777,6 +941,9 @@ namespace EbonsContentMod.Utilities
         /// </para>
         /// <para>
         /// OnlyMalesBald = bool, if true, and BaldRace is true, only male members of your race will be bald.
+        /// </para>
+        /// <para>
+        /// BaldDefault = bool, if true, the race will start with the bald hairstyle even if BaldRace == false
         /// </para>
         /// <para>
         /// KitsuneBaldRace = bool, if true, will not assign anything but heads to male or female options. Use when copying the kitsune race.
@@ -841,11 +1008,20 @@ namespace EbonsContentMod.Utilities
         /// <para>
         /// RemoveHeadParts = List&lt;BodyPartType&gt;, will remove all the BodyPartTypes indicated from the head EquipmentEntities 
         /// </para>
+        /// <para>
+        /// RaceHasTail = bool, if true, the copied race's tail will be recolored (still under development)
+        /// </para>
+        /// <para>
+        /// CustomTail = EquipmentEntityLink for the specific tail you would like your race to use (still under development)
+        /// </para>
+        /// <para>
+        /// EarRace = BlueprintRace for the race whose ears you would like to swap in replacing the copied race's ears (still under development)
+        /// </para>
         /// </remarks>
         /// <returns>
         /// New recolored race.
         /// </returns>
-        public static BlueprintRace RecolorRace(BlueprintRace race, List<Color> headcolors, List<Color> haircolors, /*string[] sExtraHeadRamps = null, string[] sExtraHairRamps = null,*/ List<Color> eyecolors = null, List<Color> horncolors = null, BlueprintRace eyerace = null, EquipmentEntityLink eyeEE = null, bool BaldRace = false, bool OnlyMalesBald = false, bool KitsuneBaldRace = false, bool NoEyebrows = false, bool NoBeards = false, bool OnlyAddHeadColors = false, bool OnlyAddHairColors = false, bool OnlyAddEyeColors = false, BlueprintRace HeadSwapRace = null, EquipmentEntityLink[] CustomMaleHeads = null, EquipmentEntityLink[] CustomFemaleHeads = null, EquipmentEntityLink[] CustomMaleHairs = null, EquipmentEntityLink[] CustomFemaleHairs = null, EquipmentEntityLink CustomBody = null, List<Texture2D> CustomHeadRamps = null, List<Texture2D> CustomEyeRamps = null, List<Texture2D> CustomHairRamps = null, EquipmentEntityLink CustomBodyNoRecolor = null, EquipmentEntityLink[] CustomMaleHeadsNoRecolor = null,  EquipmentEntityLink[] CustomFemaleHeadsNoRecolor = null, EquipmentEntityLink[] EyeLinkedEEs = null, bool StartMalesWithBeard = false, List<BodyPartType> RemoveHeadParts = null/*, bool OnlyFemale = false*/, bool RaceHasTail = false, EquipmentEntityLink CustomTail = null, BlueprintRace EarRace = null)
+        public static BlueprintRace RecolorRace(BlueprintRace race, List<Color> headcolors, List<Color> haircolors, /*string[] sExtraHeadRamps = null, string[] sExtraHairRamps = null,*/ List<Color> eyecolors = null, List<Color> horncolors = null, BlueprintRace eyerace = null, EquipmentEntityLink eyeEE = null, bool BaldRace = false, bool OnlyMalesBald = false, bool BaldDefault = false, bool KitsuneBaldRace = false, bool NoEyebrows = false, bool NoBeards = false, bool OnlyAddHeadColors = false, bool OnlyAddHairColors = false, bool OnlyAddEyeColors = false, BlueprintRace HeadSwapRace = null, EquipmentEntityLink[] CustomMaleHeads = null, EquipmentEntityLink[] CustomFemaleHeads = null, EquipmentEntityLink[] CustomMaleHairs = null, EquipmentEntityLink[] CustomFemaleHairs = null, EquipmentEntityLink CustomBody = null, List<Texture2D> CustomHeadRamps = null, List<Texture2D> CustomEyeRamps = null, List<Texture2D> CustomHairRamps = null, EquipmentEntityLink CustomBodyNoRecolor = null, EquipmentEntityLink[] CustomMaleHeadsNoRecolor = null,  EquipmentEntityLink[] CustomFemaleHeadsNoRecolor = null, EquipmentEntityLink[] EyeLinkedEEs = null, bool StartMalesWithBeard = false, List<BodyPartType> RemoveHeadParts = null/*, bool OnlyFemale = false*/, bool RaceHasTail = false, EquipmentEntityLink CustomTail = null, BlueprintRace EarRace = null)
         {
             // TO DO: add handling for tails and horns
             
@@ -897,9 +1073,6 @@ namespace EbonsContentMod.Utilities
             if (CustomMaleHeads != null) maleheads = CustomMaleHeads;
             if (CustomFemaleHeads != null) femaleheads = CustomFemaleHeads;
 
-            //CharacterColorsProfile NewSkinColorsProfile = new();
-            //CharacterColorsProfile NewHairColorsProfile = new();
-            //CharacterColorsProfile NewEyeColorsProfile = new();
             CharacterColorsProfile NewSkinColorsProfile = ScriptableObject.CreateInstance<CharacterColorsProfile>();
             CharacterColorsProfile NewHairColorsProfile = ScriptableObject.CreateInstance<CharacterColorsProfile>();
             CharacterColorsProfile NewEyeColorsProfile = ScriptableObject.CreateInstance<CharacterColorsProfile>();
@@ -991,9 +1164,21 @@ namespace EbonsContentMod.Utilities
                     }
                 }
 
-                // Add the recolored bald hair to the end of the array
-                MaleHairArray = MaleHairArray.AppendToArray(BaldHair);
-                FemaleHairArray = FemaleHairArray.AppendToArray(BaldHair);
+                if (BaldDefault == true)
+                {
+                    EquipmentEntityLink[] NewMaleHairArray = [BaldHair];
+                    EquipmentEntityLink[] NewFemaleHairArray = [BaldHair];
+                    NewMaleHairArray = NewMaleHairArray.AppendToArray(MaleHairArray);
+                    NewFemaleHairArray = NewFemaleHairArray.AppendToArray(FemaleHairArray);
+                    MaleHairArray = NewMaleHairArray;
+                    FemaleHairArray = NewFemaleHairArray;
+                }
+                else
+                {
+                    // Add the recolored bald hair to the end of the array
+                    MaleHairArray = MaleHairArray.AppendToArray(BaldHair);
+                    FemaleHairArray = FemaleHairArray.AppendToArray(BaldHair);
+                }
 
                 var malebrows = race.MaleOptions.Eyebrows;
                 var femalebrows = race.FemaleOptions.Eyebrows;

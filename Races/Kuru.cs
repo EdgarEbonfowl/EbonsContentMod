@@ -244,6 +244,7 @@ namespace EbonsContentMod.Races
                 .AddAdditionalLimb(BiteWeapon)
                 .SetGiveFeaturesForPreviousLevels(true)
                 .AddToLevelEntries(1, MaleTattoos, FemaleTattoos)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var BloodCourage = FeatureConfigurator.New("KuruBloodCourage", "{4D84001A-CC7C-4D07-8773-635B67DC881F}")
@@ -251,6 +252,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(BloodCourageDescription)
                 .SetIcon(FeatureRefs.AuraOfCourageFeature.Reference.Get().Icon)
                 .AddSavingThrowBonusAgainstDescriptor(2, modifierDescriptor: ModifierDescriptor.Racial, spellDescriptor: SpellDescriptor.Fear)
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var TempHPBuff = BuffConfigurator.New("KuruCannabalisticVitalityBuff", "{DA56164F-52F6-448E-BF3B-972911432762}")
@@ -300,6 +302,7 @@ namespace EbonsContentMod.Races
                 .SetDescription(CannabalisticVitalityDescription)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.CrushAndTearFeature.ToString()).Icon)
                 .AddComponent<KuruBiteTempHP>()
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             var LightSensitivity = BlueprintTools.GetBlueprint<BlueprintFeature>("{BBA86DB1-B3EF-4AB5-A412-A5910F2B8947}");

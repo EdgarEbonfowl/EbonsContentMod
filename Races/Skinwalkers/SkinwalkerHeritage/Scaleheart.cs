@@ -95,6 +95,7 @@ namespace EbonsContentMod.Races.Skinwalkers.SkinwalkerHeritage
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.HumanSkilled.ToString()).Icon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillLoreNature, value: 2) // Skill bonus 1
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillStealth, value: 2) // Skill bonus 2
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             // Make base feature
@@ -104,6 +105,7 @@ namespace EbonsContentMod.Races.Skinwalkers.SkinwalkerHeritage
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Constitution, value: 2) // Ability score bonus
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Wisdom, value: -2) // Ability score penalty
                 .AddFacts(new() { skills, changeshape })
+                .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
             return feat;
