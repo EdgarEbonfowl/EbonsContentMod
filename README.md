@@ -112,6 +112,14 @@ Some of my favorites:
     - School Expertise - this is homebrew, but not anything crazy so I added it
     - [Staff-Like Wand](https://www.d20pfsrd.com/classes/core-classes/wizard/arcane-discoveries/arcane-discoveries-paizo/staff-like-wand/ "Staff-Like Wand")
    
+## Kineticist Wild Talents
+- [Air's Leap](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Air%27s%20Leap)
+- [Clockwork Heart](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Clockwork%20Heart)
+- [Kinetic Form](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Kinetic%20Form)
+- [Spark of Life](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Spark%20of%20Life)
+- [Spark of Innovation](https://aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Spark%20of%20Innovation)
+- [Wings of Air](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Wings%20of%20Air)
+
 ## Ability Fixes
 - **Come And Get Me!** barbarian power now works correctly with the skald's raging song. The vanilla version only affected the skald, not teammates. It will be disabled any time a teammate steps out of the song's aura then steps back in, so be aware of that.
 - **Discordant Voice** feat now applies to any ally within the area of effect of any bard song rather than just the beneficial ones.
