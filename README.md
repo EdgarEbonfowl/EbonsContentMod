@@ -63,6 +63,8 @@ Different Change Shape forms for the skinwalker:
 ## Portraits
 Portraits included for 5 races: Samsaran, Drow, Mongrel, Goblin, and Hobgoblin. I have tried my best to include examples of each sex choice for the race with a wide variety of fantasy archetypes. Most are based on in-game screenshots, so that you can match the look easier if you want to. All portraits are selectable from the character creator and will automatically start you with the proper race, just like the official portraits.  
 
+Portrait `.png` files have been compressed and quantized to impact overall mod file size as little as possible while maintaining quality and resolution at the highest level.
+
 I also added Nok-Nok to the Kingmaker Characters section since you can make goblins now.
 
 Some of my favorites:  
