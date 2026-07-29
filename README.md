@@ -121,7 +121,7 @@ Some of my favorites:
 - [Wings of Air](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Wings%20of%20Air)
 
 ## Ability Fixes
-- **Come And Get Me!** barbarian power now works correctly with the skald's raging song. The vanilla version only affected the skald, not teammates. It will be disabled any time a teammate steps out of the song's aura then steps back in, so be aware of that.
+- **Come And Get Me!** barbarian power now works correctly with the skald's raging song. The vanilla version only affected the skald, not teammates. *Update:* the state of the toggle is now tracked, so if a character steps out of the inspired rage aoe with Come And Get Me! enabled it is immediately disabled, but when they step back in it turns back on automatically. This happens even on other character's turns so if a character moves out of the song, ends their turn, then the skald moves close to them again, Come And Get Me! will turn back on automatically.
 - **Discordant Voice** feat now applies to any ally within the area of effect of any bard song rather than just the beneficial ones.
 
 ## Mechanics Fixes/Changes
