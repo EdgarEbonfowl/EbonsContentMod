@@ -63,7 +63,9 @@ Different Change Shape forms for the skinwalker:
 ## Portraits
 Portraits included for 5 races: Samsaran, Drow, Mongrel, Goblin, and Hobgoblin. I have tried my best to include examples of each sex choice for the race with a wide variety of fantasy archetypes. Most are based on in-game screenshots, so that you can match the look easier if you want to. All portraits are selectable from the character creator and will automatically start you with the proper race, just like the official portraits.  
 
-Portrait `.png` files have been compressed and quantized to impact overall mod file size as little as possible while maintaining quality and resolution at the highest level.
+Portrait `.png` files have been compressed and quantized to impact overall mod file size as little as possible while maintaining quality and resolution at the highest level.  
+
+More coming soon!  
 
 I also added Nok-Nok to the Kingmaker Characters section since you can make goblins now.
 
@@ -71,10 +73,10 @@ Some of my favorites:
 
 <table>
   <tr>
-    <img width=24% alt="Fulllength" src="https://github.com/user-attachments/assets/7a982fc9-44c1-4510-beb6-4b5ebaf9eb56" />
-    <img width=24% alt="Fulllength" src="https://github.com/user-attachments/assets/42d337fd-a76e-4c91-9ce3-8c24f6e2ebaf" />
-    <img width=24% alt="FullLength" src="https://github.com/user-attachments/assets/3f329261-0184-40da-b5ac-530d85429fe5" />
-    <img width=24% alt="Fulllength" src="https://github.com/user-attachments/assets/30b44a4d-3bc7-48ed-9195-374c6daef311" />
+    <img width=25% alt="Fulllength" src="https://github.com/user-attachments/assets/7a982fc9-44c1-4510-beb6-4b5ebaf9eb56" />
+    <img width=25% alt="Fulllength" src="https://github.com/user-attachments/assets/42d337fd-a76e-4c91-9ce3-8c24f6e2ebaf" />
+    <img width=25% alt="FullLength" src="https://github.com/user-attachments/assets/3f329261-0184-40da-b5ac-530d85429fe5" />
+    <img width=25% alt="Fulllength" src="https://github.com/user-attachments/assets/30b44a4d-3bc7-48ed-9195-374c6daef311" />
   </tr>
 </table>
 
