@@ -61,7 +61,7 @@ Different Change Shape forms for the skinwalker:
 ![ECM10](https://github.com/user-attachments/assets/7e685556-bd92-49a8-a8ae-87f8d01a4812)
 
 ## Portraits
-Portraits included for 13 races: Samsaran, Drow, Mongrel, Goblin, Android, Ifrit, Suli, Sylph, Undine, Nagaji, Fetchling, Duergar, and Hobgoblin. I have tried my best to include examples of each sex choice for the race with a wide variety of fantasy archetypes. Most are based on in-game screenshots, so that you can match the look easier if you want to. All portraits are selectable from the character creator and will automatically start you with the proper race, just like the official portraits.  
+Portraits included for 16 races: Samsaran, Drow, Mongrel, Goblin, Android, Ifrit, Suli, Sylph, Undine, Nagaji, Fetchling, Duergar, Hobgoblin, Vishkanya, Kuru, and Shabti. I have tried my best to include examples of each sex choice for the race with a wide variety of fantasy archetypes. Most are based on in-game screenshots, so that you can match the look easier if you want to. All portraits are selectable from the character creator and will automatically start you with the proper race, just like the official portraits.  
 
 Portrait `.png` files have been compressed and quantized to impact overall mod file size as little as possible while maintaining quality and resolution at the highest level.  
 
