@@ -71,6 +71,8 @@ I also added Nok-Nok to the Kingmaker Characters section since you can make gobl
 
 Some of my favorites:  
 
+<p align="center"><img width="25%" alt="Fulllength" src="https://github.com/user-attachments/assets/7a982fc9-44c1-4510-beb6-4b5ebaf9eb56"><img width="25%" alt="Fulllength" src="https://github.com/user-attachments/assets/04aed6f9-57c3-4dec-8cde-2b2144211547"><img width="25%" alt="Fulllength" src="https://github.com/user-attachments/assets/3f329261-0184-40da-b5ac-530d85429fe5"><img width="25%" alt="Fulllength" src="https://github.com/user-attachments/assets/30b44a4d-3bc7-48ed-9195-374c6daef311"></p>
+
 <table>
   <tr>
     <td width="25%">
