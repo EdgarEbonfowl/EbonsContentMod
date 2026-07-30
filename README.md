@@ -73,10 +73,10 @@ Some of my favorites:
 
 <table>
   <tr>
-    <img width=25% alt="Fulllength" src="https://github.com/user-attachments/assets/7a982fc9-44c1-4510-beb6-4b5ebaf9eb56" />
-    <img width=25% alt="Fulllength" src="https://github.com/user-attachments/assets/42d337fd-a76e-4c91-9ce3-8c24f6e2ebaf" />
-    <img width=25% alt="FullLength" src="https://github.com/user-attachments/assets/3f329261-0184-40da-b5ac-530d85429fe5" />
-    <img width=25% alt="Fulllength" src="https://github.com/user-attachments/assets/30b44a4d-3bc7-48ed-9195-374c6daef311" />
+    <img width=24% alt="Fulllength" src="https://github.com/user-attachments/assets/7a982fc9-44c1-4510-beb6-4b5ebaf9eb56" />
+    <img width=24% alt="Fulllength" src="https://github.com/user-attachments/assets/42d337fd-a76e-4c91-9ce3-8c24f6e2ebaf" />
+    <img width=24% alt="FullLength" src="https://github.com/user-attachments/assets/3f329261-0184-40da-b5ac-530d85429fe5" />
+    <img width=24% alt="Fulllength" src="https://github.com/user-attachments/assets/30b44a4d-3bc7-48ed-9195-374c6daef311" />
   </tr>
 </table>
 
