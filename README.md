@@ -73,19 +73,35 @@ Some of my favorites:
 
 <table>
   <tr>
-    <img width=24% alt="Fulllength" src="https://github.com/user-attachments/assets/7a982fc9-44c1-4510-beb6-4b5ebaf9eb56" />
-    <img width=24% alt="Fulllength" src="https://github.com/user-attachments/assets/04aed6f9-57c3-4dec-8cde-2b2144211547" />
-    <img width=24% alt="FullLength" src="https://github.com/user-attachments/assets/3f329261-0184-40da-b5ac-530d85429fe5" />
-    <img width=24% alt="Fulllength" src="https://github.com/user-attachments/assets/30b44a4d-3bc7-48ed-9195-374c6daef311" />
+    <td width="25%">
+      <img width="100%" alt="Fulllength" src="https://github.com/user-attachments/assets/7a982fc9-44c1-4510-beb6-4b5ebaf9eb56">
+    </td>
+    <td width="25%">
+      <img width="100%" alt="Fulllength" src="https://github.com/user-attachments/assets/04aed6f9-57c3-4dec-8cde-2b2144211547">
+    </td>
+    <td width="25%">
+      <img width="100%" alt="Fulllength" src="https://github.com/user-attachments/assets/3f329261-0184-40da-b5ac-530d85429fe5">
+    </td>
+    <td width="25%">
+      <img width="100%" alt="Fulllength" src="https://github.com/user-attachments/assets/30b44a4d-3bc7-48ed-9195-374c6daef311">
+    </td>
   </tr>
 </table>
 
 <table>
   <tr>
-    <img width=24% alt="Fulllength" src="https://github.com/user-attachments/assets/08582a7b-4f96-4eeb-ba8f-03911d9de584" />
-    <img width=24% alt="Fulllength" src="https://github.com/user-attachments/assets/2b034231-5627-4934-8043-67d49dc82f19" />
-    <img width=24% alt="Fulllength" src="https://github.com/user-attachments/assets/6a67afb7-8522-4773-9c17-0e81414ca928" />
-    <img width=24% alt="Fulllength" src="https://github.com/user-attachments/assets/60110d07-00b8-4c47-90a1-ba9e2a1a26ae" />
+    <td width="25%">
+      <img width=100% alt="Fulllength" src="https://github.com/user-attachments/assets/08582a7b-4f96-4eeb-ba8f-03911d9de584" />
+    </td>
+    <td width="25%">
+      <img width=100% alt="Fulllength" src="https://github.com/user-attachments/assets/2b034231-5627-4934-8043-67d49dc82f19" />
+    </td>
+    <td width="25%">
+      <img width=100% alt="Fulllength" src="https://github.com/user-attachments/assets/6a67afb7-8522-4773-9c17-0e81414ca928" />
+    </td>
+    <td width="25%">
+      <img width=100% alt="Fulllength" src="https://github.com/user-attachments/assets/60110d07-00b8-4c47-90a1-ba9e2a1a26ae" />
+    </td>
   </tr>
 </table>
 
