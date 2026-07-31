@@ -3,6 +3,8 @@ This mod was created to add new content from tabletop to Wrath of the Righteous 
 
 If you want to read through my rationale for any implementation decisions I had to make along the way, please see my [Modder Notes](https://github.com/EdgarEbonfowl/EbonsContentMod/blob/main/ModderNotes.md "Modder Notes").
 
+Everything can now be toggled on-and-off in the Unity Mod Manager menu. Toggling off requires a reload and remember that if you use a blueprint from my mod in one of your saves, you may break your save if you then toggle that feature off.
+
 ## Added Races
 This mod adds the following races to the game and they should work like the default races. Note, I have not completed a playthrough with these races, so I cannot say for sure that you will not encounter problems. You may experience some strange behavior, especially in dialog, where the race type either is not recognized or, more likely, is recognized as some other race (an NPC calling your drow character an elf, for instnace). That being said, if you encounter bugs, please report them!
 
