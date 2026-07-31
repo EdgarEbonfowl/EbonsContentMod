@@ -37,6 +37,7 @@ This mod adds the following races to the game and they should work like the defa
 - Ascending Succubus (Owlbrew)
 - [Hobgoblin](https://www.d20pfsrd.com/races/other-races/featured-races/arg-hobgoblin "Hobgoblin")
 - [Aquatic Elf](https://www.d20pfsrd.com/races/other-races/more-races/advanced-races-11-20-rp/aquatic-elves/)
+- [Aphorite](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/aphorite/ "Aphorite")
 
 Here is what all the new races look like:
 
