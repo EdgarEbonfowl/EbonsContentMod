@@ -5,7 +5,7 @@
 		<TargetFramework>net481</TargetFramework>
 		<AssemblyName>EbonsContentMod</AssemblyName>
 		<Description>EbonsContentMod</Description>
-		<Version>1.1.4</Version>
+		<Version>1.1.5</Version>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<LangVersion>latest</LangVersion>
 		<RootNamespace>EbonsContentMod</RootNamespace>
@@ -30,6 +30,7 @@
 		<None Include="Info.json" CopyToOutputDirectory="PreserveNewest" />
 		<None Include="LocalizedStrings.json" CopyToOutputDirectory="PreserveNewest" />
 		<None Include="GoblinTest_content" CopyToOutputDirectory="PreserveNewest" />
+		<None Include="ebonscontentmod_assets" CopyToOutputDirectory="PreserveNewest" />
 	</ItemGroup>
 	<Target Name="ILRepack" AfterTargets="Build">
 		<ItemGroup>
@@ -69,7 +70,51 @@
 	  </Reference>
 	</ItemGroup>
 	<ItemGroup>
+	  <Folder Include="Portraits\Mongrel_F_01\" />
+	  <Folder Include="Portraits\Mongrel_M_01\" />
+	  <Folder Include="Portraits\Drow_F_01\" />
+	  <Folder Include="Portraits\Drow_M_01\" />
+	  <Folder Include="Portraits\Goblin_M_01\" />
+	  <Folder Include="Portraits\Goblin_M_02\" />
+	  <Folder Include="Portraits\Hobgoblin_F_01\" />
+	  <Folder Include="Portraits\Hobgoblin_M_01\" />
+	  <Folder Include="Portraits\Android_F_01\" />
+	  <Folder Include="Portraits\Android_M_01\" />
+	  <Folder Include="Portraits\Ifrit_M_01\" />
+	  <Folder Include="Portraits\Ifrit_F_01\" />
+	  <Folder Include="Portraits\Android_F_02\" />
+	  <Folder Include="Portraits\Duergar_M_01\" />
+	  <Folder Include="Portraits\Duergar_F_01\" />
+	  <Folder Include="Portraits\Fetchling_F_01\" />
+	  <Folder Include="Portraits\Fetchling_M_01\" />
+	  <Folder Include="Portraits\Nagaji_M_01\" />
+	  <Folder Include="Portraits\Nagaji_F_01\" />
+	  <Folder Include="Portraits\Kuru_F_01\" />
+	  <Folder Include="Portraits\Kuru_M_01\" />
+	  <Folder Include="Portraits\Vishkanya_M_01\" />
+	  <Folder Include="Portraits\Vishkanya_F_01\" />
+	  <Folder Include="Portraits\Shabti_M_01\" />
+	  <Folder Include="Portraits\Shabti_F_01\" />
+	  <Folder Include="Portraits\Suli_F_01\" />
+	  <Folder Include="Portraits\Suli_M_01\" />
+	  <Folder Include="Portraits\Sylph_F_01\" />
+	  <Folder Include="Portraits\Sylph_M_01\" />
+	  <Folder Include="Portraits\Undine_M_01\" />
+	  <Folder Include="Portraits\Undine_F_01\" />
+	  <Folder Include="Portraits\NokNokGoblinPortrait\" />
+	  <Folder Include="Portraits\Samsaran_F_01\" />
+	  <Folder Include="Portraits\Samsaran_M_01\" />
 	  <Folder Include="Rules\" />
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="Portraits\**\*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="ebonscontentmod_assets">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 	<Target Name="GenerateCustomPropsFile" Condition="$(WrathInstallDir) == ''">
 		<Exec Command="findstr /C:&quot;Mono path[0]&quot; &quot;$(WrathData)\Player.log&quot;" IgnoreExitCode="true" ConsoleToMSBuild="true">

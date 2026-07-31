@@ -286,6 +286,8 @@ namespace EbonsContentMod.Races
 
             RaceEquipmentHiderizer.AddRaceHiddenItems(FinalRace, HiddenItems);
 
+            
+
             // Add race to race list
             var raceRef = FinalRace.ToReference<BlueprintRaceReference>();
             ref var races = ref BlueprintRoot.Instance.Progression.m_CharacterRaces;
@@ -293,6 +295,11 @@ namespace EbonsContentMod.Races
             var length = races.Length;
             Array.Resize(ref races, length + 1);
             races[length] = raceRef;
+
+            // Add portraits
+            PortraitCreatonator.RegisterRacePortrait("NokNokGoblinPortrait", "{38B12A7E-8B1C-41FC-962F-B114161B15DF}", FinalRace, Gender.Male, "NokNokGoblinPortrait", PortraitCategory.KingmakerNPC);
+            PortraitCreatonator.RegisterRacePortrait("Goblin_M_01", "{E83E9B86-5143-491B-8B0B-9E9D6C6A6A39}", FinalRace, Gender.Male, "Goblin_M_01");
+            PortraitCreatonator.RegisterRacePortrait("Goblin_M_02", "{25F7F4FD-6474-4A6D-B3F7-C0A2960A71CE}", FinalRace, Gender.Male, "Goblin_M_02");
         }
     }
 }

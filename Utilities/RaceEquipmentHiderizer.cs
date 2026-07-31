@@ -51,6 +51,11 @@ namespace EbonsContentMod.utilities
         [HarmonyPostfix]
         public static void Postfix(DollState __instance, ref bool __result)
         {
+            if (!Main.Settings.Races)
+            {
+                return;
+            }
+
             var race = __instance.Race;
             if (race == null) 
             {
@@ -74,6 +79,11 @@ namespace EbonsContentMod.utilities
         [HarmonyPostfix]
         public static void Postfix(UnitUISettings __instance, ref bool __result)
         {
+            if (!Main.Settings.Races)
+            {
+                return;
+            }
+
             var race = __instance.Owner.Progression.Race;
             if (race == null)
             {
@@ -98,6 +108,11 @@ namespace EbonsContentMod.utilities
         [HarmonyPostfix]
         public static void Postfix(DollState __instance, ref bool __result)
         {
+            if (!Main.Settings.Races)
+            {
+                return;
+            }
+
             var race = __instance.Race;
             if (race == null)
             {
@@ -121,6 +136,11 @@ namespace EbonsContentMod.utilities
         [HarmonyPostfix]
         public static void Postfix(UnitUISettings __instance, ref bool __result)
         {
+            if (!Main.Settings.Races)
+            {
+                return;
+            }
+
             var race = __instance.Owner.Progression.Race;
             if (race == null)
             {
@@ -145,6 +165,11 @@ namespace EbonsContentMod.utilities
         [HarmonyPostfix]
         public static void Postfix(DollState __instance, ref bool __result)
         {
+            if (!Main.Settings.Races)
+            {
+                return;
+            }
+
             var race = __instance.Race;
             if (race == null)
             {
@@ -168,6 +193,11 @@ namespace EbonsContentMod.utilities
         [HarmonyPostfix]
         public static void Postfix(UnitUISettings __instance, ref bool __result)
         {
+            if (!Main.Settings.Races)
+            {
+                return;
+            }
+
             var race = __instance.Owner.Progression.Race;
             if (race == null)
             {
@@ -191,6 +221,11 @@ namespace EbonsContentMod.utilities
     {
         public static void Postfix(UnitEntityView __instance, ItemEntity item, UnitEntityData unit, ref Character avatar)
         {
+            if (!Main.Settings.Races)
+            {
+                return;
+            }
+
             // First, let's turn hiding on
             foreach (var bprace in RaceEquipmentHiderizer.HiddenItems.Keys)
             {

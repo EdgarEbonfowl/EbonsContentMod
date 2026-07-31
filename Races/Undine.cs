@@ -390,6 +390,9 @@ namespace EbonsContentMod.Races
             var length = races.Length;
             Array.Resize(ref races, length + 1);
             races[length] = raceRef;
+
+            PortraitCreatonator.RegisterRacePortrait("Undine_F_01", "{775E38DE-15B7-44FA-998E-2B9685E5AD1E}", race, Gender.Female, "Undine_F_01");
+            PortraitCreatonator.RegisterRacePortrait("Undine_M_01", "{8DCB8738-DCBB-43C8-A3B6-0661E08B6D41}", race, Gender.Male, "Undine_M_01");
         }
     }
 }

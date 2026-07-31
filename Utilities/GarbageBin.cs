@@ -260,6 +260,130 @@ namespace EbonsContentMod.Utilities
          
          */
 
+        // Come and get me old code
+
+        /*private const string ToggleGrantBuffName =
+            "SharedComeAndGetMeToggleGrantBuff";
+
+        private const string ToggleGrantBuffGuid =
+            "{FB6810F3-87FE-4E97-86DB-F72398BB8AED}";
+
+        private static string ToggleAbilityName =
+            ActivatableAbilityRefs.ComeAndGetMeToggleAbility.Reference.Get().Name;
+
+        private static string ToggleAbilityGuid =
+            ActivatableAbilityRefs.ComeAndGetMeToggleAbility.ToString();
+
+        private static string SwitchBuffName =
+            BuffRefs.ComeAndGetMeSwitchBuff.Reference.Get().Name;
+
+        private static string SwitchBuffGuid =
+            BuffRefs.ComeAndGetMeSwitchBuff.ToString();
+
+        private static string SharedFeatureName =
+            FeatureRefs.ComeAndGetMeFeature.Reference.Get().Name;
+
+        private static string SharedFeatureGuid =
+            FeatureRefs.ComeAndGetMeFeature.ToString();
+
+        private static string ComeAndGetMeEffectBuffGuid =
+            BuffRefs.ComeAndGetMeEffectBuff.ToString();
+
+        private static string InspiredRageEffectBuffGuid =
+            BuffRefs.InspiredRageEffectBuff.ToString();
+
+        internal const string AcceptSharedComeAndGetMeDisplayName = "AcceptSharedComeAndGetMe.Name";
+        private const string AcceptSharedComeAndGetMeDescription = "AcceptSharedComeAndGetMe.Description";
+
+        internal static void Configure()
+        {
+            ConfigureSwitchBuff();
+            ConfigureToggle();
+            ConfigureToggleGrantBuff();
+            ConfigureSharedFeature();
+        }
+
+        private static void ConfigureSwitchBuff()
+        {
+            BuffConfigurator.For(SwitchBuffGuid)
+                .SetFlags(BlueprintBuff.Flags.HiddenInUi)
+
+                // When the switch is turned on while Inspired Rage is already
+                // active, immediately add the Come and Get Me effect.
+                .AddFactContextActions(
+                    activated: ActionsBuilder.New()
+                        .Conditional(
+                            ConditionsBuilder.New()
+                                .HasFact(InspiredRageEffectBuffGuid)
+                                .HasFact(ComeAndGetMeEffectBuffGuid, negate: true),
+                            ifTrue: ActionsBuilder.New()
+                                .ApplyBuffPermanent(
+                                    ComeAndGetMeEffectBuffGuid,
+                                    isNotDispelable: true)),
+
+                    // When the switch is turned off, immediately remove the
+                    // Come and Get Me effect.
+                    deactivated: ActionsBuilder.New()
+                        .RemoveBuff(ComeAndGetMeEffectBuffGuid))
+
+                .Configure();
+        }
+
+        private static void ConfigureToggle()
+        {
+            ActivatableAbilityConfigurator.New(
+                    ToggleAbilityName,
+                    ToggleAbilityGuid)
+                .SetDisplayName(AcceptSharedComeAndGetMeDisplayName)
+                .SetDescription(AcceptSharedComeAndGetMeDescription)
+                .SetIcon(FeatureRefs.ComeAndGetMeFeature.Reference.Get().Icon)
+                .SetBuff(SwitchBuffGuid)
+                .SetGroup(ActivatableAbilityGroup.None)
+                .SetDeactivateImmediately(false)
+                .SetIsOnByDefault(true)
+                .Configure();
+        }
+
+        private static void ConfigureToggleGrantBuff()
+        {
+            BuffConfigurator.New(
+                    ToggleGrantBuffName,
+                    ToggleGrantBuffGuid)
+                .SetFlags(
+                    BlueprintBuff.Flags.HiddenInUi |
+                    BlueprintBuff.Flags.StayOnDeath)
+
+                // This hidden permanent buff owns the activatable ability.
+                .AddFacts([
+                    ToggleAbilityGuid
+                ])
+                .Configure();
+        }
+
+        private static void ConfigureSharedFeature()
+        {
+            FeatureConfigurator.For(SharedFeatureGuid)
+
+                // Every time Inspired Rage adds this feature, check whether
+                // the unit already has the permanent grant buff.
+                //
+                // The first time, install it permanently. On later entries
+                // into the song, this does nothing.
+                .AddFactContextActions(
+                    activated: ActionsBuilder.New()
+                        .Conditional(
+                            ConditionsBuilder.New()
+                                .HasFact(
+                                    ToggleGrantBuffGuid,
+                                    negate: true),
+                            ifTrue: ActionsBuilder.New()
+                                .ApplyBuffPermanent(
+                                    ToggleGrantBuffGuid,
+                                    isNotDispelable: true)))
+
+                .Configure();
+        }*/
+
         internal const string ObscuringMistDisplayName = "Undine.ObscuringMist.Name";
         private static readonly string ObscuringMistDescription = "Undine.ObscuringMist.Description";
 

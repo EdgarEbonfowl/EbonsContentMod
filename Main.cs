@@ -20,12 +20,14 @@ using EbonsContentMod.Bloodlines;
 using EbonsContentMod.Traits;
 using EbonsContentMod.Races.Skinwalkers;
 using EbonsContentMod.Utilities;
+using EbonsContentMod.WildTalents;
 using Kingmaker.BundlesLoading;
 using Kingmaker.Modding;
 using Kingmaker.ResourceLinks;
 using Kingmaker.SharedTypes;
 using System.IO;
 using UnityEngine;
+
 
 namespace EbonsContentMod;
 
@@ -34,28 +36,147 @@ namespace EbonsContentMod;
 #endif
 public static class Main
 {
-    internal const string Toggle1 = "Toggle1";
+    internal static Settings Settings;
+    public static UnityModManager.ModEntry ModEntry;
 
     internal static Harmony HarmonyInstance;
     internal static UnityModManager.ModEntry.ModLogger log;
+    internal static string ModPath;
 
     public static bool Load(UnityModManager.ModEntry modEntry)
     {
+        ModEntry = modEntry;
+        ModPath = modEntry.Path;
         log = modEntry.Logger;
+
+        Settings = UnityModManager.ModSettings.Load<Settings>(modEntry);
+
 #if DEBUG
         modEntry.OnUnload = OnUnload;
 #endif
+
         modEntry.OnGUI = OnGUI;
-        Main.ModEntry = modEntry;
+        modEntry.OnSaveGUI = OnSaveGUI;
+
         HarmonyInstance = new Harmony(modEntry.Info.Id);
         HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
+
         CreateAssetLinks.LoadAllSettings();
+
         return true;
     }
 
     public static void OnGUI(UnityModManager.ModEntry modEntry)
     {
+        GUILayout.Label(
+            "Blueprint settings are applied when the game starts. " +
+            "Restart the game after changing them. " +
+            "Note: If the game was saved with settings enabled, disabling them may break saves");
 
+        GUILayout.Space(10);
+
+        GUILayout.Label("<b>Races</b>");
+
+        Settings.Races = GUILayout.Toggle(
+            Settings.Races,
+            "Enable added races");
+
+        GUILayout.Space(10);
+
+        GUILayout.Label("<b>Portraits for New Races</b>");
+
+        Settings.Portraits = GUILayout.Toggle(
+            Settings.Portraits,
+            "Enable portraits for added races");
+
+        GUILayout.Space(10);
+
+        GUILayout.Label("<b>Archetypes</b>");
+
+        Settings.HungryGhostMonk = GUILayout.Toggle(
+            Settings.HungryGhostMonk,
+            "Enable Hungry Ghost Monk archetype");
+
+        Settings.CollegiateInitiate = GUILayout.Toggle(
+            Settings.CollegiateInitiate,
+            "Enable Collegiate Initiate archetype");
+
+        Settings.EldritchScrapper = GUILayout.Toggle(
+            Settings.EldritchScrapper,
+            "Enable Eldritch Scrapper archetype");
+
+        GUILayout.Space(10);
+
+        GUILayout.Label("<b>New Features and Abilities</b>");
+
+        Settings.ArcaneDeed = GUILayout.Toggle(
+            Settings.ArcaneDeed,
+            "Enable Arcane Deed magus arcana");
+
+        Settings.ArcanistExploits = GUILayout.Toggle(
+            Settings.ArcanistExploits,
+            "Enable Arcanist Exploits");
+
+        Settings.Bloodlines = GUILayout.Toggle(
+            Settings.Bloodlines,
+            "Enable added bloodlines and bloodline mutations");
+
+        Settings.FaithMagic = GUILayout.Toggle(
+            Settings.FaithMagic,
+            "Enable Faith Magic arcane discovery");
+
+        Settings.FlamboyantArcana = GUILayout.Toggle(
+            Settings.FlamboyantArcana,
+            "Enable Flamboyant Arcana magus arcana");
+
+        GUILayout.Space(10);
+
+        GUILayout.Label("<b>New Wild Talents</b>");
+
+        Settings.AirsLeap = GUILayout.Toggle(
+            Settings.AirsLeap,
+            "Enable Air's Leap utility wild talent");
+
+        Settings.ClockworkHeart = GUILayout.Toggle(
+            Settings.ClockworkHeart,
+            "Enable Clockwork Heart utility wild talent");
+
+        Settings.KineticForm = GUILayout.Toggle(
+            Settings.KineticForm,
+            "Enable Kinetic Form utility wild talent");
+
+        Settings.SparkOfInnovation = GUILayout.Toggle(
+            Settings.SparkOfInnovation,
+            "Enable Spark Of Innovation utility wild talent");
+
+        Settings.SparkOfLife = GUILayout.Toggle(
+            Settings.SparkOfLife,
+            "Enable Spark Of Life utility wild talent");
+
+        Settings.WingsOfAir = GUILayout.Toggle(
+            Settings.WingsOfAir,
+            "Enable Wings Of Air utility wild talent");
+
+        GUILayout.Space(10);
+
+        GUILayout.Label("<b>Mechanics Fixes</b>");
+
+        Settings.ComeAndGetMe = GUILayout.Toggle(
+            Settings.ComeAndGetMe,
+            "Enable Come and Get Me! fix");
+
+        Settings.DiscordantVoice = GUILayout.Toggle(
+            Settings.DiscordantVoice,
+            "Enable Discordant Voice fix");
+
+        Settings.MultiProjectileSpellFix = GUILayout.Toggle(
+            Settings.MultiProjectileSpellFix,
+            "Enable multi-projectile spell fix");
+    }
+
+    public static void OnSaveGUI(UnityModManager.ModEntry modEntry)
+    {
+        Settings.Save(modEntry);
     }
 
 #if DEBUG
@@ -63,6 +184,36 @@ public static class Main
     {
         HarmonyInstance.UnpatchAll(modEntry.Info.Id);
         return true;
+    }
+
+    private static void ConfigureRaces()
+    {
+        Samsaran.Configure();
+        Svirfneblin.Configure();
+        Duergar.Configure();
+        Sylph.Configure();
+        Undine.Configure();
+        Strix.Configure();
+        Drow.Configure();
+        Orc.Configure();
+        Suli.Configure();
+        Android.Configure();
+        Ifrit.Configure();
+        Fetchling.Configure();
+        Changeling.Configure();
+        Skinwalker.Configure();
+        Goblin.Configure();
+        Kuru.Configure();
+        Vishkanya.Configure();
+        Shabti.Configure();
+        Rougarou.Configure();
+        Nagaji.Configure();
+        Mongrel.Configure();
+        Ganzi.Configure();
+        AscendingSuccubus.Configure();
+        Hobgoblin.Configure();
+        AquaticElf.Configure();
+        Aphorite.Configure();
     }
 
     [HarmonyPatch]
@@ -215,12 +366,62 @@ public static class Main
 
                 log.Log("Patching blueprints.");
 
-                ComeAndGetMe.Configure();
-                DiscordantVoice.Configure();
-                HungryGhostMonk.Configure();
-                FlamboyantArcana.Configure();
-                ArcaneDeed.Configure();
+                if (Settings.ComeAndGetMe)
+                {
+                    ComeAndGetMe.Configure();
+                }
+
+                if (Settings.DiscordantVoice)
+                {
+                    DiscordantVoice.Configure();
+                }
+
+                if (Settings.HungryGhostMonk)
+                {
+                    HungryGhostMonk.Configure();
+                }
+
+                if (Settings.FlamboyantArcana)
+                {
+                    FlamboyantArcana.Configure();
+                }
+
+                if (Settings.ArcaneDeed)
+                {
+                    ArcaneDeed.Configure();
+                }
+
                 LightSensitivityTrait.Configure();
+
+                if (Settings.KineticForm)
+                {
+                    KineticForm.Configure();
+                }
+
+                if (Settings.ClockworkHeart)
+                {
+                    ClockworkHeart.Configure();
+                }
+
+                if (Settings.AirsLeap)
+                {
+                    AirsLeap.Configure();
+                }
+
+                if (Settings.WingsOfAir)
+                {
+                    WingsOfAir.Configure();
+                }
+
+                if (Settings.SparkOfLife)
+                {
+                    SparkOfLife.Configure();
+                }
+
+                if (Settings.SparkOfInnovation)
+                {
+                    SparkOfInnovation.Configure();
+                }               
             }
             catch (Exception e)
             {
@@ -260,36 +461,41 @@ public static class Main
         {
             try
             {
-                EldritchScrapper.Configure();
-                CollegiateInitiate.Configure(); // Not compatible with Worldcrawl yet
-                ConfigureBloodlines.Configure();
-                Samsaran.Configure();
-                Svirfneblin.Configure();
-                Duergar.Configure();
-                Sylph.Configure();
-                Undine.Configure();
-                Strix.Configure();
-                Drow.Configure();
-                Orc.Configure();
-                Suli.Configure();
-                Android.Configure();
-                Ifrit.Configure();
-                Fetchling.Configure();
-                Changeling.Configure();
-                Skinwalker.Configure();
-                Goblin.Configure();
-                Kuru.Configure();
-                Vishkanya.Configure();
-                Shabti.Configure();
-                Rougarou.Configure();
-                Nagaji.Configure();
-                Mongrel.Configure();
-                Ganzi.Configure();
-                AscendingSuccubus.Configure();
-                Hobgoblin.Configure();
-                MultiProjectileSpellFix.Configure();
-                ArcanistExploits.Configure();
-                FaithMagic.Configure();
+                if (Settings.EldritchScrapper)
+                {
+                    EldritchScrapper.Configure();
+                }
+
+                if (Settings.CollegiateInitiate)
+                {
+                    CollegiateInitiate.Configure(); // Not compatible with Worldcrawl yet
+                }
+
+                if (Settings.Bloodlines)
+                {
+                    ConfigureBloodlines.Configure();
+                }
+
+                if (Settings.Races)
+                {
+                    ConfigureRaces();
+                }
+
+                if (Settings.MultiProjectileSpellFix)
+                {
+                    MultiProjectileSpellFix.Configure();
+                }
+
+                if (Settings.ArcanistExploits)
+                {
+                    ArcanistExploits.Configure();
+                }
+
+                if (Settings.FaithMagic)
+                {
+                    FaithMagic.Configure();
+                }
+
                 GarbageBin.Configure();
             }
             catch (Exception e)
@@ -298,6 +504,4 @@ public static class Main
             }
         }
     }
-
-    public static UnityModManager.ModEntry ModEntry;
 }

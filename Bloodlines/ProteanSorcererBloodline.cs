@@ -146,6 +146,13 @@ namespace EbonsContentMod.Bloodlines
                     c.m_Spell = spell3;
                     c.SpellLevel = 1;
                 })
+                .AddComponent<AddKnownSpell>(c =>
+                {
+                    c.m_CharacterClass = magusclass;
+                    c.m_Spell = spell3;
+                    c.SpellLevel = 1;
+                    c.m_Archetype = eldritchscionarchetype;
+                })
                 .Configure();
 
             var ProteanSorcererBloodlineSpells5 = FeatureConfigurator.New("ProteanSorcererBloodlineSpells5", "{34AC02F3-98C4-4A12-960C-6900F1A8E278}")
@@ -158,6 +165,13 @@ namespace EbonsContentMod.Bloodlines
                     c.m_CharacterClass = sorcererclass;
                     c.m_Spell = spell5;
                     c.SpellLevel = 2;
+                })
+                .AddComponent<AddKnownSpell>(c =>
+                {
+                    c.m_CharacterClass = magusclass;
+                    c.m_Spell = spell5;
+                    c.SpellLevel = 2;
+                    c.m_Archetype = eldritchscionarchetype;
                 })
                 .Configure();
 
@@ -172,6 +186,13 @@ namespace EbonsContentMod.Bloodlines
                     c.m_Spell = spell7;
                     c.SpellLevel = 3;
                 })
+                .AddComponent<AddKnownSpell>(c =>
+                {
+                    c.m_CharacterClass = magusclass;
+                    c.m_Spell = spell7;
+                    c.SpellLevel = 3;
+                    c.m_Archetype = eldritchscionarchetype;
+                })
                 .Configure();
 
             var ProteanSorcererBloodlineSpells9 = FeatureConfigurator.New("ProteanSorcererBloodlineSpells9", "{628A23C7-0940-477E-8B77-AB724A2F7AAE}")
@@ -184,6 +205,13 @@ namespace EbonsContentMod.Bloodlines
                     c.m_CharacterClass = sorcererclass;
                     c.m_Spell = spell9;
                     c.SpellLevel = 4;
+                })
+                .AddComponent<AddKnownSpell>(c =>
+                {
+                    c.m_CharacterClass = magusclass;
+                    c.m_Spell = spell9;
+                    c.SpellLevel = 4;
+                    c.m_Archetype = eldritchscionarchetype;
                 })
                 .Configure();
 
@@ -198,6 +226,13 @@ namespace EbonsContentMod.Bloodlines
                     c.m_Spell = spell11;
                     c.SpellLevel = 5;
                 })
+                .AddComponent<AddKnownSpell>(c =>
+                {
+                    c.m_CharacterClass = magusclass;
+                    c.m_Spell = spell11;
+                    c.SpellLevel = 5;
+                    c.m_Archetype = eldritchscionarchetype;
+                })
                 .Configure();
 
             var ProteanSorcererBloodlineSpells13 = FeatureConfigurator.New("ProteanSorcererBloodlineSpells13", "{C94F084B-CAF0-40E0-ACA0-D03D6C2EE926}")
@@ -210,6 +245,13 @@ namespace EbonsContentMod.Bloodlines
                     c.m_CharacterClass = sorcererclass;
                     c.m_Spell = spell13;
                     c.SpellLevel = 6;
+                })
+                .AddComponent<AddKnownSpell>(c =>
+                {
+                    c.m_CharacterClass = magusclass;
+                    c.m_Spell = spell13;
+                    c.SpellLevel = 6;
+                    c.m_Archetype = eldritchscionarchetype;
                 })
                 .Configure();
 

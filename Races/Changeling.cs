@@ -327,7 +327,7 @@ namespace EbonsContentMod.Races
                 .SetDisplayName(ClawsDisplayName)
                 .SetDescription(ClawsDescription)
                 .SetIcon(FeatureRefs.HagRivenClawsFeatureLevel1.Reference.Get().Icon)
-                .AddEmptyHandWeaponOverride(false, false, weapon: ClawRef).AddEmptyHandWeaponOverride(false, false, weapon: ClawRef)
+                .AddEmptyHandWeaponOverride(false, false, weapon: ClawRef)/*.AddEmptyHandWeaponOverride(false, false, weapon: ClawRef)*/
                 .SetGiveFeaturesForPreviousLevels(true)
                 .AddToLevelEntries(1, MaleClaws, FemaleClaws)
                 .SetGroups(FeatureGroup.Racial)

@@ -74,7 +74,7 @@ namespace EbonsContentMod.Races.Skinwalkers.SkinwalkerHeritage
                 .SetDisplayName(BloodmarkedChangeShapeDisplayName)
                 .SetDescription(BloodmarkedChangeShapeDescription)
                 .SetIcon(changeshapeicon)
-                .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Charisma, value: 2) // Shifted ability score bonus
+                .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Dexterity, value: 2) // Shifted ability score bonus
                 .AddAdditionalLimb(BiteRef) // Bestial feature 1
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Speed, value: 10) // Bestial feature 2
                 .AddSpellDescriptorComponent(SpellDescriptor.Polymorph)
@@ -116,7 +116,7 @@ namespace EbonsContentMod.Races.Skinwalkers.SkinwalkerHeritage
             var feat = FeatureConfigurator.New("SkinwalkerBloodmarked", "{3BD18948-FE33-4C05-AE3C-DDB13CE0A3F1}")
                 .SetDisplayName(BloodmarkedDisplayName)
                 .SetDescription(BloodmarkedDescription)
-                .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Dexterity, value: 2) // Ability score bonus
+                .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Intelligence, value: 2) // Ability score bonus
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Wisdom, value: -2) // Ability score penalty
                 .AddFacts(new() { skills, changeshape })
                 .SetGroups(FeatureGroup.Racial)

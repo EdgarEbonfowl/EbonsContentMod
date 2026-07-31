@@ -334,6 +334,11 @@ namespace EbonsContentMod.Races
             var length = races.Length;
             Array.Resize(ref races, length + 1);
             races[length] = raceRef;
+
+            // Add portraits
+            PortraitCreatonator.RegisterRacePortrait("Android_F_01", "{A467F3CB-58DE-4989-A208-E9F97EABE50A}", race, Gender.Female, "Android_F_01");
+            PortraitCreatonator.RegisterRacePortrait("Android_F_02", "{A2072627-37C8-4363-93B5-75FCF0F4A76D}", race, Gender.Female, "Android_F_02");
+            PortraitCreatonator.RegisterRacePortrait("Android_M_01", "{E131B1D9-F177-4A24-9039-7C87CF372688}", race, Gender.Male, "Android_M_01");
         }
     }
 }

@@ -221,17 +221,37 @@ namespace EbonsContentMod.Archetypes
                 }
             }
 
+            HashSet<string> ArcanistSpellIds = ArcanistSpells
+                .Select(s => s.ToString())
+                .ToHashSet();
+
+            HashSet<string> ArcanistSpellNames = ArcanistSpells
+                .Select(s => s.Get())
+                .Where(a => a != null && !string.IsNullOrEmpty(a.Name))
+                .Select(a => a.Name)
+                .ToHashSet();
+
             for (int i = 0; i < 11; i++)
             {
-                SpellLevelList HalcyonSpells = DruidSpellList.SpellsByLevel[i];
+                SpellLevelList HalcyonSpells = new SpellLevelList(i)
+                {
+                    m_Spells = DruidSpellList.SpellsByLevel[i].m_Spells.ToList()
+                };
+
+                //SpellLevelList HalcyonSpells = DruidSpellList.SpellsByLevel[i];
 
                 IEnumerable<BlueprintAbilityReference> cSpells = ClericSpellList.SpellsByLevel[i].m_Spells
-                    .Where(s => s.Get().SpellDescriptor.HasFlag(SpellDescriptor.Good));
+                    //.Where(s => s.Get().SpellDescriptor.HasFlag(SpellDescriptor.Good));
+                    .Where(s =>
+                    {
+                        BlueprintAbility ability = s.Get();
+                        return ability != null && ability.SpellDescriptor.HasFlag(SpellDescriptor.Good);
+                    });
                 HalcyonSpells.m_Spells.AddRange(cSpells);
                 HalcyonSpells.m_Spells = HalcyonSpells.m_Spells.Distinct().ToList();
 
                 // Remove Arcanist spells - probably quicker to just check the spellcomponent list
-                List<BlueprintAbilityReference> TrimmedHalcyonSpells = [];
+                /*List<BlueprintAbilityReference> TrimmedHalcyonSpells = [];
 
                 bool skip = false;
 
@@ -248,6 +268,28 @@ namespace EbonsContentMod.Archetypes
 
                     if (skip == false) TrimmedHalcyonSpells.Add(halcyonspell);
                     else skip = false;
+                }
+
+                HalcyonSpells.m_Spells = TrimmedHalcyonSpells.Distinct().ToList();*/
+
+                // Remove Arcanist spells
+                List<BlueprintAbilityReference> TrimmedHalcyonSpells = [];
+
+                foreach (BlueprintAbilityReference halcyonspell in HalcyonSpells.m_Spells.ToList())
+                {
+                    BlueprintAbility ability = halcyonspell.Get();
+
+                    if (ability == null)
+                        continue;
+
+                    string spellName = ability.Name;
+
+                    bool isArcanistSpell =
+                        ArcanistSpellIds.Contains(halcyonspell.ToString()) ||
+                        (!string.IsNullOrEmpty(spellName) && ArcanistSpellNames.Contains(spellName));
+
+                    if (!isArcanistSpell)
+                        TrimmedHalcyonSpells.Add(halcyonspell);
                 }
 
                 HalcyonSpells.m_Spells = TrimmedHalcyonSpells.Distinct().ToList();

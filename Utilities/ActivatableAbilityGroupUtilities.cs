@@ -18,7 +18,8 @@ namespace EbonsContentMod.Utilities
         {
             HungryGhostMonkAbilities = 1313,
             BleedingWoundAbilities = 1414,
-            SkinwalkerChangeShapeAbilities = 1515
+            SkinwalkerChangeShapeAbilities = 1515,
+            KineticFormAbilities = 1616
         }
 
         private static bool IsECGroup(this ActivatableAbilityGroup group)

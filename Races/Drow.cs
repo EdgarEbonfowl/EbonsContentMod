@@ -295,6 +295,10 @@ namespace EbonsContentMod.Races
             var length = races.Length;
             Array.Resize(ref races, length + 1);
             races[length] = raceRef;
+
+            // Add portraits
+            PortraitCreatonator.RegisterRacePortrait("Drow_F_01", "{65BA262F-894F-4C29-BEC5-4DF0179248D8}", race, Gender.Female, "Drow_F_01");
+            PortraitCreatonator.RegisterRacePortrait("Drow_M_01", "{385D3791-07F6-4768-BA3D-41ED2386CAD3}", race, Gender.Male, "Drow_M_01");
         }
     }
 }

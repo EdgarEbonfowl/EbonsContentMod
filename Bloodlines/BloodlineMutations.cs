@@ -18,7 +18,7 @@ using EbonsContentMod.Utilities;
 namespace EbonsContentMod.Bloodlines
 {
     internal class BloodlineMutations
-    {
+    {      
         // Bloodline powers at 1st, 3rd, 9th, 15th, 20th
         // Bloodline feats at 7th, 13th, 19th
 
@@ -45,6 +45,35 @@ namespace EbonsContentMod.Bloodlines
 
         private const string BloodragerBloodPiercing = "BloodragerBloodPiercingBloodlineMutation";
         public static readonly string BloodragerBloodPiercingGuid = "{D2ADC41F-4681-4714-B78F-4DA07F51DA38}";
+
+        internal const string BloodlineMutationName = "BloodlineMutation.PowerSelection.Name";
+        private const string BloodlineMutationDescription = "BloodlineMutation.PowerSelection.Description";
+
+        // Helpers
+
+        private static string CreateDeterministicGuid(string stableKey)
+        {
+            if (string.IsNullOrWhiteSpace(stableKey))
+            {
+                throw new ArgumentException(
+                    "The deterministic GUID key cannot be null or empty.",
+                    nameof(stableKey));
+            }
+
+            byte[] keyBytes = Encoding.UTF8.GetBytes(stableKey);
+
+            using var sha256 =
+                System.Security.Cryptography.SHA256.Create();
+
+            byte[] hash = sha256.ComputeHash(keyBytes);
+
+            byte[] guidBytes = new byte[16];
+            Array.Copy(hash, guidBytes, guidBytes.Length);
+
+            return new Guid(guidBytes).ToString();
+        }
+
+
 
         internal static void Configure()
         {
@@ -120,41 +149,210 @@ namespace EbonsContentMod.Bloodlines
                 .Configure();
             }
 
-            // Replacing Bloodline Powers (may not be possible because of Second Bloodline, at least no this way) - Commenting out for now
-            // Could try making a new component that only removes the replaced power from the first bloodline, somehow...
-            /*BlueprintFeatureBase[] LevelOnePowers = [];
-            BlueprintFeatureBase[] LevelThreePowers = [];
-            BlueprintFeatureBase[] LevelNinePowers = [];
-            BlueprintFeatureBase[] LevelThirteenPowers = [];
-            BlueprintFeatureBase[] LevelTwentyPowers = [];
+            // Replacing Bloodline Powers
+            int[] BloodlinePowerLevels = [1, 3, 9, 15, 20];
 
             foreach (BlueprintFeature bl in SorcerBloodlines)
             {
-                if (bl is not BlueprintProgression bloodline)
+                if (bl is not BlueprintProgression bloodlineFromSelection)
                     continue;
 
-                var LevelOnePower = bloodline.GetLevelEntry(1).m_FeaturesList.Where(f => f.GetComponent<AddAbilityResources>() != null);
+                BlueprintProgression bloodline =
+                    BlueprintTools.GetBlueprint<BlueprintProgression>(
+                        bloodlineFromSelection.AssetGuid);
 
-                foreach (BlueprintFeatureBase bfb in LevelOnePower) LevelOnePowers = LevelOnePowers.AppendToArray(bfb);
+                if (bloodline == null)
+                {
+                    Main.log.Log(
+                        $"Bloodline Mutations: Could not retrieve canonical blueprint " +
+                        $"for {bloodlineFromSelection.name} " +
+                        $"({bloodlineFromSelection.AssetGuid}).");
 
-                var LevelThreePower = bloodline.GetLevelEntry(3).m_FeaturesList.Where(f => f.GetComponent<AddKnownSpell>() == null);
+                    continue;
+                }
 
-                foreach (BlueprintFeatureBase bfb in LevelThreePower) LevelThreePowers = LevelThreePowers.AppendToArray(bfb);
+                Main.log.Log(
+                    $"Bloodline Mutations: Selection instance equals canonical instance: " +
+                    $"{ReferenceEquals(bloodlineFromSelection, bloodline)}");
 
-                var LevelNinePower = bloodline.GetLevelEntry(9).m_FeaturesList.Where(f => f.GetComponent<AddKnownSpell>() == null);
+                /*
+                * Create one configurator and apply all level-entry replacements before
+                * configuring the progression.
+                */
+                ProgressionConfigurator progressionConfigurator =
+                    ProgressionConfigurator.For(bloodline);
 
-                foreach (BlueprintFeatureBase bfb in LevelNinePower) LevelNinePowers = LevelNinePowers.AppendToArray(bfb);
+                bool progressionChanged = false;
 
-                var LevelThirteenPower = bloodline.GetLevelEntry(13).m_FeaturesList.Where(f => f.GetComponent<AddKnownSpell>() == null);
+                foreach (int level in BloodlinePowerLevels)
+                {
+                    LevelEntry levelEntry = bloodline.GetLevelEntry(level);
 
-                foreach (BlueprintFeatureBase bfb in LevelThirteenPower) LevelThirteenPowers = LevelThirteenPowers.AppendToArray(bfb);
+                    if (levelEntry == null ||
+                        levelEntry.m_Features == null ||
+                        levelEntry.m_FeaturesList == null)
+                    {
+                        continue;
+                    }
 
-                var LevelTwentyPower = bloodline.GetLevelEntry(20).m_FeaturesList.Where(f => f.GetComponent<AddKnownSpell>() == null);
+                    /*
+                     * Find the bloodline power at this level.
+                     *
+                     * Bloodline powers add an ability resource, while the bloodline
+                     * spell granted at the same level has AddKnownSpell.
+                     */
+                    List<BlueprintFeatureBase> matchingPowers = levelEntry.m_FeaturesList
+                        .Where(candidate =>
+                            candidate != null &&
+                            candidate.GetComponent<AddAbilityResources>() != null &&
+                            candidate.GetComponent<AddKnownSpell>() == null)
+                        .ToList();
 
-                foreach (BlueprintFeatureBase bfb in LevelTwentyPower) LevelTwentyPowers = LevelTwentyPowers.AppendToArray(bfb);
-            }*/
+                    /*
+                     * Do not patch this level if its structure is different from what
+                     * we expect. The log will identify any unusual bloodlines.
+                     */
+                    if (matchingPowers.Count != 1)
+                    {
+                        Main.log.Log(
+                            $"Bloodline Mutations: Expected exactly one bloodline power " +
+                            $"in {bloodline.name} at level {level}, but found " +
+                            $"{matchingPowers.Count}.");
 
-            // Replacing Bloodline Powers
+                        foreach (BlueprintFeatureBase feature in levelEntry.m_FeaturesList)
+                        {
+                            Main.log.Log(
+                                $"    {feature.name}: " +
+                                $"AddAbilityResources=" +
+                                $"{feature.GetComponent<AddAbilityResources>() != null}, " +
+                                $"AddKnownSpell=" +
+                                $"{feature.GetComponent<AddKnownSpell>() != null}");
+                        }
+
+                        continue;
+                    }
+
+                    BlueprintFeatureBase bloodlinePower = matchingPowers[0];
+
+                    /*
+                     * A BlueprintFeatureSelection expects BlueprintFeature options.
+                     */
+                    if (bloodlinePower is not BlueprintFeature bloodlinePowerFeature)
+                    {
+                        Main.log.Log(
+                            $"Bloodline Mutations: {bloodlinePower.name} in " +
+                            $"{bloodline.name} at level {level} is not a " +
+                            $"{nameof(BlueprintFeature)}.");
+
+                        continue;
+                    }
+
+                    /*
+                     * The internal blueprint name and deterministic GUID are unique to
+                     * this bloodline and level.
+                     */
+                    string selectionName =
+                        $"{bloodline.name}Level{level}BloodlineMutationSelection";
+
+                    string selectionGuid = CreateDeterministicGuid(
+                        $"EbonsContentMod.BloodlineMutationSelection." +
+                        $"{bloodline.AssetGuid}.Level{level}");
+
+                    /*
+                     * The player may retain the original power or replace it with one
+                     * of the bloodline mutations.
+                     *
+                     * Prerequisites on the mutation features can control whether each
+                     * mutation is legal at a particular level.
+                     */
+                    BlueprintFeatureSelection powerSelection =
+                        FeatureSelectionConfigurator.New(selectionName, selectionGuid)
+                            .SetDisplayName(BloodlineMutationName)
+                            .SetDescription(BloodlineMutationDescription)
+                            .AddToAllFeatures(
+                            [
+                                bloodlinePowerFeature,
+                                bloodHavoc
+                                //bloodIntensity,
+                                //bloodPiercing
+                            ])
+                            .Configure();
+
+                    /*
+                    * Locate the serialized reference by GUID. Resolved blueprint instances
+                    * are not necessarily reference-equal.
+                    */
+                    List<BlueprintFeatureBaseReference> rebuiltFeatures =
+                        levelEntry.m_Features.ToList();
+
+                    int powerIndex = rebuiltFeatures.FindIndex(reference =>
+                    {
+                        BlueprintFeatureBase referencedFeature = reference?.Get();
+
+                        return referencedFeature != null &&
+                               referencedFeature.AssetGuid == bloodlinePower.AssetGuid;
+                    });
+
+                    if (powerIndex < 0)
+                    {
+                        Main.log.Log(
+                            $"Bloodline Mutations: Could not find the backing reference for " +
+                            $"{bloodlinePower.name} ({bloodlinePower.AssetGuid}) in " +
+                            $"{bloodline.name} at level {level}.");
+
+                        continue;
+                    }
+
+                    rebuiltFeatures[powerIndex] =
+                        powerSelection.ToReference<BlueprintFeatureBaseReference>();
+
+                    progressionConfigurator.RemoveLevelEntry(level);
+
+                    foreach (BlueprintFeatureBaseReference rebuiltFeature in rebuiltFeatures)
+                    {
+                        progressionConfigurator.AddToLevelEntry(
+                            level,
+                            rebuiltFeature);
+                    }
+
+                    progressionChanged = true;
+
+                    Main.log.Log(
+                        $"Bloodline Mutations: Queued replacement of " +
+                        $"{bloodlinePower.name} in {bloodline.name} at level {level} " +
+                        $"with {selectionName}. Selection GUID: {selectionGuid}");
+                }
+
+                if (!progressionChanged)
+                    continue;
+
+                BlueprintProgression configuredBloodline =
+                    progressionConfigurator.Configure();
+
+                foreach (int level in BloodlinePowerLevels)
+                {
+                    LevelEntry configuredEntry =
+                        configuredBloodline.GetLevelEntry(level);
+
+                    if (configuredEntry?.m_Features == null)
+                        continue;
+
+                    Main.log.Log(
+                        $"Bloodline Mutations: Final entry for " +
+                        $"{configuredBloodline.name}, level {level}:");
+
+                    foreach (BlueprintFeatureBaseReference reference
+                        in configuredEntry.m_Features)
+                    {
+                        BlueprintFeatureBase configuredFeature = reference?.Get();
+
+                        Main.log.Log(
+                            $"    {configuredFeature?.name}, " +
+                            $"GUID={configuredFeature?.AssetGuid}, " +
+                            $"Type={configuredFeature?.GetType().Name}");
+                    }
+                }
+            }
         }
     }
 }

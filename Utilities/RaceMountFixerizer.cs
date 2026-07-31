@@ -46,6 +46,11 @@ namespace EbonsContentMod.Utilities
             [HarmonyPostfix]
             static void GetMountOffsets_Postfix(BlueprintRace race, MountOffsets __instance, ref RaceMountOffsetsConfig.MountOffsetData __result)
             {
+                if (!Main.Settings.Races)
+                {
+                    return;
+                }
+
                 if (__result == null && RaceOriginals.TryGetValue(race, out var originalRace))
                 {
                     __result = __instance.GetMountOffsets(originalRace);

@@ -232,7 +232,13 @@ namespace EbonsContentMod.Races
                 .SetDescription(WeaponPlayDescription)
                 .SetIcon(FeatureRefs.WeaponMastery.Reference.Get().Icon)
                 .AddFacts([FeatureRefs.MartialWeaponProficiency.ToString(), FeatureRefs.SimpleWeaponProficiency.ToString()])
-                .AddClassLevelsForPrerequisites(fakeClass: CharacterClassRefs.FighterClass.Reference.Get(), forSelection: FeatureSelectionRefs.BasicFeatSelection.Reference.Get(), modifier: 1.0, summand: 0)
+                //.AddClassLevelsForPrerequisites(fakeClass: CharacterClassRefs.FighterClass.Reference.Get(), forSelection: FeatureSelectionRefs.BasicFeatSelection.Reference.Get(), modifier: 1.0, summand: 0)
+                .AddComponent<CharacterLevelsForPrerequisites>(c =>
+                {
+                    c.m_FakeClass = CharacterClassRefs.FighterClass.Reference.Get().ToReference<BlueprintCharacterClassReference>();
+                    c.Modifier = 1.0;
+                    c.Summand = 0;
+                })
                 .AddToLevelEntries(1, FemaleWeaponPlay, MaleWeaponPlay)
                 .SetGroups(FeatureGroup.Racial)
                 .Configure();
@@ -402,7 +408,7 @@ namespace EbonsContentMod.Races
                 .SetDisplayName(AmorphousLimbsDisplayName)
                 .SetDescription(AmorphousLimbsDescription)
                 .SetIcon(ItemWeaponRefs.Claw1d6.Reference.Get().Icon)
-                .AddEmptyHandWeaponOverride(false, false, weapon: ItemWeaponRefs.Claw1d6.Reference.Get()).AddEmptyHandWeaponOverride(false, false, weapon: ItemWeaponRefs.Claw1d6.Reference.Get())
+                .AddEmptyHandWeaponOverride(false, false, weapon: ItemWeaponRefs.Claw1d6.Reference.Get())/*.AddEmptyHandWeaponOverride(false, false, weapon: ItemWeaponRefs.Claw1d6.Reference.Get())*/
                 .AddComponent<AddEquipmentEntityBySex>(c =>
                 {
                     c.FemaleEquipmentEntity = FemaleClawsEE;

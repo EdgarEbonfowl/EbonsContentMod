@@ -25,7 +25,7 @@ namespace EbonsContentMod.Utilities
 
         private static readonly Dictionary<string, (EquipmentEntityLink source, Action<EquipmentEntity> init)> DynamicPrefabLinks =
           new();
-        
+
         private static EquipmentEntity Clone(EquipmentEntity ee)
         {
             EquipmentEntity ret = (EquipmentEntity)ScriptableObject.CreateInstance(typeof(EquipmentEntity));

@@ -109,7 +109,7 @@ namespace EbonsContentMod.Races.Skinwalkers.SkinwalkerHeritage
                 .SetIcon(changeshapeicon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Wisdom, value: 2) // Shifted ability score bonus
                 .AddAdditionalLimb(BiteRef) // Bestial feature 1
-                .AddEmptyHandWeaponOverride(false, false, weapon: ClawRef).AddEmptyHandWeaponOverride(false, false, weapon: ClawRef) // Bestial feature 2
+                .AddEmptyHandWeaponOverride(false, false, weapon: ClawRef)/*.AddEmptyHandWeaponOverride(false, false, weapon: ClawRef)*/ // Bestial feature 2
                 .AddSpellDescriptorComponent(SpellDescriptor.Polymorph)
                 .AddComponent<AddEquipmentEntityBySex>(c =>
                 {
