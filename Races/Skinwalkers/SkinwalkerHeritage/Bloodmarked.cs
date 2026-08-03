@@ -76,7 +76,7 @@ namespace EbonsContentMod.Races.Skinwalkers.SkinwalkerHeritage
                 .SetIcon(changeshapeicon)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Dexterity, value: 2) // Shifted ability score bonus
                 .AddAdditionalLimb(BiteRef) // Bestial feature 1
-                .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Speed, value: 10) // Bestial feature 2
+                .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillPerception, value: 4) // Bestial feature 2
                 .AddSpellDescriptorComponent(SpellDescriptor.Polymorph)
                 .AddComponent<AddEquipmentEntityBySex>(c =>
                 {
@@ -107,7 +107,7 @@ namespace EbonsContentMod.Races.Skinwalkers.SkinwalkerHeritage
                 .SetDisplayName(BloodmarkedSkilledDisplayName)
                 .SetDescription(BloodmarkedSkilledDescription)
                 .SetIcon(BlueprintTools.GetBlueprint<BlueprintFeature>(FeatureRefs.HumanSkilled.ToString()).Icon)
-                .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillAthletics, value: 2) // Skill bonus 1
+                .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillMobility, value: 2) // Skill bonus 1
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.SkillPerception, value: 2) // Skill bonus 2
                 .SetGroups(FeatureGroup.Racial)
                 .Configure();
