@@ -65,7 +65,7 @@ Different Change Shape forms for the skinwalker:
 ![ECM10](https://github.com/user-attachments/assets/7e685556-bd92-49a8-a8ae-87f8d01a4812)
 
 ## Portraits
-Portraits included for 16 races: Samsaran, Drow, Mongrel, Goblin, Android, Ifrit, Suli, Sylph, Undine, Nagaji, Fetchling, Duergar, Hobgoblin, Vishkanya, Kuru, and Shabti. I have tried my best to include examples of each sex choice for the race with a wide variety of fantasy archetypes. Most are based on in-game screenshots, so that you can match the look easier if you want to. All portraits are selectable from the character creator and will automatically start you with the proper race, just like the official portraits.  
+Portraits included for *all* added races. I have tried my best to include examples of each sex choice for the race with a wide variety of fantasy archetypes. Most are based on in-game screenshots, so that you can match the look easier if you want to. All portraits are selectable from the character creator and will automatically start you with the proper race, just like the official portraits.  
 
 Portrait `.png` files have been compressed and quantized to impact overall mod file size as little as possible while maintaining quality and resolution at the highest level.  
 
@@ -87,6 +87,10 @@ Some of my favorites:
 - **Sorcerer**
   - [Eldritch Scrapper](https://www.d20pfsrd.com/classes/core-classes/sorcerer/archetypes/paizo-sorcerer-archetypes/eldritch-scrapper/ "Eldritch Scrapper")
  
+## Spells
+- [Miracle](https://www.d20pfsrd.com/magic/all-spells/m/miracle/ "Miracle")
+  - Currently can duplicate spells and cleanse all negative status effects from an ally. A couple bigger effects that require a sacrifice of 25,000 GP coming soon.
+
 ## Bloodlines
 - [Orc Sorcerer Bloodline](https://www.d20pfsrd.com/classes/core-classes/sorcerer/bloodlines/bloodlines-from-paizo/orc-bloodline/ "Orc Sorcerer Bloodline")
 - [Protean Sorcerer Bloodline](https://www.d20pfsrd.com/classes/core-classes/sorcerer/bloodlines/bloodlines-from-paizo/protean-bloodline/ "Protean Sorcerer Bloodline")
@@ -122,6 +126,9 @@ Some of my favorites:
 ## Ability Fixes
 - **Come And Get Me!** barbarian power now works correctly with the skald's raging song. The vanilla version only affected the skald, not teammates. *Update:* the state of the toggle is now tracked, so if a character steps out of the inspired rage aoe with Come And Get Me! enabled it is immediately disabled, but when they step back in it turns back on automatically. This happens even on other character's turns so if a character moves out of the song, ends their turn, then the skald moves close to them again, Come And Get Me! will turn back on automatically.
 - **Discordant Voice** feat now applies to any ally within the area of effect of any bard song rather than just the beneficial ones.
+- **Battle Prowess** was completely unfinished and broken. The AOE was too small, it did not trigger Mythic Inspiration, it only used one round of performance per round, it did not proc Hat of Heartening Song fast healing, and the code was a complete mess. I fixed all that.
+- **Shaman Hex: Friend to Animals** now updates properly on charisma changes.
+- **(Greater) Angelic Aspect** now grants a fly speed per tabletop, 30-feet for regular and 60-feet for greater. The fly implementation matches other Owlcat flying instances: immunity to ground-based effects, +3 AC versus melee attacks, and a formation AC bonus to adjacent allies (the regular version already had this last one).
 
 ## Mechanics Fixes/Changes
 - Multi-projectile spells (Hellfire Ray, Scorching Ray, etc.) that should be able to assign projectiles to different targets per tabletop rules will now switch to a new target if the current target dies, rather than just dumping all the extra projectiles into the first target's corpse. All tabletop targeting rules are respected - for instance, no two targets can be more than 30 feet apart for Hellfire Ray. There was some early inconsistency here, but I think I have corrected any flaws in the implementation and my current testing seems to indicate that this consistently works as intended - please submit an issue report if you find otherwise.
