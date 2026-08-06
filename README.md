@@ -89,7 +89,7 @@ Some of my favorites:
  
 ## Spells
 - [Miracle](https://www.d20pfsrd.com/magic/all-spells/m/miracle/ "Miracle")
-  - Currently can duplicate spells and cleanse all negative status effects from an ally. A couple bigger effects that require a sacrifice of $25,000 GP coming soon.
+  - Currently can duplicate spells and cleanse all negative status effects from an ally. A couple bigger effects that require a sacrifice of 25,000 GP coming soon.
 
 ## Bloodlines
 - [Orc Sorcerer Bloodline](https://www.d20pfsrd.com/classes/core-classes/sorcerer/bloodlines/bloodlines-from-paizo/orc-bloodline/ "Orc Sorcerer Bloodline")
