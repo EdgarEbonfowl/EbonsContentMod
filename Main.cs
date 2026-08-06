@@ -27,6 +27,7 @@ using Kingmaker.ResourceLinks;
 using Kingmaker.SharedTypes;
 using System.IO;
 using UnityEngine;
+using EbonsContentMod.Spells;
 
 
 namespace EbonsContentMod;
@@ -45,25 +46,40 @@ public static class Main
 
     public static bool Load(UnityModManager.ModEntry modEntry)
     {
-        ModEntry = modEntry;
-        ModPath = modEntry.Path;
-        log = modEntry.Logger;
+        try
+        {
+            ModEntry = modEntry;
+            ModPath = modEntry.Path;
+            log = modEntry.Logger;
 
-        Settings = UnityModManager.ModSettings.Load<Settings>(modEntry);
+            Settings = UnityModManager.ModSettings.Load<Settings>(modEntry);
 
 #if DEBUG
-        modEntry.OnUnload = OnUnload;
+            modEntry.OnUnload = OnUnload;
 #endif
 
-        modEntry.OnGUI = OnGUI;
-        modEntry.OnSaveGUI = OnSaveGUI;
+            modEntry.OnGUI = OnGUI;
+            modEntry.OnSaveGUI = OnSaveGUI;
 
-        HarmonyInstance = new Harmony(modEntry.Info.Id);
-        HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
+            HarmonyInstance = new Harmony(modEntry.Info.Id);
+            HarmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
+            MiracleWish.ApplyNestedMenuUIPatches(HarmonyInstance);
 
-        CreateAssetLinks.LoadAllSettings();
+            CreateAssetLinks.LoadAllSettings();
 
-        return true;
+            return true;
+        }
+        catch (Exception ex)
+        {
+            /*
+             * ex.ToString() includes the stack trace and inner exceptions.
+             */
+            log?.Error(
+                "[EbonsContentMod] Main.Load failed:\n"
+                + ex);
+
+            return false;
+        }
     }
 
     public static void OnGUI(UnityModManager.ModEntry modEntry)
@@ -131,6 +147,14 @@ public static class Main
 
         GUILayout.Space(10);
 
+        GUILayout.Label("<b>New Spells</b>");
+
+        Settings.Miracle = GUILayout.Toggle(
+            Settings.Miracle,
+            "Enable the Miracle spell");
+
+        GUILayout.Space(10);
+
         GUILayout.Label("<b>New Wild Talents</b>");
 
         Settings.AirsLeap = GUILayout.Toggle(
@@ -172,6 +196,18 @@ public static class Main
         Settings.MultiProjectileSpellFix = GUILayout.Toggle(
             Settings.MultiProjectileSpellFix,
             "Enable multi-projectile spell fix");
+
+        Settings.BattleProwessFix = GUILayout.Toggle(
+            Settings.BattleProwessFix,
+            "Enable Battle Prowess fix");
+
+        Settings.ShamanFriendToAnimalsFix = GUILayout.Toggle(
+            Settings.ShamanFriendToAnimalsFix,
+            "Enable Shaman Hex: Friend to Animals fix");
+
+        Settings.AngelicAspectFlightFix = GUILayout.Toggle(
+            Settings.AngelicAspectFlightFix,
+            "Enable flight from (Greater) Angelic Aspect");
     }
 
     public static void OnSaveGUI(UnityModManager.ModEntry modEntry)
@@ -185,6 +221,7 @@ public static class Main
         HarmonyInstance.UnpatchAll(modEntry.Info.Id);
         return true;
     }
+#endif
 
     private static void ConfigureRaces()
     {
@@ -327,7 +364,6 @@ public static class Main
         }
     }
 
-#endif
     [HarmonyPatch(typeof(BlueprintsCache))]
     public static class BlueprintsCaches_Patch
     {
@@ -421,7 +457,37 @@ public static class Main
                 if (Settings.SparkOfInnovation)
                 {
                     SparkOfInnovation.Configure();
-                }               
+                }
+
+                if (Settings.BattleProwessFix)
+                {
+                    BattleProwess.Configure();
+                }
+
+                if (Settings.ShamanFriendToAnimalsFix)
+                {
+                    ShamanFriendToAnimalsHex.Configure();
+                }
+
+                if (Settings.AngelicAspectFlightFix)
+                {
+                    AngelicAspect.Configure();
+                }
+
+                try
+                {
+                    log.Log("[Miracle] Calling MiracleWish.Configure().");
+                    if (Settings.Miracle)
+                    {
+                        MiracleWish.Configure();
+                    }
+                    log.Log("[Miracle] MiracleWish.Configure() returned.");
+                }
+                catch (Exception ex)
+                {
+                    log.Error(
+                        "[Miracle] Initialization failed:\n" + ex);
+                }
             }
             catch (Exception e)
             {

@@ -47,6 +47,11 @@ namespace EbonsContentMod.Races.Skinwalkers
                 Witchwolf.Configure().ToReference<BlueprintFeatureReference>()
             ];
 
+            foreach (Blueprint<BlueprintFeatureReference> feat in HeritageList)
+            {
+                RaceOddsAndEndsFixerizer.FixFeat(feat.Reference);
+            }
+
             var BiteWeapon = ItemWeaponConfigurator.New("SkinwalkerBiteWeapon", "{8D16F61E-D521-4153-89C3-C3163016DBAF}")
                 .CopyFrom(ItemWeaponRefs.Bite1d6)
                 //.SetAlwaysPrimary(true)
@@ -90,6 +95,9 @@ namespace EbonsContentMod.Races.Skinwalkers
             var length = races.Length;
             Array.Resize(ref races, length + 1);
             races[length] = raceRef;
+
+            PortraitCreatonator.RegisterRacePortrait("Skinwalker_F_01", "{3B4FBE1E-BE19-4486-9635-1BB36635C787}", race, Gender.Female, "Skinwalker_F_01");
+            PortraitCreatonator.RegisterRacePortrait("Skinwalker_M_01", "{29665426-35AF-4468-9A13-2426AA7C7ADD}", race, Gender.Male, "Skinwalker_M_01");
         }
     }
 }

@@ -273,6 +273,9 @@ namespace EbonsContentMod.Races
             // Add race to mount fixes
             RaceMountFixerizer.AddRaceToMountFixes(recoloredrace, CopyRace);
 
+            // Fix Odds and Ends
+            RaceOddsAndEndsFixerizer.FixRace(recoloredrace);
+
             // Add race to race list
             var raceRef = recoloredrace.ToReference<BlueprintRaceReference>();
             ref var races = ref BlueprintRoot.Instance.Progression.m_CharacterRaces;
@@ -280,6 +283,9 @@ namespace EbonsContentMod.Races
             var length = races.Length;
             Array.Resize(ref races, length + 1);
             races[length] = raceRef;
+
+            PortraitCreatonator.RegisterRacePortrait("Svirfneblin_F_01", "{0CA0FB4E-CFB8-4E64-B631-C17B6ACF8CF0}", race, Gender.Female, "Svirfneblin_F_01");
+            PortraitCreatonator.RegisterRacePortrait("Svirfneblin_M_01", "{C4F26C04-E1CF-4FD7-B1BC-C2ED29F75932}", race, Gender.Male, "Svirfneblin_M_01");
         }
     }
 }

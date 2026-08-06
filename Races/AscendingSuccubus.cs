@@ -183,6 +183,9 @@ namespace EbonsContentMod.Races
             // Add race to mount fixes
             RaceMountFixerizer.AddRaceToMountFixes(recoloredrace, BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()));
 
+            // Fix Odds and Ends
+            RaceOddsAndEndsFixerizer.FixRace(recoloredrace);
+
             // Add race to race list
             var raceRef = recoloredrace.ToReference<BlueprintRaceReference>();
             ref var races = ref BlueprintRoot.Instance.Progression.m_CharacterRaces;
@@ -190,6 +193,10 @@ namespace EbonsContentMod.Races
             var length = races.Length;
             Array.Resize(ref races, length + 1);
             races[length] = raceRef;
+
+            // Add portraits
+            PortraitCreatonator.RegisterRacePortrait("Succubus_F_01", "{72D640B1-843C-46D1-8F67-00BD6E553ADC}", race, Gender.Female, "Succubus_F_01");
+            PortraitCreatonator.RegisterRacePortrait("Succubus_M_01", "{2E7A9C3E-50CB-4FE0-8DC4-5FC61F78240D}", race, Gender.Male, "Succubus_M_01");
         }
     }
 }

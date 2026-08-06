@@ -198,6 +198,9 @@ namespace EbonsContentMod.Races
             // Add race to mount fixes
             RaceMountFixerizer.AddRaceToMountFixes(recoloredrace, CopyRace);
 
+            // Fix Odds and Ends
+            RaceOddsAndEndsFixerizer.FixRace(recoloredrace);
+
             // Add race to race list
             var raceRef = recoloredrace.ToReference<BlueprintRaceReference>();
             ref var races = ref BlueprintRoot.Instance.Progression.m_CharacterRaces;
@@ -207,8 +210,8 @@ namespace EbonsContentMod.Races
             races[length] = raceRef;
 
             // Add portraits
-            //PortraitCreatonator.RegisterRacePortrait("AquaticElf_F_01", "{3D3C1DF3-A347-4BD5-B278-68F220C17918}", race, Gender.Female, "AquaticElf_F_01");
-            //PortraitCreatonator.RegisterRacePortrait("AquaticElf_M_01", "{25B7718E-0941-4830-9BC1-49A1CAF12B0D}", race, Gender.Male, "AquaticElf_M_01");
+            PortraitCreatonator.RegisterRacePortrait("AquaticElf_F_01", "{C7FBD6F6-2573-40D9-A4A7-2FFB8ADB89D6}", race, Gender.Female, "AquaticElf_F_01");
+            PortraitCreatonator.RegisterRacePortrait("AquaticElf_M_01", "{19572277-C02D-4D39-99CA-F1AA33ECBDCF}", race, Gender.Male, "AquaticElf_M_01");
         }
     }
 }

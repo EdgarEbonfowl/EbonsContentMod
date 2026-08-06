@@ -31,6 +31,9 @@ public class Settings : UnityModManager.ModSettings
     public bool ComeAndGetMe = true;
     public bool DiscordantVoice = true;
     public bool MultiProjectileSpellFix = true;
+    public bool BattleProwessFix = true;
+    public bool ShamanFriendToAnimalsFix = true;
+    public bool AngelicAspectFlightFix = true;
 
     // Wild Talents
     public bool AirsLeap = true;
@@ -39,6 +42,9 @@ public class Settings : UnityModManager.ModSettings
     public bool SparkOfInnovation = true;
     public bool SparkOfLife = true;
     public bool WingsOfAir = true;
+
+    // Spells
+    public bool Miracle = true;
 
     public override void Save(UnityModManager.ModEntry modEntry)
     {

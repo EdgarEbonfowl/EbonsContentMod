@@ -224,6 +224,9 @@ namespace EbonsContentMod.Races
             // Add race to mount fixes
             RaceMountFixerizer.AddRaceToMountFixes(recoloredrace, CopyRace);
 
+            // Fix Odds and Ends
+            RaceOddsAndEndsFixerizer.FixRace(recoloredrace);
+
             // Add race to race list
             var raceRef = recoloredrace.ToReference<BlueprintRaceReference>();
             ref var races = ref BlueprintRoot.Instance.Progression.m_CharacterRaces;

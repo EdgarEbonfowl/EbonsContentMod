@@ -44,6 +44,8 @@ using UnityEngine.Serialization;
 using TabletopTweaks.Core.NewUnitParts;
 using TabletopTweaks.Core.Utilities;
 using EbonsContentMod.Utilities;
+using HarmonyLib;
+using EbonsContentMod;
 
 namespace Kingmaker.UnitLogic.Abilities.Components
 {
@@ -294,7 +296,7 @@ namespace Kingmaker.UnitLogic.Abilities.Components
                 var originaltarget = target.Unit;
                 if (this.currenttarget == null) this.currenttarget = originaltarget;
 
-                if (this.currenttarget.HPLeft <= 0 && this.currenttarget != null) // Is the current target real and dead?
+                if (this.currenttarget != null && this.currenttarget.HPLeft <= 0) // Is the current target real and dead?
                 {
                     // Find the next target within m_SecondaryTargetMaxDistance from original target, or within range of caster if m_SecondaryTargetMaxDistance = 0f
                     var newtarget = GetNewTarget(context, originaltarget, AbilityRange, SecondaryTargetMaxRange);
@@ -681,5 +683,43 @@ namespace Kingmaker.UnitLogic.Abilities.Components
         public BlueprintBuffReference m_ControlledProjectileHolderBuff;
 
         public float m_SecondaryTargetMaxDistance = 0f;
+    }
+
+    [HarmonyPatch(typeof(AbilityData), nameof(AbilityData.IsRay), MethodType.Getter)]
+    internal static class AbilityData_IsRay_Patch
+    {
+        private static void Postfix(AbilityData __instance, ref bool __result)
+        {
+            if (!Main.Settings.MultiProjectileSpellFix)
+            {
+                return;
+            }
+
+            // The original getter already recognized a vanilla
+            // AbilityDeliverProjectile component.
+            if (__result)
+            {
+                return;
+            }
+
+            AbilityDeliverProjectileDynamic dynamicProjectile =
+                __instance
+                    .GetDeliverBlueprint(false)
+                    .GetComponent<AbilityDeliverProjectileDynamic>();
+
+            if (dynamicProjectile?.Weapon == null)
+            {
+                return;
+            }
+
+            AttackType attackType = dynamicProjectile.Weapon.AttackType;
+
+            __result =
+                attackType == AttackType.RangedTouch
+                || (
+                    attackType == AttackType.Touch
+                    && __instance.HasMetamagic(Metamagic.Reach)
+                );
+        }
     }
 }

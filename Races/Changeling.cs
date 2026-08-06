@@ -436,6 +436,9 @@ namespace EbonsContentMod.Races
 
             EELinker.RegisterSkinLink(recoloredrace, SkinLinks);
 
+            // Fix Odds and Ends
+            RaceOddsAndEndsFixerizer.FixRace(recoloredrace);
+
             // Add race to race list
             var raceRef = recoloredrace.ToReference<BlueprintRaceReference>();
             ref var races = ref BlueprintRoot.Instance.Progression.m_CharacterRaces;
@@ -443,6 +446,8 @@ namespace EbonsContentMod.Races
             var length = races.Length;
             Array.Resize(ref races, length + 1);
             races[length] = raceRef;
+
+            PortraitCreatonator.RegisterRacePortrait("Changeling_F_01", "{9DC46243-7862-476C-9C5E-AE313D1819C3}", race, Gender.Female, "Changeling_F_01");
         }
     }
 }

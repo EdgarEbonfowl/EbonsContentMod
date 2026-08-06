@@ -3131,4 +3131,84 @@
     "enGB": "Aphorites gain a +2 racial bonus on Knowledge (Arcana) checks."
   },
 
+  {
+    "Key": "Ebon.BattleProwess.Description",
+    "enGB": "Whenever a Battle Scion would gain a rage power from the skald’s rage power ability (at 3rd level and every 3 skald levels thereafter), he can instead choose to gain a combat feat or teamwork feat for which he meets the prerequisites. \nThe Battle Scion can grant this feat to allies under the effect of Inspired Rage, as long as those allies also meet the prerequisites, but he must expend 2 rounds of raging song for each round in which he grants a teamwork feat."
+  },
+
+  {
+    "Key": "Ebon.AngelicAspect.Description",
+    "enGB": "You take on an aspect of an angelic being, including some of its physical characteristics. You gain {g|Encyclopedia:Energy_Resistance}resistance{/g} to acid and cold 10, and {g|Encyclopedia:Damage_Reduction}DR{/g} 5/{g|Encyclopedia:Alignment}evil{/g}, and you sprout white feathered wings allowing you to fly at a speed of 30 feet with average maneuverability. You also gain a +2 deflection {g|Encyclopedia:Bonus}bonus{/g} to {g|Encyclopedia:Armor_Class}AC{/g} and a +2 resistance bonus on {g|Encyclopedia:Saving_Throw}saves{/g} against {g|Encyclopedia:Attack}attacks{/g} made or effects created by evil creatures. In addition, your {g|Encyclopedia:NaturalAttack}natural weapons{/g} and any weapons you wield are considered good-aligned for the purpose of overcoming damage reduction."
+  },
+
+  {
+    "Key": "Ebon.GreaterAngelicAspect.Description",
+    "enGB": "This {g|Encyclopedia:Spell}spell{/g} functions like {g|SpellsAngelicAspect}angelic aspect{/g}, except you gain {g|Encyclopedia:Damage_Reduction}DR{/g} 10/{g|Encyclopedia:Alignment}evil{/g}; {g|Encyclopedia:Energy_Immunity}immunity{/g} to acid and cold; {g|Encyclopedia:Energy_Resistance}resistance{/g} to electricity and fire 10; a +4 racial {g|Encyclopedia:Bonus}bonus{/g} on {g|Encyclopedia:Saving_Throw}saves{/g} against poison; and protective aura as {g|Encyclopedia:Special_Abilities}supernatural ability{/g} for the duration of the spell. Also, your wings give you a fly speed of 60 feet with good maneuverability. Protective aura provides a +4 deflection bonus to {g|Encyclopedia:Armor_Class}AC{/g} and a +4 resistance bonus on saving throws against {g|Encyclopedia:Attack}attacks{/g} made or effects created by evil creatures to anyone within 20 feet. Otherwise, it functions as a magic circle against evil and a lesser globe of invulnerability, both with a radius of 20 feet."
+  },
+
+  {
+    "Key": "EbonsContentMod.Miracle.Name",
+    "ProcessTemplates": false,
+    "enGB": "Miracle"
+  },
+
+  {
+    "Key": "EbonsContentMod.Miracle.Description",
+    "enGB": "You request divine intervention. Miracle can duplicate any cleric spell of 8th level or lower, or any other spell of 7th level or lower. Alternatively, miracle can be used to cleanse all negative status effects that afflict an ally. \nA duplicated spell allows saving throws and spell resistance as normal, but the save DCs are as for a 9th-level spell. When a miracle spell duplicates a spell with a material component that costs more than 100 gp, you must provide that component."
+  },
+
+  {
+    "Key": "EbonsContentMod.Miracle.Level1.Name",
+    "ProcessTemplates": false,
+    "enGB": "Duplicate 1st-Level Spells"
+  },
+
+  {
+    "Key": "EbonsContentMod.Miracle.Level2.Name",
+    "ProcessTemplates": false,
+    "enGB": "Duplicate 2nd-Level Spells"
+  },
+
+  {
+    "Key": "EbonsContentMod.Miracle.Level3.Name",
+    "ProcessTemplates": false,
+    "enGB": "Duplicate 3rd-Level Spells"
+  },
+
+  {
+    "Key": "EbonsContentMod.Miracle.Level4.Name",
+    "ProcessTemplates": false,
+    "enGB": "Duplicate 4th-Level Spells"
+  },
+
+  {
+    "Key": "EbonsContentMod.Miracle.Level5.Name",
+    "ProcessTemplates": false,
+    "enGB": "Duplicate 5th-Level Spells"
+  },
+
+  {
+    "Key": "EbonsContentMod.Miracle.Level6.Name",
+    "ProcessTemplates": false,
+    "enGB": "Duplicate 6th-Level Spells"
+  },
+
+  {
+    "Key": "EbonsContentMod.Miracle.Level7.Name",
+    "ProcessTemplates": false,
+    "enGB": "Duplicate 7th-Level Spells"
+  },
+
+  {
+    "Key": "EbonsContentMod.Miracle.Level8.Name",
+    "ProcessTemplates": false,
+    "enGB": "Duplicate 8th-Level Spells"
+  },
+
+  {
+    "Key": "EbonsContentMod.Miracle.RemoveNegativeEffects.Name",
+    "ProcessTemplates": false,
+    "enGB": "Cleanse All Afflictions"
+  },
+
 ]

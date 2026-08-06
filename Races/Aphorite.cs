@@ -176,6 +176,7 @@ namespace EbonsContentMod.Races
                 .SetIcon(AbilityRefs.Glitterdust.Reference.Get().Icon)
                 .SetGroups(FeatureGroup.Racial)
                 .AddFacts([CrystallineDustActivatableAblity])
+                .AddAbilityResources(resource: CrystallineDustResource, restoreAmount: true)
                 .Configure();
 
             // Aphorite Resistances
@@ -245,6 +246,9 @@ namespace EbonsContentMod.Races
             // Add race to mount fixes
             RaceMountFixerizer.AddRaceToMountFixes(recoloredrace, CopyRace);
 
+            // Fix Odds and Ends
+            RaceOddsAndEndsFixerizer.FixRace(recoloredrace);
+
             // Add race to race list
             var raceRef = recoloredrace.ToReference<BlueprintRaceReference>();
             ref var races = ref BlueprintRoot.Instance.Progression.m_CharacterRaces;
@@ -253,8 +257,9 @@ namespace EbonsContentMod.Races
             Array.Resize(ref races, length + 1);
             races[length] = raceRef;
 
-            //PortraitCreatonator.RegisterRacePortrait("Aphorite_F_01", "{16532BC7-57D5-4E9A-BA04-0C435E9B53F6}", race, Gender.Female, "Aphorite_F_01");
-            //PortraitCreatonator.RegisterRacePortrait("Aphorite_M_01", "{96B6FEDE-12D5-4F71-92D5-BF26C2B07192}", race, Gender.Male, "Aphorite_M_01");
+            // Add portraits
+            PortraitCreatonator.RegisterRacePortrait("Aphorite_F_01", "{452AE5B7-9374-4444-8B21-5DAB550A6CF7}", race, Gender.Female, "Aphorite_F_01");
+            PortraitCreatonator.RegisterRacePortrait("Aphorite_M_01", "{460B67DF-FBE5-4496-A26B-E373EA279F47}", race, Gender.Male, "Aphorite_M_01");
         }
     }
 }

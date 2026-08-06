@@ -5,7 +5,7 @@
 		<TargetFramework>net481</TargetFramework>
 		<AssemblyName>EbonsContentMod</AssemblyName>
 		<Description>EbonsContentMod</Description>
-		<Version>1.1.5</Version>
+		<Version>1.1.6</Version>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<LangVersion>latest</LangVersion>
 		<RootNamespace>EbonsContentMod</RootNamespace>
@@ -49,6 +49,8 @@
 			<Files Remove="$(TargetDir)\**\UnityModManager.xml" />
 			<Files Include="$(TargetDir)\**\$(AssemblyName).dll" />
 			<Files Include="$(TargetDir)\**\$(AssemblyName).pdb" />
+			<Files Remove="$(TargetDir)\**\*.nupkg" />
+			<Files Remove="$(TargetDir)\**\*.snupkg" />
 			<ToDelete Include="$(TargetDir)\**\*.*" />
 			<ToDelete Remove="@(Files)" />
 		</ItemGroup>
@@ -91,6 +93,27 @@
 	  <Folder Include="Portraits\Nagaji_F_01\" />
 	  <Folder Include="Portraits\Kuru_F_01\" />
 	  <Folder Include="Portraits\Kuru_M_01\" />
+	  <Folder Include="Portraits\Changeling_F_01\" />
+	  <Folder Include="Portraits\Aphorite_F_01\" />
+	  <Folder Include="Portraits\Aphorite_M_01\" />
+	  <Folder Include="Portraits\Ganzi_F_01\" />
+	  <Folder Include="Portraits\Ganzi_M_01\" />
+	  <Folder Include="Portraits\AquaticElf_F_01\" />
+	  <Folder Include="Portraits\AquaticElf_M_01\" />
+	  <Folder Include="Portraits\Succubus_M_01\" />
+	  <Folder Include="Portraits\Succubus_F_01\" />
+	  <Folder Include="Portraits\Rougarou_M_01\" />
+	  <Folder Include="Portraits\Rougarou_F_01\" />
+	  <Folder Include="Portraits\Samsaran_M_02\" />
+	  <Folder Include="Portraits\Samsaran_F_02\" />
+	  <Folder Include="Portraits\Strix_M_01\" />
+	  <Folder Include="Portraits\Strix_F_01\" />
+	  <Folder Include="Portraits\Orc_M_01\" />
+	  <Folder Include="Portraits\Orc_F_01\" />
+	  <Folder Include="Portraits\Svirfneblin_M_01\" />
+	  <Folder Include="Portraits\Svirfneblin_F_01\" />
+	  <Folder Include="Portraits\Skinwalker_M_01\" />
+	  <Folder Include="Portraits\Skinwalker_F_01\" />
 	  <Folder Include="Portraits\Vishkanya_M_01\" />
 	  <Folder Include="Portraits\Vishkanya_F_01\" />
 	  <Folder Include="Portraits\Shabti_M_01\" />

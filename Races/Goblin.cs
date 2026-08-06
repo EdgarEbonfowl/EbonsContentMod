@@ -286,7 +286,8 @@ namespace EbonsContentMod.Races
 
             RaceEquipmentHiderizer.AddRaceHiddenItems(FinalRace, HiddenItems);
 
-            
+            // Fix Odds and Ends
+            RaceOddsAndEndsFixerizer.FixRace(FinalRace);
 
             // Add race to race list
             var raceRef = FinalRace.ToReference<BlueprintRaceReference>();
