@@ -40,6 +40,8 @@ This mod adds the following races to the game and they should work like the defa
 - [Hobgoblin](https://www.d20pfsrd.com/races/other-races/featured-races/arg-hobgoblin "Hobgoblin")
 - [Aquatic Elf](https://www.d20pfsrd.com/races/other-races/more-races/advanced-races-11-20-rp/aquatic-elves/)
 - [Aphorite](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/aphorite/ "Aphorite")
+- [Astomoi](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/astomoi/ "Astomoi")
+- [Duskwalker](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/duskwalker/ "Duskwalker")
 
 Here is what all the new races look like:
 
@@ -126,6 +128,8 @@ Some of my favorites:
 - [Wings of Air](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Wings%20of%20Air)
 - [Earth Walk](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Earth%20Walk)
 - [Earth Glide](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Earth%20Glide)
+- [Air Shroud](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Air%20Shroud "Air Shroud")
+- [Greater Air Shroud](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Air%20Shroud,%20Greater "Greater Air Shroud")
 
 ## Ability Fixes
 - **Come And Get Me!** barbarian power now works correctly with the skald's raging song. The vanilla version only affected the skald, not teammates. *Update:* the state of the toggle is now tracked, so if a character steps out of the inspired rage aoe with Come And Get Me! enabled it is immediately disabled, but when they step back in it turns back on automatically. This happens even on other character's turns so if a character moves out of the song, ends their turn, then the skald moves close to them again, Come And Get Me! will turn back on automatically.
