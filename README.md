@@ -91,7 +91,7 @@ Some of my favorites:
 - [Miracle](https://www.d20pfsrd.com/magic/all-spells/m/miracle/ "Miracle")
 - [Wish](https://www.d20pfsrd.com/magic/all-spells/w/wish/ "Wish")
 - [Limited Wish](https://www.d20pfsrd.com/magic/all-spells/l/limited-wish/ "Limited Wish")
-  - The spells above have all the effects explicitly detailed in their descriptions without the more esoteric options. For instance, Wish can duplicate spells (include resurrection which is explicitly called out in its description), grant inherent ability score bonuses, fully heal your party, and remove negative status effects from your part, but cannot "undo misfortune." Materials costs are in diamonds for Wish/Limited Wish, but the high-powered uses of Miracle require a sacrifice of gold pieces since there is not enough diamond dust in the game to pay for it.
+  - The spells above have all the effects explicitly detailed in their descriptions without the more esoteric options. For instance, Wish can duplicate spells (including resurrection which is explicitly called out in its description), grant inherent ability score bonuses, fully heal your party, and remove negative status effects from your party, but cannot "undo misfortune." Materials costs are in diamonds for Wish/Limited Wish, but the high-powered uses of Miracle require a sacrifice of gold pieces since there is not enough diamond dust in the game to pay for it.
 
 ## Bloodlines
 - [Orc Sorcerer Bloodline](https://www.d20pfsrd.com/classes/core-classes/sorcerer/bloodlines/bloodlines-from-paizo/orc-bloodline/ "Orc Sorcerer Bloodline")
