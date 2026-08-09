@@ -89,7 +89,9 @@ Some of my favorites:
  
 ## Spells
 - [Miracle](https://www.d20pfsrd.com/magic/all-spells/m/miracle/ "Miracle")
-  - Currently can duplicate spells and cleanse all negative status effects from an ally. A couple bigger effects that require a sacrifice of 25,000 GP coming soon.
+- [Wish](https://www.d20pfsrd.com/magic/all-spells/w/wish/ "Wish")
+- [Limited Wish](https://www.d20pfsrd.com/magic/all-spells/l/limited-wish/ "Limited Wish")
+  - The spells above have all the effects explicitly detailed in their descriptions without the more esoteric options. For instance, Wish can duplicate spells (include resurrection which is explicitly called out in its description), grant inherent ability score bonuses, fully heal your party, and remove negative status effects from your part, but cannot "undo misfortune." Materials costs are in diamonds for Wish/Limited Wish, but the high-powered uses of Miracle require a sacrifice of gold pieces since there is not enough diamond dust in the game to pay for it.
 
 ## Bloodlines
 - [Orc Sorcerer Bloodline](https://www.d20pfsrd.com/classes/core-classes/sorcerer/bloodlines/bloodlines-from-paizo/orc-bloodline/ "Orc Sorcerer Bloodline")
@@ -122,6 +124,8 @@ Some of my favorites:
 - [Spark of Life](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Spark%20of%20Life)
 - [Spark of Innovation](https://aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Spark%20of%20Innovation)
 - [Wings of Air](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Wings%20of%20Air)
+- [Earth Walk](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Earth%20Walk)
+- [Earth Glide](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Earth%20Glide)
 
 ## Ability Fixes
 - **Come And Get Me!** barbarian power now works correctly with the skald's raging song. The vanilla version only affected the skald, not teammates. *Update:* the state of the toggle is now tracked, so if a character steps out of the inspired rage aoe with Come And Get Me! enabled it is immediately disabled, but when they step back in it turns back on automatically. This happens even on other character's turns so if a character moves out of the song, ends their turn, then the skald moves close to them again, Come And Get Me! will turn back on automatically.
