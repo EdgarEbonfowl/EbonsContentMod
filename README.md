@@ -40,8 +40,9 @@ This mod adds the following races to the game and they should work like the defa
 - [Aphorite](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/aphorite/ "Aphorite")
 - [Astomoi](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/astomoi/ "Astomoi")
 - [Duskwalker](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/duskwalker/ "Duskwalker")
+- [Naiad](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/naiad-characters/ "Naiad")
 
-Here is what all the new races look like (some pictures outdated):
+Here is what all the new races look like (some pictures are outdated - several races look better with the new color ramps):
 
 ![ECM1](https://github.com/user-attachments/assets/6caac997-715a-4b6a-802a-4da565a8e65e)
 ![ECM2](https://github.com/user-attachments/assets/3b50acfa-ee31-42ff-87dd-c377becbceb1)
