@@ -113,6 +113,62 @@ namespace EbonsContentMod.Races
                 new Color(0.86f, 0.86f, 0.89f) // Super White
             ];
 
+        public static List<Texture2D> CustomHeadRamps =
+        [
+            ColorRampGenerator.CreateDhampirSkinRamp(new Color( // Deep Gray-Purple
+                RaceRecolorizer.GetColorsFromRGB(117f),
+                RaceRecolorizer.GetColorsFromRGB(102f),
+                RaceRecolorizer.GetColorsFromRGB(117f)
+                )),
+            ColorRampGenerator.CreateDhampirSkinRamp(new Color( // Medium Gray
+                RaceRecolorizer.GetColorsFromRGB(125f),
+                RaceRecolorizer.GetColorsFromRGB(125f),
+                RaceRecolorizer.GetColorsFromRGB(130f)
+                ),
+                new Color( // Medium Gray
+                RaceRecolorizer.GetColorsFromRGB(125f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(125f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(130f * 2/5)
+                )),
+            ColorRampGenerator.CreateDhampirSkinRamp(new Color( // Deep Gray-Blue
+                RaceRecolorizer.GetColorsFromRGB(95f),
+                RaceRecolorizer.GetColorsFromRGB(102f),
+                RaceRecolorizer.GetColorsFromRGB(130f)
+                )),
+            ColorRampGenerator.CreateDhampirSkinRamp(new Color( // Light Gray
+                RaceRecolorizer.GetColorsFromRGB(150f),
+                RaceRecolorizer.GetColorsFromRGB(150f),
+                RaceRecolorizer.GetColorsFromRGB(155f)
+                ),
+                new Color( // Light Gray
+                RaceRecolorizer.GetColorsFromRGB(150f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(150f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(155f * 2/5)
+                )),
+            ColorRampGenerator.CreateDhampirSkinRamp(new Color( // Dark Gray
+                RaceRecolorizer.GetColorsFromRGB(100f),
+                RaceRecolorizer.GetColorsFromRGB(100f),
+                RaceRecolorizer.GetColorsFromRGB(105f)
+                )),
+            ColorRampGenerator.CreateDhampirSkinRamp(new Color( // Dark Gray-Blue
+                RaceRecolorizer.GetColorsFromRGB(79f),
+                RaceRecolorizer.GetColorsFromRGB(85f),
+                RaceRecolorizer.GetColorsFromRGB(89f)
+                )),
+            ColorRampGenerator.CreateDhampirSkinRamp(new Color( // Light Gray-Purple
+                RaceRecolorizer.GetColorsFromRGB(142f),
+                RaceRecolorizer.GetColorsFromRGB(125f),
+                RaceRecolorizer.GetColorsFromRGB(144f)
+                ))
+        ];
+
+        public static List<Texture2D> CustomHairRamps =
+        [
+            RaceRecolorizer.GetRaceHairRampByIndex(RaceRefs.DhampirRace.Reference.Get(), 0),
+            ColorRampGenerator.CreateDhampirHairRamp(new Color(0.75f, 0.75f, 0.78f), new Color(0.5f, 0.5f, 0.53f)), // White
+            ColorRampGenerator.CreateDhampirHairRamp(new Color(0.92f, 0.92f, 0.95f), new Color(0.8f, 0.8f, 0.83f)) // Super White
+        ];
+
         public static BlueprintRace CopyRace = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.GnomeRace.ToString());
 
         private static readonly string SvirfneblinName = "SvirfneblinRace";
@@ -268,7 +324,7 @@ namespace EbonsContentMod.Races
                 .Configure();
 
             // Recolor Race
-            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, BaldRace: true, OnlyMalesBald: true);
+            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, CustomHeadRamps: CustomHeadRamps, CustomHairRamps: CustomHairRamps, BaldRace: true, OnlyMalesBald: true);
 
             // Add race to mount fixes
             RaceMountFixerizer.AddRaceToMountFixes(recoloredrace, CopyRace);

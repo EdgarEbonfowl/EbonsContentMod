@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using UnityModManagerNet;
@@ -34,6 +35,8 @@ public class Settings : UnityModManager.ModSettings
     public bool BattleProwessFix = true;
     public bool ShamanFriendToAnimalsFix = true;
     public bool AngelicAspectFlightFix = true;
+    public bool TableTopUMD = true;
+    public bool BestowGraceOfTheChampion = true;
 
     // Wild Talents
     public bool AirsLeap = true;
@@ -41,10 +44,16 @@ public class Settings : UnityModManager.ModSettings
     public bool KineticForm = true;
     public bool SparkOfInnovation = true;
     public bool SparkOfLife = true;
-    public bool WingsOfAir = true;
+    //public bool WingsOfAir = true;
+    public bool EarthWalk = true;
+    public bool EarthGlide = true;
+    public bool AirShroud = true;
+    //public bool GreaterAirShroud = true;
 
     // Spells
     public bool Miracle = true;
+    public bool Wish = true;
+    public bool LimitedWish = true;
 
     public override void Save(UnityModManager.ModEntry modEntry)
     {

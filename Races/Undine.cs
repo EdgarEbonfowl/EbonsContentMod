@@ -145,6 +145,188 @@ namespace EbonsContentMod.Races
                 )
         ];
 
+        public static List<Texture2D> CustomHeadRamps =
+        [
+            ColorRampGenerator.CreateHumanSkinRamp(new Color( // Light Water
+                RaceRecolorizer.GetColorsFromRGB(110f),
+                RaceRecolorizer.GetColorsFromRGB(143f),
+                RaceRecolorizer.GetColorsFromRGB(202f)
+                ),
+                new Color( // Light Water
+                RaceRecolorizer.GetColorsFromRGB(110f * 4/5),
+                RaceRecolorizer.GetColorsFromRGB(143f * 4/5),
+                RaceRecolorizer.GetColorsFromRGB(202f * 4/5)
+                )),
+            ColorRampGenerator.CreateHumanSkinRamp(new Color( // Light Seafoam
+                RaceRecolorizer.GetColorsFromRGB(134f),
+                RaceRecolorizer.GetColorsFromRGB(162f),
+                RaceRecolorizer.GetColorsFromRGB(164f)
+                ),
+                new Color( // Light Seafoam
+                RaceRecolorizer.GetColorsFromRGB(134f * 4/5),
+                RaceRecolorizer.GetColorsFromRGB(162f * 4/5),
+                RaceRecolorizer.GetColorsFromRGB(164f * 4/5)
+                )),
+            ColorRampGenerator.CreateHumanSkinRamp(new Color( // Deep Water //
+                RaceRecolorizer.GetColorsFromRGB(71f),
+                RaceRecolorizer.GetColorsFromRGB(114f),
+                RaceRecolorizer.GetColorsFromRGB(154f)
+                ),
+                new Color( // Deep Water //
+                RaceRecolorizer.GetColorsFromRGB(71f * 4/5),
+                RaceRecolorizer.GetColorsFromRGB(114f * 4/5),
+                RaceRecolorizer.GetColorsFromRGB(154f * 4/5)
+                ))
+        ];
+
+        public static List<Texture2D> CustomEyeRamps =
+        [
+            ColorRampGenerator.CreateOreadEyeRamp(new Color( // White
+                RaceRecolorizer.GetColorsFromRGB(182f),
+                RaceRecolorizer.GetColorsFromRGB(182f),
+                RaceRecolorizer.GetColorsFromRGB(182f)
+                ),
+                new Color( // White
+                RaceRecolorizer.GetColorsFromRGB(182f * 4/5),
+                RaceRecolorizer.GetColorsFromRGB(182f * 4/5),
+                RaceRecolorizer.GetColorsFromRGB(182f * 4/5)
+                )),
+            ColorRampGenerator.CreateOreadEyeRamp(new Color( // Light Purple
+                RaceRecolorizer.GetColorsFromRGB(190f),
+                RaceRecolorizer.GetColorsFromRGB(150f),
+                RaceRecolorizer.GetColorsFromRGB(205f)
+                ),
+                new Color( // Light Purple
+                RaceRecolorizer.GetColorsFromRGB(190f * 4/5),
+                RaceRecolorizer.GetColorsFromRGB(150f * 4/5),
+                RaceRecolorizer.GetColorsFromRGB(205f * 4/5)
+                )),
+            ColorRampGenerator.CreateOreadEyeRamp(new Color( // Light Teal
+                RaceRecolorizer.GetColorsFromRGB(143f),
+                RaceRecolorizer.GetColorsFromRGB(220f),
+                RaceRecolorizer.GetColorsFromRGB(203f)
+                ),
+                new Color( // Light Teal
+                RaceRecolorizer.GetColorsFromRGB(143f * 4/5),
+                RaceRecolorizer.GetColorsFromRGB(220f * 4/5),
+                RaceRecolorizer.GetColorsFromRGB(203f * 4/5)
+                )),
+            ColorRampGenerator.CreateOreadEyeRamp(new Color( // Light Blue
+                RaceRecolorizer.GetColorsFromRGB(144f),
+                RaceRecolorizer.GetColorsFromRGB(160f),
+                RaceRecolorizer.GetColorsFromRGB(236f)
+                ),
+                new Color( // Light Blue
+                RaceRecolorizer.GetColorsFromRGB(144f * 4/5),
+                RaceRecolorizer.GetColorsFromRGB(160f * 4/5),
+                RaceRecolorizer.GetColorsFromRGB(236f * 4/5)
+                ))
+        ];
+
+        public static List<Texture2D> CustomHairRamps =
+        [
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Dark blue
+                RaceRecolorizer.GetColorsFromRGB(50f),
+                RaceRecolorizer.GetColorsFromRGB(81f),
+                RaceRecolorizer.GetColorsFromRGB(200f)
+                ),
+                new Color( // Dark blue
+                RaceRecolorizer.GetColorsFromRGB(50f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(81f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(200f * 3/5)
+                )),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Very blue
+                RaceRecolorizer.GetColorsFromRGB(68f),
+                RaceRecolorizer.GetColorsFromRGB(106f),
+                RaceRecolorizer.GetColorsFromRGB(200f)
+                ),
+                new Color( // Very blue
+                RaceRecolorizer.GetColorsFromRGB(68f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(106f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(200f * 3/5)
+                )),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Dark Purple
+                RaceRecolorizer.GetColorsFromRGB(39f),
+                RaceRecolorizer.GetColorsFromRGB(16f),
+                RaceRecolorizer.GetColorsFromRGB(86f)
+                ),
+                new Color( // Dark Purple
+                RaceRecolorizer.GetColorsFromRGB(39f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(16f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(86f * 3/5)
+                )),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Teal Seafoam
+                RaceRecolorizer.GetColorsFromRGB(116f),
+                RaceRecolorizer.GetColorsFromRGB(196f),
+                RaceRecolorizer.GetColorsFromRGB(213f)
+                ),
+                new Color( // Teal Seafoam
+                RaceRecolorizer.GetColorsFromRGB(116f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(196f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(213f * 3/5)
+                )),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Very Dark Blue
+                RaceRecolorizer.GetColorsFromRGB(6f),
+                RaceRecolorizer.GetColorsFromRGB(28f),
+                RaceRecolorizer.GetColorsFromRGB(109f)
+                ),
+                new Color( // Very Dark Blue
+                RaceRecolorizer.GetColorsFromRGB(6f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(28f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(109f * 3/5)
+                )),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Medium Purple
+                RaceRecolorizer.GetColorsFromRGB(109f),
+                RaceRecolorizer.GetColorsFromRGB(80f),
+                RaceRecolorizer.GetColorsFromRGB(166f)
+                ),
+                new Color( // Medium Purple
+                RaceRecolorizer.GetColorsFromRGB(109f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(80f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(166f * 3/5)
+                )),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Sea Green
+                RaceRecolorizer.GetColorsFromRGB(38f),
+                RaceRecolorizer.GetColorsFromRGB(155f),
+                RaceRecolorizer.GetColorsFromRGB(143f)
+                ),
+                new Color( // Sea Green
+                RaceRecolorizer.GetColorsFromRGB(38f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(155f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(143f * 3/5)
+                )),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Almost Black Blue
+                RaceRecolorizer.GetColorsFromRGB(6f),
+                RaceRecolorizer.GetColorsFromRGB(16f),
+                RaceRecolorizer.GetColorsFromRGB(59f)
+                ),
+                new Color( // Almost Black Blue
+                RaceRecolorizer.GetColorsFromRGB(6f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(16f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(59f * 3/5)
+                )),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Light Blue
+                RaceRecolorizer.GetColorsFromRGB(134f),
+                RaceRecolorizer.GetColorsFromRGB(153f),
+                RaceRecolorizer.GetColorsFromRGB(236f)
+                ),
+                new Color( // Light Blue
+                RaceRecolorizer.GetColorsFromRGB(134f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(153f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(236f * 3/5)
+                )),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Black
+                RaceRecolorizer.GetColorsFromRGB(30f),
+                RaceRecolorizer.GetColorsFromRGB(30f),
+                RaceRecolorizer.GetColorsFromRGB(35f)
+                ),
+                new Color( // Black
+                RaceRecolorizer.GetColorsFromRGB(30f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(30f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(35f * 3/5)
+                ))
+        ];
+
         public static EquipmentEntityLink[] MaleHeads =
         [
             BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()).MaleOptions.Heads[0],
@@ -378,7 +560,7 @@ namespace EbonsContentMod.Races
                 .Configure();
 
             // Recolor Race
-            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.OreadRace.ToString()), CustomMaleHeads: MaleHeads, CustomFemaleHeads: FemaleHeads, CustomFemaleHairs: NewFemaleHairArray);
+            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, CustomHeadRamps: CustomHeadRamps, CustomEyeRamps: CustomEyeRamps, CustomHairRamps: CustomHairRamps, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.OreadRace.ToString()), CustomMaleHeads: MaleHeads, CustomFemaleHeads: FemaleHeads, CustomFemaleHairs: NewFemaleHairArray);
 
             // Add race to mount fixes
             RaceMountFixerizer.AddRaceToMountFixes(recoloredrace, CopyRace);

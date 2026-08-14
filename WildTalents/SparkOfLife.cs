@@ -71,12 +71,6 @@ namespace EbonsContentMod.WildTalents
         internal const string SparkOfLifeWaterDisplayName = "SparkOfLifeWater.Name";
         private static readonly string SparkOfLifeWaterDescription = "SparkOfLifeWater.Description";
 
-        /*
-         * Replace every placeholder below with the actual unit GUID.
-         *
-         * You can get these from BlueprintDump, BubblePrints, or your own
-         * blueprint logging.
-         */
         public static readonly ElementalSet AirUnits = new(
             medium: "676f8b7d0a170674cb6e504e0e30b4f0",
             large: "3764b43791a00e1468257adbca43ce9b",
@@ -172,16 +166,6 @@ namespace EbonsContentMod.WildTalents
                     BlueprintTools.GetBlueprintReference<BlueprintFeatureReference>(FeatureRefs.WaterBlastFeature.ToString()),
                     BlueprintTools.GetBlueprintReference<BlueprintFeatureReference>(FeatureRefs.ColdBlastFeature.ToString())
                 });
-
-            /*
-             * Later, Spark of Innovation can use the same factory:
-             *
-             * CreateSpark(
-             *     name: "SparkOfInnovation",
-             *     displayName: "Spark of Innovation",
-             *     description: "...",
-             *     units: SparkOfInnovationUnits);
-             */
 
             FeatureConfigurator
                 .New(

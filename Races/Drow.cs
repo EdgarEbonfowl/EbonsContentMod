@@ -56,7 +56,7 @@ namespace EbonsContentMod.Races
         public static List<Texture2D> CustomHeadRamps =
         [
             RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.DhampirRace.Reference.Get(), 4),
-            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Near Black
+            ColorRampGenerator.CreateElfSkinRamp(new Color( // Near Black
                 RaceRecolorizer.GetColorsFromRGB(45f),
                 RaceRecolorizer.GetColorsFromRGB(45f),
                 RaceRecolorizer.GetColorsFromRGB(50f)
@@ -65,28 +65,28 @@ namespace EbonsContentMod.Races
             RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.DhampirRace.Reference.Get(), 3),
             RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.TieflingRace.Reference.Get(), 4),
             RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.TieflingRace.Reference.Get(), 5),
-            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Dark Blue - slight gray
+            ColorRampGenerator.CreateElfSkinRamp(new Color( // Dark Blue - slight gray
                 RaceRecolorizer.GetColorsFromRGB(74f),
                 RaceRecolorizer.GetColorsFromRGB(74f),
                 RaceRecolorizer.GetColorsFromRGB(120f)
                 )),
-            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Medium Blue
+            ColorRampGenerator.CreateElfSkinRamp(new Color( // Medium Blue
                 RaceRecolorizer.GetColorsFromRGB(94f),
                 RaceRecolorizer.GetColorsFromRGB(102f),
                 RaceRecolorizer.GetColorsFromRGB(175f)
                 )),
-            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Light Gray-Blue
+            ColorRampGenerator.CreateElfSkinRamp(new Color( // Light Gray-Blue
                 RaceRecolorizer.GetColorsFromRGB(128f),
                 RaceRecolorizer.GetColorsFromRGB(136f),
                 RaceRecolorizer.GetColorsFromRGB(190f)
                 )),
             RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.TieflingRace.Reference.Get(), 13),
-            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Dark Gray
+            ColorRampGenerator.CreateElfSkinRamp(new Color( // Dark Gray
                 RaceRecolorizer.GetColorsFromRGB(90f),
                 RaceRecolorizer.GetColorsFromRGB(90f),
                 RaceRecolorizer.GetColorsFromRGB(95f)
                 )),
-            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Medium Dark Gray with Purple
+            ColorRampGenerator.CreateElfSkinRamp(new Color( // Medium Dark Gray with Purple
                 RaceRecolorizer.GetColorsFromRGB(75f),
                 RaceRecolorizer.GetColorsFromRGB(61f),
                 RaceRecolorizer.GetColorsFromRGB(68f)
@@ -94,22 +94,22 @@ namespace EbonsContentMod.Races
             RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.TieflingRace.Reference.Get(), 7),
             RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.TieflingRace.Reference.Get(), 8),
             RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.DhampirRace.Reference.Get(), 9),
-            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Blue Gray
+            ColorRampGenerator.CreateElfSkinRamp(new Color( // Blue Gray
                 RaceRecolorizer.GetColorsFromRGB(87f),
                 RaceRecolorizer.GetColorsFromRGB(91f),
                 RaceRecolorizer.GetColorsFromRGB(125f)
                 )),
-            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Very Dark Blue
+            ColorRampGenerator.CreateElfSkinRamp(new Color( // Very Dark Blue
                 RaceRecolorizer.GetColorsFromRGB(44f),
                 RaceRecolorizer.GetColorsFromRGB(44f),
                 RaceRecolorizer.GetColorsFromRGB(99f)
                 )),
-            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Medium Dark Gray-Blue
+            ColorRampGenerator.CreateElfSkinRamp(new Color( // Medium Dark Gray-Blue
                 RaceRecolorizer.GetColorsFromRGB(77f),
                 RaceRecolorizer.GetColorsFromRGB(82f),
                 RaceRecolorizer.GetColorsFromRGB(103f)
                 )),
-            RaceRecolorizer.CreateSingleRampFromColor(new Color( // Dark Purple-Blue
+            ColorRampGenerator.CreateElfSkinRamp(new Color( // Dark Purple-Blue
                 RaceRecolorizer.GetColorsFromRGB(52f),
                 RaceRecolorizer.GetColorsFromRGB(45f),
                 RaceRecolorizer.GetColorsFromRGB(75f)
@@ -119,9 +119,9 @@ namespace EbonsContentMod.Races
         public static List<Texture2D> CustomHairRamps =
         [
             RaceRecolorizer.GetRaceHairRampByIndex(RaceRefs.DhampirRace.Reference.Get(), 0),
-            RaceRecolorizer.CreateSingleRampFromColor(new Color(0.75f, 0.75f, 0.78f)), // White
-            RaceRecolorizer.CreateSingleRampFromColor(new Color(0f, 0f, 0f)), // Black
-            RaceRecolorizer.CreateSingleRampFromColor(new Color(0.86f, 0.86f, 0.89f)) // Super White
+            ColorRampGenerator.CreateDhampirHairRamp(new Color(0.85f, 0.85f, 0.88f), new Color(0.65f, 0.65f, 0.68f)), // White
+            ColorRampGenerator.CreateDhampirHairRamp(new Color(0.1f, 0.1f, 0.1f), new Color(0f, 0f, 0f)), // Black
+            ColorRampGenerator.CreateDhampirHairRamp(new Color(0.92f, 0.92f, 0.95f), new Color(0.8f, 0.8f, 0.83f)) // Super White
         ];
 
         public static EquipmentEntityLink[] MaleHairs =

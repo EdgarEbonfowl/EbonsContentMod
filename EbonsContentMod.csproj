@@ -5,7 +5,7 @@
 		<TargetFramework>net481</TargetFramework>
 		<AssemblyName>EbonsContentMod</AssemblyName>
 		<Description>EbonsContentMod</Description>
-		<Version>1.1.6</Version>
+		<Version>1.1.8</Version>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<LangVersion>latest</LangVersion>
 		<RootNamespace>EbonsContentMod</RootNamespace>
@@ -72,6 +72,15 @@
 	  </Reference>
 	</ItemGroup>
 	<ItemGroup>
+	  <Folder Include="Portraits\Naiad_F_01\" />
+	  <Folder Include="Portraits\Naiad_M_01\" />
+	  <Folder Include="Portraits\Astomoi_F_01\" />
+	  <Folder Include="Portraits\Astomoi_M_01\" />
+	  <Folder Include="Portraits\Duskwalker_F_01\" />
+	  <Folder Include="Portraits\Duskwalker_M_01\" />
+	  <Folder Include="Portraits\Triaxian_M_01\" />
+	  <Folder Include="Portraits\Triaxian_F_01\" />
+	  <Folder Include="Sprites\" />
 	  <Folder Include="Portraits\Mongrel_F_01\" />
 	  <Folder Include="Portraits\Mongrel_M_01\" />
 	  <Folder Include="Portraits\Drow_F_01\" />
@@ -127,12 +136,16 @@
 	  <Folder Include="Portraits\NokNokGoblinPortrait\" />
 	  <Folder Include="Portraits\Samsaran_F_01\" />
 	  <Folder Include="Portraits\Samsaran_M_01\" />
-	  <Folder Include="Rules\" />
 	</ItemGroup>
 	<ItemGroup>
 		<Content Include="Portraits\**\*">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="Sprites\**\*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
 	</ItemGroup>
 	<ItemGroup>
 	  <None Update="ebonscontentmod_assets">

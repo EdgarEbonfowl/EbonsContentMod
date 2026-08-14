@@ -83,6 +83,27 @@ namespace EbonsContentMod.Races
             new Color(0.0f, 0.0f, 0.0f)
         ];
 
+        public static List<Texture2D> CustomHeadRamps =
+        [
+            ColorRampGenerator.CreateHumanSkinRamp(new Color(0.173f, 0.455f, 0.78f), new Color(0.173f * 2/5, 0.455f * 2/5, 0.78f * 2/5)),
+            ColorRampGenerator.CreateHumanSkinRamp(new Color(0.118f, 0.573f, 0.824f), new Color(0.118f * 2/5, 0.573f * 2/5, 0.824f * 2/5)),
+            ColorRampGenerator.CreateHumanSkinRamp(new Color(0.0f, 0.5f, 1f), new Color(0.0f, 0.5f * 2/5, 1f * 2/5)),
+            ColorRampGenerator.CreateHumanSkinRamp(new Color(0.322f, 0.439f, 0.816f), new Color(0.322f * 2/5, 0.439f * 2/5, 0.816f * 2/5)),
+            ColorRampGenerator.CreateHumanSkinRamp(new Color(0.301f, 0.333f, 0.863f), new Color(0.301f * 2/5, 0.333f * 2/5, 0.863f * 2/5)),
+
+        ];
+
+        public static List<Texture2D> CustomEyeRamps =
+        [
+            ColorRampGenerator.CreateHumanSkinRamp(new Color(0.92f, 0.92f, 0.94f), new Color(0.85f, 0.85f, 0.87f), new Color(0.97f, 0.97f, 0.99f)),
+        ];
+
+        public static List<Texture2D> CustomHairRamps =
+        [
+            ColorRampGenerator.CreateHumanSkinRamp(new Color(0.11764706f, 0.11764706f, 0.11764706f), new Color(0.05f, 0.05f, 0.05f)),
+            ColorRampGenerator.CreateHumanSkinRamp(new Color(0.0f, 0.0f, 0.0f)),
+        ];
+
         public static EquipmentEntityLink[] FemaleHairs =
         [
             new EquipmentEntityLink() {AssetId = "04c3eb6d7570d8d49b686516b7c4a4f8"}, // Long Camelia Hair
@@ -655,7 +676,7 @@ namespace EbonsContentMod.Races
                 .Configure();
 
             // Recolor Race
-            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.OreadRace.ToString()), CustomFemaleHairs: NewFemaleHairArray);
+            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, CustomHeadRamps: CustomHeadRamps, CustomEyeRamps: CustomEyeRamps, CustomHairRamps: CustomHairRamps, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.OreadRace.ToString()), CustomFemaleHairs: NewFemaleHairArray);
 
             // Add race to mount fixes
             RaceMountFixerizer.AddRaceToMountFixes(recoloredrace, CopyRace);

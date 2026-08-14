@@ -133,7 +133,71 @@ namespace EbonsContentMod.Races
             RaceRecolorizer.GetArmorRampByIndex(70)
         ];
 
-        public static List<Texture2D> CustomHairRamps = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HumanRace.ToString()).MaleOptions.Hair[1].Load(true, false).m_PrimaryRamps;
+        public static List<Texture2D> CustomHairRamps =
+        [
+            ColorRampGenerator.CreateHumanHairRamp(new Color(0.11764706f, 0.11764706f, 0.11764706f), new Color(0.05f, 0.05f, 0.05f)),
+            ColorRampGenerator.CreateHumanHairRamp(new Color(0.0f, 0.0f, 0.0f), new Color(0.0f, 0.0f, 0.0f)),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Dark Brown
+                RaceRecolorizer.GetColorsFromRGB(50f),
+                RaceRecolorizer.GetColorsFromRGB(35f),
+                RaceRecolorizer.GetColorsFromRGB(10f)
+                ),
+                new Color( // Dark Brown
+                RaceRecolorizer.GetColorsFromRGB(50f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(35f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(10f * 3/5)
+                )),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Brown
+                RaceRecolorizer.GetColorsFromRGB(72f),
+                RaceRecolorizer.GetColorsFromRGB(53f),
+                RaceRecolorizer.GetColorsFromRGB(13f)
+                ),
+                new Color( // Brown
+                RaceRecolorizer.GetColorsFromRGB(72f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(53f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(13f * 3/5)
+                )),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Medium Brown
+                RaceRecolorizer.GetColorsFromRGB(85f),
+                RaceRecolorizer.GetColorsFromRGB(75f),
+                RaceRecolorizer.GetColorsFromRGB(55f)
+                ),
+                new Color( // Medium Brown
+                RaceRecolorizer.GetColorsFromRGB(85f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(75f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(55f * 3/5)
+                )),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Deep Red
+                RaceRecolorizer.GetColorsFromRGB(120f),
+                RaceRecolorizer.GetColorsFromRGB(55f),
+                RaceRecolorizer.GetColorsFromRGB(50f)
+                ),
+                new Color( // Deep Red
+                RaceRecolorizer.GetColorsFromRGB(120f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(55f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(50f * 3/5)
+                )),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Deep Red-Brown
+                RaceRecolorizer.GetColorsFromRGB(100f),
+                RaceRecolorizer.GetColorsFromRGB(50f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+                new Color( // Deep Red-Brown
+                RaceRecolorizer.GetColorsFromRGB(100f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(50f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                )),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Orange
+                RaceRecolorizer.GetColorsFromRGB(140f),
+                RaceRecolorizer.GetColorsFromRGB(80f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+                new Color( // Orange
+                RaceRecolorizer.GetColorsFromRGB(140f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(80f * 3/5),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                )),
+        ];
 
         public static EquipmentEntityLink[] MaleHeads =
         [
@@ -321,7 +385,7 @@ namespace EbonsContentMod.Races
                 .Configure();
 
             // Recolor Race
-            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyeEE: ContactEEL, CustomMaleHeads: MaleHeads, CustomFemaleHeads: FemaleHeads, CustomFemaleHairs: FemaleHairs, CustomMaleHairs: MaleHairs, CustomEyeRamps: CustomEyeRamps, CustomHeadRamps: CustomSkinRamps);
+            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyeEE: ContactEEL, CustomMaleHeads: MaleHeads, CustomFemaleHeads: FemaleHeads, CustomFemaleHairs: FemaleHairs, CustomMaleHairs: MaleHairs, CustomEyeRamps: CustomEyeRamps, CustomHeadRamps: CustomSkinRamps, CustomHairRamps: CustomHairRamps);
 
             // Add race to mount fixes
             RaceMountFixerizer.AddRaceToMountFixes(recoloredrace, CopyRace);

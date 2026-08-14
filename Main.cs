@@ -28,6 +28,7 @@ using Kingmaker.SharedTypes;
 using System.IO;
 using UnityEngine;
 using EbonsContentMod.Spells;
+using BlueprintCore.Blueprints.References;
 
 
 namespace EbonsContentMod;
@@ -153,13 +154,21 @@ public static class Main
             Settings.Miracle,
             "Enable the Miracle spell");
 
+        Settings.Wish = GUILayout.Toggle(
+            Settings.Wish,
+            "Enable the Wish spell");
+
+        Settings.LimitedWish = GUILayout.Toggle(
+            Settings.LimitedWish,
+            "Enable the Limited Wish spell");
+
         GUILayout.Space(10);
 
         GUILayout.Label("<b>New Wild Talents</b>");
 
         Settings.AirsLeap = GUILayout.Toggle(
             Settings.AirsLeap,
-            "Enable Air's Leap utility wild talent");
+            "Enable Air's Leap and Wings of Air utility wild talent");
 
         Settings.ClockworkHeart = GUILayout.Toggle(
             Settings.ClockworkHeart,
@@ -177,9 +186,21 @@ public static class Main
             Settings.SparkOfLife,
             "Enable Spark Of Life utility wild talent");
 
-        Settings.WingsOfAir = GUILayout.Toggle(
+        /*Settings.WingsOfAir = GUILayout.Toggle(
             Settings.WingsOfAir,
-            "Enable Wings Of Air utility wild talent");
+            "Enable Wings Of Air utility wild talent");*/
+
+        Settings.EarthWalk = GUILayout.Toggle(
+            Settings.EarthWalk,
+            "Enable Earth Walk utility wild talent");
+
+        Settings.EarthGlide = GUILayout.Toggle(
+            Settings.EarthGlide,
+            "Enable Earth Glide utility wild talent");
+
+        Settings.AirShroud = GUILayout.Toggle(
+            Settings.AirShroud,
+            "Enable Air Shroud and Greater Air Shroud utility wild talents");
 
         GUILayout.Space(10);
 
@@ -208,6 +229,14 @@ public static class Main
         Settings.AngelicAspectFlightFix = GUILayout.Toggle(
             Settings.AngelicAspectFlightFix,
             "Enable flight from (Greater) Angelic Aspect");
+
+        Settings.BestowGraceOfTheChampion = GUILayout.Toggle(
+            Settings.BestowGraceOfTheChampion,
+            "Enable Smite Evil and Lay on Hands from Bestow Grace of the Champion per tabletop");
+
+        Settings.TableTopUMD = GUILayout.Toggle(
+            Settings.TableTopUMD,
+            "Enable UMD to allow equipping items with stat, class, and alignment restrictions per tabletop");
     }
 
     public static void OnSaveGUI(UnityModManager.ModEntry modEntry)
@@ -225,6 +254,10 @@ public static class Main
 
     private static void ConfigureRaces()
     {
+        // Generalize the Keen Senses description
+        KeenSenses.Configure();
+        
+        // Create the new races
         Samsaran.Configure();
         Svirfneblin.Configure();
         Duergar.Configure();
@@ -251,6 +284,12 @@ public static class Main
         Hobgoblin.Configure();
         AquaticElf.Configure();
         Aphorite.Configure();
+        Astomoi.Configure();
+        Duskwalker.Configure();
+        Triaxian.Configure();
+
+        // Testing
+        Naiad.Configure();
     }
 
     [HarmonyPatch]
@@ -442,10 +481,6 @@ public static class Main
                 if (Settings.AirsLeap)
                 {
                     AirsLeap.Configure();
-                }
-
-                if (Settings.WingsOfAir)
-                {
                     WingsOfAir.Configure();
                 }
 
@@ -457,6 +492,21 @@ public static class Main
                 if (Settings.SparkOfInnovation)
                 {
                     SparkOfInnovation.Configure();
+                }
+
+                if (Settings.EarthWalk)
+                {
+                    EarthWalk.Configure();
+                }
+
+                if (Settings.EarthGlide)
+                {
+                    EarthGlide.Configure();
+                }
+
+                if (Settings.AirShroud)
+                {
+                    AirShroud.Configure();
                 }
 
                 if (Settings.BattleProwessFix)
@@ -474,19 +524,11 @@ public static class Main
                     AngelicAspect.Configure();
                 }
 
-                try
+                MiracleWish.Configure();
+
+                if (Settings.BestowGraceOfTheChampion)
                 {
-                    log.Log("[Miracle] Calling MiracleWish.Configure().");
-                    if (Settings.Miracle)
-                    {
-                        MiracleWish.Configure();
-                    }
-                    log.Log("[Miracle] MiracleWish.Configure() returned.");
-                }
-                catch (Exception ex)
-                {
-                    log.Error(
-                        "[Miracle] Initialization failed:\n" + ex);
+                    BestowGraceOfTheChampion.Configure();
                 }
             }
             catch (Exception e)
@@ -561,6 +603,12 @@ public static class Main
                 {
                     FaithMagic.Configure();
                 }
+
+                MiracleWish.FixMiracleWishSpells();
+
+                //MiracleWish.ExportSprites();
+
+                //TextureExporterator.ExportAllRamps();
 
                 GarbageBin.Configure();
             }

@@ -16,10 +16,6 @@ namespace EbonsContentMod.Utilities
 {
     internal class EELinker
     {
-        /*
-         * These retain the registered links by race. They are used by
-         * DollState.ApplyRamps and AddItemEquipment.
-         */
         private static readonly Dictionary<BlueprintRace, EquipmentEntityLink[]>
             EyeLinkEELs = new();
 
@@ -29,16 +25,6 @@ namespace EbonsContentMod.Utilities
         private static readonly Dictionary<BlueprintRace, EquipmentEntityLink[]>
             HairLinkEELs = new();
 
-        /*
-         * Canonical mappings. AssetId strings are stable even when the game
-         * loads a new EquipmentEntity object for the same resource.
-         *
-         * "SourcesByLinkedAssetId":
-         *     Linked circuitry/body-paint asset -> source head/hair assets.
-         *
-         * "LinksBySourceAssetId":
-         *     Source head/hair asset -> linked circuitry/body-paint assets.
-         */
         private static readonly Dictionary<string, string[]>
             EyeSourcesByLinkedAssetId =
                 new(StringComparer.OrdinalIgnoreCase);
@@ -63,21 +49,9 @@ namespace EbonsContentMod.Utilities
             HairLinksBySourceAssetId =
                 new(StringComparer.OrdinalIgnoreCase);
 
-        /*
-         * EquipmentEntity itself does not expose its originating AssetId.
-         * Therefore, register the relationship whenever both the link and its
-         * loaded entity are available.
-         */
         private static readonly Dictionary<EquipmentEntity, string>
             AssetIdByInstance = new();
 
-        /*
-         * A rebuilt EquipmentEntity may be a new object. The signature allows
-         * us to associate that new object with a registered AssetId.
-         *
-         * A signature can theoretically match multiple AssetIds. In that case
-         * the resolver refuses to guess.
-         */
         private static readonly Dictionary<string, HashSet<string>>
             AssetIdsBySignature =
                 new(StringComparer.Ordinal);
@@ -182,9 +156,8 @@ namespace EbonsContentMod.Utilities
             sourceLinks ??= Array.Empty<EquipmentEntityLink>();
             linkedLinks ??= Array.Empty<EquipmentEntityLink>();
 
-            /*
-             * Register each link/object relationship while both are known.
-             */
+            // Register each link/object relationship while both are known.
+
             foreach (EquipmentEntityLink link in sourceLinks)
             {
                 LoadAndRegister(link);
@@ -301,11 +274,11 @@ namespace EbonsContentMod.Utilities
 
             AssetIdByInstance[equipmentEntity] = assetId;
 
-            Main.log.Log(
+            /*Main.log.Log(
                 $"EELinker REGISTER INSTANCE: " +
                 $"name={equipmentEntity.name}, " +
                 $"hash={equipmentEntity.GetHashCode()}, " +
-                $"assetId={assetId}");
+                $"assetId={assetId}");*/
 
             string signature =
                 GetEquipmentEntitySignature(equipmentEntity);
@@ -327,12 +300,12 @@ namespace EbonsContentMod.Utilities
 
             assetIds.Add(assetId);
 
-            Main.log.Log(
+            /*Main.log.Log(
                 $"EELinker REGISTER SIGNATURE: " +
                 $"name={equipmentEntity.name}, " +
                 $"assetId={assetId}, " +
                 $"candidateCount={assetIds.Count}, " +
-                $"signature={signature}");
+                $"signature={signature}");*/
         }
 
         private static string GetEquipmentEntitySignature(
@@ -364,7 +337,7 @@ namespace EbonsContentMod.Utilities
 
             if (equipmentEntity == null)
             {
-                Main.log.Log("EELinker TryGetAssetId: equipmentEntity was null.");
+                //Main.log.Log("EELinker TryGetAssetId: equipmentEntity was null.");
                 return false;
             }
 
@@ -372,11 +345,11 @@ namespace EbonsContentMod.Utilities
                     equipmentEntity,
                     out assetId))
             {
-                Main.log.Log(
+                /*Main.log.Log(
                     $"EELinker TryGetAssetId DIRECT: " +
                     $"name={equipmentEntity.name}, " +
                     $"hash={equipmentEntity.GetHashCode()}, " +
-                    $"assetId={assetId}");
+                    $"assetId={assetId}");*/
 
                 return true;
             }
@@ -386,11 +359,11 @@ namespace EbonsContentMod.Utilities
 
             if (string.IsNullOrEmpty(signature))
             {
-                Main.log.Log(
+                /*Main.log.Log(
                     $"EELinker TryGetAssetId FAILED: " +
                     $"name={equipmentEntity.name}, " +
                     $"hash={equipmentEntity.GetHashCode()}, " +
-                    $"signature was empty.");
+                    $"signature was empty.");*/
 
                 return false;
             }
@@ -399,25 +372,25 @@ namespace EbonsContentMod.Utilities
                     signature,
                     out HashSet<string> candidates))
             {
-                Main.log.Log(
+                /*Main.log.Log(
                     $"EELinker TryGetAssetId FAILED: " +
                     $"name={equipmentEntity.name}, " +
                     $"hash={equipmentEntity.GetHashCode()}, " +
                     $"no registered signature match. " +
-                    $"signature={signature}");
+                    $"signature={signature}");*/
 
                 return false;
             }
 
             if (candidates.Count != 1)
             {
-                Main.log.Log(
+                /*Main.log.Log(
                     $"EELinker TryGetAssetId AMBIGUOUS: " +
                     $"name={equipmentEntity.name}, " +
                     $"hash={equipmentEntity.GetHashCode()}, " +
                     $"candidateCount={candidates.Count}, " +
                     $"candidates={string.Join(",", candidates)}, " +
-                    $"signature={signature}");
+                    $"signature={signature}");*/
 
                 return false;
             }
@@ -426,11 +399,11 @@ namespace EbonsContentMod.Utilities
 
             AssetIdByInstance[equipmentEntity] = assetId;
 
-            Main.log.Log(
+            /*Main.log.Log(
                 $"EELinker TryGetAssetId SIGNATURE: " +
                 $"name={equipmentEntity.name}, " +
                 $"hash={equipmentEntity.GetHashCode()}, " +
-                $"assetId={assetId}");
+                $"assetId={assetId}");*/
 
             return true;
         }
@@ -512,20 +485,20 @@ namespace EbonsContentMod.Utilities
                         assetId,
                         StringComparison.OrdinalIgnoreCase))
                 {
-                    Main.log.Log(
+                    /*Main.log.Log(
                         $"EELinker FindRuntimeEntity FOUND: " +
                         $"requested={assetId}, " +
                         $"name={runtimeEntity.name}, " +
-                        $"hash={runtimeEntity.GetHashCode()}");
+                        $"hash={runtimeEntity.GetHashCode()}");*/
 
                     return runtimeEntity;
                 }
             }
 
-            Main.log.Log(
+            /*Main.log.Log(
                 $"EELinker FindRuntimeEntity FAILED: " +
                 $"requested={assetId}, " +
-                $"rampEntryCount={character.m_RampIndices.Count}");
+                $"rampEntryCount={character.m_RampIndices.Count}");*/
 
             return null;
         }
@@ -584,15 +557,6 @@ namespace EbonsContentMod.Utilities
         [HarmonyPatch]
         private static class Patches
         {
-            /*
-             * This catches both sides of the rebuild:
-             *
-             * 1. A source head/hair receives its selected ramp and propagates
-             *    that ramp to linked entities.
-             *
-             * 2. A linked entity later receives its default ramp and is
-             *    corrected from the current source entity.
-             */
             [HarmonyPatch(
                 typeof(Character),
                 "SetRampIndices",
@@ -620,54 +584,45 @@ namespace EbonsContentMod.Utilities
 
                 if (__instance == null)
                 {
-                    Main.log.Log(
-                        "EELinker SetRampIndices: character was null.");
+                    //Main.log.Log("EELinker SetRampIndices: character was null.");
 
                     return;
                 }
 
                 if (ee == null)
                 {
-                    Main.log.Log(
-                        "EELinker SetRampIndices: EquipmentEntity was null.");
+                    //Main.log.Log("EELinker SetRampIndices: EquipmentEntity was null.");
 
                     return;
                 }
 
-                Main.log.Log(
+                /*Main.log.Log(
                     $"EELinker SetRampIndices ENTER: " +
                     $"name={ee.name}, " +
                     $"hash={ee.GetHashCode()}, " +
                     $"primary={primaryRampIndex}, " +
-                    $"secondary={secondaryRampIndex}");
+                    $"secondary={secondaryRampIndex}");*/
 
                 if (!TryGetAssetId(ee, out string currentAssetId))
                 {
-                    Main.log.Log(
+                    /*Main.log.Log(
                         $"EELinker SetRampIndices ABORT: " +
                         $"could not resolve AssetId for {ee.name}, " +
-                        $"hash={ee.GetHashCode()}");
+                        $"hash={ee.GetHashCode()}");*/
 
                     return;
                 }
 
-                Main.log.Log(
+                /*Main.log.Log(
                     $"EELinker SetRampIndices RESOLVED: " +
                     $"name={ee.name}, " +
                     $"assetId={currentAssetId}, " +
                     $"isEyeSource={EyeLinksBySourceAssetId.ContainsKey(currentAssetId)}, " +
-                    $"isEyeLinked={EyeSourcesByLinkedAssetId.ContainsKey(currentAssetId)}");
+                    $"isEyeLinked={EyeSourcesByLinkedAssetId.ContainsKey(currentAssetId)}");*/
 
                 try
                 {
                     ApplyingLinkedRamp = true;
-
-                    /*
-                     * TARGET-SIDE CORRECTION
-                     *
-                     * The entity whose ramp just changed is itself a linked
-                     * eye/skin/hair entity.
-                     */
 
                     if (EyeSourcesByLinkedAssetId.TryGetValue(
                             currentAssetId,
@@ -678,11 +633,11 @@ namespace EbonsContentMod.Utilities
                             useSecondaryRamp: true,
                             out int eyeRamp))
                     {
-                        Main.log.Log(
+                        /*Main.log.Log(
                             $"EELinker TARGET eye correction: " +
                             $"linked={ee.name}, " +
                             $"linkedAssetId={currentAssetId}, " +
-                            $"eyeRamp={eyeRamp}");
+                            $"eyeRamp={eyeRamp}");*/
 
                         __instance.SetPrimaryRampIndex(
                             ee,
@@ -701,10 +656,6 @@ namespace EbonsContentMod.Utilities
                             useSecondaryRamp: false,
                             out int skinRamp))
                     {
-                        /*
-                         * Preserve your original behavior of assigning the
-                         * source skin ramp to both ramp channels.
-                         */
                         __instance.SetRampIndices(
                             ee,
                             skinRamp,
@@ -730,24 +681,17 @@ namespace EbonsContentMod.Utilities
                         return;
                     }
 
-                    /*
-                     * SOURCE-SIDE PROPAGATION
-                     *
-                     * The entity whose ramp just changed is a source head or
-                     * source hair entity.
-                     */
-
                     if (secondaryRampIndex >= 0 &&
                         EyeLinksBySourceAssetId.TryGetValue(
                             currentAssetId,
                             out string[] eyeLinkedAssetIds))
                     {
-                        Main.log.Log(
+                        /*Main.log.Log(
                             $"EELinker SOURCE eye propagation: " +
                             $"source={ee.name}, " +
                             $"sourceAssetId={currentAssetId}, " +
                             $"eyeRamp={secondaryRampIndex}, " +
-                            $"linkedCount={eyeLinkedAssetIds.Length}");
+                            $"linkedCount={eyeLinkedAssetIds.Length}");*/
 
                         foreach (string linkedAssetId
                                  in eyeLinkedAssetIds)
@@ -757,9 +701,9 @@ namespace EbonsContentMod.Utilities
                                     __instance,
                                     linkedAssetId);
 
-                            Main.log.Log(
+                            /*Main.log.Log(
                                 $"EELinker SOURCE searching for linked AssetId: " +
-                                $"{linkedAssetId}");
+                                $"{linkedAssetId}");*/
 
                             if (runtimeLinkedEntity == null)
                             {
@@ -829,10 +773,6 @@ namespace EbonsContentMod.Utilities
                 }
             }
 
-            /*
-             * Character creation already provides authoritative eye, skin,
-             * and hair ramp values through DollState.
-             */
             [HarmonyPatch(
                 typeof(DollState),
                 nameof(DollState.ApplyRamps))]
@@ -914,10 +854,6 @@ namespace EbonsContentMod.Utilities
                 }
             }
 
-            /*
-             * If a linked entity is added after its source already has its
-             * final ramp, apply that existing source ramp immediately.
-             */
             [HarmonyPatch(
                 typeof(Character),
                 nameof(Character.AddEquipmentEntity),
@@ -1002,11 +938,6 @@ namespace EbonsContentMod.Utilities
                 }
             }
 
-            /*
-             * This is retained from your original implementation for item
-             * equipment that directly supplies one of the registered linked
-             * EquipmentEntityLinks.
-             */
             [HarmonyPatch(
                 typeof(UnitEntityView),
                 nameof(UnitEntityView.AddItemEquipment),

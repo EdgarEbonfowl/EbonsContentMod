@@ -29,11 +29,11 @@ namespace EbonsContentMod.Components
             var state =
                 owner.Get<UnitPartComeAndGetMeToggleState>();
 
-            Main.log.Log(
+            /*Main.log.Log(
                 $"Come and Get Me: Inspired Rage activated for " +
                 $"{owner.CharacterName}; " +
                 $"hasSavedState={state?.HasSavedState ?? false}, " +
-                $"saved={state?.ShouldBeActive ?? false}");
+                $"saved={state?.ShouldBeActive ?? false}");*/
 
             if (state == null ||
                 !state.HasSavedState ||
@@ -42,10 +42,6 @@ namespace EbonsContentMod.Components
                 return;
             }
 
-            /*
-             * Give AddFacts/AddFactsFromCaster time to restore or expose
-             * the activatable ability before looking for it.
-             */
             DelayedInvoker.InvokeInTime(
                 () => Restore(owner),
                 0.01f);
@@ -66,30 +62,25 @@ namespace EbonsContentMod.Components
 
             if (toggle == null)
             {
-                Main.log.Log(
+                /*Main.log.Log(
                     $"Come and Get Me: restoration failed for " +
-                    $"{owner.CharacterName}; toggle fact not found.");
+                    $"{owner.CharacterName}; toggle fact not found.");*/
 
                 return;
             }
 
-            Main.log.Log(
+            /*Main.log.Log(
                 $"Come and Get Me: restoring for " +
                 $"{owner.CharacterName}; " +
                 $"current={toggle.IsOn}, " +
                 $"started={toggle.IsStarted}, " +
-                $"available={toggle.IsAvailable}");
+                $"available={toggle.IsAvailable}");*/
 
             if (!toggle.IsOn)
             {
                 toggle.IsOn = true;
             }
 
-            /*
-             * Normally setting IsOn starts or queues the ability. Calling
-             * TryStart here handles cases where it remained on but stopped
-             * when the previous Inspired Rage instance disappeared.
-             */
             if (toggle.IsOn &&
                 !toggle.IsStarted &&
                 toggle.IsAvailable)
@@ -97,12 +88,12 @@ namespace EbonsContentMod.Components
                 toggle.TryStart();
             }
 
-            Main.log.Log(
+            /*Main.log.Log(
                 $"Come and Get Me: restore completed for " +
                 $"{owner.CharacterName}; " +
                 $"isOn={toggle.IsOn}, " +
                 $"started={toggle.IsStarted}, " +
-                $"buff={toggle.AppliedBuff?.Blueprint?.name ?? "null"}");
+                $"buff={toggle.AppliedBuff?.Blueprint?.name ?? "null"}");*/
         }
     }
 }

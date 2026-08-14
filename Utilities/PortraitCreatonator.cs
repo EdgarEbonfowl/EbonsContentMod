@@ -33,13 +33,6 @@ namespace EbonsContentMod.Utilities
             var portraitDirectory = CreatePortraitDirectory(folderName);
             
             var portrait = PortraitConfigurator.New(name, guid)
-                /*.SetData(new PortraitData()
-                {
-                    PortraitCategory = category,
-                    m_FullLengthImage = large,
-                    m_HalfLengthImage = medium,
-                    m_PortraitImage = small
-                })*/
                 .SetData(new PortraitData(portraitDirectory)
                 {
                     PortraitCategory = category

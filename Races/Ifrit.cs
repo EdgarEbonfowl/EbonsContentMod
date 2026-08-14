@@ -166,6 +166,134 @@ namespace EbonsContentMod.Races
             RaceRecolorizer.GetArmorRampByIndex(79)
         ];
 
+        public static List<Texture2D> CustomEyeRamps =
+        [
+            ColorRampGenerator.CreateGnomeEyeRamp(new Color( // Fiery Orange
+                RaceRecolorizer.GetColorsFromRGB(235f),
+                RaceRecolorizer.GetColorsFromRGB(119f),
+                RaceRecolorizer.GetColorsFromRGB(38f)
+                ),
+                new Color( // Fiery Orange
+                RaceRecolorizer.GetColorsFromRGB(235f),
+                RaceRecolorizer.GetColorsFromRGB(119f),
+                RaceRecolorizer.GetColorsFromRGB(38f)
+                )),
+            ColorRampGenerator.CreateGnomeEyeRamp(new Color( // Bright Yellow Orange
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(165f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+                new Color( // Bright Yellow Orange
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(165f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                )),
+            ColorRampGenerator.CreateGnomeEyeRamp(new Color( // Bright Orange
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(125f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+                new Color( // Bright Orange
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(125f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                )),
+            ColorRampGenerator.CreateGnomeEyeRamp(new Color( // Fiery Red
+                RaceRecolorizer.GetColorsFromRGB(235f),
+                RaceRecolorizer.GetColorsFromRGB(73f),
+                RaceRecolorizer.GetColorsFromRGB(38f)
+                ),
+                new Color( // Fiery Red
+                RaceRecolorizer.GetColorsFromRGB(235f),
+                RaceRecolorizer.GetColorsFromRGB(73f),
+                RaceRecolorizer.GetColorsFromRGB(38f)
+                )),
+            ColorRampGenerator.CreateGnomeEyeRamp(new Color( // Bright Red Orange
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(90f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+                new Color( // Bright Red Orange
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(90f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                )),
+            ColorRampGenerator.CreateGnomeEyeRamp(new Color( // Bright Yellow
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(215f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+                new Color( // Bright Yellow
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(215f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                )),
+        ];
+
+        public static List<Texture2D> CustomHairRamps =
+        [
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Fiery Orange
+                RaceRecolorizer.GetColorsFromRGB(235f),
+                RaceRecolorizer.GetColorsFromRGB(119f),
+                RaceRecolorizer.GetColorsFromRGB(38f)
+                ),
+                new Color( // Fiery Orange
+                RaceRecolorizer.GetColorsFromRGB(235f),
+                RaceRecolorizer.GetColorsFromRGB(119f),
+                RaceRecolorizer.GetColorsFromRGB(38f)
+                )),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Bright Yellow Orange
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(165f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+                new Color( // Bright Yellow Orange
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(165f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                )),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Bright Orange
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(125f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+                new Color( // Bright Orange
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(125f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                )),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Fiery Red
+                RaceRecolorizer.GetColorsFromRGB(235f),
+                RaceRecolorizer.GetColorsFromRGB(73f),
+                RaceRecolorizer.GetColorsFromRGB(38f)
+                ),
+                new Color( // Fiery Red
+                RaceRecolorizer.GetColorsFromRGB(235f),
+                RaceRecolorizer.GetColorsFromRGB(73f),
+                RaceRecolorizer.GetColorsFromRGB(38f)
+                )),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Bright Red Orange
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(90f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+                new Color( // Bright Red Orange
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(90f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                )),
+            ColorRampGenerator.CreateHumanHairRamp(new Color( // Bright Yellow
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(215f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+                new Color( // Bright Yellow
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(215f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                )),
+        ];
+
         public static BlueprintRace CopyRace = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HumanRace.ToString());
 
         private static readonly string IfritName = "IfritRace";
@@ -339,7 +467,7 @@ namespace EbonsContentMod.Races
                 .Configure();
 
             // Recolor Race
-            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.OreadRace.ToString()), CustomFemaleHairs: FemaleHairs, CustomMaleHairs: MaleHairs, CustomHeadRamps: CustomSkinRamps);
+            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.OreadRace.ToString()), CustomFemaleHairs: FemaleHairs, CustomMaleHairs: MaleHairs, CustomHeadRamps: CustomSkinRamps, CustomEyeRamps: CustomEyeRamps, CustomHairRamps: CustomHairRamps);
 
             // Register linked EEs
             EELinker.RegisterSkinLink(recoloredrace, HornsLinks);

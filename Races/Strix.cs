@@ -67,6 +67,66 @@ namespace EbonsContentMod.Races
             new Color(0.86f, 0.86f, 0.89f) // Super White
         ];
 
+        public static List<Texture2D> CustomHeadRamps =
+        [
+            ColorRampGenerator.CreateTieflingSkinRamp(new Color( // Nearly Black
+                RaceRecolorizer.GetColorsFromRGB(60f),
+                RaceRecolorizer.GetColorsFromRGB(60f),
+                RaceRecolorizer.GetColorsFromRGB(60f)
+                )),
+            ColorRampGenerator.CreateTieflingSkinRamp(new Color( // Very Dark Gray
+                RaceRecolorizer.GetColorsFromRGB(75f),
+                RaceRecolorizer.GetColorsFromRGB(75f),
+                RaceRecolorizer.GetColorsFromRGB(75f)
+                )),
+            ColorRampGenerator.CreateTieflingSkinRamp(new Color( // Dark Gray
+                RaceRecolorizer.GetColorsFromRGB(90f),
+                RaceRecolorizer.GetColorsFromRGB(90f),
+                RaceRecolorizer.GetColorsFromRGB(90f)
+                ))
+        ];
+
+        public static List<Texture2D> CustomEyeRamps =
+        [
+            ColorRampGenerator.CreateGnomeEyeRamp(new Color( // Red
+                RaceRecolorizer.GetColorsFromRGB(177f),
+                RaceRecolorizer.GetColorsFromRGB(6f),
+                RaceRecolorizer.GetColorsFromRGB(1f)
+                ),
+                new Color( // Red
+                RaceRecolorizer.GetColorsFromRGB(177f * 4/5),
+                RaceRecolorizer.GetColorsFromRGB(4f),
+                RaceRecolorizer.GetColorsFromRGB(1f)
+                )),
+            ColorRampGenerator.CreateGnomeEyeRamp(new Color( // Dark Red
+                RaceRecolorizer.GetColorsFromRGB(130f),
+                RaceRecolorizer.GetColorsFromRGB(6f),
+                RaceRecolorizer.GetColorsFromRGB(1f)
+                ),
+                new Color( // Dark Red
+                RaceRecolorizer.GetColorsFromRGB(130f * 4/5),
+                RaceRecolorizer.GetColorsFromRGB(4f),
+                RaceRecolorizer.GetColorsFromRGB(1f)
+                )),
+            ColorRampGenerator.CreateGnomeEyeRamp(new Color( // Dark Red
+                RaceRecolorizer.GetColorsFromRGB(100f),
+                RaceRecolorizer.GetColorsFromRGB(6f),
+                RaceRecolorizer.GetColorsFromRGB(1f)
+                ),
+                new Color( // Dark Red
+                RaceRecolorizer.GetColorsFromRGB(100f * 4/5),
+                RaceRecolorizer.GetColorsFromRGB(4f),
+                RaceRecolorizer.GetColorsFromRGB(1f)
+                )),
+        ];
+
+        public static List<Texture2D> CustomHairRamps =
+        [
+            RaceRecolorizer.GetRaceHairRampByIndex(RaceRefs.DhampirRace.Reference.Get(), 0),
+            ColorRampGenerator.CreateDhampirHairRamp(new Color(0.85f, 0.85f, 0.88f), new Color(0.65f, 0.65f, 0.68f)), // White
+            ColorRampGenerator.CreateDhampirHairRamp(new Color(0.92f, 0.92f, 0.95f), new Color(0.8f, 0.8f, 0.83f)) // Super White
+        ];
+
         public static EquipmentEntityLink[] MaleHeads =
         [
             BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.TieflingRace.ToString()).MaleOptions.Heads[2],
@@ -211,7 +271,7 @@ namespace EbonsContentMod.Races
                 .Configure();
 
             // Recolor Race
-            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.OreadRace.ToString()), NoEyebrows: true, CustomMaleHeads: MaleHeads, CustomFemaleHeads: FemaleHeads, CustomFemaleHairs: NewFemaleHairArray);
+            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyecolors: RaceEyeColors, CustomHeadRamps: CustomHeadRamps, CustomHairRamps: CustomHairRamps, CustomEyeRamps: CustomEyeRamps, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.OreadRace.ToString()), NoEyebrows: true, CustomMaleHeads: MaleHeads, CustomFemaleHeads: FemaleHeads, CustomFemaleHairs: NewFemaleHairArray);
 
             // Register linked EEs
             //EELinker.RegisterSkinLink(recoloredrace, WingLinks);

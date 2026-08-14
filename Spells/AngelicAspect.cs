@@ -14,7 +14,7 @@ namespace EbonsContentMod.Spells
     internal class AngelicAspect
     {
         private static readonly string AADescription = "Ebon.AngelicAspect.Description";
-        private static readonly string GAADescription = "Ebon.AngelicAspectGreater.Description";
+        private static readonly string GAADescription = "Ebon.GreaterAngelicAspect.Description";
 
         internal static void Configure()
         {

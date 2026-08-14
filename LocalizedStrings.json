@@ -1,4 +1,4 @@
-[
+Ôªø[
   {
     "Key": "Example.Name",
     "ProcessTemplates": false,
@@ -23,7 +23,7 @@
 
   {
     "Key": "HungryGhostMonk.Description",
-    "enGB": "The hungry ghost monk looks to spirits that prey upon the living as models of perfection. He sees the life energy of the universe as a resource to be manipulated, even stealing it from other creatures. It is through this constant influx of energy that the hungry ghost monk reaches his ultimate goal: power ó personal, pure, and simple."
+    "enGB": "The hungry ghost monk looks to spirits that prey upon the living as models of perfection. He sees the life energy of the universe as a resource to be manipulated, even stealing it from other creatures. It is through this constant influx of energy that the hungry ghost monk reaches his ultimate goal: power ‚Äî personal, pure, and simple."
   },
 
   {
@@ -56,7 +56,7 @@
 
   {
     "Key": "HungryGhostMonk.LifeFunnel.Description",
-    "enGB": "At 6th level, a hungry ghost monk can steal a creatureís life force to replenish his own. If the monk has at least 1 ki point in his ki pool and scores a confirmed critical hit against a living enemy or reduces a living enemy to 0 or fewer hit points, he heals a number of hit points equal to his monk level. As with steal ki, some monks believe that life funnel is an unsavory act, no better than what the undead do to the living. A monk with this ability cannot steal both ki and hit points at the same time. This ability replaces the ki power normally gained at 6th level."
+    "enGB": "At 6th level, a hungry ghost monk can steal a creature‚Äôs life force to replenish his own. If the monk has at least 1 ki point in his ki pool and scores a confirmed critical hit against a living enemy or reduces a living enemy to 0 or fewer hit points, he heals a number of hit points equal to his monk level. As with steal ki, some monks believe that life funnel is an unsavory act, no better than what the undead do to the living. A monk with this ability cannot steal both ki and hit points at the same time. This ability replaces the ki power normally gained at 6th level."
   },
 
   {
@@ -116,7 +116,7 @@
 
   {
     "Key": "FlamboyantArcana.Description",
-    "enGB": "A magus gains the derring-do and opportune parry and riposte deeds from the swashbuckler's list of deeds. \nThe magus can spend only points from his arcane pool (not panache points) to use these deeds and any other deeds he gains from the deed arcana. He canít use points from his arcane pool to use deeds from other classes or those gained by feats, nor can he regain points to his arcane pool as a swashbuckler would regain panache points. \nEffects that add to, reduce the cost of, or otherwise affect panache or grit don't affect the arcane pool of a magus with this arcana. \nDerring-Do (Ex): At 1st level, a magus can spend 1 arcane pool point when she makes an Acrobatics, Climb, Escape Artist, Fly, Ride, or Swim check to roll 1d6 and add the result to the check. She can do this after she makes the check but before the result is revealed. If the result of the d6 roll is a natural 6, she rolls another 1d6 and adds it to the check. She can continue to do this as long as she rolls natural 6s, up to a number of times equal to her Dexterity modifier (minimum 1). \nOpportune Parry and Riposte (Ex): At 1st level, when an opponent makes a melee attack against the magus, she can spend 1 arcane pool point to attempt to parry that attack. The magus makes an attack roll as if she were making an attack of opportunity; for each size category the attacking creature is larger than the magus, the magus takes a ñ2 penalty on this roll. If her result is greater than the attacking creature's result, the creature's attack automatically misses. The magus must declare the use of this ability after the creature's attack is announced, but before its attack roll is made. Upon performing a successful parry and if she has at least 1 arcane pool point, the magus can make an attack of opportunity against the creature whose attack she parried, provided that creature is within her reach."
+    "enGB": "A magus gains the derring-do and opportune parry and riposte deeds from the swashbuckler's list of deeds. \nThe magus can spend only points from his arcane pool (not panache points) to use these deeds and any other deeds he gains from the deed arcana. He can‚Äôt use points from his arcane pool to use deeds from other classes or those gained by feats, nor can he regain points to his arcane pool as a swashbuckler would regain panache points. \nEffects that add to, reduce the cost of, or otherwise affect panache or grit don't affect the arcane pool of a magus with this arcana. \nDerring-Do (Ex): At 1st level, a magus can spend 1 arcane pool point when she makes an Acrobatics, Climb, Escape Artist, Fly, Ride, or Swim check to roll 1d6 and add the result to the check. She can do this after she makes the check but before the result is revealed. If the result of the d6 roll is a natural 6, she rolls another 1d6 and adds it to the check. She can continue to do this as long as she rolls natural 6s, up to a number of times equal to her Dexterity modifier (minimum 1). \nOpportune Parry and Riposte (Ex): At 1st level, when an opponent makes a melee attack against the magus, she can spend 1 arcane pool point to attempt to parry that attack. The magus makes an attack roll as if she were making an attack of opportunity; for each size category the attacking creature is larger than the magus, the magus takes a ‚Äì2 penalty on this roll. If her result is greater than the attacking creature's result, the creature's attack automatically misses. The magus must declare the use of this ability after the creature's attack is announced, but before its attack roll is made. Upon performing a successful parry and if she has at least 1 arcane pool point, the magus can make an attack of opportunity against the creature whose attack she parried, provided that creature is within her reach."
   },
 
   {
@@ -335,7 +335,7 @@
 
   {
     "Key": "Samsaran.Description",
-    "enGB": "Mysterious humanoids with pale blue flesh and transparent blood like the waters of a trickling brook, samsarans are ancient creatures even in their youth. A samsaran's life is not a linear progression from birth to death, but rather a circle of birth to death to rebirth. Whenever a samsaran dies, it reincarnates anew as a young samsaran to live a new life. Her past memories remain vague and indistinctóand each new incarnation is as different a creature and personality as a child is to a parent. \nSamsarans appear similar to humans, with dark hair and solid white eyes with no pupils or irises. Skin tones are generally shades of light blue. \nCapable of recalling the lessons and failings of their previous incarnations, the samsarans seek to live lives of balance and enlightenment in order to ensure they are reborn upon death to continue their trek through history."
+    "enGB": "Mysterious humanoids with pale blue flesh and transparent blood like the waters of a trickling brook, samsarans are ancient creatures even in their youth. A samsaran's life is not a linear progression from birth to death, but rather a circle of birth to death to rebirth. Whenever a samsaran dies, it reincarnates anew as a young samsaran to live a new life. Her past memories remain vague and indistinct‚Äîand each new incarnation is as different a creature and personality as a child is to a parent. \nSamsarans appear similar to humans, with dark hair and solid white eyes with no pupils or irises. Skin tones are generally shades of light blue. \nCapable of recalling the lessons and failings of their previous incarnations, the samsarans seek to live lives of balance and enlightenment in order to ensure they are reborn upon death to continue their trek through history."
   },
 
   {
@@ -357,7 +357,7 @@
 
   {
     "Key": "Samsaran.ShardsOfThePast.Description",
-    "enGB": " A samsaran's past lives grant her bonuses on two particular skills. A samsaran chooses two skillsóshe gains a +2 racial bonus on both of these skills, and they are treated as class skills regardless of what class she actually takes."
+    "enGB": " A samsaran's past lives grant her bonuses on two particular skills. A samsaran chooses two skills‚Äîshe gains a +2 racial bonus on both of these skills, and they are treated as class skills regardless of what class she actually takes."
   },
 
   {
@@ -610,7 +610,7 @@
 
   {
     "Key": "OrcSorcererBloodlinePowerOfGiants.Description",
-    "enGB": "At 15th level, you may grow to Large size as a standard action. At this size you gain a +6 size bonus to Strength, a ñ2 penalty to Dexterity, a +4 size bonus to Constitution, and a +4 natural armor bonus. You may return to your normal size as a standard action. You may remain in this size for up to 1 minute per character level per day; this duration does not need to be consecutive, but it must be used in 1 minute increments."
+    "enGB": "At 15th level, you may grow to Large size as a standard action. At this size you gain a +6 size bonus to Strength, a ‚Äì2 penalty to Dexterity, a +4 size bonus to Constitution, and a +4 natural armor bonus. You may return to your normal size as a standard action. You may remain in this size for up to 1 minute per character level per day; this duration does not need to be consecutive, but it must be used in 1 minute increments."
   },
 
   {
@@ -621,7 +621,7 @@
 
   {
     "Key": "OrcSorcererBloodlineWarlordReborn.Description",
-    "enGB": "At 20th level, you become a true orc warlord of legend. You gain immunity to fire and DR 5/ó. Once per day, you can cast transformation as a spell-like ability using your sorcerer level as your caster level."
+    "enGB": "At 20th level, you become a true orc warlord of legend. You gain immunity to fire and DR 5/‚Äî. Once per day, you can cast transformation as a spell-like ability using your sorcerer level as your caster level."
   },
 
   {
@@ -736,7 +736,7 @@
 
   {
     "Key": "Svirfneblin.SvirfneblinMagic.Description",
-    "enGB": "Svirfneblin add +1 to the DC of any illusion spells they cast. Svirfneblin also gain the following spell-like abilities: 1/dayóblindness, blur; caster level equals the svirfneblin's character level."
+    "enGB": "Svirfneblin add +1 to the DC of any illusion spells they cast. Svirfneblin also gain the following spell-like abilities: 1/day‚Äîblindness, blur; caster level equals the svirfneblin's character level."
   },
 
   {
@@ -1149,7 +1149,7 @@
 
   {
     "Key": "Suli.Description",
-    "enGB": "Sulis, or suli-jann, are the descendents of mortals and jann. They manifest their otherworldly heritage in adolescence, or when awakened by an encounter with a genie. Strong and attractive, these dynamic individuals can call forth elemental energies to augment their prowess in combat. Neither genie nor quite human, sulis stand in two worlds and often feel as if they donít belong to either."
+    "enGB": "Sulis, or suli-jann, are the descendents of mortals and jann. They manifest their otherworldly heritage in adolescence, or when awakened by an encounter with a genie. Strong and attractive, these dynamic individuals can call forth elemental energies to augment their prowess in combat. Neither genie nor quite human, sulis stand in two worlds and often feel as if they don‚Äôt belong to either."
   },
 
   {
@@ -1217,7 +1217,7 @@
 
   {
     "Key": "Android.Description",
-    "enGB": "Androids are superficially identical to humans in many ways, and to the uninformed it can be difficult to differentiate the two. In the right light, though, androids' alien nature is revealed by the metallic sheen in their eyes and the biological, tattoo-like circuitry that riddles their skin. Their bodies are completely artificial, though made of materials that mimic the flexibility, shape, and density of human flesh and bone. Their organs mirror those of humans so well that only by examining the materials and makeup of these systemsówhich use sheeny oils and polymer alloys rather than blood and marrowócould one guess that their physiology is alien. Androids are roughly the same size as humans; on average, they are 6 feet tall and weigh 200 pounds. \nShamans speak of great forges where androids are \"born\" from metal wombs and are cut from electrified umbilical cords. Even androids canít refute or verify such stories, since most who emerge from ruins do so naked and without any memories beyond their initial egress into the wide, unfamiliar world. Their complex design is unlike that of any race known, leading many to suspect that they originated from a distant star system or even another galaxy. \nWhat separates androids from golems and other mindless constructs is that androids are living beings and as such possess souls. Similarly, androids donít live forever, though barring violence or tragedy their bodies never deteriorate. Rather, an androidís cybernetic mind eventually shuts down and self-restarts after about a century, leaving its body vacant for several weeks as the old soul departs for its final reward in the Great Beyond and a fresh, new soul finds its way into the shell."
+    "enGB": "Androids are superficially identical to humans in many ways, and to the uninformed it can be difficult to differentiate the two. In the right light, though, androids' alien nature is revealed by the metallic sheen in their eyes and the biological, tattoo-like circuitry that riddles their skin. Their bodies are completely artificial, though made of materials that mimic the flexibility, shape, and density of human flesh and bone. Their organs mirror those of humans so well that only by examining the materials and makeup of these systems‚Äîwhich use sheeny oils and polymer alloys rather than blood and marrow‚Äîcould one guess that their physiology is alien. Androids are roughly the same size as humans; on average, they are 6 feet tall and weigh 200 pounds. \nShamans speak of great forges where androids are \"born\" from metal wombs and are cut from electrified umbilical cords. Even androids can‚Äôt refute or verify such stories, since most who emerge from ruins do so naked and without any memories beyond their initial egress into the wide, unfamiliar world. Their complex design is unlike that of any race known, leading many to suspect that they originated from a distant star system or even another galaxy. \nWhat separates androids from golems and other mindless constructs is that androids are living beings and as such possess souls. Similarly, androids don‚Äôt live forever, though barring violence or tragedy their bodies never deteriorate. Rather, an android‚Äôs cybernetic mind eventually shuts down and self-restarts after about a century, leaving its body vacant for several weeks as the old soul departs for its final reward in the Great Beyond and a fresh, new soul finds its way into the shell."
   },
 
   {
@@ -1536,7 +1536,7 @@
 
   {
     "Key": "Skinwalker.Description",
-    "enGB": "Skinwalkers resemble humans much of the time, but they possess the uncanny ability to transform into bestial humanoids who combine the most fearsome aspects of flesh and fur. \nMost people believe skinwalkers are half-breeds of lycanthropes, or that they share some slight version of the curse of those creatures. Skinwalker shamans say they are chosen by nature or the gods to be a bridge between the world of humanity and the animal world. The truth may lie somewhere between these two ideas. For indeed, skinwalkers are those with a lycanthrope crouching somewhere in the branches of their family tree. These distant progeny of monstrous werewolves and other creatures of the night have special talents unlike those of most civilized peoples, and they arise randomly among remote humanoid populations as well as within their own secretive sects. A pair of humans may give birth to a skinwalkeróthe dormant lycanthropic ancestry making itself known in a child neither beast nor humanóor a pair of skinwalker parents may produce a skinwalker child, though these couplings can sometimes produce human children as well."
+    "enGB": "Skinwalkers resemble humans much of the time, but they possess the uncanny ability to transform into bestial humanoids who combine the most fearsome aspects of flesh and fur. \nMost people believe skinwalkers are half-breeds of lycanthropes, or that they share some slight version of the curse of those creatures. Skinwalker shamans say they are chosen by nature or the gods to be a bridge between the world of humanity and the animal world. The truth may lie somewhere between these two ideas. For indeed, skinwalkers are those with a lycanthrope crouching somewhere in the branches of their family tree. These distant progeny of monstrous werewolves and other creatures of the night have special talents unlike those of most civilized peoples, and they arise randomly among remote humanoid populations as well as within their own secretive sects. A pair of humans may give birth to a skinwalker‚Äîthe dormant lycanthropic ancestry making itself known in a child neither beast nor human‚Äîor a pair of skinwalker parents may produce a skinwalker child, though these couplings can sometimes produce human children as well."
   },
 
   {
@@ -1723,7 +1723,7 @@
 
   {
     "Key": "Bloodmarked.Description",
-    "enGB": "Bloodmarked, like werebats, are generally communal and often defer readily to their superiors within their flocks or even other leaders or employers. They tend to be gregarious yet savage, and enjoy using their unassuming natural forms to trick others before revealing their true bestial powers. Bloodmarked reveal their human ancestry in their ability to break from the group, make their own choices, and associate with humans without trying to force their way of life upon them, although troublemakers are strongly frowned upon and find it hard to get any other werebat-kin to take their side if in opposition to the group. \nLike werebats, bloodmarked are fond of elaborate social ceremonies that strengthen group cohesion and loyalty. \nWerebat-kin ceremonies often involve wearing bat skins, sacrificing animals or humanoids, and drinking blood. \nWerebat-kin are most commonly found near dense forests and jungles. With little trust for outsiders, werebat-kin often form insular communities at the fringes of civilized societies, with each bloodmarked being loyal to every member of the community and whichever leader has bested all challengers. Like other skinwalkers, however, bloodmarked are typically born into societies that donít include others of their kind, and these individuals are inclined to seek out surrogate flocks, generally in the form of violent gangs, tight-knit adventuring parties, or even insular academic circles, according to the individualís disposition. Bloodmarked are generally tall and slight, with dark hair and severe features. Poor eyesight is relatively common among werebat-kin, though they often hear and smell well enough to make up for it.\nBloodmarked skinwalkers receive a +2 racial bonus to Dexterity, a -2 penalty to Wisdom, and a +2 racial bonus to Athletics and Perception skills. When in their bestial form, they gain a +2 racial bonus to Charisma, a primary bite attack that deals 1d6 damage, and +10 foot racial bonus to movement speed."
+    "enGB": "Bloodmarked, like werebats, are generally communal and often defer readily to their superiors within their flocks or even other leaders or employers. They tend to be gregarious yet savage, and enjoy using their unassuming natural forms to trick others before revealing their true bestial powers. Bloodmarked reveal their human ancestry in their ability to break from the group, make their own choices, and associate with humans without trying to force their way of life upon them, although troublemakers are strongly frowned upon and find it hard to get any other werebat-kin to take their side if in opposition to the group. \nLike werebats, bloodmarked are fond of elaborate social ceremonies that strengthen group cohesion and loyalty. \nWerebat-kin ceremonies often involve wearing bat skins, sacrificing animals or humanoids, and drinking blood. \nWerebat-kin are most commonly found near dense forests and jungles. With little trust for outsiders, werebat-kin often form insular communities at the fringes of civilized societies, with each bloodmarked being loyal to every member of the community and whichever leader has bested all challengers. Like other skinwalkers, however, bloodmarked are typically born into societies that don‚Äôt include others of their kind, and these individuals are inclined to seek out surrogate flocks, generally in the form of violent gangs, tight-knit adventuring parties, or even insular academic circles, according to the individual‚Äôs disposition. Bloodmarked are generally tall and slight, with dark hair and severe features. Poor eyesight is relatively common among werebat-kin, though they often hear and smell well enough to make up for it.\nBloodmarked skinwalkers receive a +2 racial bonus to Dexterity, a -2 penalty to Wisdom, and a +2 racial bonus to Athletics and Perception skills. When in their bestial form, they gain a +2 racial bonus to Charisma, a primary bite attack that deals 1d6 damage, and +10 foot racial bonus to movement speed."
   },
 
   {
@@ -1756,7 +1756,7 @@
 
   {
     "Key": "ClassicSkinwalker.Description",
-    "enGB": "Skinwalkers are well attuned to the natural order of things and value passion above reason. They gain +2 racial bonus to Wisdom, ñ2 penalty to Intelligence, and a +2 racial bonus to Lore (Nature) skill checks. While in their bestial form, they gain a +2 racial bonus to either Strength, Dexterity, or Constitution, along with two claw attacks that deal 1d4 damage and a +1 bonus to natural armor. Skinwalkers of specific heritages gain different ability score modifiers, as indicated."
+    "enGB": "Skinwalkers are well attuned to the natural order of things and value passion above reason. They gain +2 racial bonus to Wisdom, ‚Äì2 penalty to Intelligence, and a +2 racial bonus to Lore (Nature) skill checks. While in their bestial form, they gain a +2 racial bonus to either Strength, Dexterity, or Constitution, along with two claw attacks that deal 1d4 damage and a +1 bonus to natural armor. Skinwalkers of specific heritages gain different ability score modifiers, as indicated."
   },
 
   {
@@ -1844,7 +1844,7 @@
 
   {
     "Key": "Goblin.Description",
-    "enGB": "Goblins are a race of childlike creatures with a destructive and voracious nature that makes them almost universally despised. Weak and cowardly, goblins are frequently manipulated or enslaved by stronger creatures that need destructive, disposable foot soldiers. Those goblins that rely on their own wits to survive live on the fringes of society and feed on refuse and the weaker members of more civilized races. Most other races view them as virulent parasites that have proved impossible to exterminate. \nGoblins can eat nearly anything, but prefer a diet of meat and consider the flesh of humans and gnomes a rare and difficult-to-obtain delicacy. While they fear the bigger races, goblinsí short memories and bottomless appetites mean they frequently go to war or execute raids against other races to sate their pernicious urges and fill their vast larders."
+    "enGB": "Goblins are a race of childlike creatures with a destructive and voracious nature that makes them almost universally despised. Weak and cowardly, goblins are frequently manipulated or enslaved by stronger creatures that need destructive, disposable foot soldiers. Those goblins that rely on their own wits to survive live on the fringes of society and feed on refuse and the weaker members of more civilized races. Most other races view them as virulent parasites that have proved impossible to exterminate. \nGoblins can eat nearly anything, but prefer a diet of meat and consider the flesh of humans and gnomes a rare and difficult-to-obtain delicacy. While they fear the bigger races, goblins‚Äô short memories and bottomless appetites mean they frequently go to war or execute raids against other races to sate their pernicious urges and fill their vast larders."
   },
 
   {
@@ -2097,7 +2097,7 @@
 
   {
     "Key": "Rougarou.Description",
-    "enGB": "Rougarous are wolf-headed humanoids who can transform into wolves. While this sometimes confuses others into mistaking a rougarou for a werewolf, these humanoids are not lycanthropes. In fact, most detest werewolves and hunt them mercilessly. \nThe race isnít numerous or widespread, and rougarous tend to live in secluded communities. They are very protective of their families and friends, and the communities they form tend to be strict and lawful. In their homeland, rougarous are most plentiful in southern swamps and marshes, where it is believed they originated, but have since spread throughout the rest of the world. \nWhile most of rougarou society is upstanding and trustworthy, as with any group there are some violent and aggressive members. These evil, loner rougarous occasionally form into packs that raid the countryside and prey upon the just and kind. Thankfully, rougarous are generally civilized and loyal, and most are quick to hunt down and punish their feral kin for their foul deeds. \nRougarous age like humans, but they tend to be slightly taller and heavier than typical humans."
+    "enGB": "Rougarous are wolf-headed humanoids who can transform into wolves. While this sometimes confuses others into mistaking a rougarou for a werewolf, these humanoids are not lycanthropes. In fact, most detest werewolves and hunt them mercilessly. \nThe race isn‚Äôt numerous or widespread, and rougarous tend to live in secluded communities. They are very protective of their families and friends, and the communities they form tend to be strict and lawful. In their homeland, rougarous are most plentiful in southern swamps and marshes, where it is believed they originated, but have since spread throughout the rest of the world. \nWhile most of rougarou society is upstanding and trustworthy, as with any group there are some violent and aggressive members. These evil, loner rougarous occasionally form into packs that raid the countryside and prey upon the just and kind. Thankfully, rougarous are generally civilized and loyal, and most are quick to hunt down and punish their feral kin for their foul deeds. \nRougarous age like humans, but they tend to be slightly taller and heavier than typical humans."
   },
 
   {
@@ -2174,7 +2174,7 @@
 
   {
     "Key": "Mongrel.Description",
-    "enGB": "For most people, the mongrels are little more than an urban legend. They are believed to be the descendants of those who fought in the First Crusade, when the crusaders had little experience in dealing with the unique hazards the Worldwound presented. As the story goes, during the First Crusade, many unknowingly exposed themselves to fell energies and nightmarish radiations. In the years that followed, a shocking number of children born to the crusaders were hideously deformed. Many of these unfortunate innocents were put to death by overzealous inquisitors or even fellow crusaders, but some parents fled underground to raise their children outside of the light of intolerance. \nWhether or not this story is true, the mongrels are quite real, and inhabit the vast underground catacombs and caverns below the cities. Despite their monstrous appearances, mongrels are generally hardworking and peaceful creatures. No two mongrels look the same: each of them usually has characteristics from several different creatures. This strange mixture enforces mongrels' place away from society, for they are shunned by all who fear their twisted appearance. Mistaken as enemies by all, mongrels prefer to be left alone. A tragically short lifespan limits the creatures' population growth ó mongrels rarely live past 35 years."
+    "enGB": "For most people, the mongrels are little more than an urban legend. They are believed to be the descendants of those who fought in the First Crusade, when the crusaders had little experience in dealing with the unique hazards the Worldwound presented. As the story goes, during the First Crusade, many unknowingly exposed themselves to fell energies and nightmarish radiations. In the years that followed, a shocking number of children born to the crusaders were hideously deformed. Many of these unfortunate innocents were put to death by overzealous inquisitors or even fellow crusaders, but some parents fled underground to raise their children outside of the light of intolerance. \nWhether or not this story is true, the mongrels are quite real, and inhabit the vast underground catacombs and caverns below the cities. Despite their monstrous appearances, mongrels are generally hardworking and peaceful creatures. No two mongrels look the same: each of them usually has characteristics from several different creatures. This strange mixture enforces mongrels' place away from society, for they are shunned by all who fear their twisted appearance. Mistaken as enemies by all, mongrels prefer to be left alone. A tragically short lifespan limits the creatures' population growth ‚Äî mongrels rarely live past 35 years."
   },
 
   {
@@ -2873,7 +2873,7 @@
 
   {
     "Key": "BloodlineMutation.BloodIntensity.Description",
-    "enGB": "Whenever you cast a bloodrager or sorcerer spell that deals damage, you can increase its maximum number of damage dice by an amount equal to your Strength or Charisma modifier, whichever is higher. This otherwise functions asóand does not stack withóthe Intensified Spell feat. You can use this ability once per day at 3rd level and one additional time per day for every 4 caster levels you have beyond 3rd, up to five times per day at 19th level."
+    "enGB": "Whenever you cast a bloodrager or sorcerer spell that deals damage, you can increase its maximum number of damage dice by an amount equal to your Strength or Charisma modifier, whichever is higher. This otherwise functions as‚Äîand does not stack with‚Äîthe Intensified Spell feat. You can use this ability once per day at 3rd level and one additional time per day for every 4 caster levels you have beyond 3rd, up to five times per day at 19th level."
   },
 
   {
@@ -2895,7 +2895,7 @@
 
   {
     "Key": "BloodlineMutation.PowerSelection.Description",
-    "enGB": "Although heirs to similar arcane bloodlines may share commonalities, the unique circumstances in which a bloodline enters a bloodrager or sorcererís lineage can result in the manifestation of particularly strange or unusual bloodline powers known as mutations. Whenever a bloodrager or a sorcerer gains a new bloodline power, she can swap her bloodline power for a bloodline mutation whose prerequisites she meets. Once this choice is made, it cannot be changed, and a bloodrager or sorcerer cannot swap a bloodline power that she has altered or replaced with an archetype for a bloodline mutation. A bloodrager need not be in a bloodrage to use her bloodline mutation powers."
+    "enGB": "Although heirs to similar arcane bloodlines may share commonalities, the unique circumstances in which a bloodline enters a bloodrager or sorcerer‚Äôs lineage can result in the manifestation of particularly strange or unusual bloodline powers known as mutations. Whenever a bloodrager or a sorcerer gains a new bloodline power, she can swap her bloodline power for a bloodline mutation whose prerequisites she meets. Once this choice is made, it cannot be changed, and a bloodrager or sorcerer cannot swap a bloodline power that she has altered or replaced with an archetype for a bloodline mutation. A bloodrager need not be in a bloodrage to use her bloodline mutation powers."
   },
 
   {
@@ -2924,7 +2924,7 @@
 
   {
     "Key": "KineticForm.Description",
-    "enGB": "Element: universal\nType: utility\nBurn: 1\nYou are able to suspend your body in a large mass of elemental matter. Until the next time your burn is removed, you can change your size to Large or shift back to your original size as a standard action. This doesnít change your ability scores in any way. At 16th level, you can accept 1 additional point of burn to instead change your size to Huge. You cannot use kinetic form to decrease your size."
+    "enGB": "Element: universal\nType: utility\nBurn: 1\nYou are able to suspend your body in a large mass of elemental matter. Until the next time your burn is removed, you can change your size to Large or shift back to your original size as a standard action. This doesn‚Äôt change your ability scores in any way. At 16th level, you can accept 1 additional point of burn to instead change your size to Huge. You cannot use kinetic form to decrease your size."
   },
 
   {
@@ -3023,7 +3023,7 @@
 
   {
     "Key": "SparkOfInnovation.Description",
-    "enGB": "Element: metal\nType: utility\nBurn: 1\nYou shape metal into a clockwork creature, creating a medium clockwork earth elemental as if summoned by summon monster IV with a caster level equal to your kineticist level. The elementalís type is changed to construct and it gains construct traits instead of elemental traits. At 12th level, you can choose to form a Large clockwork elemental as if by summon monster V; at 14th level, you can choose to form a Huge clockwork elemental as if by summon monster VI; at 16th level, you can choose to form a greater clockwork elemental as if by summon monster VII; and at 18th level, you can choose to form an elder clockwork elemental as if by summon monster VIII."
+    "enGB": "Element: metal\nType: utility\nBurn: 1\nYou shape metal into a clockwork creature, creating a medium clockwork earth elemental as if summoned by summon monster IV with a caster level equal to your kineticist level. The elemental‚Äôs type is changed to construct and it gains construct traits instead of elemental traits. At 12th level, you can choose to form a Large clockwork elemental as if by summon monster V; at 14th level, you can choose to form a Huge clockwork elemental as if by summon monster VI; at 16th level, you can choose to form a greater clockwork elemental as if by summon monster VII; and at 18th level, you can choose to form an elder clockwork elemental as if by summon monster VIII."
   },
 
   {
@@ -3040,7 +3040,7 @@
 
   {
     "Key": "AquaticElf.Description",
-    "enGB": "Aquatic elves can live either in or out of the water, but most prefer homes in the watery depths of oceans and seas. They establish small communities, uniting with other aquatic elves as needed for protection but remaining largely independent. Some of these communities are built partly above and partly below the water, with half-elves of aquatic descent living in the open air, while their aquatic kin make their homes below. \nAquatic elves consider themselves an enlightened people capable of appreciating life in more dimensions than other creatures. When they do interact with other races, they often appear aloof and dismissive, as though bored or distracted, though this is not necessarily the case. \nAquatic elves are simply thinking of what wonders they might find during their explorations of their watery environs. \nConsidered beautiful by many elves, humans, and similar surface races, aquatic elves are a graceful and quick-witted people. Their skin can be the pale white or gold of beach sand, the russet of living coral, or the green-black of deepwater kelp. Often, aquatic elvesí coloration adjusts to their usual environment over time, sometimes changing over the course of a few generations. Their hair is long and silky, rippling with shades of blue and green. Aquatic elves have delicate, translucent webbing between their fingers and toes, allowing them to swim adroitly through the water."
+    "enGB": "Aquatic elves can live either in or out of the water, but most prefer homes in the watery depths of oceans and seas. They establish small communities, uniting with other aquatic elves as needed for protection but remaining largely independent. Some of these communities are built partly above and partly below the water, with half-elves of aquatic descent living in the open air, while their aquatic kin make their homes below. \nAquatic elves consider themselves an enlightened people capable of appreciating life in more dimensions than other creatures. When they do interact with other races, they often appear aloof and dismissive, as though bored or distracted, though this is not necessarily the case. \nAquatic elves are simply thinking of what wonders they might find during their explorations of their watery environs. \nConsidered beautiful by many elves, humans, and similar surface races, aquatic elves are a graceful and quick-witted people. Their skin can be the pale white or gold of beach sand, the russet of living coral, or the green-black of deepwater kelp. Often, aquatic elves‚Äô coloration adjusts to their usual environment over time, sometimes changing over the course of a few generations. Their hair is long and silky, rippling with shades of blue and green. Aquatic elves have delicate, translucent webbing between their fingers and toes, allowing them to swim adroitly through the water."
   },
 
   {
@@ -3051,7 +3051,7 @@
 
   {
     "Key": "AquaticElf.WeaponFamiliarity.Description",
-    "enGB": "Aquatic elves are proficient with rapiers, short swords, tridents, and treat any weapon with the word ìelvenî in its name as a martial weapon."
+    "enGB": "Aquatic elves are proficient with rapiers, short swords, tridents, and treat any weapon with the word ‚Äúelven‚Äù in its name as a martial weapon."
   },
 
   {
@@ -3106,7 +3106,7 @@
 
   {
     "Key": "Aphorite.SpellLikeAbility.Description",
-    "enGB": "Aphorites can use protection from chaos once per day as a spell-like ability (caster level equal to the aphoriteís class level)."
+    "enGB": "Aphorites can use protection from chaos once per day as a spell-like ability (caster level equal to the aphorite‚Äôs class level)."
   },
 
   {
@@ -3133,17 +3133,17 @@
 
   {
     "Key": "Ebon.BattleProwess.Description",
-    "enGB": "Whenever a Battle Scion would gain a rage power from the skaldís rage power ability (at 3rd level and every 3 skald levels thereafter), he can instead choose to gain a combat feat or teamwork feat for which he meets the prerequisites. \nThe Battle Scion can grant this feat to allies under the effect of Inspired Rage, as long as those allies also meet the prerequisites, but he must expend 2 rounds of raging song for each round in which he grants a teamwork feat."
+    "enGB": "Whenever a Battle Scion would gain a rage power from the skald‚Äôs rage power ability (at 3rd level and every 3 skald levels thereafter), he can instead choose to gain a combat feat or teamwork feat for which he meets the prerequisites. \nThe Battle Scion can grant this feat to allies under the effect of Inspired Rage, as long as those allies also meet the prerequisites, but he must expend 2 rounds of raging song for each round in which he grants a teamwork feat."
   },
 
   {
     "Key": "Ebon.AngelicAspect.Description",
-    "enGB": "You take on an aspect of an angelic being, including some of its physical characteristics. You gain {g|Encyclopedia:Energy_Resistance}resistance{/g} to acid and cold 10, and {g|Encyclopedia:Damage_Reduction}DR{/g} 5/{g|Encyclopedia:Alignment}evil{/g}, and you sprout white feathered wings allowing you to fly at a speed of 30 feet with average maneuverability. You also gain a +2 deflection {g|Encyclopedia:Bonus}bonus{/g} to {g|Encyclopedia:Armor_Class}AC{/g} and a +2 resistance bonus on {g|Encyclopedia:Saving_Throw}saves{/g} against {g|Encyclopedia:Attack}attacks{/g} made or effects created by evil creatures. In addition, your {g|Encyclopedia:NaturalAttack}natural weapons{/g} and any weapons you wield are considered good-aligned for the purpose of overcoming damage reduction."
+    "enGB": "You take on an aspect of an angelic being, including some of its physical characteristics. You gain resistance to acid and cold 10, and DR 5/evil, and you sprout white feathered wings allowing you to fly at a speed of 30 feet with average maneuverability. You also gain a +2 deflection bonus to AC and a +2 resistance bonus on saves against attacks made or effects created by evil creatures. In addition, your natural weapons and any weapons you wield are considered good-aligned for the purpose of overcoming damage reduction."
   },
 
   {
     "Key": "Ebon.GreaterAngelicAspect.Description",
-    "enGB": "This {g|Encyclopedia:Spell}spell{/g} functions like {g|SpellsAngelicAspect}angelic aspect{/g}, except you gain {g|Encyclopedia:Damage_Reduction}DR{/g} 10/{g|Encyclopedia:Alignment}evil{/g}; {g|Encyclopedia:Energy_Immunity}immunity{/g} to acid and cold; {g|Encyclopedia:Energy_Resistance}resistance{/g} to electricity and fire 10; a +4 racial {g|Encyclopedia:Bonus}bonus{/g} on {g|Encyclopedia:Saving_Throw}saves{/g} against poison; and protective aura as {g|Encyclopedia:Special_Abilities}supernatural ability{/g} for the duration of the spell. Also, your wings give you a fly speed of 60 feet with good maneuverability. Protective aura provides a +4 deflection bonus to {g|Encyclopedia:Armor_Class}AC{/g} and a +4 resistance bonus on saving throws against {g|Encyclopedia:Attack}attacks{/g} made or effects created by evil creatures to anyone within 20 feet. Otherwise, it functions as a magic circle against evil and a lesser globe of invulnerability, both with a radius of 20 feet."
+    "enGB": "This spell functions like angelic aspect, except you gain DR 10/evil; immunity to acid and cold; resistance to electricity and fire 10; a +4 racial bonus on saves against poison; and protective aura as a supernatural ability for the duration of the spell. Also, your wings give you a fly speed of 60 feet with good maneuverability. Protective aura provides a +4 deflection bonus to AC and a +4 resistance bonus on saving throws against attacks made or effects created by evil creatures to anyone within 20 feet. Otherwise, it functions as a magic circle against evil and a lesser globe of invulnerability, both with a radius of 20 feet."
   },
 
   {
@@ -3154,7 +3154,7 @@
 
   {
     "Key": "EbonsContentMod.Miracle.Description",
-    "enGB": "You request divine intervention. Miracle can duplicate any cleric spell of 8th level or lower, or any other spell of 7th level or lower. Alternatively, miracle can be used to cleanse all negative status effects that afflict an ally. \nA duplicated spell allows saving throws and spell resistance as normal, but the save DCs are as for a 9th-level spell. When a miracle spell duplicates a spell with a material component that costs more than 100 gp, you must provide that component."
+    "enGB": "You request divine intervention. Miracle can duplicate any cleric spell of 8th level or lower, or any other spell of 7th level or lower. Alternatively, miracle can be used to cleanse all negative status effects that afflict an ally. \nBy sacrificing 25,000 gp a cleric can make a very powerful request. Invoking his deity in this way, the cleric can swing the tide of battle by raising all of his fallen allies (Raise the Fallen) or fully healing his allies and removing all negative status effects afflicting them (Renewal) in a 30 foot radius. \nA duplicated spell allows saving throws and spell resistance as normal, but the save DCs are as for a 9th-level spell. When a miracle spell duplicates a spell with a material component that costs more than 100 gp, you must provide that component."
   },
 
   {
@@ -3208,7 +3208,348 @@
   {
     "Key": "EbonsContentMod.Miracle.RemoveNegativeEffects.Name",
     "ProcessTemplates": false,
-    "enGB": "Cleanse All Afflictions"
+    "enGB": "Cleanse Afflictions"
   },
 
+  {
+    "Key": "EbonsContentMod.Miracle.RaiseTheFallen.Name",
+    "ProcessTemplates": false,
+    "enGB": "Raise the Fallen"
+  },
+
+  {
+    "Key": "EbonsContentMod.Miracle.Renewal.Name",
+    "ProcessTemplates": false,
+    "enGB": "Renewal"
+  },
+
+  {
+    "Key": "EbonsContentMod.Wish.Name",
+    "ProcessTemplates": false,
+    "enGB": "Wish"
+  },
+
+  {
+    "Key": "EbonsContentMod.Wish.Description",
+    "enGB": "Wish is the mightiest spell a wizard or sorcerer can cast. By simply speaking aloud, you can alter reality to better suit you. Even wish, however, has its limits. A wish can duplicate any sorcerer/wizard spell of 8th level or lower, provided the spell does not belong to one of your opposition schools; duplicate any non-sorcerer/wizard spell of 7th level or lower, provided the spell does not belong to one of your opposition schools; duplicate any sorcerer/wizard spell of 7th level or lower, even if it belongs to one of your opposition schools; or duplicate any non-sorcerer/wizard spell of 6th level or lower, even if it belongs to one of your opposition schools. \nA wish spell can grant a creature a +1 inherent bonus to an ability score. Two to five wish spells cast in succession can grant a creature a +2 to +5 inherent bonus to an ability score (two wishes for a +2 inherent bonus, three wishes for a +3 inherent bonus, and so on). Inherent bonuses are instantaneous, so they cannot be dispelled. Note: An inherent bonus may not exceed +5 for a single ability score, and inherent bonuses to a particular ability score do not stack, so only the best one applies. \nFinally a wish spell can remove injuries and afflictions. A single wish can can remove the negative status effects or fully heal all allies, but cannot do both simultaneously. \nDuplicated spells allow saves and Spell Resistance as normal (but save DCs are for 9th-level spells). \nWhen a wish duplicates a spell with a material component that costs more than 10,000 gp, you must provide that component (in addition to the five diamond material components for this spell)."
+  },
+
+  {
+    "Key": "EbonsContentMod.Wish.AbilityScores.Name",
+    "ProcessTemplates": false,
+    "enGB": "Grant Ability Score Bonus"
+  },
+
+  {
+    "Key": "EbonsContentMod.Wish.Strength.Name",
+    "ProcessTemplates": false,
+    "enGB": "Wish Strength Bonus"
+  },
+
+  {
+    "Key": "EbonsContentMod.Wish.Dexterity.Name",
+    "ProcessTemplates": false,
+    "enGB": "Wish Dexterity Bonus"
+  },
+
+  {
+    "Key": "EbonsContentMod.Wish.Constitution.Name",
+    "ProcessTemplates": false,
+    "enGB": "Wish Constitution Bonus"
+  },
+
+  {
+    "Key": "EbonsContentMod.Wish.Intelligence.Name",
+    "ProcessTemplates": false,
+    "enGB": "Wish Intelligence Bonus"
+  },
+
+  {
+    "Key": "EbonsContentMod.Wish.Wisdom.Name",
+    "ProcessTemplates": false,
+    "enGB": "Wish Wisdom Bonus"
+  },
+
+  {
+    "Key": "EbonsContentMod.Wish.Charisma.Name",
+    "ProcessTemplates": false,
+    "enGB": "Wish Charisma Bonus"
+  },
+
+  {
+    "Key": "EbonsContentMod.Wish.RemoveAfflictions.Name",
+    "ProcessTemplates": false,
+    "enGB": "Remove Afflictions"
+  },
+
+  {
+    "Key": "EbonsContentMod.Wish.HealAllies.Name",
+    "ProcessTemplates": false,
+    "enGB": "Heal Allies"
+  },
+
+  {
+    "Key": "EbonsContentMod.LimitedWish.Name",
+    "ProcessTemplates": false,
+    "enGB": "Limited Wish"
+  },
+
+  {
+    "Key": "EbonsContentMod.LimitedWish.Description",
+    "enGB": "A limited wish lets you create nearly any type of effect. For example, a limited wish can duplicate any sorcerer/wizard spell of 6th level or lower, provided the spell does not belong to one of your opposition schools; duplicate any non-sorcerer/wizard spell of 5th level or lower, provided the spell does not belong to one of your opposition schools; duplicate any sorcerer/wizard spell of 5th level or lower, even if it belongs to one of your opposition schools; or duplicate any non-sorcerer/wizard spell of 4th level or lower, even if it belongs to one of your opposition schools. Additionally, wish can remove most negative status effects from an ally as the greater restoration spell. \nA duplicated spell allows saving throws and spell resistance as normal, but the save DC is for a 7th-level spell. When a limited wish spell duplicates a spell with a material component that costs more than 1,000 gp, you must provide that component (in addition to the single diamond material component for this spell)."
+  },
+
+  {
+    "Key": "EbonsContentMod.LimitedWish.RemoveAfflictions.Name",
+    "ProcessTemplates": false,
+    "enGB": "Remove Afflictions"
+  },
+
+  {
+    "Key": "EbonsContentMod.EarthWalk.Name",
+    "ProcessTemplates": false,
+    "enGB": "Earth Walk"
+  },
+
+  {
+    "Key": "EbonsContentMod.EarthWalk.Description",
+    "enGB": "Element: earth\nType: utility\nBurn: 0\nBecause you meld very slightly into the earth, when you are standing on an earthen surface, you ignore difficult terrain caused by rocks, earth, or mud, and while on such surfaces you add your elemental overflow bonus to your CMD against being moved or tripped."
+  },
+
+  {
+    "Key": "EbonsContentMod.EarthGlide.Name",
+    "ProcessTemplates": false,
+    "enGB": "Earth Glide"
+  },
+
+  {
+    "Key": "EbonsContentMod.EarthGlide.Description",
+    "enGB": "Element: earth\nType: utility\nBurn: 0\nYou can glide through earth, as an earth elemental‚Äôs earth glide ability, with a burrow speed equal to your base land speed."
+  },
+
+  {
+    "Key": "EbonsContentMod.AirShroud.Name",
+    "ProcessTemplates": false,
+    "enGB": "Air Shroud"
+  },
+
+  {
+    "Key": "EbonsContentMod.AirShroud.Description",
+    "enGB": "Element: air\nType: utility\nBurn: 0\nYou are always under the effect of life bubble. As a standard action, you can accept 1 point of burn to extend the effect to all allies within 30 feet for 1 minute per kineticist level you possess."
+  },
+
+  {
+    "Key": "EbonsContentMod.GreaterAirShroud.Name",
+    "ProcessTemplates": false,
+    "enGB": "Greater Air Shroud"
+  },
+
+  {
+    "Key": "EbonsContentMod.GreaterAirShroud.Description",
+    "enGB": "Element: air\nType: utility\nBurn: 0\nYour air shroud improves. When you accept burn to grant the benefit to others, the benefit lasts until the next time your burn is removed."
+  },
+
+  {
+    "Key": "Astomoi.Name",
+    "ProcessTemplates": false,
+    "enGB": "Astomoi"
+  },
+
+  {
+    "Key": "Astomoi.Description",
+    "enGB": "Astomoi appear to be made of pure darkness. They require no food‚Äîindeed, they have no mouths‚Äîand they have no eyes with which to survey their environment. Instead, they rely on their powerful minds to sense the world around them, and subsist on nutrients absorbed from the air. This can turn against them, however, as powerful smells and inhaled poisons can render an astomoi helpless. Predisposed to asceticism, astomoi rarely wear more than rags, if they wear anything at all."
+  },
+
+  {
+    "Key": "Astomoi.SensitiveBreath.Name",
+    "ProcessTemplates": false,
+    "enGB": "Sensitive Breath"
+  },
+
+  {
+    "Key": "Astomoi.SensitiveBreath.Description",
+    "enGB": "Astomoi take a ‚àí2 penalty on saving throws against disease and effects that rely on inhalation."
+  },
+
+  {
+    "Key": "Astomoi.TelepathicSight.Name",
+    "ProcessTemplates": false,
+    "enGB": "Telepathic Senses"
+  },
+
+  {
+    "Key": "Astomoi.TelepathicSight.Description",
+    "enGB": "Astomoi can't speak or see, but can mentally sense the area within 60 feet, as per blindsight, and can speak telepathically. An astomoi can't see anything beyond 60 feet."
+  },
+
+  {
+    "Key": "Duskwalker.Name",
+    "ProcessTemplates": false,
+    "enGB": "Duskwalker"
+  },
+
+  {
+    "Key": "Duskwalker.Description",
+    "enGB": "Duskwalkers are tall, bipedal, gray‚Äîskinned beings that are incarnated from souls that have earned the honor of a second life. The souls that become duskwalkers have often distinguished themselves in the eyes of psychopomps as guardians of the cycle of birth and death. Other than their gray skin, their physical features bear some resemblance to those they held in their previous lives. As such, a typical duskwalker looks mostly human, other than her unusual coloration. \nThe first duskwalkers appeared as the result of a bargain between two powerful psychopomps: an olethros mother and a yamaraj. The olethros mother made the case to allow certain souls whose actions helped preserve and protect the cycle of souls, but whose lives had been cut short of what fate had decreed for them to reincarnate once before passing to their final judgment. After a long debate, the yamaraj agreed but imposed a strict limit on the number of duskwalkers that can exist at one time. Whenever this limit has been reached, dead duskwalkers cannot be restored to life. Most duskwalkers accept this limitation and appreciate that the end of their lives opens the door for new lives to begin. Some request that those mourning their deaths also celebrate the birth of a new duskwalker in the near future. The length of time it takes for a new duskwalker to be born when one dies varies, but is rarely more than a year. \nWhen a duskwalker is born, she appears spontaneously in a sanctified place with a connection to death, most often a graveyard or a temple. Duskwalkers do not experience infancy, instead beginning their lives with the appearance and facilities of a roughly 8‚Äîyear‚Äîold human child. These mysterious children always appear cloaked in simple white robes, with a small satchel of food and water by their sides."
+  },
+
+  {
+    "Key": "Duskwalker.Skilled.Name",
+    "ProcessTemplates": false,
+    "enGB": "Skilled"
+  },
+
+  {
+    "Key": "Duskwalker.Skilled.Description",
+    "enGB": "Duskwalkers gain a +2 racial bonus on Lore (Religion) checks."
+  },
+
+  {
+    "Key": "Duskwalker.WardAgainstCorruption.Name",
+    "ProcessTemplates": false,
+    "enGB": "Ward Against Corruption"
+  },
+
+  {
+    "Key": "Duskwalker.WardAgainstCorruption.Description",
+    "enGB": "Duskwalkers gain a +2 racial bonus on saving throws against negative energy and death effects, as well as the spell‚Äîlike and supernatural abilities of undead."
+  },
+
+  {
+    "Key": "Duskwalker.GhostHunter.Name",
+    "ProcessTemplates": false,
+    "enGB": "Ghost Hunter"
+  },
+
+  {
+    "Key": "Duskwalker.GhostHunter.Description",
+    "enGB": "In a duskwalker's hands, any weapon can strike true against spectral beings. A duskwalker's non‚Äîmagical weapons deal half damage to incorporeal creatures, as if they were magic weapons, and her magic weapons can deal critical hits and precision damage, even if they do not have the ghost touch property. Once per day as a standard action, a duskwalker can focus her natural revulsion toward undead. If she does so, she treats all weapons she wields as if they had the ghost touch property for 1 minute."
+  },
+
+  {
+    "Key": "EbonsContentMod.KeenSenses.Description",
+    "enGB": "Many races have extraordinarily developed senses and receive a +2 racial bonus on Perception checks."
+  },
+
+  {
+    "Key": "3fe980d4-f1be-4164-9aa7-27a67dc0c554",
+    "enGB": "This {g|Encyclopedia:Skills}skill{/g} depends on {g|Encyclopedia:Charisma}Charisma{/g} {g|Encyclopedia:Ability_Scores}ability score{/g}. This skill cannot be used if your character is not trained in it.\nUse Magic Device represents a character's talent at activating and using magic items, even if they are not otherwise trained or qualified to use them.\nHere are examples where you apply your character's Use Magic Device skill to:\n‚Ä¢ Activate wands and scrolls that you would normally be unable to use.\n‚Ä¢ Bypass ability score requirements on magic equipment. Each point of Use Magic Device above 15 compensates for one missing point of the required ability score.\n‚Ä¢ Bypass class restrictions on magic equipment with a Use Magic Device bonus of 20 or higher.\n‚Ä¢ Bypass alignment restrictions on magic equipment with a Use Magic Device bonus of 30 or higher."
+  },
+
+  {
+    "Key": "3b06023f-cbba-4527-98b9-2b3e491abc12",
+    "enGB": "This {g|Encyclopedia:Skills}skill{/g} represents a character's ability to activate and use magic items, even if they are not otherwise trained or qualified to use them. Your character's {g|Encyclopedia:Use_Magic_Device}Use Magic Device{/g} skill enables you to activate wands and scrolls that you would normally be unable to use and equip magic items that you would normally be prohibited from equipping.\n\nFor magic equipment, each point of Use Magic Device above 15 compensates for one missing point of a required ability score. A Use Magic Device bonus of 20 or higher allows the character to bypass class restrictions, while a bonus of 30 or higher allows the character to bypass alignment restrictions."
+  },
+
+  {
+    "Key": "Triaxian.Name",
+    "ProcessTemplates": false,
+    "enGB": "Triaxian"
+  },
+
+  {
+    "Key": "Triaxian.Description",
+    "enGB": "Triaxians are the dominant race on a world whose erratic orbit causes exceptionally long and disparate seasons. Though eerily similar to humans, elves, and the other mammalian humanoids, Triaxians have developed certain adaptations to their environment that mark them as indisputably alien. \nLike many creatures on their world, Triaxians have evolved to shift along with their environment, resulting in differences between generations of the same family that would seem bizarre to other humanoids. \nIn the warm summer years, Triaxians are completely hairless, with skin that ranges from deep red to coffee-colored to charcoal black. This configuration allows them to better survive in the sweltering heat of the planet's tropical summers, with the increased melanin in their dark skin protecting them from the sun's intense rays. \nThese Triaxians breed true for many generations‚Äîyet as the planet begins its rapid seasonal shift, so do the Triaxians. Newborn Triaxians begin to evince new adaptations to the cooling environment, and by the time winter has come on in full, Triaxians change markedly: their pale bodies are covered in fine, insulating white fur like that of an ermine, while their eyes narrow to elongated slits to protect against snowblindness. These new traits similarly breed true until the seasons begin to change once more, at which point the eyes widen and fur recedes, starting the cycle anew."
+  },
+
+  {
+    "Key": "Triaxian.Seasoned.Name",
+    "ProcessTemplates": false,
+    "enGB": "Seasoned"
+  },
+
+  {
+    "Key": "Triaxian.Seasoned.Description",
+    "enGB": "Choose summer or winter. If summer is chosen, the triaxian can exist comfortably in conditions between 90 and 110 degrees Fahrenheit and receives fire resistance 2. If winter is chosen, the triaxian can exist comfortably in conditions between 40 and 0 degrees Fahrenheit and receives cold resistance 2."
+  },
+
+  {
+    "Key": "Triaxian.Summer.Name",
+    "ProcessTemplates": false,
+    "enGB": "Summer Triaxian"
+  },
+
+  {
+    "Key": "Triaxian.Winter.Name",
+    "ProcessTemplates": false,
+    "enGB": "Winter Triaxian"
+  },
+
+  {
+    "Key": "Triaxian.ExceptionalSenses.Name",
+    "ProcessTemplates": false,
+    "enGB": "Exceptional Senses"
+  },
+
+  {
+    "Key": "Triaxian.ExceptionalSenses.Description",
+    "enGB": "Even among races possessing keen senses, some stand out as exceptional and receive a +4 racial bonus on Perception checks."
+  },
+
+  {
+    "Key": "Naiad.Name",
+    "ProcessTemplates": false,
+    "enGB": "Naiad"
+  },
+
+  {
+    "Key": "Naiad.Description",
+    "enGB": "Naiads are protectors of freshwater areas such as lakes, ponds, and particularly rivers. While many naiads are reclusive, some choose to regularly visit settlements built near their bodies of water as long as those settlements are respectful to nature and the fey. Others explore the vast world, bonding to bodies of water as they travel. These naiads are the most likely to come in contact with other societies or visit other nations, but regardless, these fey enjoy inspiring others to artistic greatness. Some take this as proof that naiads originated long ago from the intermingling of nymph and mortal bloodlines."
+  },
+
+  {
+    "Key": "Naiad.FeyNature.Name",
+    "ProcessTemplates": false,
+    "enGB": "Fey Nature"
+  },
+
+  {
+    "Key": "Naiad.FeyNature.Description",
+    "enGB": "Naiads have a +2 racial bonus on Mobility and Lore (Nature) checks."
+  },
+
+  {
+    "Key": "Naiad.WaterBond.Name",
+    "ProcessTemplates": false,
+    "enGB": "Water Bond"
+  },
+
+  {
+    "Key": "Naiad.WaterBond.Description",
+    "enGB": "A naiad's supernatural connection to the waters of the First World sustains her even when far from her native spring. She gains a +1 insight bonus to Armor Class and a +1 racial bonus on saving throws."
+  },
+
+  {
+    "Key": "Naiad.Inspiration.Name",
+    "ProcessTemplates": false,
+    "enGB": "Inspiration"
+  },
+
+  {
+    "Key": "Naiad.Inspiration.Description",
+    "enGB": "A naiad can choose another intelligent creature to inspire by giving that creature a token (typically a lock of her hair). As long as the creature carries the naiad's token and retains her favor, that creature gains a +1 insight bonus on Will saving throws and Knowledge (World) and Persuasion checks. The naiad can maintain the link indefinitely, but can end the effect at any time as a free action. A single naiad can only inspire one other creature at a time in this manner."
+  },
+
+  {
+    "Key": "Naiad.GrantInspiration.Name",
+    "ProcessTemplates": false,
+    "enGB": "Grant Inspiration"
+  },
+
+  {
+    "Key": "Naiad.RevokeInspiration.Name",
+    "ProcessTemplates": false,
+    "enGB": "Revoke Inspiration"
+  },
+
+  {
+    "Key": "EbonsContentMod.AquaticSubtype.Name",
+    "ProcessTemplates": false,
+    "enGB": "Aquatic Subtype"
+  },
+
+  {
+    "Key": "EbonsContentMod.AquaticSubtype.Description",
+    "enGB": "These creatures always have swim speeds and can move in water without making Swim checks. An aquatic creature can breathe water."
+  },
 ]

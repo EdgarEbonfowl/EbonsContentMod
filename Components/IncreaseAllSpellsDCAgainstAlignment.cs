@@ -14,7 +14,6 @@ namespace EbonsContentMod.Components
 {
     internal class IncreaseAllSpellsDCAgainstAlignment : UnitFactComponentDelegate, IInitiatorRulebookHandler<RuleCalculateAbilityParams>, IRulebookHandler<RuleCalculateAbilityParams>, ISubscriber, IInitiatorRulebookSubscriber
     {
-        // Token: 0x0600EA03 RID: 59907 RVA: 0x003C2BB9 File Offset: 0x003C0DB9
         public void OnEventAboutToTrigger(RuleCalculateAbilityParams evt)
         {
             if (this.SpellsOnly && evt.Spellbook == null)
@@ -24,7 +23,6 @@ namespace EbonsContentMod.Components
             evt.AddBonusDC(this.Value.Calculate(base.Context), this.Descriptor);
         }
 
-        // Token: 0x0600EA04 RID: 59908 RVA: 0x003C2BE9 File Offset: 0x003C0DE9
         public void OnEventDidTrigger(RuleCalculateAbilityParams evt)
         {
         }

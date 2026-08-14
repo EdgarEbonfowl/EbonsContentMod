@@ -120,6 +120,110 @@ namespace EbonsContentMod.Races
 
         ];
 
+        public static List<Texture2D> CustomHeadRamps =
+        [
+            ColorRampGenerator.CreateHumanSkinRamp(new Color( // Gold
+                RaceRecolorizer.GetColorsFromRGB(120f),
+                RaceRecolorizer.GetColorsFromRGB(100f),
+                RaceRecolorizer.GetColorsFromRGB(50f)
+                ),
+                new Color( // Gold
+                RaceRecolorizer.GetColorsFromRGB(120f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(100f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(50f * 2/5)
+                )),
+            ColorRampGenerator.CreateHumanSkinRamp(new Color( // Orange Gold
+                RaceRecolorizer.GetColorsFromRGB(140f),
+                RaceRecolorizer.GetColorsFromRGB(100f),
+                RaceRecolorizer.GetColorsFromRGB(50f)
+                ),
+                new Color( // Orange Gold
+                RaceRecolorizer.GetColorsFromRGB(140f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(100f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(50f * 2/5)
+                )),
+            ColorRampGenerator.CreateHumanSkinRamp(new Color( // Deep Gold
+                RaceRecolorizer.GetColorsFromRGB(110f),
+                RaceRecolorizer.GetColorsFromRGB(90f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+                new Color( // Deep Gold
+                RaceRecolorizer.GetColorsFromRGB(110f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(90f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                )),
+            ColorRampGenerator.CreateHumanSkinRamp(new Color( // Golden Tan
+                RaceRecolorizer.GetColorsFromRGB(135f),
+                RaceRecolorizer.GetColorsFromRGB(105f),
+                RaceRecolorizer.GetColorsFromRGB(65f)
+                ),
+                new Color( // Golden Tan
+                RaceRecolorizer.GetColorsFromRGB(135f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(105f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(65f * 2/5)
+                )),
+            ColorRampGenerator.CreateHumanSkinRamp(new Color( // Deep Golden Bronze
+                RaceRecolorizer.GetColorsFromRGB(110f),
+                RaceRecolorizer.GetColorsFromRGB(75f),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                ),
+                new Color( // Deep Golden Bronze
+                RaceRecolorizer.GetColorsFromRGB(110f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(75f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(0f)
+                )),
+            ColorRampGenerator.CreateHumanSkinRamp(new Color( // Deep Earth
+                RaceRecolorizer.GetColorsFromRGB(76f),
+                RaceRecolorizer.GetColorsFromRGB(59f),
+                RaceRecolorizer.GetColorsFromRGB(37f)
+                ),
+                new Color( // Deep Earth
+                RaceRecolorizer.GetColorsFromRGB(76f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(59f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(37f * 2/5)
+                )),
+            ColorRampGenerator.CreateHumanSkinRamp(new Color( // Sand
+                RaceRecolorizer.GetColorsFromRGB(111f),
+                RaceRecolorizer.GetColorsFromRGB(89f),
+                RaceRecolorizer.GetColorsFromRGB(62f)
+                ),
+                new Color( // Sand
+                RaceRecolorizer.GetColorsFromRGB(111f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(89f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(62f * 2/5)
+                )),
+            ColorRampGenerator.CreateHumanSkinRamp(new Color( // Deep Bronze
+                RaceRecolorizer.GetColorsFromRGB(116f),
+                RaceRecolorizer.GetColorsFromRGB(86f),
+                RaceRecolorizer.GetColorsFromRGB(50f)
+                ),
+                new Color( // Deep Bronze
+                RaceRecolorizer.GetColorsFromRGB(116f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(86f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(50f * 2/5)
+                )),
+            ColorRampGenerator.CreateHumanSkinRamp(new Color( // Gold
+                RaceRecolorizer.GetColorsFromRGB(161f),
+                RaceRecolorizer.GetColorsFromRGB(139f),
+                RaceRecolorizer.GetColorsFromRGB(96f)
+                ),
+                new Color( // Gold
+                RaceRecolorizer.GetColorsFromRGB(161f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(139f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(96f * 2/5)
+                )),
+            ColorRampGenerator.CreateHumanSkinRamp(new Color( // Silver
+                RaceRecolorizer.GetColorsFromRGB(136f),
+                RaceRecolorizer.GetColorsFromRGB(132f),
+                RaceRecolorizer.GetColorsFromRGB(132f)
+                ),
+                new Color( // Silver
+                RaceRecolorizer.GetColorsFromRGB(136f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(132f * 2/5),
+                RaceRecolorizer.GetColorsFromRGB(132f * 2/5)
+                ))
+        ];
+
         public static BlueprintRace CopyRace = BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.HumanRace.ToString());
 
         private static readonly string ShabtiName = "ShabtiRace";
@@ -206,8 +310,7 @@ namespace EbonsContentMod.Races
                 .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
-            var race =
-            RaceConfigurator.New(ShabtiName, RaceGuid)
+            var race = RaceConfigurator.New(ShabtiName, RaceGuid)
                 .CopyFrom(CopyRace)
                 .SetDisplayName(ShabtiDisplayName)
                 .SetDescription(ShabtiDescription)
@@ -219,7 +322,7 @@ namespace EbonsContentMod.Races
                 .Configure();
 
             // Recolor Race
-            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, BaldRace: true, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.KitsuneRace.ToString()), CustomHairRamps: CopyRace.FemaleOptions.m_Hair[1].Load(true, false).PrimaryColorsProfile.Ramps, CustomEyeRamps: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.GnomeRace.ToString()).FemaleOptions.m_Heads[0].Load(true, false).SecondaryColorsProfile.Ramps /*eyeEE: ContactEEL*/);
+            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, CustomHeadRamps: CustomHeadRamps, BaldRace: true, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.KitsuneRace.ToString()), CustomHairRamps: CopyRace.FemaleOptions.m_Hair[1].Load(true, false).PrimaryColorsProfile.Ramps, CustomEyeRamps: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.GnomeRace.ToString()).FemaleOptions.m_Heads[0].Load(true, false).SecondaryColorsProfile.Ramps /*eyeEE: ContactEEL*/);
 
             // Add race to mount fixes
             RaceMountFixerizer.AddRaceToMountFixes(recoloredrace, CopyRace);

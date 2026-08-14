@@ -111,34 +111,26 @@ namespace EbonsContentMod.Abilities
                     owner.HasFact(
                         BuffRefs.InspiredRageEffectBuffMythic.Reference.Get());
 
-                Main.log.Log(
+                /*Main.log.Log(
                     $"Come and Get Me: SetIsOn for {owner.CharacterName}; " +
                     $"requested={value}, actual={actualState}, " +
                     $"started={__instance.IsStarted}, " +
-                    $"inspiredRage={hasInspiredRage}");
+                    $"inspiredRage={hasInspiredRage}");*/
 
-                /*
-                 * Turning on is always an intentional preference worth remembering.
-                 *
-                 * Save false only while Inspired Rage is still present. When the
-                 * character runs out of the AOE, Inspired Rage disappears and the
-                 * game automatically switches this ability off. That automatic
-                 * shutdown must not overwrite the saved preference.
-                 */
                 if (actualState || hasInspiredRage)
                 {
                     owner.Ensure<UnitPartComeAndGetMeToggleState>()
                         .SaveState(actualState);
 
-                    Main.log.Log(
+                    /*Main.log.Log(
                         $"Come and Get Me: saved preference={actualState} " +
-                        $"for {owner.CharacterName}");
+                        $"for {owner.CharacterName}");*/
                 }
                 else
                 {
-                    Main.log.Log(
+                    /*Main.log.Log(
                         $"Come and Get Me: ignored automatic shutdown " +
-                        $"for {owner.CharacterName}");
+                        $"for {owner.CharacterName}");*/
                 }
             }
         }
@@ -165,11 +157,11 @@ namespace EbonsContentMod.Abilities
 
             var state = owner.Get<UnitPartComeAndGetMeToggleState>();
 
-            Main.log.Log(
+            /*Main.log.Log(
                 $"Come and Get Me: toggle added for {owner.CharacterName}; " +
                 $"current={__instance.IsOn}, " +
                 $"hasSavedState={state?.HasSavedState ?? false}, " +
-                $"saved={state?.ShouldBeActive ?? false}");
+                $"saved={state?.ShouldBeActive ?? false}");*/
 
             if (state == null || !state.HasSavedState)
             {
@@ -178,47 +170,39 @@ namespace EbonsContentMod.Abilities
 
             bool desiredState = state.ShouldBeActive;
 
-            /*
-             * OnActivate fires while AddFacts is still creating/initializing
-             * the ActivatableAbility. Restore after that process finishes.
-             */
             DelayedInvoker.InvokeInTime(
                 () =>
             {
                 if (__instance.Owner == null)
                 {
-                    Main.log.Log(
-                        "Come and Get Me: delayed restore aborted; owner is null.");
+                    /*Main.log.Log(
+                        "Come and Get Me: delayed restore aborted; owner is null.");*/
                     return;
                 }
 
-                /*
-                    * Make sure this exact fact instance still belongs to the unit.
-                    * It could theoretically have been removed again before this runs.
-                    */
                 if (!__instance.Active)
                 {
-                    Main.log.Log(
+                    /*Main.log.Log(
                         $"Come and Get Me: delayed restore aborted for " +
-                        $"{owner.CharacterName}; fact is no longer active.");
+                        $"{owner.CharacterName}; fact is no longer active.");*/
                     return;
                 }
 
-                Main.log.Log(
+                /*Main.log.Log(
                     $"Come and Get Me: delayed restore beginning for " +
                     $"{owner.CharacterName}; current={__instance.IsOn}, " +
-                    $"desired={desiredState}, started={__instance.IsStarted}");
+                    $"desired={desiredState}, started={__instance.IsStarted}");*/
 
                 if (__instance.IsOn != desiredState)
                 {
                     __instance.IsOn = desiredState;
                 }
 
-                Main.log.Log(
+                /*Main.log.Log(
                     $"Come and Get Me: delayed restore finished for " +
                     $"{owner.CharacterName}; current={__instance.IsOn}, " +
                     $"started={__instance.IsStarted}, " +
-                    $"buff={__instance.AppliedBuff?.Blueprint?.name ?? "null"}");
+                    $"buff={__instance.AppliedBuff?.Blueprint?.name ?? "null"}");*/
             },
             0.01f);
 
@@ -234,11 +218,11 @@ namespace EbonsContentMod.Abilities
                 owner.Buffs.HasFact(
                     BuffRefs.ComeAndGetMeEffectBuff.Reference.Get());
 
-            Main.log.Log(
+            /*Main.log.Log(
                 $"Come and Get Me: post-restore facts for {owner.CharacterName}; " +
                 $"normalRage={hasNormalInspiredRage}, " +
                 $"mythicRage={hasMythicInspiredRage}, " +
-                $"effect={hasComeAndGetMeEffect}");
+                $"effect={hasComeAndGetMeEffect}");*/
         }
     }
 }

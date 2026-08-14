@@ -75,6 +75,32 @@ namespace EbonsContentMod.Components
         public int OtherMaxSpellLevel;
 
         /// <summary>
+        /// Highest primary-list spell level that may be duplicated when the
+        /// selected spell belongs to one of the source spellbook's opposition
+        /// schools.
+        ///
+        /// -1 disables opposition-school filtering for the primary list.
+        ///
+        /// Miracle: -1
+        /// Wish: 7
+        /// Limited Wish: 5
+        /// </summary>
+        public int PrimaryOppositionMaxSpellLevel = -1;
+
+        /// <summary>
+        /// Highest non-primary spell level that may be duplicated when the
+        /// selected spell belongs to one of the source spellbook's opposition
+        /// schools.
+        ///
+        /// -1 disables opposition-school filtering for the other lists.
+        ///
+        /// Miracle: -1
+        /// Wish: 6
+        /// Limited Wish: 4
+        /// </summary>
+        public int OtherOppositionMaxSpellLevel = -1;
+
+        /// <summary>
         /// Optional manual exclusions for spells that should not be
         /// duplicated.
         ///
@@ -146,6 +172,22 @@ namespace EbonsContentMod.Components
         [NonSerialized]
         private Dictionary<BlueprintAbility, int>
             m_CachedEffectiveSpellLevels;
+
+        /// <summary>
+        /// Lowest legal primary-list level for each final leaf ability.
+        /// Kept separately so runtime opposition-school filtering can tell
+        /// whether a spell qualifies through the primary list.
+        /// </summary>
+        [NonSerialized]
+        private Dictionary<BlueprintAbility, int>
+            m_CachedPrimarySpellLevels;
+
+        /// <summary>
+        /// Lowest legal non-primary-list level for each final leaf ability.
+        /// </summary>
+        [NonSerialized]
+        private Dictionary<BlueprintAbility, int>
+            m_CachedOtherSpellLevels;
 
         /// <summary>
         /// Resolved blueprint objects from m_ExcludedSpells.
@@ -224,6 +266,8 @@ namespace EbonsContentMod.Components
         {
             m_CachedAvailableSpells = null;
             m_CachedEffectiveSpellLevels = null;
+            m_CachedPrimarySpellLevels = null;
+            m_CachedOtherSpellLevels = null;
             m_CachedExcludedSpells = null;
 
             unchecked
@@ -235,22 +279,25 @@ namespace EbonsContentMod.Components
         private void EnsureSpellCache()
         {
             if (m_CachedAvailableSpells != null
-                && m_CachedEffectiveSpellLevels != null)
+                && m_CachedEffectiveSpellLevels != null
+                && m_CachedPrimarySpellLevels != null
+                && m_CachedOtherSpellLevels != null)
             {
                 return;
             }
 
             EnsureExcludedSpellCache();
 
-            // First determine the lowest legal level at which each root
-            // spell can be duplicated.
-            var rootSpellLevels =
+            var primaryRootSpellLevels =
                 new Dictionary<BlueprintAbility, int>();
 
             AddSpellsFromList(
                 PrimarySpellList,
                 PrimaryMaxSpellLevel,
-                rootSpellLevels);
+                primaryRootSpellLevels);
+
+            var otherRootSpellLevels =
+                new Dictionary<BlueprintAbility, int>();
 
             foreach (BlueprintSpellListReference spellListReference in
                      m_OtherSpellLists
@@ -259,12 +306,60 @@ namespace EbonsContentMod.Components
                 AddSpellsFromList(
                     spellListReference?.Get(),
                     OtherMaxSpellLevel,
-                    rootSpellLevels);
+                    otherRootSpellLevels);
             }
 
-            // Then flatten each root into castable leaf variants. A leaf may
-            // be reachable through more than one list or parent, so preserve
-            // its lowest legal level.
+            m_CachedPrimarySpellLevels =
+                FlattenRootSpellLevels(
+                    primaryRootSpellLevels);
+
+            m_CachedOtherSpellLevels =
+                FlattenRootSpellLevels(
+                    otherRootSpellLevels);
+
+            var effectiveSpellLevels =
+                new Dictionary<BlueprintAbility, int>();
+
+            MergeMinimumSpellLevels(
+                m_CachedPrimarySpellLevels,
+                effectiveSpellLevels);
+
+            MergeMinimumSpellLevels(
+                m_CachedOtherSpellLevels,
+                effectiveSpellLevels);
+
+            m_CachedEffectiveSpellLevels =
+                effectiveSpellLevels;
+
+            IEnumerable<KeyValuePair<BlueprintAbility, int>> entries =
+                effectiveSpellLevels;
+
+            if (!IncludeAllSpellLevels)
+            {
+                entries = entries.Where(
+                    entry =>
+                        entry.Value == SelectedSpellLevel);
+            }
+
+            m_CachedAvailableSpells =
+                entries
+                    .OrderBy(entry => entry.Value)
+                    .ThenBy(entry => entry.Key.School)
+                    .ThenBy(
+                        entry => entry.Key.Name,
+                        StringComparer.CurrentCultureIgnoreCase)
+                    .Select(entry => entry.Key)
+                    .ToArray();
+        }
+
+        /// <summary>
+        /// Flattens root spell-list entries into final castable leaves while
+        /// preserving the lowest level at which each leaf is reachable.
+        /// </summary>
+        private Dictionary<BlueprintAbility, int>
+            FlattenRootSpellLevels(
+                IDictionary<BlueprintAbility, int> rootSpellLevels)
+        {
             var leafSpellLevels =
                 new Dictionary<BlueprintAbility, int>();
 
@@ -287,32 +382,34 @@ namespace EbonsContentMod.Components
                             out int currentLevel)
                         || rootEntry.Value < currentLevel)
                     {
-                        leafSpellLevels[leaf] = rootEntry.Value;
+                        leafSpellLevels[leaf] =
+                            rootEntry.Value;
                     }
                 }
             }
 
-            m_CachedEffectiveSpellLevels = leafSpellLevels;
+            return leafSpellLevels;
+        }
 
-            IEnumerable<KeyValuePair<BlueprintAbility, int>> entries =
-                leafSpellLevels;
-
-            if (!IncludeAllSpellLevels)
+        /// <summary>
+        /// Merges spell levels, retaining the lowest level for each spell.
+        /// </summary>
+        private static void MergeMinimumSpellLevels(
+            IDictionary<BlueprintAbility, int> sourceLevels,
+            IDictionary<BlueprintAbility, int> destinationLevels)
+        {
+            foreach (KeyValuePair<BlueprintAbility, int> entry in
+                     sourceLevels)
             {
-                entries = entries.Where(
-                    entry =>
-                        entry.Value == SelectedSpellLevel);
+                if (!destinationLevels.TryGetValue(
+                        entry.Key,
+                        out int currentLevel)
+                    || entry.Value < currentLevel)
+                {
+                    destinationLevels[entry.Key] =
+                        entry.Value;
+                }
             }
-
-            m_CachedAvailableSpells =
-                entries
-                    .OrderBy(entry => entry.Value)
-                    .ThenBy(entry => entry.Key.School)
-                    .ThenBy(
-                        entry => entry.Key.Name,
-                        StringComparer.CurrentCultureIgnoreCase)
-                    .Select(entry => entry.Key)
-                    .ToArray();
         }
 
         private void EnsureExcludedSpellCache()
@@ -330,11 +427,47 @@ namespace EbonsContentMod.Components
                 BlueprintAbility excluded =
                     excludedReference?.Get();
 
-                if (excluded != null)
-                    excludedSpells.Add(excluded);
+                if (excluded == null)
+                    continue;
+
+                AddExcludedAbilityTree(
+                    excluded,
+                    excludedSpells);
             }
 
             m_CachedExcludedSpells = excludedSpells;
+        }
+
+        private static void AddExcludedAbilityTree(
+            BlueprintAbility ability,
+            ISet<BlueprintAbility> excludedSpells)
+        {
+            if (ability == null)
+                return;
+
+            // Also protects against circular variant references.
+            if (!excludedSpells.Add(ability))
+                return;
+
+            AbilityVariants variants =
+                ability.GetComponent<AbilityVariants>();
+
+            if (variants?.m_Variants == null)
+                return;
+
+            foreach (BlueprintAbilityReference variantReference in
+                     variants.m_Variants)
+            {
+                BlueprintAbility variant =
+                    variantReference?.Get();
+
+                if (variant == null)
+                    continue;
+
+                AddExcludedAbilityTree(
+                    variant,
+                    excludedSpells);
+            }
         }
 
         private void AddSpellsFromList(
@@ -478,6 +611,96 @@ namespace EbonsContentMod.Components
             return true;
         }
 
+        /// <summary>
+        /// Applies caster-specific opposition-school limits after the
+        /// caster-independent blueprint cache has been built.
+        ///
+        /// A spell may qualify through either the primary list or any of the
+        /// other lists. This matters for spells that appear on multiple class
+        /// lists at different levels.
+        /// </summary>
+        private bool IsAllowedForSource(
+            AbilityData source,
+            BlueprintAbility spell)
+        {
+            if (spell == null)
+                return false;
+
+            if (PrimaryOppositionMaxSpellLevel < 0
+                && OtherOppositionMaxSpellLevel < 0)
+            {
+                return true;
+            }
+
+            var spellbook =
+                source?.Spellbook;
+
+            if (spellbook == null
+                || !spellbook.OppositionSchools.Contains(
+                    spell.School))
+            {
+                return true;
+            }
+
+            EnsureSpellCache();
+
+            bool allowedAsPrimary =
+                PrimaryOppositionMaxSpellLevel >= 0
+                && m_CachedPrimarySpellLevels.TryGetValue(
+                    spell,
+                    out int primaryLevel)
+                && primaryLevel
+                    <= PrimaryOppositionMaxSpellLevel;
+
+            bool allowedAsOther =
+                OtherOppositionMaxSpellLevel >= 0
+                && m_CachedOtherSpellLevels.TryGetValue(
+                    spell,
+                    out int otherLevel)
+                && otherLevel
+                    <= OtherOppositionMaxSpellLevel;
+
+            return allowedAsPrimary
+                || allowedAsOther;
+        }
+
+        /// <summary>
+        /// Include the current opposition-school set in the runtime conversion
+        /// cache identity. This lets the menu refresh if another feature changes
+        /// the source spellbook's opposition schools.
+        /// </summary>
+        private int GetOppositionSchoolSignature(
+            AbilityData source)
+        {
+            if (PrimaryOppositionMaxSpellLevel < 0
+                && OtherOppositionMaxSpellLevel < 0)
+            {
+                return 0;
+            }
+
+            var spellbook =
+                source?.Spellbook;
+
+            if (spellbook == null)
+                return 0;
+
+            unchecked
+            {
+                int signature =
+                    17;
+
+                foreach (SpellSchool school in
+                         spellbook.OppositionSchools)
+                {
+                    signature =
+                        signature * 31
+                        + (int)school;
+                }
+
+                return signature;
+            }
+        }
+
         private bool IsExcluded(BlueprintAbility spell)
         {
             if (spell == null)
@@ -510,6 +733,9 @@ namespace EbonsContentMod.Components
             public AbilityDuplicateSpell Provider;
 
             public int Generation = -1;
+
+            public int OppositionSchoolSignature =
+                int.MinValue;
 
             public BlueprintAbility[] Blueprints =
                 Array.Empty<BlueprintAbility>();
@@ -547,14 +773,21 @@ namespace EbonsContentMod.Components
                     source,
                     _ => new RuntimeConversionCacheEntry());
 
+            int oppositionSchoolSignature =
+                GetOppositionSchoolSignature(
+                    source);
+
             lock (cache)
             {
                 if (cache.Provider != this
-                    || cache.Generation != m_CacheGeneration)
+                    || cache.Generation != m_CacheGeneration
+                    || cache.OppositionSchoolSignature
+                        != oppositionSchoolSignature)
                 {
                     RebuildRuntimeConversions(
                         source,
-                        cache);
+                        cache,
+                        oppositionSchoolSignature);
                 }
 
                 RefreshRuntimeConversionDC(
@@ -567,7 +800,8 @@ namespace EbonsContentMod.Components
 
         private void RebuildRuntimeConversions(
             AbilityData source,
-            RuntimeConversionCacheEntry cache)
+            RuntimeConversionCacheEntry cache,
+            int oppositionSchoolSignature)
         {
             BlueprintAbility[] availableSpells =
                 m_CachedAvailableSpells
@@ -582,12 +816,36 @@ namespace EbonsContentMod.Components
                 if (spell == null)
                     continue;
 
+                if (!IsAllowedForSource(
+                        source,
+                        spell))
+                {
+                    continue;
+                }
+
+                var conversion =
+                    new AbilityData(
+                        source,
+                        spell)
+                    {
+                        SaveSpellbookSlot =
+                            source.SaveSpellbookSlot
+                    };
+
+                if (source.ResourceLogic != null)
+                {
+                    conversion.OverrideResourceLogic(
+                        source.ResourceLogic);
+                }
+
                 conversions.Add(
-                    new AbilityData(source, spell));
+                    conversion);
             }
 
             cache.Provider = this;
             cache.Generation = m_CacheGeneration;
+            cache.OppositionSchoolSignature =
+                oppositionSchoolSignature;
             cache.Blueprints = availableSpells;
             cache.Conversions = conversions;
             cache.LastDCFrame = -1;

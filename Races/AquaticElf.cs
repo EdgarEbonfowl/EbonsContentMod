@@ -143,8 +143,8 @@ namespace EbonsContentMod.Races
         internal const string AquaticElfRacialHeritageDisplayName = "AquaticElf.RacialHeritage.Name";
         private static readonly string AquaticElfRacialHeritageDescription = "AquaticElf.RacialHeritage.Description";
 
-        //internal const string AncestralGrudgeDisplayName = "AquaticElf.AncestralGrudge.Name";
-        //private static readonly string AncestralGrudgeDescription = "AquaticElf.AncestralGrudge.Description";
+        internal const string AquaticSubtypeDisplaName = "EbonsContentMod.AquaticSubtype.Name";
+        private static readonly string AquaticSubtypeDescription = "EbonsContentMod.AquaticSubtype.Description";
 
         internal static void Configure()
         {
@@ -178,13 +178,18 @@ namespace EbonsContentMod.Races
                 .SetGroup(FeatureGroup.Racial)
                 .Configure();
 
+            var AquaticSubtype = FeatureConfigurator.For(FeatureRefs.SubtypeAquatic)
+                .SetDisplayName(AquaticSubtypeDisplaName)
+                .SetDescription(AquaticSubtypeDescription)
+                .Configure();
+
             var race =
             RaceConfigurator.New(AquaticElfName, RaceGuid)
                 .CopyFrom(CopyRace)
                 .SetDisplayName(AquaticElfDisplayName)
                 .SetDescription(AquaticElfDescription)
                 .SetSelectableRaceStat(false)
-                .SetFeatures(RacialHeritage, FeatureRefs.KeenSenses.ToString(), FeatureRefs.ElvenImmunities.ToString(), WeaponFamiliarity, FeatureRefs.SubtypeAquatic.ToString())
+                .SetFeatures(RacialHeritage, FeatureRefs.KeenSenses.ToString(), FeatureRefs.ElvenImmunities.ToString(), WeaponFamiliarity, AquaticSubtype)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Dexterity, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Intelligence, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Constitution, value: -2)

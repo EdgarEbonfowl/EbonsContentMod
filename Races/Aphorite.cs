@@ -64,7 +64,11 @@ namespace EbonsContentMod.Races
 
         public static List<Color> RaceEyeColors =
         [
-
+            new Color( // Green
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(255f),
+                RaceRecolorizer.GetColorsFromRGB(255f)
+                )
         ];
 
         public static List<Color> RaceHairColors =
@@ -79,14 +83,14 @@ namespace EbonsContentMod.Races
 
         public static List<Texture2D> CustomHeadRamps =
         [
-            RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.TieflingRace.Reference.Get(), 13), // Gray            
+            RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.ElfRace.Reference.Get(), 3), // Golden Copper
+            RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.TieflingRace.Reference.Get(), 13), // Gray
             RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.OreadRace.Reference.Get(), 1), // Rock Gray
             RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.OreadRace.Reference.Get(), 0), // Medium Gray
             RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.OreadRace.Reference.Get(), 6), // Salmon-Coral            
             RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.TieflingRace.Reference.Get(), 7), // Deep Coral
             RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.TieflingRace.Reference.Get(), 8), // Dark Coral
             RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.DhampirRace.Reference.Get(), 0), // Light Gray
-            RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.ElfRace.Reference.Get(), 3), // Golden Copper
             RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.TieflingRace.Reference.Get(), 0), // Sand Brown
             RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.OreadRace.Reference.Get(), 8), // Light Bronze
             RaceRecolorizer.GetRaceSkinRampByIndex(RaceRefs.OreadRace.Reference.Get(), 7), // Rust
@@ -140,7 +144,10 @@ namespace EbonsContentMod.Races
 
         internal static void Configure()
         {
-            //var ContactEEL = new EquipmentEntityLink() { AssetId = "a47bac4deb099fc4b86a2e01bb425cc5" };
+            var ContactEEL = new EquipmentEntityLink() { AssetId = "a47bac4deb099fc4b86a2e01bb425cc5" };
+            var EyeCovers = RaceRecolorizer.SwitchEEEyeTexture(ContactEEL, "{2C4285B1-2E36-4655-8E80-7CA7622973C0}", CustomHeadRamps, true, true, CustomHeadRamps, RaceRefs.OreadRace.Reference.Get().MaleOptions.Heads.First());
+
+            //var EyeCovers = RaceRecolorizer.RecolorEELink(ContactEEL, CustomHeadRamps, "{2C4285B1-2E36-4655-8E80-7CA7622973C0}", true);
 
             // Crystalline Dust
 
@@ -187,8 +194,8 @@ namespace EbonsContentMod.Races
                 .SetIcon(FeatureRefs.CelestialResistance.Reference.Get().Icon)
                 .AddImmunityToEnergyDrain()
                 .AddDamageResistanceEnergy(type: DamageEnergyType.Electricity, value: 5)
-                .AddSavingThrowBonusAgainstDescriptor(2, spellDescriptor: SpellDescriptor.Poison)
-                .AddSavingThrowBonusAgainstDescriptor(2, spellDescriptor: SpellDescriptor.MindAffecting)
+                .AddSavingThrowBonusAgainstDescriptor(2, modifierDescriptor: ModifierDescriptor.Racial, spellDescriptor: SpellDescriptor.Poison)
+                .AddSavingThrowBonusAgainstDescriptor(2, modifierDescriptor: ModifierDescriptor.Racial, spellDescriptor: SpellDescriptor.MindAffecting)
                 .SetGroups(FeatureGroup.Racial)
                 .Configure();
 
@@ -238,10 +245,14 @@ namespace EbonsContentMod.Races
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Intelligence, value: 2)
                 .AddStatBonus(ModifierDescriptor.Racial, stat: StatType.Dexterity, value: -2)
                 .SetRaceId(Race.Human)
+                .AddEquipmentEntity(EyeCovers)
                 .Configure();
 
             // Recolor Race
-            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.AasimarRace.ToString()), CustomHeadRamps: CustomHeadRamps, CustomHairRamps: CustomHairRamps, CustomEyeRamps: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.GnomeRace.ToString()).FemaleOptions.m_Heads[0].Load(true, false).SecondaryColorsProfile.Ramps, CustomFemaleHairs: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.AasimarRace.ToString()).FemaleOptions.m_Hair, CustomMaleHairs: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.AasimarRace.ToString()).MaleOptions.m_Hair /*eyeEE: ContactEEL*/);
+            var recoloredrace = RaceRecolorizer.RecolorRace(race, RaceHeadColors, RaceHairColors, RaceEyeColors, /*eyerace: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.AasimarRace.ToString()),*/ CustomHeadRamps: CustomHeadRamps, CustomHairRamps: CustomHairRamps, /*CustomEyeRamps: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.GnomeRace.ToString()).FemaleOptions.m_Heads[0].Load(true, false).SecondaryColorsProfile.Ramps,*/ CustomFemaleHairs: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.AasimarRace.ToString()).FemaleOptions.m_Hair, CustomMaleHairs: BlueprintTools.GetBlueprint<BlueprintRace>(RaceRefs.AasimarRace.ToString()).MaleOptions.m_Hair /*eyeEE: ContactEEL*/);
+
+            // Register linked EEs
+            EELinker.RegisterSkinLink(recoloredrace, [EyeCovers]);
 
             // Add race to mount fixes
             RaceMountFixerizer.AddRaceToMountFixes(recoloredrace, CopyRace);
