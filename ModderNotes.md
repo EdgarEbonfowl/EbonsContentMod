@@ -20,14 +20,28 @@ In making this mod, I generally tried to follow exact implementations of tableto
 - Sylph: slight alterations to SLAs to use spells already in-game.
 - Vishkanya: slight alteration to Weapon Familiarity to reflect weapons already in-game.
 - Sylph, Undine, Ifrit: their elemental affinity features were implemented as +1 to caster level and +1 to save DC for spells of their respective element. The "treat charisma as 2 higher..." thing is either not possible or unknown to me and this seemed like a fair tradeoff. You don't get the benefit to other class features, but you get a broader impact to spells.
+- Astomoi: they got blindsight. This is a powerful ability for a level 1 character, but under Wrath's system they otherwise would have only gotten standard stat adjustments and further save penalties since darkvision, scent and ingested poisons aren't a thing in the game. By comparison, a Samsaran gets the same stat adjustments, good save bonuses, perception check bonus, SLAs, and can add spells from the spell list of a different class.
+- Triaxian: the Seasoned ability gives a tiny amount of energy resistance (2) against fire or cold since having to make rolls due to high or low temperatures is not a thing in Wrath.
+- Naiad: the Water Bond ability was changed to a passive with the same effects. The ability was already worse than what some races get for permanent AC and save bonuses, and water isn't really a thing in Wrath, so making it a passive ability seems minimally disruptive or unbalanced.
 
 ## Archetype
 - Collegiate Initiate: Spell Mastery is not a thing in Wrath, so that was eliminated. Ditto for Aura of Good. You do not get to pick a druid/good spell at first level because the spellbook has not been generated yet, so you don't appear to be able to cast anything, presenting you with an empty selection. This may be possible to fix by moving the Halcyon Spell Lore selection after the normal spell selection as is the case with Lore Master secret spell selections, but I don't know how to do this. As it stands, you just get 19 spells instead of 20 and you get the next spell level one class level later for Halcyon Spell Lore. To balance out, I did not rempve the exploit choice at first level rather than giving back the one at fifth level for losing Spell Mastery. You still get the correct number of exploits based on the included features, you just get one at 1st rather than 5th level.
 - Hungry Ghost Monk: this is a traditional monk archetype and Owlcat chose the unchained monk for Wrath. Luckily, Owlcat also provided a model for how traditinal monk should work in their system and I used that archetype to determine where the new features should go and what they should replace. This is basically equivalent to the tabletop version with a few features arriving one level earlier. I did not include Punishing Kick replacing Stunning Fist as I wasn't sure how to implement it and, frankly, it seemes relatively unimportant thematically and mechanically for the archetype - I may add it later, but not likely.
 - Eldritch Scrapper: their bonus combat feats are not implemented as "floating feats" that can be changed once per day, but rather permanent bonus combat feat selections. This is how the Brawler was implemented in mods for both Kingmaker and Wrath, so I decided to follow suit.
 
+## Spells
+- Miracle, Wish and Limited Wish got only the variant effects explicitly detailed in their descriptions, I did not take artistic license with other effects. The cost for the greater effects of Miracle is paid in gold pieces since there is not enough diamond dust in the game.
+
 ## Sorcerer Bloodlines
 - Some bonus spells and bloodline feats were changed when nonexistant or impossible in Wrath. Care was taken to preserve the bloodline's theme and power level when choosing replacements.
 
 ## Magus Arcana
 - Arcane Deed: added the Swashbuckler deeds that still do anything considering the massive nerf errata to the ability. If I ever figure out toggles, I may go back and do a pre-errata version that can give you all the possible deeds.
+
+## Wild Talents
+- Air's Leap: was changed to a mobility check bonus in alignment with Wrath's simplified system.
+- Earth Glide: implemented basically identically to the Earth Elemental Bloodline's movement ability (burrow speed), except the concealment type was changed to Winds of Vengeance to avoid true seeing piercing it, and the condition was changed from `CantAct` to `CanNotAttack` to get around some visual glitches and make burrowing more true to table top. There is currently no visual indication this ability is being used.
+- Air Shroud: even the lesser version grants Life Bubble because Air Bubble is not a thing (and is useless) in Wrath.
+
+## Rules Changes
+- The minimum skill ranks needed to always succeed at Use Magic Device checks to emulate ability scores, classes and alignments when equipping items was chosen as the threshold to ignore requirements to represent the most conservative implementation of tabletop rules.

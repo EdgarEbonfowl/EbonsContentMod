@@ -10,8 +10,6 @@ This mod adds the following races to the game and they should work like the defa
 
 **If you don't see your favorite race here:** the way I do races involves cloning, recoloring, and then cobbling together base game assets (think Mr. Potatohead plus a paint brush), so only races that can be made from vanilla assets are included here. That means no tengu, no catfolk, etc. If you want me to make a race that would look acceptable with vanilla assets let me know OR if you have some 3D modeling skills and want to submit custom assets, I can make your race. Currently, only the goblin is using anything custom.
 
-**Note on colors:** the method I use to add custom color textures to the game causes my custom color ramps for skin color, eye color, hair color, etc. to not show their color swatch in the character creator, showing up as empty circles instead. I promise, they still work, just click through them and you will see.
-
 - [Sylph](https://www.d20pfsrd.com/races/other-races/featured-races/arg-sylph/ "Sylph")
 - [Undine](https://www.d20pfsrd.com/races/other-races/featured-races/arg-undine/ "Undine")
 - [Duergar](https://www.d20pfsrd.com/races/other-races/uncommon-races/arg-duergar/ "Duergar")
@@ -40,8 +38,12 @@ This mod adds the following races to the game and they should work like the defa
 - [Hobgoblin](https://www.d20pfsrd.com/races/other-races/featured-races/arg-hobgoblin "Hobgoblin")
 - [Aquatic Elf](https://www.d20pfsrd.com/races/other-races/more-races/advanced-races-11-20-rp/aquatic-elves/)
 - [Aphorite](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/aphorite/ "Aphorite")
+- [Astomoi](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/astomoi/ "Astomoi")
+- [Duskwalker](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/duskwalker/ "Duskwalker")
+- [Triaxian](https://www.d20pfsrd.com/races/other-races/more-races/standard-races-1-10-rp/triaxian-10-rp/ "Triaxian")
+- [Naiad](https://www.d20pfsrd.com/races/other-races/more-races/race-points-unknown/naiad-characters/ "Naiad")
 
-Here is what all the new races look like:
+Here is what all the new races look like (some pictures are outdated - several races look better with the new color ramps):
 
 ![ECM1](https://github.com/user-attachments/assets/6caac997-715a-4b6a-802a-4da565a8e65e)
 ![ECM2](https://github.com/user-attachments/assets/3b50acfa-ee31-42ff-87dd-c377becbceb1)
@@ -89,7 +91,9 @@ Some of my favorites:
  
 ## Spells
 - [Miracle](https://www.d20pfsrd.com/magic/all-spells/m/miracle/ "Miracle")
-  - Currently can duplicate spells and cleanse all negative status effects from an ally. A couple bigger effects that require a sacrifice of 25,000 GP coming soon.
+- [Wish](https://www.d20pfsrd.com/magic/all-spells/w/wish/ "Wish")
+- [Limited Wish](https://www.d20pfsrd.com/magic/all-spells/l/limited-wish/ "Limited Wish")
+  - The spells above have all the effects explicitly detailed in their descriptions without the more esoteric options. For instance, Wish can duplicate spells (including resurrection which is explicitly called out in its description), grant inherent ability score bonuses, fully heal your party, and remove negative status effects from your party, but cannot "undo misfortune." Materials costs are in diamonds for Wish/Limited Wish, but the high-powered uses of Miracle require a sacrifice of gold pieces since there is not enough diamond dust in the game to pay for it.
 
 ## Bloodlines
 - [Orc Sorcerer Bloodline](https://www.d20pfsrd.com/classes/core-classes/sorcerer/bloodlines/bloodlines-from-paizo/orc-bloodline/ "Orc Sorcerer Bloodline")
@@ -122,6 +126,10 @@ Some of my favorites:
 - [Spark of Life](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Spark%20of%20Life)
 - [Spark of Innovation](https://aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Spark%20of%20Innovation)
 - [Wings of Air](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Wings%20of%20Air)
+- [Earth Walk](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Earth%20Walk)
+- [Earth Glide](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Earth%20Glide)
+- [Air Shroud](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Air%20Shroud "Air Shroud")
+- [Greater Air Shroud](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Air%20Shroud,%20Greater "Greater Air Shroud")
 
 ## Ability Fixes
 - **Come And Get Me!** barbarian power now works correctly with the skald's raging song. The vanilla version only affected the skald, not teammates. *Update:* the state of the toggle is now tracked, so if a character steps out of the inspired rage aoe with Come And Get Me! enabled it is immediately disabled, but when they step back in it turns back on automatically. This happens even on other character's turns so if a character moves out of the song, ends their turn, then the skald moves close to them again, Come And Get Me! will turn back on automatically.
@@ -129,9 +137,11 @@ Some of my favorites:
 - **Battle Prowess** was completely unfinished and broken. The AOE was too small, it did not trigger Mythic Inspiration, it only used one round of performance per round, it did not proc Hat of Heartening Song fast healing, and the code was a complete mess. I fixed all that.
 - **Shaman Hex: Friend to Animals** now updates properly on charisma changes.
 - **(Greater) Angelic Aspect** now grants a fly speed per tabletop, 30-feet for regular and 60-feet for greater. The fly implementation matches other Owlcat flying instances: immunity to ground-based effects, +3 AC versus melee attacks, and a formation AC bonus to adjacent allies (the regular version already had this last one).
+- **Bestow Grace of the Champion** now grants Smite Evil and Lay on Hands with one usage and the appropriate modifiers per tabletop.
 
 ## Mechanics Fixes/Changes
 - Multi-projectile spells (Hellfire Ray, Scorching Ray, etc.) that should be able to assign projectiles to different targets per tabletop rules will now switch to a new target if the current target dies, rather than just dumping all the extra projectiles into the first target's corpse. All tabletop targeting rules are respected - for instance, no two targets can be more than 30 feet apart for Hellfire Ray. There was some early inconsistency here, but I think I have corrected any flaws in the implementation and my current testing seems to indicate that this consistently works as intended - please submit an issue report if you find otherwise.
+- The Use Magic Device skill now can allow the character to emulate ability scores, classes and alignments when equipping items. The skill rank cutoffs to do so are based on the tabletop minimum skill rank bonus needed to never fail the check and bonuses can be used to qualify. The UMD tooltip has been rewritten to reflect the changes.
 
 ## Installation
 1. Download and install [Unity Mod Manager](https://github.com/newman55/unity-mod-manager).
