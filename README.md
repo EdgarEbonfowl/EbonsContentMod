@@ -137,6 +137,7 @@ Some of my favorites:
 - [Greater Air Shroud](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Air%20Shroud,%20Greater "Greater Air Shroud")
 
 ## Bardic Masterpieces
+If you have [PrestigePlus](https://github.com/YLMstring/Prestige-Plus "PrestigePlus") installed, which also adds masterpieces, it will create the infrastructure and my mod will piggyback off it. If you don't my mod will create the essential machinery.
 - [Music Beyond the Spheres](https://www.d20pfsrd.com/classes/core-classes/bard/bardic-masterpieces/masterpieces/music-beyond-the-spheres-dance-sing-string/ "Music Beyond the Spheres")
 - [Song of Sarkoris](https://www.aonprd.com/BardMasterpieces.aspx "Song of Sarkoris")
 - [Pageant of the Peacock](https://www.d20pfsrd.com/classes/core-classes/bard/bardic-masterpieces/masterpieces/pageant-of-the-peacock/ "Pageant of the Peacock")
