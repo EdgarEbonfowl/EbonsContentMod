@@ -84,11 +84,16 @@ Some of my favorites:
 ## Archetypes
 - **Arcanist**
   - [Collegiate Initiate](https://www.d20pfsrd.com/classes/hybrid-classes/arcanist/archetypes/paizo-arcanist-archetypes/collegiate-initiate-arcanist/ "Collegiate Initiate")
+- **Bard**
+  - [Tabletop Archaeologist](https://www.d20pfsrd.com/classes/core-classes/bard/archetypes/paizo-bard-archetypes/archaeologist/ "Archaeologist")
 - **Monk**
   - [Hungry Ghost Monk](https://www.d20pfsrd.com/classes/core-classes/monk/archetypes/paizo-monk-archetypes/hungry-ghost-monk/ "Hungry Ghost Monk")
 - **Sorcerer**
   - [Eldritch Scrapper](https://www.d20pfsrd.com/classes/core-classes/sorcerer/archetypes/paizo-sorcerer-archetypes/eldritch-scrapper/ "Eldritch Scrapper")
  
+## Prestige Classes
+- [Battle Herald](https://www.d20pfsrd.com/classes/prestige-classes/apg/battle-herald/ "Battle Herald")
+
 ## Spells
 - [Miracle](https://www.d20pfsrd.com/magic/all-spells/m/miracle/ "Miracle")
 - [Wish](https://www.d20pfsrd.com/magic/all-spells/w/wish/ "Wish")
@@ -131,6 +136,21 @@ Some of my favorites:
 - [Air Shroud](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Air%20Shroud "Air Shroud")
 - [Greater Air Shroud](https://www.aonprd.com/KineticistTalentsDisplay.aspx?ItemName=Air%20Shroud,%20Greater "Greater Air Shroud")
 
+## Bardic Masterpieces
+- [Music Beyond the Spheres](https://www.d20pfsrd.com/classes/core-classes/bard/bardic-masterpieces/masterpieces/music-beyond-the-spheres-dance-sing-string/ "Music Beyond the Spheres")
+- [Song of Sarkoris](https://www.aonprd.com/BardMasterpieces.aspx "Song of Sarkoris")
+- [Pageant of the Peacock](https://www.d20pfsrd.com/classes/core-classes/bard/bardic-masterpieces/masterpieces/pageant-of-the-peacock/ "Pageant of the Peacock")
+- [Blazing Rondo](https://www.d20pfsrd.com/classes/core-classes/bard/bardic-masterpieces/masterpieces/blazing-rondo/ "Blazing Rondo")
+- [Banshee's Requiem](https://www.d20pfsrd.com/classes/core-classes/bard/bardic-masterpieces/masterpieces/banshee-s-requiem-sing/ "Banshee's Requiem")
+- [Vindictive Soliloquy](https://www.d20pfsrd.com/classes/core-classes/bard/bardic-masterpieces/masterpieces/vindictive-soliloquy-act-oratory-sing/ "Vindictive Soliloquy")
+- [The Tragedy of False Hope](https://www.d20pfsrd.com/classes/core-classes/bard/bardic-masterpieces/masterpieces/the-tragedy-of-false-hope-oratory-sing/ "The Tragedy of False Hope")
+- [Symphony of the Elysian Heart](https://www.d20pfsrd.com/classes/core-classes/bard/bardic-masterpieces/masterpieces/symphony-of-the-elysian-heart-keyboard-wind/ "Symphony of the Elysian Heart")
+
+## Equipment
+- [Three Reasons to Live](https://www.aonprd.com/MagicWondrousDisplay.aspx?FinalName=Three%20Reasons%20to%20Live "Three Reasons to Live")
+- [Dervish Sikke](https://www.d20pfsrd.com/magic-items/wondrous-items/c-d/dervish-sikke/ "Dervish Sikke")
+- [Banner of the Ancient Kings](https://www.d20pfsrd.com/magic-items/wondrous-items/a-b/banner-of-the-ancient-kings/ "Banner of the Ancient Kings")
+
 ## Ability Fixes
 - **Come And Get Me!** barbarian power now works correctly with the skald's raging song. The vanilla version only affected the skald, not teammates. *Update:* the state of the toggle is now tracked, so if a character steps out of the inspired rage aoe with Come And Get Me! enabled it is immediately disabled, but when they step back in it turns back on automatically. This happens even on other character's turns so if a character moves out of the song, ends their turn, then the skald moves close to them again, Come And Get Me! will turn back on automatically.
 - **Discordant Voice** feat now applies to any ally within the area of effect of any bard song rather than just the beneficial ones.
@@ -142,6 +162,7 @@ Some of my favorites:
 ## Mechanics Fixes/Changes
 - Multi-projectile spells (Hellfire Ray, Scorching Ray, etc.) that should be able to assign projectiles to different targets per tabletop rules will now switch to a new target if the current target dies, rather than just dumping all the extra projectiles into the first target's corpse. All tabletop targeting rules are respected - for instance, no two targets can be more than 30 feet apart for Hellfire Ray. There was some early inconsistency here, but I think I have corrected any flaws in the implementation and my current testing seems to indicate that this consistently works as intended - please submit an issue report if you find otherwise.
 - The Use Magic Device skill now can allow the character to emulate ability scores, classes and alignments when equipping items. The skill rank cutoffs to do so are based on the tabletop minimum skill rank bonus needed to never fail the check and bonuses can be used to qualify. The UMD tooltip has been rewritten to reflect the changes.
+- There is now a toggle to disable all enchanted weapon VFX. Kinetic blades maintain their normal look. If you are like me, you probably think the cluttered weapon VFX - particularly on weapons with multiple enchantments - looks absolutely terrible and you would rather just look at the bare weapons.
 
 ## Installation
 1. Download and install [Unity Mod Manager](https://github.com/newman55/unity-mod-manager).
